@@ -1,7 +1,0 @@
----
-layout: post
-title:  "中文测试!"
-date:   2016-02-21 22:47:23 +0800
-categories: jekyll update
----
-想想也是醉了！
