@@ -6,9 +6,23 @@
 </description>
     <link>http://javictory.info/</link>
     <atom:link href="http://javictory.info/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 08 Mar 2016 17:41:58 +0800</pubDate>
-    <lastBuildDate>Tue, 08 Mar 2016 17:41:58 +0800</lastBuildDate>
+    <pubDate>Tue, 08 Mar 2016 18:56:18 +0800</pubDate>
+    <lastBuildDate>Tue, 08 Mar 2016 18:56:18 +0800</lastBuildDate>
     <generator>Jekyll v3.1.1</generator>
+    
+      <item>
+        <title>序言</title>
+        <description>&lt;p&gt;不知不觉毕业都快三年了，却总感觉自己到目前为止一事无成，徒增遗憾。然昨日不可追，未来亦不可知。所求之事，但求今日无悔。&lt;/p&gt;
+
+</description>
+        <pubDate>Tue, 08 Mar 2016 15:30:45 +0800</pubDate>
+        <link>http://javictory.info/notebook/2016/03/08/pretell.html</link>
+        <guid isPermaLink="true">http://javictory.info/notebook/2016/03/08/pretell.html</guid>
+        
+        
+        <category>notebook</category>
+        
+      </item>
     
       <item>
         <title>测试!</title>
@@ -28,105 +42,9 @@ print_hi(&amp;#39;Tom&amp;#39;)
 &lt;p&gt;Check out the &lt;a href=&quot;http://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;
 
 </description>
-        <pubDate>Fri, 01 May 2015 15:30:45 +0800</pubDate>
-        <link>http://javictory.info/jekyll/update/2015/05/01/welcome-to-jekyll.html</link>
-        <guid isPermaLink="true">http://javictory.info/jekyll/update/2015/05/01/welcome-to-jekyll.html</guid>
-        
-        
-        <category>jekyll</category>
-        
-        <category>update</category>
-        
-      </item>
-    
-      <item>
-        <title>Customizing Your iTerm2</title>
-        <description>&lt;p&gt;Since we’re going to be spending a lot of time in the command-line, let’s install a better terminal than the default one.&lt;/p&gt;
-
-&lt;h4 id=&quot;are-you-looking-for-something-like-this&quot;&gt;Are you looking for something like this?&lt;/h4&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://javictory.info/img/preview.png&quot; alt=&quot;Preview&quot; /&gt;&lt;/p&gt;
-
-&lt;h4 id=&quot;iterm2&quot;&gt;iTerm2&lt;/h4&gt;
-
-&lt;p&gt;Download and install iTerm2 (the newest version, even if it says “beta release”).&lt;/p&gt;
-
-&lt;p&gt;In &lt;strong&gt;Finder&lt;/strong&gt;, drag and drop the &lt;strong&gt;iTerm&lt;/strong&gt; Application file into the &lt;strong&gt;Applications&lt;/strong&gt; folder.&lt;/p&gt;
-
-&lt;p&gt;You can now launch iTerm, through the &lt;strong&gt;Launchpad&lt;/strong&gt; for instance.&lt;/p&gt;
-
-&lt;p&gt;Let’s just quickly change some preferences. In &lt;strong&gt;iTerm &amp;gt; Preferences…&lt;/strong&gt;, under the tab &lt;strong&gt;General&lt;/strong&gt;, uncheck &lt;strong&gt;Confirm closing multiple sessions&lt;/strong&gt; and &lt;strong&gt;Confirm “Quit iTerm2 (Cmd+Q)” command&lt;/strong&gt; under the section &lt;strong&gt;Closing&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;In the tab &lt;strong&gt;Profiles&lt;/strong&gt;, create a new one with the “+” icon, and rename it to your first name for example. Then, select &lt;strong&gt;Other Actions… &amp;gt; Set as Default&lt;/strong&gt;. Finally, under the section &lt;strong&gt;Window&lt;/strong&gt;, change the size to something better, like &lt;strong&gt;Columns: 125&lt;/strong&gt; and &lt;strong&gt;Rows: 35&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;When done, hit the red “X” in the upper left (saving is automatic in OS X preference panes). Close the window and open a new one to see the size change.&lt;/p&gt;
-
-&lt;h4 id=&quot;beautiful-terminal&quot;&gt;Beautiful terminal&lt;/h4&gt;
-
-&lt;p&gt;Throughout a normal day, you’ll see your prompt thousands of times. Customizing it with relevant information can drastically improve your workflow.&lt;/p&gt;
-
-&lt;p&gt;Let’s go ahead and start by changing the font. In &lt;strong&gt;iTerm &amp;gt; Preferences…&lt;/strong&gt;, under the tab &lt;strong&gt;Profiles&lt;/strong&gt;, section &lt;strong&gt;Text&lt;/strong&gt;, change both fonts to &lt;strong&gt;Source Code Pro 13pt&lt;/strong&gt;. This font isn’t included in the default Mac font libary, so you have to download and install it.&lt;/p&gt;
-
-&lt;p&gt;Now let’s add some color. I’m a big fan of the &lt;strong&gt;Dracula&lt;/strong&gt; color scheme. I just find it pretty. There are so many alternatives such as &lt;strong&gt;solarized&lt;/strong&gt;, you can choose whatever you want.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/zenorocha/dracula-theme&quot;&gt;Download ZIP file&lt;/a&gt; from github repo. Unzip the archive. In it you will find the &lt;strong&gt;iterm&lt;/strong&gt; folder, but I will just walk you through it here:&lt;/p&gt;
-
-&lt;p&gt;In &lt;strong&gt;iTerm2 Preferences&lt;/strong&gt;, under &lt;strong&gt;Profiles&lt;/strong&gt; and &lt;strong&gt;Colors&lt;/strong&gt;, go to &lt;strong&gt;Load Presets… &amp;gt; Import…&lt;/strong&gt;, find and open the two &lt;strong&gt;.itermcolors&lt;/strong&gt; files we downloaded.
-Go back to &lt;strong&gt;Load Presets…&lt;/strong&gt; and select &lt;strong&gt;Dracula&lt;/strong&gt; to activate it. Voila!&lt;/p&gt;
-
-&lt;p&gt;Till now, we have finished the appearance of our iTerm2. Next step, we need to tweak a little bit our Unix user’s profile. This is done (on OS X and Linux), in the &lt;code&gt;~/.bash_profile&lt;/code&gt; text file (&lt;code&gt;~&lt;/code&gt; stands for the user’s home directory).&lt;/p&gt;
-
-&lt;p&gt;We’ll come back to the details of that later, but for now, just download the files &lt;a href=&quot;https://raw.githubusercontent.com/nicolashery/mac-dev-setup/master/.bash_profile&quot;&gt;.bash_profile&lt;/a&gt;, &lt;a href=&quot;https://raw.githubusercontent.com/nicolashery/mac-dev-setup/master/.bash_prompt&quot;&gt;.bash_prompt&lt;/a&gt;, &lt;a href=&quot;https://raw.githubusercontent.com/nicolashery/mac-dev-setup/master/.aliases&quot;&gt;.aliases&lt;/a&gt; into your home directory:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-bash&quot;&gt;$ cd ~
-$ curl -O https://raw.githubusercontent.com/nicolashery/mac-dev-setup/master/.bash_profile
-$ curl -O https://raw.githubusercontent.com/nicolashery/mac-dev-setup/master/.bash_prompt
-$ curl -O https://raw.githubusercontent.com/nicolashery/mac-dev-setup/master/.aliases
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;With that, open a new terminal tab (Cmd+T) and see the change! Try the list commands: &lt;code&gt;ls&lt;/code&gt;, &lt;code&gt;ls -lh&lt;/code&gt; (aliased to &lt;code&gt;ll&lt;/code&gt;), &lt;code&gt;ls -lha&lt;/code&gt; (aliased to &lt;code&gt;la&lt;/code&gt;).&lt;/p&gt;
-
-&lt;p&gt;At this point you can also change your computer’s name, which shows up in this terminal prompt. If you want to do so, go to &lt;strong&gt;System Preferences &amp;gt; Sharing&lt;/strong&gt;. For example, I changed mine from “Renyuan’s MacBook Pro” to just “big-house”, so it shows up as “big-house” in the terminal.&lt;/p&gt;
-
-&lt;p&gt;Now we have a terminal we can work with!&lt;/p&gt;
-
-&lt;p&gt;(Thanks to Nicolas Hery for his &lt;a href=&quot;https://github.com/nicolashery/mac-dev-setup&quot;&gt;setup document&lt;/a&gt;)&lt;/p&gt;
-</description>
-        <pubDate>Thu, 30 Apr 2015 03:32:27 +0800</pubDate>
-        <link>http://javictory.info/mac/2015/04/30/customizing-your-iterm2.html</link>
-        <guid isPermaLink="true">http://javictory.info/mac/2015/04/30/customizing-your-iterm2.html</guid>
-        
-        <category>terminal</category>
-        
-        <category>iTerm2</category>
-        
-        <category>OS X</category>
-        
-        
-        <category>MAC</category>
-        
-      </item>
-    
-      <item>
-        <title>Welcome to Jekyll!</title>
-        <description>&lt;p&gt;You’ll find this post in your &lt;code&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
-
-&lt;p&gt;To add new posts, simply add a file in the &lt;code&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
-
-&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;def print_hi(name)
-  puts &amp;quot;Hi, #{name}&amp;quot;
-end
-print_hi(&amp;#39;Tom&amp;#39;)
-#=&amp;gt; prints &amp;#39;Hi, Tom&amp;#39; to STDOUT.&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Check out the &lt;a href=&quot;http://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;
-
-</description>
-        <pubDate>Sun, 01 Mar 2015 15:30:45 +0800</pubDate>
-        <link>http://javictory.info/jekyll/update/2015/03/01/chinesetest.html</link>
-        <guid isPermaLink="true">http://javictory.info/jekyll/update/2015/03/01/chinesetest.html</guid>
+        <pubDate>Sat, 05 Mar 2016 15:30:45 +0800</pubDate>
+        <link>http://javictory.info/jekyll/update/2016/03/05/welcome-to-jekyll.html</link>
+        <guid isPermaLink="true">http://javictory.info/jekyll/update/2016/03/05/welcome-to-jekyll.html</guid>
         
         
         <category>jekyll</category>
