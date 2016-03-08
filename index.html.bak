@@ -100,6 +100,14 @@
   <ul class="post-list">
     
       <li>
+        <span class="post-meta">May 1, 2015</span>
+
+        <h2>
+          <a class="post-link" href="/jekyll/update/2015/05/01/welcome-to-jekyll.html">测试!</a>
+        </h2>
+      </li>
+    
+      <li>
         <span class="post-meta">Apr 30, 2015</span>
 
         <h2>
@@ -111,7 +119,7 @@
         <span class="post-meta">Mar 1, 2015</span>
 
         <h2>
-          <a class="post-link" href="/jekyll/update/2015/03/01/welcome-to-jekyll.html">Welcome to Jekyll!</a>
+          <a class="post-link" href="/jekyll/update/2015/03/01/chinesetest.html">Welcome to Jekyll!</a>
         </h2>
       </li>
     
