@@ -108,10 +108,18 @@
       </li>
     
       <li>
-        <span class="post-meta">Mar 5, 2016</span>
+        <span class="post-meta">Mar 8, 2016</span>
 
         <h2>
-          <a class="post-link" href="/jekyll/update/2016/03/05/welcome-to-jekyll.html">测试!</a>
+          <a class="post-link" href="/c++/base/2016/03/08/C++-learning.html">C++ 基础</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">Mar 1, 2016</span>
+
+        <h2>
+          <a class="post-link" href="/jekyll/update/2016/03/01/welcome-to-jekyll.html">Welcome to Jekyll!</a>
         </h2>
       </li>
     

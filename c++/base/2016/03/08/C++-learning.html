@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>C++ 基础</title>
+  <meta name="description" content="基本语法1、全局变量个局部变量  如下面的这一串代码">
+
+  <!-- CSS files -->
+  <link rel="stylesheet" href="http://javictory.info/css/font-awesome.min.css">
+  <link rel="stylesheet" href="http://javictory.info/css/main.css">
+
+  <link rel="canonical" href="http://javictory.info/c++/base/2016/03/08/C++-learning.html">
+  <link rel="alternate" type="application/rss+xml" title="Javicroty's Blog" href="http://javictory.info /feed.xml " />
+
+  <!-- Icons -->
+  <!-- 16x16 -->
+  <link rel="shortcut icon" href="http://javictory.info/favicon.ico">
+  <!-- 32x32 -->
+  <link rel="shortcut icon" href="http://javictory.info/favicon.png">
+</head>
+
+
+<body>
+  <div class="row">
+    <div class="col s12 m3">
+      <div class="table cover">
+        
+
+<div class="cover-card table-cell table-bottom">
+  
+  <img src="http://javictory.info/img/horse.jpg" alt="" class="avatar">
+  
+  <a href="http://javictory.info/" class="author_name">Javictory</a>
+  <span class="author_job">Soft Engineer</span>
+  <span class="author_bio mbm">Stay hungry. Stay foolish.<nbsp/> <br/>--Steve Jobs.</span>
+  <nav class="nav">
+    <ul class="nav-list">
+       
+      <li class="nav-item">
+        <a href="http://javictory.info/about/">About</a>
+        <span>||</span>
+      </li>
+        
+      <li class="nav-item">
+        <a href="http://javictory.info/archive/">Archive</a>
+        <span>||</span>
+      </li>
+          
+      <li class="nav-item">
+        <a href="http://javictory.info/categories/">Categories</a>
+        <span>||</span>
+      </li>
+                
+      <li class="nav-item">
+        <a href="http://javictory.info/tags/">Tags</a>
+      </li>
+       
+    </ul>
+  </nav>
+  <div class="social-links">
+  <ul>
+    <li><a href="mailto:javictory@163.com" class="social-link-item" target="_blank"><i class="fa fa-fw fa-envelope"></i></a></li>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  </ul>
+</div>
+
+</div>
+
+      </div>
+    </div>
+    <div class="col s12 m9">
+      <div class="post-listing">
+        <div class="back-home">
+  <a href="http://javictory.info/">< back Home.</a>
+</div>
+
+
+
+<div id="post">
+  <header class="post-header">
+    <h1 title="C++ 基础">C++ 基础</h1>
+    <span class="post-meta">
+      <span class="post-date">
+        8 MAR 2016
+      </span>
+      •
+      <span class="read-time" title="Estimated read time">
+  
+  
+    1 min read
+  
+</span>
+
+    </span>
+
+  </header>
+
+  <article class="post-content">
+    <p>基本语法
+1、全局变量个局部变量
+  如下面的这一串代码</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby">#include &lt;iostream&gt;
+
+  #include &lt;stdlib.h&gt;
+
+  using namespace std;
+  
+  int vac=3;
+
+  int main(){
+
+  	int vac=10;
+  	::vac++;
+  	cout&lt;&lt;::vac&lt;&lt;endl;
+  	cout&lt;&lt;vac&lt;&lt;endl;
+  	system(&quot;pause&quot;);
+  	return 0 ;
+  }</code></pre></figure>
+
+<p>其中，有几个地方需要做一下说明：</p>
+
+<p>(1)在调试的时候，想要让弹出console的时候停止 需要添加system(“pause”)，方便进行观看。</p>
+
+<p>(2)::是域操作符，::前面可以是 类名，命名空间名 来限定 ::后面的内容从哪里读取，在这里如果 ::前面没有域名 那么就是全局；：：vac代表的即是全局变量。</p>
+
+<p>(3)而在main函数里面定义的 vac函数则是局部变量。</p>
+
+<p>2、变量初始化</p>
+
+<p>形式：<变量名>(表达式)</变量名></p>
+
+<p>例如：int a(4); //与C语言中的int a=4;是等价的。</p>
+
+<p>3、C++符号常量 const</p>
+
+<p>C++有符号常量而C中是没有的</p>
+
+<p>C++的格式： const <类型><符号常量>=值;</符号常量></类型></p>
+
+<pre><code>例如 ：const float PI=3.1415926; // C为 #define PI 3.1415926;
+</code></pre>
+
+<p>(1)与C相比，用const定义的符号常量具有数据类型，而且作用域可以是局部的。</p>
+
+<p>(2)const 可以是参数指针不被改变</p>
+
+<pre><code> 例如： int sum(const int *a);    (3)调用时，不想改变引用变量a的值
+
+ 例如： void f(const int &amp;a,int b){...}
+</code></pre>
+
+<p>4、自增判断</p>
+
+<p>#include <iostream></iostream></p>
+
+<p>using namespace std;</p>
+
+<p>#define product(x) (x*x);</p>
+
+<p>int main(){</p>
+
+<pre><code>int i=3,j,k;
+
+j=product(i++);//此处的表达式为(i++)*(i++)，运行结束后，i==5；
+
+k=product(++i);//此处的表达式为(++i)*(++i),在得到运算结果之前，i==7
+
+cout&lt;&lt;"j="&lt;&lt;j&lt;&lt;"k="&lt;&lt;k&lt;&lt;endl;
+
+system("pause");
+
+return 0; }
+</code></pre>
+
+<p>5、在VC++ 编写dll时应当注意在.c文件和在.CPP文件下的区别。      <br />
+   在.cpp文件下无论是动态链接库的创建还是调用，都要声明一下extern “C” ；</p>
+
+<p>6、在C中是没有string类型的，因此都是用字符数组进行
+   字符数组也没有办法直接进行字符串的赋值
+   只有在初始化的时候可以直接进行赋值</p>
+
+  </article>
+</div>
+
+<div class="share-buttons">
+  <h6>Share on: </h6>
+  <ul>
+    <li>
+      <a href="https://twitter.com/intent/tweet?text=http://javictory.info/c++/base/2016/03/08/C++-learning.html" class="twitter btn" title="Share on Twitter"><i class="fa fa-twitter"></i><span> Twitter</span></a>
+    </li>
+    <li>
+      <a href="https://www.facebook.com/sharer/sharer.php?u=http://javictory.info/c++/base/2016/03/08/C++-learning.html" class="facebook btn" title="Share on Facebook"><i class="fa fa-facebook"></i><span> Facebook</span></a>
+    </li>
+    <li>
+      <a href="https://plus.google.com/share?url=http://javictory.info/c++/base/2016/03/08/C++-learning.html" class="google-plus btn" title="Share on Google Plus"><i class="fa fa-google-plus"></i><span> Google+</span></a>
+    </li>
+    <li>
+      <a href="https://news.ycombinator.com/submitlink?u=http://javictory.info/c++/base/2016/03/08/C++-learning.html" class="hacker-news btn" title="Share on Hacker News"><i class="fa fa-hacker-news"></i><span> Hacker News</span></a>
+    </li>
+    <li>
+      <a href="https://www.reddit.com/submit?url=http://javictory.info/c++/base/2016/03/08/C++-learning.html" class="reddit btn" title="Share on Reddit"><i class="fa fa-reddit"></i><span> Reddit</span></a>
+    </li>
+  </ul>
+</div><!-- end share-buttons -->
+
+
+
+
+        <footer>
+  &copy; 2016 Javictory. Powered by <a href="http://jekyllrb.com/">jekyll</a>, <a href="https://github.com/javictory/">javictory theme</a> made with <i class="fa fa-heart heart-icon"></i>
+</footer>
+
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="http://javictory.info/js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="http://javictory.info/js/main.js"></script>
+
+
+</body>
+</html>

@@ -6,8 +6,8 @@
 </description>
     <link>http://javictory.info/</link>
     <atom:link href="http://javictory.info/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 08 Mar 2016 18:56:18 +0800</pubDate>
-    <lastBuildDate>Tue, 08 Mar 2016 18:56:18 +0800</lastBuildDate>
+    <pubDate>Tue, 08 Mar 2016 19:28:19 +0800</pubDate>
+    <lastBuildDate>Tue, 08 Mar 2016 19:28:19 +0800</lastBuildDate>
     <generator>Jekyll v3.1.1</generator>
     
       <item>
@@ -25,9 +25,105 @@
       </item>
     
       <item>
-        <title>测试!</title>
-        <description>&lt;p&gt;&lt;img src=&quot;http://javictory.info/img/preview.png&quot; alt=&quot;Preview&quot; /&gt;
-You’ll find this post in your &lt;code&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+        <title>C++ 基础</title>
+        <description>&lt;p&gt;基本语法
+1、全局变量个局部变量
+  如下面的这一串代码&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;#include &amp;lt;iostream&amp;gt;
+
+  #include &amp;lt;stdlib.h&amp;gt;
+
+  using namespace std;
+  
+  int vac=3;
+
+  int main(){
+
+  	int vac=10;
+  	::vac++;
+  	cout&amp;lt;&amp;lt;::vac&amp;lt;&amp;lt;endl;
+  	cout&amp;lt;&amp;lt;vac&amp;lt;&amp;lt;endl;
+  	system(&amp;quot;pause&amp;quot;);
+  	return 0 ;
+  }&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;其中，有几个地方需要做一下说明：&lt;/p&gt;
+
+&lt;p&gt;(1)在调试的时候，想要让弹出console的时候停止 需要添加system(“pause”)，方便进行观看。&lt;/p&gt;
+
+&lt;p&gt;(2)::是域操作符，::前面可以是 类名，命名空间名 来限定 ::后面的内容从哪里读取，在这里如果 ::前面没有域名 那么就是全局；：：vac代表的即是全局变量。&lt;/p&gt;
+
+&lt;p&gt;(3)而在main函数里面定义的 vac函数则是局部变量。&lt;/p&gt;
+
+&lt;p&gt;2、变量初始化&lt;/p&gt;
+
+&lt;p&gt;形式：&lt;变量名&gt;(表达式)&lt;/变量名&gt;&lt;/p&gt;
+
+&lt;p&gt;例如：int a(4); //与C语言中的int a=4;是等价的。&lt;/p&gt;
+
+&lt;p&gt;3、C++符号常量 const&lt;/p&gt;
+
+&lt;p&gt;C++有符号常量而C中是没有的&lt;/p&gt;
+
+&lt;p&gt;C++的格式： const &lt;类型&gt;&lt;符号常量&gt;=值;&lt;/符号常量&gt;&lt;/类型&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;例如 ：const float PI=3.1415926; // C为 #define PI 3.1415926;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;(1)与C相比，用const定义的符号常量具有数据类型，而且作用域可以是局部的。&lt;/p&gt;
+
+&lt;p&gt;(2)const 可以是参数指针不被改变&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt; 例如： int sum(const int *a);    (3)调用时，不想改变引用变量a的值
+
+ 例如： void f(const int &amp;amp;a,int b){...}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;4、自增判断&lt;/p&gt;
+
+&lt;p&gt;#include &lt;iostream&gt;&lt;/iostream&gt;&lt;/p&gt;
+
+&lt;p&gt;using namespace std;&lt;/p&gt;
+
+&lt;p&gt;#define product(x) (x*x);&lt;/p&gt;
+
+&lt;p&gt;int main(){&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;int i=3,j,k;
+
+j=product(i++);//此处的表达式为(i++)*(i++)，运行结束后，i==5；
+
+k=product(++i);//此处的表达式为(++i)*(++i),在得到运算结果之前，i==7
+
+cout&amp;lt;&amp;lt;&quot;j=&quot;&amp;lt;&amp;lt;j&amp;lt;&amp;lt;&quot;k=&quot;&amp;lt;&amp;lt;k&amp;lt;&amp;lt;endl;
+
+system(&quot;pause&quot;);
+
+return 0; }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;5、在VC++ 编写dll时应当注意在.c文件和在.CPP文件下的区别。      &lt;br /&gt;
+   在.cpp文件下无论是动态链接库的创建还是调用，都要声明一下extern “C” ；&lt;/p&gt;
+
+&lt;p&gt;6、在C中是没有string类型的，因此都是用字符数组进行
+   字符数组也没有办法直接进行字符串的赋值
+   只有在初始化的时候可以直接进行赋值&lt;/p&gt;
+</description>
+        <pubDate>Tue, 08 Mar 2016 15:30:45 +0800</pubDate>
+        <link>http://javictory.info/c++/base/2016/03/08/C++-learning.html</link>
+        <guid isPermaLink="true">http://javictory.info/c++/base/2016/03/08/C++-learning.html</guid>
+        
+        
+        <category>C++</category>
+        
+        <category>base</category>
+        
+      </item>
+    
+      <item>
+        <title>Welcome to Jekyll!</title>
+        <description>&lt;p&gt;You’ll find this post in your &lt;code&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
 
 &lt;p&gt;To add new posts, simply add a file in the &lt;code&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
 
@@ -42,9 +138,9 @@ print_hi(&amp;#39;Tom&amp;#39;)
 &lt;p&gt;Check out the &lt;a href=&quot;http://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;
 
 </description>
-        <pubDate>Sat, 05 Mar 2016 15:30:45 +0800</pubDate>
-        <link>http://javictory.info/jekyll/update/2016/03/05/welcome-to-jekyll.html</link>
-        <guid isPermaLink="true">http://javictory.info/jekyll/update/2016/03/05/welcome-to-jekyll.html</guid>
+        <pubDate>Tue, 01 Mar 2016 15:30:45 +0800</pubDate>
+        <link>http://javictory.info/jekyll/update/2016/03/01/welcome-to-jekyll.html</link>
+        <guid isPermaLink="true">http://javictory.info/jekyll/update/2016/03/01/welcome-to-jekyll.html</guid>
         
         
         <category>jekyll</category>
