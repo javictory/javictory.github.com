@@ -6,8 +6,8 @@
 </description>
     <link>http://javictory.info/</link>
     <atom:link href="http://javictory.info/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 08 Mar 2016 22:32:07 +0800</pubDate>
-    <lastBuildDate>Tue, 08 Mar 2016 22:32:07 +0800</lastBuildDate>
+    <pubDate>Tue, 08 Mar 2016 22:33:53 +0800</pubDate>
+    <lastBuildDate>Tue, 08 Mar 2016 22:33:53 +0800</lastBuildDate>
     <generator>Jekyll v3.1.1</generator>
     
       <item>
@@ -60,14 +60,14 @@ Struct  A
 	char   c; //1byte  
 	double d; //8byte  
 	short s;  //2byte  
-  		int   i;  //4byte  
+	int   i;  //4byte  
 };  
 
 int main(int argc, char* argv[]) 
 { 
-   		A  strua;
+	A  strua;
 	printf(&quot;%len:d\n&quot;,sizeof(A));     
-  		printf(&quot;%d,%d,%d,%d&quot;,&amp;amp;strua.c,&amp;amp;strua.d,&amp;amp;strua.s,&amp;amp;strua.i);  
+	printf(&quot;%d,%d,%d,%d&quot;,&amp;amp;strua.c,&amp;amp;strua.d,&amp;amp;strua.s,&amp;amp;strua.i);  
 	return 0;  
 }  
 &lt;/code&gt;&lt;/pre&gt;
