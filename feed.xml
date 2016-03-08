@@ -6,8 +6,8 @@
 </description>
     <link>http://javictory.info/</link>
     <atom:link href="http://javictory.info/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 08 Mar 2016 22:28:28 +0800</pubDate>
-    <lastBuildDate>Tue, 08 Mar 2016 22:28:28 +0800</lastBuildDate>
+    <pubDate>Tue, 08 Mar 2016 22:32:07 +0800</pubDate>
+    <lastBuildDate>Tue, 08 Mar 2016 22:32:07 +0800</lastBuildDate>
     <generator>Jekyll v3.1.1</generator>
     
       <item>
@@ -76,7 +76,7 @@ int main(int argc, char* argv[])
 
 &lt;p&gt;1245032,1245040,1245048,1245052 内存中成员分布如下：&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;../img/img_append/C++VS2008-1.png&quot; alt=&quot;Preview&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://javictory.info/img/img_append/C++VS2008-1.png&quot; alt=&quot;Preview&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;2、用 devenv.exe /resetuserdata 恢复Visual Studio 初始状态&lt;/p&gt;
 </description>
