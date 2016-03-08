@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="http://javictory.info/css/font-awesome.min.css">
   <link rel="stylesheet" href="http://javictory.info/css/main.css">
 
-  <link rel="canonical" href="http://javictory.info/page2/">
+  <link rel="canonical" href="http://javictory.info/.bak">
   <link rel="alternate" type="application/rss+xml" title="Javicroty's Blog" href="http://javictory.info /feed.xml " />
 
   <!-- Icons -->
@@ -43,7 +43,22 @@
         <a href="http://javictory.info/about/">About</a>
         <span>/</span>
       </li>
-                   
+        
+      <li class="nav-item">
+        <a href="http://javictory.info/archive/">Archive</a>
+        <span>/</span>
+      </li>
+          
+      <li class="nav-item">
+        <a href="http://javictory.info/categories/">Categories</a>
+        <span>/</span>
+      </li>
+                  
+      <li class="nav-item">
+        <a href="http://javictory.info/tags/">Tags</a>
+        <span>/</span>
+      </li>
+         
     </ul>
   </nav>
   <div class="social-links">
