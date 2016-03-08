@@ -1434,7 +1434,7 @@ pre code {
   text-align: center;
   width: 100%;
   min-height: 400px;
-  padding: 300px 15px 20px;
+  padding: 30px 15px 20px;
   z-index: 1; }
   @media only screen and (min-width: 600px) {
     .cover {
@@ -1442,7 +1442,7 @@ pre code {
       padding: 30px; } }
   @media only screen and (min-width: 992px) {
     .cover {
-      height: 100vh;
+      height: 10vh;
       position: initial;
       width: 100%; } }
 
