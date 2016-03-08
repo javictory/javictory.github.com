@@ -1496,7 +1496,7 @@ pre code {
   .nav-list .nav-item {
     display: inline-block;
     *display: inline;
-    zoom: 1; }
+    zoom: 1.5; }
     .nav-list .nav-item a {
       margin-top: 1em;
       text-transform: lowercase;
