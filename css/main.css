@@ -1496,11 +1496,11 @@ pre code {
   .nav-list .nav-item {
     display: inline-block;
     *display: inline;
-    zoom: 1; }
+    zoom: 2; }
     .nav-list .nav-item a {
       margin-top: 1em;
       text-transform: lowercase;
-      font-size: 85%;
+      font-size: 100%;
       color: #8d7edc; }
       .nav-list .nav-item a:hover, .nav-list .nav-item a:focus {
         color: #bfb6eb; }
