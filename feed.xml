@@ -6,8 +6,8 @@
 </description>
     <link>http://javictory.info/</link>
     <atom:link href="http://javictory.info/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 08 Mar 2016 22:54:36 +0800</pubDate>
-    <lastBuildDate>Tue, 08 Mar 2016 22:54:36 +0800</lastBuildDate>
+    <pubDate>Tue, 08 Mar 2016 22:57:00 +0800</pubDate>
+    <lastBuildDate>Tue, 08 Mar 2016 22:57:00 +0800</lastBuildDate>
     <generator>Jekyll v3.1.1</generator>
     
       <item>
@@ -47,9 +47,7 @@
     
       <item>
         <title>VC++ 6.0 编译器相关设置</title>
-        <description>&lt;h1 id=&quot;vc-60-&quot;&gt;VC++ 6.0 编译器相关设置&lt;/h1&gt;
-
-&lt;p&gt;1、结构体中所有成员的对齐参数N的最大值称为结构体的对齐参数。 &lt;/p&gt;
+        <description>&lt;p&gt;1、结构体中所有成员的对齐参数N的最大值称为结构体的对齐参数。 &lt;/p&gt;
 
 &lt;p&gt;VC++6.0中n 默认是8个字节，可以修改这个设定的对齐参数；&lt;/p&gt;
 
