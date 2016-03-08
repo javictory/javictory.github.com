@@ -6,23 +6,9 @@
 </description>
     <link>http://javictory.info/</link>
     <atom:link href="http://javictory.info/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 08 Mar 2016 22:33:53 +0800</pubDate>
-    <lastBuildDate>Tue, 08 Mar 2016 22:33:53 +0800</lastBuildDate>
+    <pubDate>Tue, 08 Mar 2016 22:37:47 +0800</pubDate>
+    <lastBuildDate>Tue, 08 Mar 2016 22:37:47 +0800</lastBuildDate>
     <generator>Jekyll v3.1.1</generator>
-    
-      <item>
-        <title>序言</title>
-        <description>&lt;p&gt;不知不觉毕业都快三年了，却总感觉自己到目前为止一事无成，徒增遗憾。然昨日不可追，未来亦不可知。所求之事，但求今日无悔。&lt;/p&gt;
-
-</description>
-        <pubDate>Tue, 08 Mar 2016 15:30:45 +0800</pubDate>
-        <link>http://javictory.info/notebook/2016/03/08/pretell.html</link>
-        <guid isPermaLink="true">http://javictory.info/notebook/2016/03/08/pretell.html</guid>
-        
-        
-        <category>notebook</category>
-        
-      </item>
     
       <item>
         <title>VC++ 6.0 编译器相关设置</title>
@@ -311,13 +297,25 @@ print_hi(&amp;#39;Tom&amp;#39;)
 
 </description>
         <pubDate>Tue, 01 Mar 2016 15:30:45 +0800</pubDate>
-        <link>http://javictory.info/jekyll/update/2016/03/01/welcome-to-jekyll.html</link>
-        <guid isPermaLink="true">http://javictory.info/jekyll/update/2016/03/01/welcome-to-jekyll.html</guid>
+        <link>http://javictory.info/jekyll/2016/03/01/welcome-to-jekyll.html</link>
+        <guid isPermaLink="true">http://javictory.info/jekyll/2016/03/01/welcome-to-jekyll.html</guid>
         
         
         <category>jekyll</category>
         
-        <category>update</category>
+      </item>
+    
+      <item>
+        <title>序言</title>
+        <description>&lt;p&gt;不知不觉毕业都快三年了，却总感觉自己到目前为止一事无成，徒增遗憾。然昨日不可追，未来亦不可知。所求之事，但求今日无悔。&lt;/p&gt;
+
+</description>
+        <pubDate>Tue, 01 Mar 2016 15:30:45 +0800</pubDate>
+        <link>http://javictory.info/notebook/2016/03/01/pretell.html</link>
+        <guid isPermaLink="true">http://javictory.info/notebook/2016/03/01/pretell.html</guid>
+        
+        
+        <category>notebook</category>
         
       </item>
     
