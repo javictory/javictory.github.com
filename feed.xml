@@ -6,9 +6,46 @@
 </description>
     <link>http://javictory.info/</link>
     <atom:link href="http://javictory.info/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 08 Mar 2016 22:37:47 +0800</pubDate>
-    <lastBuildDate>Tue, 08 Mar 2016 22:37:47 +0800</lastBuildDate>
+    <pubDate>Tue, 08 Mar 2016 22:48:02 +0800</pubDate>
+    <lastBuildDate>Tue, 08 Mar 2016 22:48:02 +0800</lastBuildDate>
     <generator>Jekyll v3.1.1</generator>
+    
+      <item>
+        <title>常见字符集区别：</title>
+        <description>&lt;h1 id=&quot;windows&quot;&gt;Windows下常见字符集区别&lt;/h1&gt;
+
+&lt;p&gt;1、LPTSTR、LPCSTR、LPCTSTR、LPSTR的意义：&lt;/p&gt;
+
+&lt;p&gt;(1) LPSTR：32bit指针 指向一个字符串，每个字符占1字节；&lt;/p&gt;
+
+&lt;p&gt;(2) LPCSTR：32-bit指针 指向一个常字符串，每个字符占1字节；&lt;/p&gt;
+
+&lt;p&gt;(3) LPCTSTR：32-bit指针 指向一个常字符串,每字符可能占1字节或2字节，取决于Unicode是否定义，T表示在Win32环境中， 有一个_T宏；&lt;/p&gt;
+
+&lt;p&gt;(4) LPTSTR：32-bit指针 每字符可能占1字节或2字节，取决于Unicode是否定义。&lt;/p&gt;
+
+&lt;p&gt;2、Multi-Byte Character Set：&lt;/p&gt;
+
+&lt;p&gt;MBCS，它是多字节字符集，它是不定长表示世界文字的编码。&lt;/p&gt;
+
+&lt;p&gt;MBCS表示英文字母时就和ASCII一样（这也是我们容易把MBCS和ASCII搞混的原因），但表示其他文字时就需要用多字节。&lt;/p&gt;
+
+&lt;p&gt;WINDOWS下面的程序设计可以支持MBCS和UNICODE两种编码的字符串，具体用那种就看你定义了MBCS宏还是UNICODE宏。&lt;/p&gt;
+
+&lt;p&gt;MBCS宏对应的字符串指针是char* 也就是LPSTR；&lt;/p&gt;
+
+&lt;p&gt;UNICODE对应的指针是unsigned  short* 也就是LPWSTR；&lt;/p&gt;
+
+&lt;p&gt;为了写程序方便，微软定义了类型LPTSTR，在MBCS下他就是char* ,   在UNICODE下它是unsigned   char* ,这样你就可以重定义一个宏进行不同字符集的转换了。&lt;/p&gt;
+</description>
+        <pubDate>Tue, 08 Mar 2016 15:30:45 +0800</pubDate>
+        <link>http://javictory.info/windows/2016/03/08/win-common-charset.html</link>
+        <guid isPermaLink="true">http://javictory.info/windows/2016/03/08/win-common-charset.html</guid>
+        
+        
+        <category>Windows</category>
+        
+      </item>
     
       <item>
         <title>VC++ 6.0 编译器相关设置</title>
