@@ -6,8 +6,8 @@
 </description>
     <link>http://javictory.info/</link>
     <atom:link href="http://javictory.info/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 08 Mar 2016 19:31:53 +0800</pubDate>
-    <lastBuildDate>Tue, 08 Mar 2016 19:31:53 +0800</lastBuildDate>
+    <pubDate>Tue, 08 Mar 2016 22:28:28 +0800</pubDate>
+    <lastBuildDate>Tue, 08 Mar 2016 22:28:28 +0800</lastBuildDate>
     <generator>Jekyll v3.1.1</generator>
     
       <item>
@@ -21,6 +21,166 @@
         
         
         <category>notebook</category>
+        
+      </item>
+    
+      <item>
+        <title>VC++ 6.0 编译器相关设置</title>
+        <description>&lt;h1 id=&quot;vc-60-&quot;&gt;VC++ 6.0 编译器相关设置&lt;/h1&gt;
+
+&lt;p&gt;1、结构体中所有成员的对齐参数N的最大值称为结构体的对齐参数。 &lt;/p&gt;
+
+&lt;p&gt;VC++6.0中n 默认是8个字节，可以修改这个设定的对齐参数；&lt;/p&gt;
+
+&lt;p&gt;(1)方法一：&lt;/p&gt;
+
+&lt;p&gt;在菜单“工程”的“设置”中的“C/C++”选项卡的“分类”中， “Code Generation ”的“Struct member alignment” 中设置：&lt;/p&gt;
+
+&lt;p&gt;1byte、2byte、4byte、8byte、16byte等几种，默认为8byte。&lt;/p&gt;
+
+&lt;p&gt;(2)方法二：&lt;/p&gt;
+
+&lt;p&gt;可以程序控制，采用指令：
+		#pragma   pack(xx)控制&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt; 例如：
+	#pragma   pack(1),1字节对齐，
+	#pragma   pack(4)，4字节对齐，
+	#pragma   pack(16)，16字节对齐   
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;接下来我们将分不同的情况来详细讨论结构体成员的分布情况，顺便提醒一下， 常见类型的长度：&lt;/p&gt;
+
+&lt;p&gt;Int 4byte, Short 2byte, Char 1byte, Double 8byte, Long 4byte ；  &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;让我们先看下例： 
+
+Struct  A 
+{
+	char   c; //1byte  
+	double d; //8byte  
+	short s;  //2byte  
+  		int   i;  //4byte  
+};  
+
+int main(int argc, char* argv[]) 
+{ 
+   		A  strua;
+	printf(&quot;%len:d\n&quot;,sizeof(A));     
+  		printf(&quot;%d,%d,%d,%d&quot;,&amp;amp;strua.c,&amp;amp;strua.d,&amp;amp;strua.s,&amp;amp;strua.i);  
+	return 0;  
+}  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;n设置为8byte时 结果：len:24, &lt;/p&gt;
+
+&lt;p&gt;1245032,1245040,1245048,1245052 内存中成员分布如下：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../img/img_append/C++VS2008-1.png&quot; alt=&quot;Preview&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;2、用 devenv.exe /resetuserdata 恢复Visual Studio 初始状态&lt;/p&gt;
+</description>
+        <pubDate>Tue, 08 Mar 2016 15:30:45 +0800</pubDate>
+        <link>http://javictory.info/c++/2016/03/08/C++-VS2008.html</link>
+        <guid isPermaLink="true">http://javictory.info/c++/2016/03/08/C++-VS2008.html</guid>
+        
+        
+        <category>C++</category>
+        
+      </item>
+    
+      <item>
+        <title>VC++中动静态链接库的调用</title>
+        <description>&lt;h1 id=&quot;vc&quot;&gt;VC++中动静态链接库的调用&lt;/h1&gt;
+
+&lt;p&gt;1、动态链接库在调用时要注意:&lt;/p&gt;
+
+&lt;p&gt;格式为hdll=LoadLibrary（“DLL地址”）；&lt;/p&gt;
+
+&lt;p&gt;这里字符串类型是LPSTR，当VS中工程属性设置是unicode字符集的时候会提示错误，
+   因此要在配置-Property-General-&amp;gt;Character Set 里面把默认字符集“unicode”改成支持多字符扩展或者notset即可。&lt;/p&gt;
+
+&lt;p&gt;2、动态链接库DLL的调用分为动态调用和静态调用&lt;/p&gt;
+
+&lt;p&gt;(1)DLL的静态调用&lt;/p&gt;
+
+&lt;p&gt;在程序中要静态调用一个dll文件，一般会有下面这么一句 ：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;#pragma comment(lib, &quot;dll2.lib&quot;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;当然这不是必须的，也可以通过工程 设置 链接 添加这个lib。&lt;/p&gt;
+
+&lt;p&gt;意思是要把dll2.lib这个文件的信息编译到exe这个程序当中的，所以你必须把你的dll2.lib和dll2.dll都得放入exe所在的文件夹；&lt;/p&gt;
+
+&lt;p&gt;dll2.lib是用于编译的时候用的，  dll2.dll是当exe文件执行的时候用的；&lt;/p&gt;
+
+&lt;p&gt;当编译好了以后 这个dll2.lib文件就没有用了 ，因为它的信息已经编译到exe中了；&lt;/p&gt;
+
+&lt;p&gt;所以当你发布的时候 就可以把这个dll2.lib删除了，只留下dll2.dll就可以了。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;例如：
+
+#include &amp;lt;iostream&amp;gt;
+#pragma comment(lib,&quot;Mydll2.lib&quot;)
+extern &quot;C&quot; __declspec(dllimport) int add(int x,int y);
+int main(int argc, char* argv[])
+{
+	int result = add(2,3);
+	printf(&quot;%d&quot;,result);
+	getchar();
+	return 0;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;(2)DLL的动态调用：&lt;/p&gt;
+
+&lt;p&gt;只需要dll就可以了，和lib一点关系都没有。&lt;/p&gt;
+
+&lt;p&gt;可以用Extern，也可以用.def文件导出函数接口，供外部工程调用。&lt;/p&gt;
+
+&lt;p&gt;动态链接库在调用时要注意： &lt;/p&gt;
+
+&lt;p&gt;格式为hdll=LoadLibrary（“DLL地址”）；&lt;/p&gt;
+
+&lt;p&gt;这里字符串类型是LPSTR，不是unicode字符，
+   因此要配置 -Property-General-&amp;gt;Character Set 里面把默认字符集“unicode”改成支持多字符扩展或者notset即可。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;例如：
+
+#include &amp;lt;stdio.h&amp;gt;
+#include &amp;lt;windows.h&amp;gt; 
+typedef int(*lpAddFun)(int , int);
+
+int main(int argc, char* argv[])
+{
+	HINSTANCE hDll;
+	lpAddFun addFun;
+	hDll = LoadLibrary(&quot;Mydll2.dll&quot;);
+	if (hDll != NULL)
+	{
+		addFun = (lpAddFun)GetProcAddress(hDll, &quot;add&quot;);
+		if (addFun != NULL)
+		{
+			int result = addFun(2, 3);
+			printf(&quot;%d&quot;, result);
+	   	 	getchar();
+		}
+		FreeLibrary(hDll);
+	}
+   	 	getchar();
+	return 0;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;3、DLL工程和实际引用工程联调&lt;/p&gt;
+</description>
+        <pubDate>Tue, 08 Mar 2016 15:30:45 +0800</pubDate>
+        <link>http://javictory.info/c++/2016/03/08/C++-DLL.html</link>
+        <guid isPermaLink="true">http://javictory.info/c++/2016/03/08/C++-DLL.html</guid>
+        
+        
+        <category>C++</category>
         
       </item>
     
@@ -111,15 +271,25 @@ return 0; }
 &lt;p&gt;6、在C中是没有string类型的，因此都是用字符数组进行
    字符数组也没有办法直接进行字符串的赋值
    只有在初始化的时候可以直接进行赋值&lt;/p&gt;
+
+&lt;p&gt;7、main函数中参数的意义:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;int main(int argc, char* argv[])
+{
+	return 0;
+}    两个参数是给读入命令行参数的：
+&lt;/code&gt;&lt;/pre&gt;
+
+   	argc表示参数个数，Count;
+
+   	argv[]存放参数，Value;
 </description>
         <pubDate>Tue, 08 Mar 2016 15:30:45 +0800</pubDate>
-        <link>http://javictory.info/c++/base/2016/03/08/C++-learning.html</link>
-        <guid isPermaLink="true">http://javictory.info/c++/base/2016/03/08/C++-learning.html</guid>
+        <link>http://javictory.info/c++/2016/03/08/C++-Basic.html</link>
+        <guid isPermaLink="true">http://javictory.info/c++/2016/03/08/C++-Basic.html</guid>
         
         
         <category>C++</category>
-        
-        <category>base</category>
         
       </item>
     
