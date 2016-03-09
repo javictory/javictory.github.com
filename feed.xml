@@ -6,9 +6,188 @@
 </description>
     <link>http://javictory.info/</link>
     <atom:link href="http://javictory.info/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 08 Mar 2016 23:11:30 +0800</pubDate>
-    <lastBuildDate>Tue, 08 Mar 2016 23:11:30 +0800</lastBuildDate>
+    <pubDate>Wed, 09 Mar 2016 10:19:04 +0800</pubDate>
+    <lastBuildDate>Wed, 09 Mar 2016 10:19:04 +0800</lastBuildDate>
     <generator>Jekyll v3.1.1</generator>
+    
+      <item>
+        <title>Ubuntu 常用快捷键</title>
+        <description>&lt;h1 id=&quot;section&quot;&gt;一、桌面&lt;/h1&gt;
+
+&lt;p&gt;ALT + F1: 聚焦到桌面左侧任务导航栏，可按上下键导航。&lt;/p&gt;
+
+&lt;p&gt;ALT + F2: 运行命令&lt;/p&gt;
+
+&lt;p&gt;ALT + F4: 关闭窗口&lt;/p&gt;
+
+&lt;p&gt;ALT + TAB: 切换程序窗口&lt;/p&gt;
+
+&lt;p&gt;ALT + 空格: 打开窗口菜单&lt;/p&gt;
+
+&lt;p&gt;PRINT: 桌面截图&lt;/p&gt;
+
+&lt;p&gt;SUPER: 打开Dash面板，可搜索或浏览项目，默认有个搜索框，按“下”方向键进入浏览区域（SUPER键指Win键或苹果电脑的Command键）&lt;/p&gt;
+
+&lt;p&gt;在Dash面板中按CTRL + TAB: 切换到下一个子面板（可搜索不同类型项目，如程序、文件、音乐）&lt;/p&gt;
+
+&lt;p&gt;SUPER + A: 搜索或浏览程序（Application）&lt;/p&gt;
+
+&lt;p&gt;SUPER + F: 搜索或浏览文件（File）&lt;/p&gt;
+
+&lt;p&gt;SUPER + M: 搜索或浏览音乐文件（Music）&lt;/p&gt;
+
+&lt;h1 id=&quot;terminal&quot;&gt;二、Terminal终端&lt;/h1&gt;
+
+&lt;p&gt;CTRL + ALT + T: 打开终端&lt;/p&gt;
+
+&lt;p&gt;TAB: 自动补全命令或文件名&lt;/p&gt;
+
+&lt;p&gt;CTRL + SHIFT + V: 粘贴（Linux中不需要复制的动作，文本被选择就自动被复制）&lt;/p&gt;
+
+&lt;p&gt;CTRL + SHIFT + T: 新建标签页&lt;/p&gt;
+
+&lt;p&gt;CTRL + D: 关闭标签页&lt;/p&gt;
+
+&lt;p&gt;CTRL + L: 清除屏幕&lt;/p&gt;
+
+&lt;p&gt;CTRL + R + 文本: 在输入历史中搜索&lt;/p&gt;
+
+&lt;p&gt;CTRL + A: 移动到行首&lt;/p&gt;
+
+&lt;p&gt;CTRL + E: 移动到行末&lt;/p&gt;
+
+&lt;p&gt;CTRL + C: 终止当前任务&lt;/p&gt;
+
+&lt;p&gt;CTRL + Z: 把当前任务放到后台运行（相当于运行命令时后面加&amp;amp;）&lt;/p&gt;
+
+&lt;p&gt;~: 表示用户目录路径&lt;/p&gt;
+
+&lt;h1 id=&quot;nautilus&quot;&gt;三、Nautilus文件管理器&lt;/h1&gt;
+
+&lt;p&gt;启动Nautilus的方法：&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;SUPER + 1，这个方法仅适用于Nautilus在左边快速启动的位置没有改变的情况。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;SUPER + A，然后输入nautilus，然后回车&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;F2: 重命名&lt;/p&gt;
+
+&lt;p&gt;CTRL + 1: 图标视图&lt;/p&gt;
+
+&lt;p&gt;CTRL + 2: 列表视图&lt;/p&gt;
+
+&lt;p&gt;CTRL + T: 新建标签页&lt;/p&gt;
+
+&lt;p&gt;CTRL + W: 关闭标签页&lt;/p&gt;
+
+&lt;p&gt;CTRL + D: 收藏到书签&lt;/p&gt;
+
+&lt;p&gt;CTRL + Q: 退出&lt;/p&gt;
+
+&lt;p&gt;Nautilus还有很多和Firefox一致的快捷键。&lt;/p&gt;
+
+&lt;h1 id=&quot;firefox&quot;&gt;四、Firefox浏览器&lt;/h1&gt;
+&lt;p&gt;进入Firefox的方法：&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;SUPER + A，然后按firefox，回车。这个是在Dash面板中搜索应用程序运行。事实上，只要按fir就能定位到Firefox程序。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;ALT，然后按firefox，回车。这个相当于在命令行运行一条命令。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;在终端中按firefox&amp;amp;，回车。这个适用于以终端作为主要操作窗口的用户，使用TAB键还可以自动补全命令（只需输入前几个字母再按TAB键）。&amp;amp;在shell中是后台运行的意思，这样终端就不会被Firefox独占。&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;CTRL + T: 新建标签页&lt;/p&gt;
+
+&lt;p&gt;CTRL + W: 关闭标签页&lt;/p&gt;
+
+&lt;p&gt;CTRL + SHIFT + T: 重新打开最近关闭的一个标签页&lt;/p&gt;
+
+&lt;p&gt;CTRL + TAB: 切换到下一个标签页&lt;/p&gt;
+
+&lt;p&gt;CTRL + SHIFT + TAB: 切换到上一个标签页&lt;/p&gt;
+
+&lt;p&gt;ALT + [1-8]: 跳到制定标签页&lt;/p&gt;
+
+&lt;p&gt;ALT + 9: 跳到最后一个标签页&lt;/p&gt;
+
+&lt;p&gt;CTRL + L: 跳到地址栏&lt;/p&gt;
+
+&lt;p&gt;ESC: 停止加载当前页面&lt;/p&gt;
+
+&lt;p&gt;CTRL + K: 跳到搜索引擎输入框&lt;/p&gt;
+
+&lt;p&gt;CTRL + F: 在当前页面中搜索&lt;/p&gt;
+
+&lt;p&gt;/: 快速查找。在Linux中很多程序（如VI、Man、Less）都使用/作为搜索的快捷键，并且可使用正则表达式查找。但在Firefox中没有正则表达式搜索的功能。&lt;/p&gt;
+
+&lt;p&gt;CTRL + D: 收藏到书签&lt;/p&gt;
+
+&lt;p&gt;ALT + 左方向键: 后退&lt;/p&gt;
+
+&lt;p&gt;ALT + v: 前进&lt;/p&gt;
+
+&lt;p&gt;CTRL + Q: 退出&lt;/p&gt;
+
+&lt;h1 id=&quot;orca&quot;&gt;五、Orca读屏软件&lt;/h1&gt;
+
+&lt;p&gt;启动Orca: SUPER + A，然后输入orca，然后回车&lt;/p&gt;
+
+&lt;p&gt;ORCA + 空格: 显示首选项对话框（ORCA键是指Insert插入键或CAPS LOCK大小写转换键，取决于设置）&lt;/p&gt;
+
+&lt;p&gt;ORCA + t: 读当前时间&lt;/p&gt;
+
+&lt;p&gt;ORCA + tt: 读当前日期&lt;/p&gt;
+
+&lt;p&gt;ORCA + s: 切换合成语音开关&lt;/p&gt;
+
+&lt;p&gt;ORCA + /: 朗读标题&lt;/p&gt;
+
+&lt;p&gt;ORCA + //: 朗读状态栏&lt;/p&gt;
+
+&lt;p&gt;ORCA + 分号: 朗读整个文件&lt;/p&gt;
+
+&lt;p&gt;ORCA + Q: 退出Orca&lt;/p&gt;
+
+&lt;h1 id=&quot;rhythmbox&quot;&gt;六、Rhythmbox音频播放器&lt;/h1&gt;
+
+&lt;p&gt;CTRL + 空格: 播放/暂停&lt;/p&gt;
+
+&lt;p&gt;ALT + 右方向键: 下一首&lt;/p&gt;
+
+&lt;p&gt;ALT + 左方向键: 上一首&lt;/p&gt;
+
+&lt;p&gt;CTRL + 上方向键: 增大音量&lt;/p&gt;
+
+&lt;p&gt;CTRL + 下方向键: 减少音量&lt;/p&gt;
+
+&lt;p&gt;CTRL + U: 随机播放&lt;/p&gt;
+
+&lt;p&gt;CTRL + R: 重复播放&lt;/p&gt;
+
+&lt;p&gt;CTRL + Q: 退出&lt;/p&gt;
+
+&lt;h1 id=&quot;section-1&quot;&gt;七、如何打开一个程序&lt;/h1&gt;
+
+&lt;p&gt;以“系统配置”为例，先按SUPER + A，SUPER即Win键，然后切换到中文输入法，输入“系统配置”，按回车即打开程序。&lt;/p&gt;
+</description>
+        <pubDate>Wed, 09 Mar 2016 00:00:00 +0800</pubDate>
+        <link>http://javictory.info/ubuntu/2016/03/09/ubuntu-common-shortcutkey.html</link>
+        <guid isPermaLink="true">http://javictory.info/ubuntu/2016/03/09/ubuntu-common-shortcutkey.html</guid>
+        
+        
+        <category>Ubuntu</category>
+        
+      </item>
     
       <item>
         <title>常见字符集区别：</title>
