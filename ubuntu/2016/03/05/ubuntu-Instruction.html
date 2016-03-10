@@ -962,13 +962,13 @@ touch 命令能够创建一个文件，它的操作对象，为 date +%m%d%H%M%S
 -sh&lt;tab&gt;(uffle) -pl&lt;tab&gt;(aylist) &lt;tab&gt;(mp3_playlist)
 </code></pre>
 
-<p>一阵猛按 <tab> 键，一个蛮长的命令就完成了。</tab></p>
+<p>一阵猛按”&lt; tab &gt;” 键，一个蛮长的命令就完成了。</p>
 
 <p>补全结果不唯一时给出的提示中含有简短的说明，这样通常也不用看帮助了：）比如：</p>
 
 <p>mplayer -l</p>
 
-<p>&lt;tab&gt; 后，自动将参数补全为 -lo 然后给出提示</p>
+<p>”&lt; tab &gt;” 后，自动将参数补全为 -lo 然后给出提示</p>
 
 <p>-{lo}adidx (Load index from file) -{lo}op (Loop playback) {花括号中为青色文字}</p>
 
@@ -978,7 +978,8 @@ touch 命令能够创建一个文件，它的操作对象，为 date +%m%d%H%M%S
 
 <p>还是上面的那个命令</p>
 
-<p>mplayer -loop 0 -shuffle -playlist mp3_playlist</p>
+<pre><code>mplayer -loop 0 -shuffle -playlist mp3_playlist
+</code></pre>
 
 <p>用上翻配合下翻浏览命令历史，直到找到这个命令，当然那样太慢了。</p>
 
@@ -1002,9 +1003,10 @@ touch 命令能够创建一个文件，它的操作对象，为 date +%m%d%H%M%S
 
 <p>修改 /etc/fish_inputrc 这个文件，增加以下行：</p>
 
-<p>“\C-n”: history-search-forward</p>
+<pre><code>"\C-n": history-search-forward
 
-<p>“\C-p”: history-search-backward</p>
+"\C-p": history-search-backward
+</code></pre>
 
 <p>现在使用Ctrl+p上翻，使用Ctrl+n下翻。如果已经在命令行中输入字符，那么Ctrl+p就是在历史纪录向上查找您输入的字符，Ctrl+n为向下查找，非常的方便。</p>
 
@@ -1012,7 +1014,8 @@ touch 命令能够创建一个文件，它的操作对象，为 date +%m%d%H%M%S
 
 <p>如果能够拥有root权限，可以直接修改 /etc/passwd 文件。找到您用户ID起始的行</p>
 
-<p>user:x:1000:112:user,,,:/home/user:/bin/bash</p>
+<pre><code>user:x:1000:112:user,,,:/home/user:/bin/bash
+</code></pre>
 
 <p>最后一个字段为登录后的默认Shell， /bin/bash 是程序 bash 的主程序路径。 fish 主程序的路径通常为 /usr/bin/fish 。</p>
 
@@ -1020,9 +1023,10 @@ touch 命令能够创建一个文件，它的操作对象，为 date +%m%d%H%M%S
 
 <p>也可以使用如下命令更改您的默认Shell</p>
 
-<p>chsh -s /usr/bin/fish</p>
+<pre><code>chsh -s /usr/bin/fish
 
-<p>（需要输入您的密码）</p>
+（需要输入您的密码）
+</code></pre>
 
 <p>Tip：可以使用 whereis xxx 命令，来查找 xxx 程序的安装位置，详见搜索</p>
 
@@ -1030,7 +1034,8 @@ touch 命令能够创建一个文件，它的操作对象，为 date +%m%d%H%M%S
 
 <p>使用 echo $PATH ，可以显示 $PATH 变量，输出如下：</p>
 
-<p>/usr/local/sbin /usr/local/bin /usr/sbin /usr/bin /sbin /bin /usr/bin/X11 /usr/games /usr/X11R6/bin</p>
+<pre><code>/usr/local/sbin /usr/local/bin /usr/sbin /usr/bin /sbin /bin /usr/bin/X11 /usr/games /usr/X11R6/bin
+</code></pre>
 
 <p>它是一个环境变量，代表执行命令时，Shell的搜索路径。</p>
 
@@ -1038,15 +1043,17 @@ touch 命令能够创建一个文件，它的操作对象，为 date +%m%d%H%M%S
 
 <p>例如：</p>
 
-<p>/usr/local/mplayer -menu xxx.rmvb</p>
+<pre><code>/usr/local/mplayer -menu xxx.rmvb
 
-<p>/etc/init.d/powernowd start</p>
+/etc/init.d/powernowd start
 
-<p>cd /usr/local/ &amp;&amp; ./mplayer -menu xxx.rmvb</p>
+cd /usr/local/ &amp;&amp; ./mplayer -menu xxx.rmvb
+</code></pre>
 
 <p>可以修改 /etc/environment 文件来设定您的命令搜索路径，找到 PATH 起始的行</p>
 
-<p>PATH=”/usr/local/sbin:/usr/local/bin:/usr/sbin”</p>
+<pre><code>PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin"
+</code></pre>
 
 <p>在双引号中添加您的自定义路径，并以 : 分隔。</p>
 

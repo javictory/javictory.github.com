@@ -6,8 +6,8 @@
 </description>
     <link>http://javictory.info/</link>
     <atom:link href="http://javictory.info/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 10 Mar 2016 19:29:02 +0800</pubDate>
-    <lastBuildDate>Thu, 10 Mar 2016 19:29:02 +0800</lastBuildDate>
+    <pubDate>Thu, 10 Mar 2016 19:32:56 +0800</pubDate>
+    <lastBuildDate>Thu, 10 Mar 2016 19:32:56 +0800</lastBuildDate>
     <generator>Jekyll v3.1.1</generator>
     
       <item>
@@ -1340,13 +1340,13 @@ touch 命令能够创建一个文件，它的操作对象，为 date +%m%d%H%M%S
 -sh&amp;lt;tab&amp;gt;(uffle) -pl&amp;lt;tab&amp;gt;(aylist) &amp;lt;tab&amp;gt;(mp3_playlist)
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;一阵猛按 &lt;tab&gt; 键，一个蛮长的命令就完成了。&lt;/tab&gt;&lt;/p&gt;
+&lt;p&gt;一阵猛按”&amp;lt; tab &amp;gt;” 键，一个蛮长的命令就完成了。&lt;/p&gt;
 
 &lt;p&gt;补全结果不唯一时给出的提示中含有简短的说明，这样通常也不用看帮助了：）比如：&lt;/p&gt;
 
 &lt;p&gt;mplayer -l&lt;/p&gt;
 
-&lt;p&gt;&amp;lt;tab&amp;gt; 后，自动将参数补全为 -lo 然后给出提示&lt;/p&gt;
+&lt;p&gt;”&amp;lt; tab &amp;gt;” 后，自动将参数补全为 -lo 然后给出提示&lt;/p&gt;
 
 &lt;p&gt;-{lo}adidx (Load index from file) -{lo}op (Loop playback) {花括号中为青色文字}&lt;/p&gt;
 
@@ -1356,7 +1356,8 @@ touch 命令能够创建一个文件，它的操作对象，为 date +%m%d%H%M%S
 
 &lt;p&gt;还是上面的那个命令&lt;/p&gt;
 
-&lt;p&gt;mplayer -loop 0 -shuffle -playlist mp3_playlist&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;mplayer -loop 0 -shuffle -playlist mp3_playlist
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;用上翻配合下翻浏览命令历史，直到找到这个命令，当然那样太慢了。&lt;/p&gt;
 
@@ -1380,9 +1381,10 @@ touch 命令能够创建一个文件，它的操作对象，为 date +%m%d%H%M%S
 
 &lt;p&gt;修改 /etc/fish_inputrc 这个文件，增加以下行：&lt;/p&gt;
 
-&lt;p&gt;“\C-n”: history-search-forward&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&quot;\C-n&quot;: history-search-forward
 
-&lt;p&gt;“\C-p”: history-search-backward&lt;/p&gt;
+&quot;\C-p&quot;: history-search-backward
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;现在使用Ctrl+p上翻，使用Ctrl+n下翻。如果已经在命令行中输入字符，那么Ctrl+p就是在历史纪录向上查找您输入的字符，Ctrl+n为向下查找，非常的方便。&lt;/p&gt;
 
@@ -1390,7 +1392,8 @@ touch 命令能够创建一个文件，它的操作对象，为 date +%m%d%H%M%S
 
 &lt;p&gt;如果能够拥有root权限，可以直接修改 /etc/passwd 文件。找到您用户ID起始的行&lt;/p&gt;
 
-&lt;p&gt;user:x:1000:112:user,,,:/home/user:/bin/bash&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;user:x:1000:112:user,,,:/home/user:/bin/bash
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;最后一个字段为登录后的默认Shell， /bin/bash 是程序 bash 的主程序路径。 fish 主程序的路径通常为 /usr/bin/fish 。&lt;/p&gt;
 
@@ -1398,9 +1401,10 @@ touch 命令能够创建一个文件，它的操作对象，为 date +%m%d%H%M%S
 
 &lt;p&gt;也可以使用如下命令更改您的默认Shell&lt;/p&gt;
 
-&lt;p&gt;chsh -s /usr/bin/fish&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;chsh -s /usr/bin/fish
 
-&lt;p&gt;（需要输入您的密码）&lt;/p&gt;
+（需要输入您的密码）
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Tip：可以使用 whereis xxx 命令，来查找 xxx 程序的安装位置，详见搜索&lt;/p&gt;
 
@@ -1408,7 +1412,8 @@ touch 命令能够创建一个文件，它的操作对象，为 date +%m%d%H%M%S
 
 &lt;p&gt;使用 echo $PATH ，可以显示 $PATH 变量，输出如下：&lt;/p&gt;
 
-&lt;p&gt;/usr/local/sbin /usr/local/bin /usr/sbin /usr/bin /sbin /bin /usr/bin/X11 /usr/games /usr/X11R6/bin&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;/usr/local/sbin /usr/local/bin /usr/sbin /usr/bin /sbin /bin /usr/bin/X11 /usr/games /usr/X11R6/bin
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;它是一个环境变量，代表执行命令时，Shell的搜索路径。&lt;/p&gt;
 
@@ -1416,15 +1421,17 @@ touch 命令能够创建一个文件，它的操作对象，为 date +%m%d%H%M%S
 
 &lt;p&gt;例如：&lt;/p&gt;
 
-&lt;p&gt;/usr/local/mplayer -menu xxx.rmvb&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;/usr/local/mplayer -menu xxx.rmvb
 
-&lt;p&gt;/etc/init.d/powernowd start&lt;/p&gt;
+/etc/init.d/powernowd start
 
-&lt;p&gt;cd /usr/local/ &amp;amp;&amp;amp; ./mplayer -menu xxx.rmvb&lt;/p&gt;
+cd /usr/local/ &amp;amp;&amp;amp; ./mplayer -menu xxx.rmvb
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;可以修改 /etc/environment 文件来设定您的命令搜索路径，找到 PATH 起始的行&lt;/p&gt;
 
-&lt;p&gt;PATH=”/usr/local/sbin:/usr/local/bin:/usr/sbin”&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;PATH=&quot;/usr/local/sbin:/usr/local/bin:/usr/sbin&quot;
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;在双引号中添加您的自定义路径，并以 : 分隔。&lt;/p&gt;
 
