@@ -6,8 +6,8 @@
 </description>
     <link>http://javictory.info/</link>
     <atom:link href="http://javictory.info/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 10 Mar 2016 19:24:03 +0800</pubDate>
-    <lastBuildDate>Thu, 10 Mar 2016 19:24:03 +0800</lastBuildDate>
+    <pubDate>Thu, 10 Mar 2016 19:29:02 +0800</pubDate>
+    <lastBuildDate>Thu, 10 Mar 2016 19:29:02 +0800</lastBuildDate>
     <generator>Jekyll v3.1.1</generator>
     
       <item>
@@ -1346,1942 +1346,2191 @@ touch 命令能够创建一个文件，它的操作对象，为 date +%m%d%H%M%S
 
 &lt;p&gt;mplayer -l&lt;/p&gt;
 
-&lt;tab&gt; 后，自动将参数补全为 -lo 然后给出提示
+&lt;p&gt;&amp;lt;tab&amp;gt; 后，自动将参数补全为 -lo 然后给出提示&lt;/p&gt;
 
--{lo}adidx (Load index from file) -{lo}op (Loop playback) {花括号中为青色文字}
+&lt;p&gt;-{lo}adidx (Load index from file) -{lo}op (Loop playback) {花括号中为青色文字}&lt;/p&gt;
 
-它的语法高亮功能十分有用，如果你输入的命令是正确的，则用青色显示，正确的参数用白色显示，错误的则一律用红色。
+&lt;p&gt;它的语法高亮功能十分有用，如果你输入的命令是正确的，则用青色显示，正确的参数用白色显示，错误的则一律用红色。&lt;/p&gt;
 
-2.方便的历史纪录搜索
+&lt;p&gt;2.方便的历史纪录搜索&lt;/p&gt;
 
-还是上面的那个命令
+&lt;p&gt;还是上面的那个命令&lt;/p&gt;
 
-mplayer -loop 0 -shuffle -playlist mp3_playlist
+&lt;p&gt;mplayer -loop 0 -shuffle -playlist mp3_playlist&lt;/p&gt;
 
-用上翻配合下翻浏览命令历史，直到找到这个命令，当然那样太慢了。
+&lt;p&gt;用上翻配合下翻浏览命令历史，直到找到这个命令，当然那样太慢了。&lt;/p&gt;
 
-还可以输入以上命令中的某一部分，如 uffle 只要翻一次就可以找到了
+&lt;p&gt;还可以输入以上命令中的某一部分，如 uffle 只要翻一次就可以找到了&lt;/p&gt;
 
-（还可以META＋上翻在已输入部分中插入某一历史单词）
+&lt;p&gt;（还可以META＋上翻在已输入部分中插入某一历史单词）&lt;/p&gt;
 
-3.文件夹历史纪录
+&lt;p&gt;3.文件夹历史纪录&lt;/p&gt;
 
-dirh （dir history）就可以显示当前会话中进入的文件夹纪录
+&lt;p&gt;dirh （dir history）就可以显示当前会话中进入的文件夹纪录&lt;/p&gt;
 
-使用 prevd 和 nextd 跳转
+&lt;p&gt;使用 prevd 和 nextd 跳转&lt;/p&gt;
 
-假如曾进入过1 2 3 4 5 这几个文件夹， prevd 4 可以让你在 5 中直接跳到 1
+&lt;p&gt;假如曾进入过1 2 3 4 5 这几个文件夹， prevd 4 可以让你在 5 中直接跳到 1&lt;/p&gt;
 
-4.其它的功能
+&lt;p&gt;4.其它的功能&lt;/p&gt;
 
-fish基本是兼容bash的。键绑定也非常的相似，少数的键绑定不尽一致，例如：
+&lt;p&gt;fish基本是兼容bash的。键绑定也非常的相似，少数的键绑定不尽一致，例如：&lt;/p&gt;
 
-\C-h 删除光标前的一个字符（bash为退格键，不方便）
+&lt;p&gt;\C-h 删除光标前的一个字符（bash为退格键，不方便）&lt;/p&gt;
 
-修改 /etc/fish_inputrc 这个文件，增加以下行：
+&lt;p&gt;修改 /etc/fish_inputrc 这个文件，增加以下行：&lt;/p&gt;
 
-&quot;\C-n&quot;: history-search-forward
+&lt;p&gt;“\C-n”: history-search-forward&lt;/p&gt;
 
-&quot;\C-p&quot;: history-search-backward
+&lt;p&gt;“\C-p”: history-search-backward&lt;/p&gt;
 
-现在使用Ctrl+p上翻，使用Ctrl+n下翻。如果已经在命令行中输入字符，那么Ctrl+p就是在历史纪录向上查找您输入的字符，Ctrl+n为向下查找，非常的方便。
+&lt;p&gt;现在使用Ctrl+p上翻，使用Ctrl+n下翻。如果已经在命令行中输入字符，那么Ctrl+p就是在历史纪录向上查找您输入的字符，Ctrl+n为向下查找，非常的方便。&lt;/p&gt;
 
-设定您的默认Shell
+&lt;p&gt;设定您的默认Shell&lt;/p&gt;
 
-如果能够拥有root权限，可以直接修改 /etc/passwd 文件。找到您用户ID起始的行
+&lt;p&gt;如果能够拥有root权限，可以直接修改 /etc/passwd 文件。找到您用户ID起始的行&lt;/p&gt;
 
-user:x:1000:112:user,,,:/home/user:/bin/bash
+&lt;p&gt;user:x:1000:112:user,,,:/home/user:/bin/bash&lt;/p&gt;
 
-最后一个字段为登录后的默认Shell， /bin/bash 是程序 bash 的主程序路径。 fish 主程序的路径通常为 /usr/bin/fish 。
+&lt;p&gt;最后一个字段为登录后的默认Shell， /bin/bash 是程序 bash 的主程序路径。 fish 主程序的路径通常为 /usr/bin/fish 。&lt;/p&gt;
 
-/etc/shells 中列出系统中所有可用Shell（ /bin/false 代表禁用Shell）
+&lt;p&gt;/etc/shells 中列出系统中所有可用Shell（ /bin/false 代表禁用Shell）&lt;/p&gt;
 
-也可以使用如下命令更改您的默认Shell
+&lt;p&gt;也可以使用如下命令更改您的默认Shell&lt;/p&gt;
 
-chsh -s /usr/bin/fish
+&lt;p&gt;chsh -s /usr/bin/fish&lt;/p&gt;
 
-（需要输入您的密码）
+&lt;p&gt;（需要输入您的密码）&lt;/p&gt;
 
-Tip：可以使用 whereis xxx 命令，来查找 xxx 程序的安装位置，详见搜索
+&lt;p&gt;Tip：可以使用 whereis xxx 命令，来查找 xxx 程序的安装位置，详见搜索&lt;/p&gt;
 
-设定命令的搜索路径
+&lt;p&gt;设定命令的搜索路径&lt;/p&gt;
 
-使用 echo $PATH ，可以显示 $PATH 变量，输出如下：
+&lt;p&gt;使用 echo $PATH ，可以显示 $PATH 变量，输出如下：&lt;/p&gt;
 
-/usr/local/sbin /usr/local/bin /usr/sbin /usr/bin /sbin /bin /usr/bin/X11 /usr/games /usr/X11R6/bin
+&lt;p&gt;/usr/local/sbin /usr/local/bin /usr/sbin /usr/bin /sbin /bin /usr/bin/X11 /usr/games /usr/X11R6/bin&lt;/p&gt;
 
-它是一个环境变量，代表执行命令时，Shell的搜索路径。
+&lt;p&gt;它是一个环境变量，代表执行命令时，Shell的搜索路径。&lt;/p&gt;
 
-执行一个命令时，Shell会到 $PATH 变量定义的路径去搜索，并运行与命令同名的可执行文件。如果程序、脚本等可执行文件并不在上面的路径中，就必须使用绝对路径或者相对路径定位可执行文件。
+&lt;p&gt;执行一个命令时，Shell会到 $PATH 变量定义的路径去搜索，并运行与命令同名的可执行文件。如果程序、脚本等可执行文件并不在上面的路径中，就必须使用绝对路径或者相对路径定位可执行文件。&lt;/p&gt;
 
-例如：
+&lt;p&gt;例如：&lt;/p&gt;
 
-/usr/local/mplayer -menu xxx.rmvb
+&lt;p&gt;/usr/local/mplayer -menu xxx.rmvb&lt;/p&gt;
 
-/etc/init.d/powernowd start
+&lt;p&gt;/etc/init.d/powernowd start&lt;/p&gt;
 
-cd /usr/local/ &amp;amp;&amp;amp; ./mplayer -menu xxx.rmvb
+&lt;p&gt;cd /usr/local/ &amp;amp;&amp;amp; ./mplayer -menu xxx.rmvb&lt;/p&gt;
 
-可以修改 /etc/environment 文件来设定您的命令搜索路径，找到 PATH 起始的行
+&lt;p&gt;可以修改 /etc/environment 文件来设定您的命令搜索路径，找到 PATH 起始的行&lt;/p&gt;
 
-PATH=&quot;/usr/local/sbin:/usr/local/bin:/usr/sbin&quot;
+&lt;p&gt;PATH=”/usr/local/sbin:/usr/local/bin:/usr/sbin”&lt;/p&gt;
 
-在双引号中添加您的自定义路径，并以 : 分隔。
+&lt;p&gt;在双引号中添加您的自定义路径，并以 : 分隔。&lt;/p&gt;
 
-# Ubuntu系统简介 #
-## Ubuntu系统目录结构 ##
+&lt;h1 id=&quot;ubuntu-4&quot;&gt;Ubuntu系统简介&lt;/h1&gt;
+&lt;p&gt;## Ubuntu系统目录结构 ##&lt;/p&gt;
 
-以下为Ubuntu目录的主要目录结构，您稍微了解它们都包含了哪些文件就可以了，不需要记忆。
+&lt;p&gt;以下为Ubuntu目录的主要目录结构，您稍微了解它们都包含了哪些文件就可以了，不需要记忆。&lt;/p&gt;
 
-		/ 根目录
-		
-		│
-		
-		├boot/ 启动文件。所有与系统启动有关的文件都保存在这里
-		
-		│ └grub/ Grub引导器相关的文件
-		
-		│
-		
-		├dev/ 设备文件
-		
-		├proc/ 内核与进程镜像
-		
-		│
-		
-		├mnt/ 临时挂载
-		
-		├media/ 挂载媒体设备
-		
-		│
-		
-		├root/ root用户的$HOME目录
-		
-		├home/
-		
-		│ ├user/ 普通用户的$HOME目录
-		
-		│ └.../
-		
-		│
-		
-		├bin/ 系统程序
-		
-		├sbin/ 管理员系统程序
-		
-		├lib/ 系统程序库文件
-		
-		├etc/ 系统程序和大部分应用程序的全局配置文件
-		
-		│ ├init.d/ SystemV风格的启动脚本
-		
-		│ ├rcX.d/ 启动脚本的链接，定义运行级别
-		
-		│ ├network/ 网络配置文件
-		
-		│ ├X11/ 图形界面配置文件
-		
-		├usr/
-		
-		│ ├bin/ 应用程序
-		
-		│ ├sbin/ 管理员应用程序
-		
-		│ ├lib/ 应用程序库文件
-		
-		│ ├share/ 应用程序资源文件
-		
-		│ ├src/ 应用程序源代码
-		
-		│ ├local/
-		
-		│ │ ├soft/ 用户程序
-		
-		│ │ └.../ 通常使用单独文件夹
-		
-		│ ├X11R6/ 图形界面系统
-		
-		│
-		
-		├var/ 动态数据
-		
-		│
-		
-		├temp/ 临时文件
-		
-		├lost+found/ 磁盘修复文件
+&lt;pre&gt;&lt;code&gt;	/ 根目录
+	
+	│
+	
+	├boot/ 启动文件。所有与系统启动有关的文件都保存在这里
+	
+	│ └grub/ Grub引导器相关的文件
+	
+	│
+	
+	├dev/ 设备文件
+	
+	├proc/ 内核与进程镜像
+	
+	│
+	
+	├mnt/ 临时挂载
+	
+	├media/ 挂载媒体设备
+	
+	│
+	
+	├root/ root用户的$HOME目录
+	
+	├home/
+	
+	│ ├user/ 普通用户的$HOME目录
+	
+	│ └.../
+	
+	│
+	
+	├bin/ 系统程序
+	
+	├sbin/ 管理员系统程序
+	
+	├lib/ 系统程序库文件
+	
+	├etc/ 系统程序和大部分应用程序的全局配置文件
+	
+	│ ├init.d/ SystemV风格的启动脚本
+	
+	│ ├rcX.d/ 启动脚本的链接，定义运行级别
+	
+	│ ├network/ 网络配置文件
+	
+	│ ├X11/ 图形界面配置文件
+	
+	├usr/
+	
+	│ ├bin/ 应用程序
+	
+	│ ├sbin/ 管理员应用程序
+	
+	│ ├lib/ 应用程序库文件
+	
+	│ ├share/ 应用程序资源文件
+	
+	│ ├src/ 应用程序源代码
+	
+	│ ├local/
+	
+	│ │ ├soft/ 用户程序
+	
+	│ │ └.../ 通常使用单独文件夹
+	
+	│ ├X11R6/ 图形界面系统
+	
+	│
+	
+	├var/ 动态数据
+	
+	│
+	
+	├temp/ 临时文件
+	
+	├lost+found/ 磁盘修复文件
+&lt;/code&gt;&lt;/pre&gt;
 
-## 启动流程 ##
+&lt;h2 id=&quot;section-16&quot;&gt;启动流程&lt;/h2&gt;
 
-Linux系统主要通过以下步骤启动：
+&lt;p&gt;Linux系统主要通过以下步骤启动：&lt;/p&gt;
 
-#### 1.读取MBR的信息，启动Boot Manager ####
+&lt;h4 id=&quot;mbrboot-manager&quot;&gt;1.读取MBR的信息，启动Boot Manager&lt;/h4&gt;
 
-Windows使用NTLDR作为Boot
+&lt;p&gt;Windows使用NTLDR作为Boot&lt;/p&gt;
 
-Manager，如果您的系统中安装多个版本的Windows，您就需要在NTLDR中选择您要进入的系统。
+&lt;p&gt;Manager，如果您的系统中安装多个版本的Windows，您就需要在NTLDR中选择您要进入的系统。&lt;/p&gt;
 
-Linux通常使用功能强大，配置灵活的GRUB作为Boot Manager，我们将在启动管理章节中向您介绍它的使用方式。
+&lt;p&gt;Linux通常使用功能强大，配置灵活的GRUB作为Boot Manager，我们将在启动管理章节中向您介绍它的使用方式。&lt;/p&gt;
 
-#### 2.加载系统内核，启动init进程 ####
+&lt;h4 id=&quot;init&quot;&gt;2.加载系统内核，启动init进程&lt;/h4&gt;
 
-init进程是Linux的根进程，所有的系统进程都是它的子进程。
+&lt;p&gt;init进程是Linux的根进程，所有的系统进程都是它的子进程。&lt;/p&gt;
 
-#### 3.init进程读取 /etc/inittab 文件中的信息，并进入预设的运行级别，按顺序运行该运行级别对应文件夹下的脚本。脚本通常以 start 参数启动，并指向一个系统中的程序。 ####
+&lt;h4 id=&quot;init-etcinittab--start-&quot;&gt;3.init进程读取 /etc/inittab 文件中的信息，并进入预设的运行级别，按顺序运行该运行级别对应文件夹下的脚本。脚本通常以 start 参数启动，并指向一个系统中的程序。&lt;/h4&gt;
 
-通常情况下， /etc/rcS.d/ 目录下的启动脚本首先被执行，然后是 /etc/rcN.d/ 目录。例如您设定的运行级别为3,那么它对应的启动目录为 /etc/rc3.d/ 。
+&lt;p&gt;通常情况下， /etc/rcS.d/ 目录下的启动脚本首先被执行，然后是 /etc/rcN.d/ 目录。例如您设定的运行级别为3,那么它对应的启动目录为 /etc/rc3.d/ 。&lt;/p&gt;
 
-#### 4.根据 /etc/rcS.d/ 文件夹中对应的脚本启动Xwindow服务器 xorg ####
+&lt;h4 id=&quot;etcrcsd-xwindow-xorg&quot;&gt;4.根据 /etc/rcS.d/ 文件夹中对应的脚本启动Xwindow服务器 xorg&lt;/h4&gt;
 
-Xwindow为Linux下的图形用户界面系统。
+&lt;p&gt;Xwindow为Linux下的图形用户界面系统。&lt;/p&gt;
 
-#### 5.启动登录管理器，等待用户登录 ####
+&lt;h4 id=&quot;section-17&quot;&gt;5.启动登录管理器，等待用户登录&lt;/h4&gt;
 
-Ubuntu系统默认使用GDM作为登录管理器，您在登录管理器界面中输入用户名和密码后，便可以登录系统。（您可以在 /etc/rc3.d/ 文件夹中找到一个名为 S13gdm 的链接）
+&lt;p&gt;Ubuntu系统默认使用GDM作为登录管理器，您在登录管理器界面中输入用户名和密码后，便可以登录系统。（您可以在 /etc/rc3.d/ 文件夹中找到一个名为 S13gdm 的链接）&lt;/p&gt;
 
-更改运行级别
+&lt;p&gt;更改运行级别&lt;/p&gt;
 
-在 /etc/inittab 文件中找到如下内容：
+&lt;p&gt;在 /etc/inittab 文件中找到如下内容：&lt;/p&gt;
 
-	# The default runlevel.
+&lt;pre&gt;&lt;code&gt;# The default runlevel.
 
-	id:2:initdefault:
+id:2:initdefault:
+&lt;/code&gt;&lt;/pre&gt;
 
-这一行中的数字 2 ,为系统的运行级别，默认的运行级别涵义如下：
+&lt;p&gt;这一行中的数字 2 ,为系统的运行级别，默认的运行级别涵义如下：&lt;/p&gt;
 
-	0 关机       1 单用户维护模式         2~5 多用户模式         6 重启
+&lt;pre&gt;&lt;code&gt;0 关机       1 单用户维护模式         2~5 多用户模式         6 重启
+&lt;/code&gt;&lt;/pre&gt;
 
-# 服务管理 #
+&lt;h1 id=&quot;section-18&quot;&gt;服务管理&lt;/h1&gt;
 
-## 更改启动服务 ##
+&lt;h2 id=&quot;section-19&quot;&gt;更改启动服务&lt;/h2&gt;
 
-在运行级别对应的文件夹中，您可以看到许多文件名以 S## 和 K## 起始的启动脚本链接。例如：
+&lt;p&gt;在运行级别对应的文件夹中，您可以看到许多文件名以 S## 和 K## 起始的启动脚本链接。例如：&lt;/p&gt;
 
-/etc/rcS.d/S35mountall.sh 挂载文件系统
+&lt;p&gt;/etc/rcS.d/S35mountall.sh 挂载文件系统&lt;/p&gt;
 
-/etc/rcS.d/S40networking 启用网络支持
+&lt;p&gt;/etc/rcS.d/S40networking 启用网络支持&lt;/p&gt;
 
-/etc/rc2.d/S13gdm 启动登录管理器
+&lt;p&gt;/etc/rc2.d/S13gdm 启动登录管理器&lt;/p&gt;
 
-/etc/rc2.d/S20makedev 创建设备文件
+&lt;p&gt;/etc/rc2.d/S20makedev 创建设备文件&lt;/p&gt;
 
-/etc/rc2.d/S23xinetd 启动超级进程
+&lt;p&gt;/etc/rc2.d/S23xinetd 启动超级进程&lt;/p&gt;
 
-init进程将以 start 为参数，按文件名顺序执行所有以 S## 起始的脚本。脚本名称中的数字越小，它将被越早执行。例如在
+&lt;p&gt;init进程将以 start 为参数，按文件名顺序执行所有以 S## 起始的脚本。脚本名称中的数字越小，它将被越早执行。例如在&lt;/p&gt;
 
-/etc/rc2.d/ 文件夹中， S13gdm 文件名中的数字小于 S23xinetd , S13gdm 将比 S23xinetd 先执行。
+&lt;p&gt;/etc/rc2.d/ 文件夹中， S13gdm 文件名中的数字小于 S23xinetd , S13gdm 将比 S23xinetd 先执行。&lt;/p&gt;
 
-如果一个脚本链接，以 K## 起始，表示它将以 stop 参数被执行。如果相应服务没有启动，则不执行该脚本。例如：
+&lt;p&gt;如果一个脚本链接，以 K## 起始，表示它将以 stop 参数被执行。如果相应服务没有启动，则不执行该脚本。例如：&lt;/p&gt;
 
-/etc/rc2.d/K20powernowd 针对某种硬件的电源管理支持
+&lt;p&gt;/etc/rc2.d/K20powernowd 针对某种硬件的电源管理支持&lt;/p&gt;
 
-如果您想禁止某一服务在启动时自动运行，您可以将相应运行级别中的脚本由 S##xxx 重命名为 K##xxx 。
+&lt;p&gt;如果您想禁止某一服务在启动时自动运行，您可以将相应运行级别中的脚本由 S##xxx 重命名为 K##xxx 。&lt;/p&gt;
 
-## 手动控制服务 ##
+&lt;h2 id=&quot;section-20&quot;&gt;手动控制服务&lt;/h2&gt;
 
-您也可以手动运行带有以下参数的启动脚本，来控制系统服务。
+&lt;p&gt;您也可以手动运行带有以下参数的启动脚本，来控制系统服务。&lt;/p&gt;
 
-	- start 启动      - stop 停止      - restart 重启
+&lt;pre&gt;&lt;code&gt;- start 启动      - stop 停止      - restart 重启
+&lt;/code&gt;&lt;/pre&gt;
 
-例如：
+&lt;p&gt;例如：&lt;/p&gt;
 
-/etc/rc2.d/K20powernowd start
+&lt;p&gt;/etc/rc2.d/K20powernowd start&lt;/p&gt;
 
-有时您并不清楚当前运行级别，该运行级别下未必有相应脚本；而且此类脚本的前三位字符并不固定，不便于记忆。这时，可以直接使用
+&lt;p&gt;有时您并不清楚当前运行级别，该运行级别下未必有相应脚本；而且此类脚本的前三位字符并不固定，不便于记忆。这时，可以直接使用&lt;/p&gt;
 
-/etc/init.d/ 文件夹中的启动脚本（ /etc/rcX.d/ 中的启动脚本链接到 /etc/init.d/
+&lt;p&gt;/etc/init.d/ 文件夹中的启动脚本（ /etc/rcX.d/ 中的启动脚本链接到 /etc/init.d/&lt;/p&gt;
 
-文件夹下相应脚本），这也是推荐的方式。
+&lt;p&gt;文件夹下相应脚本），这也是推荐的方式。&lt;/p&gt;
 
-例如：
+&lt;p&gt;例如：&lt;/p&gt;
 
-/etc/init.d/powernowd start
+&lt;p&gt;/etc/init.d/powernowd start&lt;/p&gt;
 
-Note：以上命令的位置并没有包含在环境变量的搜索路径中，所以要输入完整路径。
+&lt;p&gt;Note：以上命令的位置并没有包含在环境变量的搜索路径中，所以要输入完整路径。&lt;/p&gt;
 
-## 常用系统服务 ##
+&lt;h2 id=&quot;section-21&quot;&gt;常用系统服务&lt;/h2&gt;
 
-acpi-support 高级电源管理支持          acpid acpi守护程序.这两个用于电源管理，非常重要
+&lt;p&gt;acpi-support 高级电源管理支持          acpid acpi守护程序.这两个用于电源管理，非常重要&lt;/p&gt;
 
-alsa 声音子系统                   alsa-utils
+&lt;p&gt;alsa 声音子系统                   alsa-utils&lt;/p&gt;
 
-anacron cron的子系统，将系统关闭期间的计划任务，在下一次系统运行时执行。
+&lt;p&gt;anacron cron的子系统，将系统关闭期间的计划任务，在下一次系统运行时执行。&lt;/p&gt;
 
-apmd acpi的扩展                 atd 类似于cron的任务调度系统。建议关闭
+&lt;p&gt;apmd acpi的扩展                 atd 类似于cron的任务调度系统。建议关闭&lt;/p&gt;
 
-binfmt-support 核心支持其他二进制的文件格式。建议开启                  bluez-utiles 蓝牙设备支持
+&lt;p&gt;binfmt-support 核心支持其他二进制的文件格式。建议开启                  bluez-utiles 蓝牙设备支持&lt;/p&gt;
 
-bootlogd 启动日志。开启它                 cron 任务调度系统，建议开启
+&lt;p&gt;bootlogd 启动日志。开启它                 cron 任务调度系统，建议开启&lt;/p&gt;
 
-cupsys 打印机子系统。              dbus 消息总线系统(message bus system)。非常重要
+&lt;p&gt;cupsys 打印机子系统。              dbus 消息总线系统(message bus system)。非常重要&lt;/p&gt;
 
-dns-clean 使用拨号连接时，清除dns信息。                
+&lt;p&gt;dns-clean 使用拨号连接时，清除dns信息。                &lt;/p&gt;
 
-evms 企业卷管理系统（Enterprise Volumn Management system）
+&lt;p&gt;evms 企业卷管理系统（Enterprise Volumn Management system）&lt;/p&gt;
 
-fetchmail 邮件用户代理守护进程，用于收取邮件                  gdm gnome登录和桌面管理器。
+&lt;p&gt;fetchmail 邮件用户代理守护进程，用于收取邮件                  gdm gnome登录和桌面管理器。&lt;/p&gt;
 
-Gdomap              gpm 终端中的鼠标支持。           halt 别动它。
+&lt;p&gt;Gdomap              gpm 终端中的鼠标支持。           halt 别动它。&lt;/p&gt;
 
-hdparm 调整硬盘的脚本，配置文件为 /etc/hdparm.conf。             hibernate 系统休眠
+&lt;p&gt;hdparm 调整硬盘的脚本，配置文件为 /etc/hdparm.conf。             hibernate 系统休眠&lt;/p&gt;
 
-hotkey-setup 笔记本功能键支持。支持类型包括： HP, Acer, ASUS, Sony, Dell, 和IBM
+&lt;p&gt;hotkey-setup 笔记本功能键支持。支持类型包括： HP, Acer, ASUS, Sony, Dell, 和IBM&lt;/p&gt;
 
-hotplug and hotplug-net 即插即用支持，比较复杂，建议不要动它
+&lt;p&gt;hotplug and hotplug-net 即插即用支持，比较复杂，建议不要动它&lt;/p&gt;
 
-hplip HP打印机和图形子系统             ifrename 网络接口重命名脚本。如果您有十块网卡，您应该开启它
+&lt;p&gt;hplip HP打印机和图形子系统             ifrename 网络接口重命名脚本。如果您有十块网卡，您应该开启它&lt;/p&gt;
 
-inetd 在文件 /etc/inetd.conf 中，注释掉所有你不需要的服务。如果该文件不包含任何服务，那关闭它是很安全的。              klogd 重要。
+&lt;p&gt;inetd 在文件 /etc/inetd.conf 中，注释掉所有你不需要的服务。如果该文件不包含任何服务，那关闭它是很安全的。              klogd 重要。&lt;/p&gt;
 
-linux-restricted-modules-common 受限模块支持。 /lib/linux-restricted-modules/ 文件夹中的模块为受限模块。例如某些驱动程序，如果您没有使用受限模块，就不需要开启它。
+&lt;p&gt;linux-restricted-modules-common 受限模块支持。 /lib/linux-restricted-modules/ 文件夹中的模块为受限模块。例如某些驱动程序，如果您没有使用受限模块，就不需要开启它。&lt;/p&gt;
 
-lvm 逻辑卷管理系统支持。                 makedev 创建设备文件，非常重要。           mdamd 磁盘阵列
+&lt;p&gt;lvm 逻辑卷管理系统支持。                 makedev 创建设备文件，非常重要。           mdamd 磁盘阵列&lt;/p&gt;
 
-module-init-tools 从/etc/modules加载扩展模块，建议开启。
+&lt;p&gt;module-init-tools 从/etc/modules加载扩展模块，建议开启。&lt;/p&gt;
 
-networking 网络支持。按 /etc/network/interfaces 文件预设激活网络，非常重要。
+&lt;p&gt;networking 网络支持。按 /etc/network/interfaces 文件预设激活网络，非常重要。&lt;/p&gt;
 
-ntpdate 时间同步服务，建议关闭。            pcmcia pcmcia设备支持。           powernowd 移动CPU节能支持
+&lt;p&gt;ntpdate 时间同步服务，建议关闭。            pcmcia pcmcia设备支持。           powernowd 移动CPU节能支持&lt;/p&gt;
 
-ppp and ppp-dns 拨号连接                   readahead 预加载库文件。          reboot 别动它            
+&lt;p&gt;ppp and ppp-dns 拨号连接                   readahead 预加载库文件。          reboot 别动它            &lt;/p&gt;
 
-resolvconf 自动配置DNS            rmnologin 清除nologin                 rsync rsync守护程序
+&lt;p&gt;resolvconf 自动配置DNS            rmnologin 清除nologin                 rsync rsync守护程序&lt;/p&gt;
 
-sendsigs 在重启和关机期间发送信号           single 激活单用户模式                 ssh ssh守护程序。建议开启
+&lt;p&gt;sendsigs 在重启和关机期间发送信号           single 激活单用户模式                 ssh ssh守护程序。建议开启&lt;/p&gt;
 
-stop-bootlogd 在2，3，4，5运行级别中停止bootlogd服务                   sudo 检查sudo状态。重要
+&lt;p&gt;stop-bootlogd 在2，3，4，5运行级别中停止bootlogd服务                   sudo 检查sudo状态。重要&lt;/p&gt;
 
-sysklogd 系统日志              udev &amp;amp; udev-mab 用户空间dev文件系统（userspace dev filesystem）。重要
+&lt;p&gt;sysklogd 系统日志              udev &amp;amp; udev-mab 用户空间dev文件系统（userspace dev filesystem）。重要&lt;/p&gt;
 
-umountfs 卸载文件系统               urandom 随机数生成器                usplash 开机画面支持
+&lt;p&gt;umountfs 卸载文件系统               urandom 随机数生成器                usplash 开机画面支持&lt;/p&gt;
 
-vbesave 显卡BIOS配置工具。保存显卡的状态            xorg-common 设置X服务ICE socket。
+&lt;p&gt;vbesave 显卡BIOS配置工具。保存显卡的状态            xorg-common 设置X服务ICE socket。&lt;/p&gt;
 
-adjtimex 调整核心时钟的工具              dirmngr 证书列表管理工具,和gnupg一起工作。
+&lt;p&gt;adjtimex 调整核心时钟的工具              dirmngr 证书列表管理工具,和gnupg一起工作。&lt;/p&gt;
 
-hwtools irqs优化工具                   libpam-devperm 系统崩溃之后，用于修理设备文件许可的守护程序。
+&lt;p&gt;hwtools irqs优化工具                   libpam-devperm 系统崩溃之后，用于修理设备文件许可的守护程序。&lt;/p&gt;
 
-lm-sensors 板载传感器支持                  mdadm-raid 磁盘陈列管理器               
+&lt;p&gt;lm-sensors 板载传感器支持                  mdadm-raid 磁盘陈列管理器               &lt;/p&gt;
 
-screen-cleanup 清除开机屏幕的脚本             xinetd 管理其他守护进程的一个inetd超级守护程序
+&lt;p&gt;screen-cleanup 清除开机屏幕的脚本             xinetd 管理其他守护进程的一个inetd超级守护程序&lt;/p&gt;
 
-## 重要配置文件 ##
+&lt;h2 id=&quot;section-22&quot;&gt;重要配置文件&lt;/h2&gt;
 
-！无论任何情况下，修改配置文件之前，先备份它！
+&lt;p&gt;！无论任何情况下，修改配置文件之前，先备份它！&lt;/p&gt;
 
-建议使用这个命令： sudo cp xxx xxx_`date +%y%m%d_%H:%M` 。
+&lt;p&gt;建议使用这个命令： sudo cp xxx xxx_&lt;code&gt;date +%y%m%d_%H:%M&lt;/code&gt; 。&lt;/p&gt;
 
-当然这很麻烦，您可以新建一个名为 bak 的文件，内容如下：
+&lt;p&gt;当然这很麻烦，您可以新建一个名为 bak 的文件，内容如下：&lt;/p&gt;
 
-	#!/bin/bash
+&lt;pre&gt;&lt;code&gt;#!/bin/bash
 
-	sudo cp $1 $1_`date +%y%m%d_%H:%M`
+sudo cp $1 $1_`date +%y%m%d_%H:%M`
+&lt;/code&gt;&lt;/pre&gt;
 
-把它放在您能够记住的目录下，比如 /home ，执行命令 sh /home/bak xxx ，就可以将当前文件夹下的文件 xxx 另存为 xxx_yymmdd_HH:MM 的格式了
+&lt;p&gt;把它放在您能够记住的目录下，比如 /home ，执行命令 sh /home/bak xxx ，就可以将当前文件夹下的文件 xxx 另存为 xxx_yymmdd_HH:MM 的格式了&lt;/p&gt;
 
-# 全局配置文件 #
+&lt;h1 id=&quot;section-23&quot;&gt;全局配置文件&lt;/h1&gt;
 
-## 系统初始化 ##
+&lt;h2 id=&quot;section-24&quot;&gt;系统初始化&lt;/h2&gt;
 
-/etc/inittab 运行级别、控制台数量                /etc/timezone 时区               /etc/inetd.conf ## 超级进程 ##
+&lt;p&gt;/etc/inittab 运行级别、控制台数量                /etc/timezone 时区               /etc/inetd.conf ## 超级进程 ##&lt;/p&gt;
 
-## 文件系统 ##
+&lt;h2 id=&quot;section-25&quot;&gt;文件系统&lt;/h2&gt;
 
-/etc/fstab 开机时挂载的文件系统                  /etc/mtab 当前挂载的文件系统
+&lt;p&gt;/etc/fstab 开机时挂载的文件系统                  /etc/mtab 当前挂载的文件系统&lt;/p&gt;
 
-## 用户系统 ##
+&lt;h2 id=&quot;section-26&quot;&gt;用户系统&lt;/h2&gt;
 
-/etc/passwd 用户信息                   /etc/shadow 用户密码                   /etc/group 群组信息
+&lt;p&gt;/etc/passwd 用户信息                   /etc/shadow 用户密码                   /etc/group 群组信息&lt;/p&gt;
 
-/etc/gshadow 群组密码                 /etc/sudoers Sudoer列表（请使用“visudo”命令修改此文件，而不要直接编辑）
+&lt;p&gt;/etc/gshadow 群组密码                 /etc/sudoers Sudoer列表（请使用“visudo”命令修改此文件，而不要直接编辑）&lt;/p&gt;
 
-## Shell ##
+&lt;h2 id=&quot;shell&quot;&gt;Shell&lt;/h2&gt;
 
-/etc/shell 可用Shell列表              /etc/inputrc ReadLine控件设定              /etc/profile 用户首选项
+&lt;p&gt;/etc/shell 可用Shell列表              /etc/inputrc ReadLine控件设定              /etc/profile 用户首选项&lt;/p&gt;
 
-/etc/bash.bashrc bash配置文件
+&lt;p&gt;/etc/bash.bashrc bash配置文件&lt;/p&gt;
 
-## 系统环境 ##
+&lt;h2 id=&quot;section-27&quot;&gt;系统环境&lt;/h2&gt;
 
-/etc/environment 环境变量           /etc/updatedb.conf 文件检索数据库配置信息                  /etc/issue 发行信息
+&lt;p&gt;/etc/environment 环境变量           /etc/updatedb.conf 文件检索数据库配置信息                  /etc/issue 发行信息&lt;/p&gt;
 
-/etc/issue.net                 /etc/screenrc 屏幕设定                 
+&lt;p&gt;/etc/issue.net                 /etc/screenrc 屏幕设定                 &lt;/p&gt;
 
-## 网络 ##
+&lt;h2 id=&quot;section-28&quot;&gt;网络&lt;/h2&gt;
 
-/etc/iftab 网卡MAC地址绑定              /etc/hosts 主机列表             /etc/hostname 主机名
+&lt;p&gt;/etc/iftab 网卡MAC地址绑定              /etc/hosts 主机列表             /etc/hostname 主机名&lt;/p&gt;
 
-/etc/resolv.conf 域名解析服务器地址             /etc/network/interfaces 网卡配置文件
+&lt;p&gt;/etc/resolv.conf 域名解析服务器地址             /etc/network/interfaces 网卡配置文件&lt;/p&gt;
 
-## 用户配置文件 ##
+&lt;h2 id=&quot;section-29&quot;&gt;用户配置文件&lt;/h2&gt;
 
-/etc/ 目录下的文件，只有root用户才有权修改。应用软件的全局配置文件，通常普通用户也不能够修改，如果要通过配置软件，来适应特殊需求，您可以修改用户配置文件。
+&lt;p&gt;/etc/ 目录下的文件，只有root用户才有权修改。应用软件的全局配置文件，通常普通用户也不能够修改，如果要通过配置软件，来适应特殊需求，您可以修改用户配置文件。&lt;/p&gt;
 
-用户配置文件通常为全局配置文件的同名隐藏文件，放在$HOME目录下，例如：
+&lt;p&gt;用户配置文件通常为全局配置文件的同名隐藏文件，放在$HOME目录下，例如：&lt;/p&gt;
 
-/etc/inputrc /home/user/.inputrc
+&lt;p&gt;/etc/inputrc /home/user/.inputrc&lt;/p&gt;
 
-/etc/vim/vimrc /home/user/.vim/vimrc
+&lt;p&gt;/etc/vim/vimrc /home/user/.vim/vimrc&lt;/p&gt;
 
-也有少数例外，通常是系统程序
+&lt;p&gt;也有少数例外，通常是系统程序&lt;/p&gt;
 
-# 软件安装 #
-## DPKG ##
+&lt;h1 id=&quot;section-30&quot;&gt;软件安装&lt;/h1&gt;
+&lt;p&gt;## DPKG ##&lt;/p&gt;
 
-Linux系统中，软件通常以源代码或者预编译包的形式提供。
+&lt;p&gt;Linux系统中，软件通常以源代码或者预编译包的形式提供。&lt;/p&gt;
 
-软件源代码需要编译为二进制的机器代码才能够使用，安装比较耗时，不过您可以自行调节编译选项，决定需要的功能或组件，或者针对硬件平台作一些优化。
+&lt;p&gt;软件源代码需要编译为二进制的机器代码才能够使用，安装比较耗时，不过您可以自行调节编译选项，决定需要的功能或组件，或者针对硬件平台作一些优化。&lt;/p&gt;
 
-预编译的软件包，通常是由软件的发布者进行编译，您只要将软件拷贝到系统中就可以了。考虑到预编译软件包的适用性，预编译软件包通常不会针对某种硬件平台优化。它所包含的功能和组件也是通用的组合。
+&lt;p&gt;预编译的软件包，通常是由软件的发布者进行编译，您只要将软件拷贝到系统中就可以了。考虑到预编译软件包的适用性，预编译软件包通常不会针对某种硬件平台优化。它所包含的功能和组件也是通用的组合。&lt;/p&gt;
 
-Ubuntu系统中，软件通常以 deb 格式的包文件发布，它是一种预编译软件包。deb包中除了包含已编译的软件，通常还包括软件的拷贝路径、对其它软件包的依赖关系纪录、比较通用的配置文件以及软件的描述、版本、作者、类别、占用空间等信息。
+&lt;p&gt;Ubuntu系统中，软件通常以 deb 格式的包文件发布，它是一种预编译软件包。deb包中除了包含已编译的软件，通常还包括软件的拷贝路径、对其它软件包的依赖关系纪录、比较通用的配置文件以及软件的描述、版本、作者、类别、占用空间等信息。&lt;/p&gt;
 
-deb软件包命令遵行如下约定：
+&lt;p&gt;deb软件包命令遵行如下约定：&lt;/p&gt;
 
-	soft_ver-rev_arch.deb
+&lt;pre&gt;&lt;code&gt;soft_ver-rev_arch.deb
 
-	soft软件包名称           ver软件版本号           revUbuntu修订版本号        arch目标架构名称
+soft软件包名称           ver软件版本号           revUbuntu修订版本号        arch目标架构名称
+&lt;/code&gt;&lt;/pre&gt;
 
-例如： azureus_2.4.0.2-0ubuntu2_all.deb
+&lt;p&gt;例如： azureus_2.4.0.2-0ubuntu2_all.deb&lt;/p&gt;
 
-您需要使用 dpkg 命令来管理deb软件包：
+&lt;p&gt;您需要使用 dpkg 命令来管理deb软件包：&lt;/p&gt;
 
-	dpkg -i | --install xxx.deb 安装deb软件包
+&lt;pre&gt;&lt;code&gt;dpkg -i | --install xxx.deb 安装deb软件包
 
-	dpkg -r | --remove xxx.deb 删除软件包
+dpkg -r | --remove xxx.deb 删除软件包
 
-	dpkg -r -P | --purge xxx.deb 连同配置文件一起删除
+dpkg -r -P | --purge xxx.deb 连同配置文件一起删除
 
-	dpkg -I | -info xxx.deb 查看软件包信息
+dpkg -I | -info xxx.deb 查看软件包信息
 
-	dpkg -L xxx.deb 查看包内文件
+dpkg -L xxx.deb 查看包内文件
 
-	dpkg -l 查看系统中已安装软件包信息
+dpkg -l 查看系统中已安装软件包信息
 
-	dpkg-reconfigure xxx 重新配置软件包
+dpkg-reconfigure xxx 重新配置软件包
+&lt;/code&gt;&lt;/pre&gt;
 
-有些时候，您使用 dpkg 安装一个软件包，系统会提示您该软件包依赖其它软件包。这时，您先安装其它软件包，直到满足依赖关系为止。或者同时安装多个软件包
+&lt;p&gt;有些时候，您使用 dpkg 安装一个软件包，系统会提示您该软件包依赖其它软件包。这时，您先安装其它软件包，直到满足依赖关系为止。或者同时安装多个软件包&lt;/p&gt;
 
-	dpkg -i aaa.deb bbb.deb ccc.deb
+&lt;pre&gt;&lt;code&gt;dpkg -i aaa.deb bbb.deb ccc.deb
+&lt;/code&gt;&lt;/pre&gt;
 
+&lt;h2 id=&quot;apt&quot;&gt;APT&lt;/h2&gt;
 
-## APT ##
+&lt;p&gt;如果一个软件依赖关系过于复杂，使用 dpkg&lt;/p&gt;
 
-如果一个软件依赖关系过于复杂，使用 dpkg
+&lt;p&gt;来安装它，并不是一个明智的选择，这个时候您就需要用到APT软件包管理系统。APT可以自动的检查依赖关系，通过您预设的方式来获得相关软件包，并自动&lt;/p&gt;
 
-来安装它，并不是一个明智的选择，这个时候您就需要用到APT软件包管理系统。APT可以自动的检查依赖关系，通过您预设的方式来获得相关软件包，并自动
+&lt;p&gt;安装配置它。事实上，在多数情况下，我们推荐您使用APT软件包管理系统。&lt;/p&gt;
 
-安装配置它。事实上，在多数情况下，我们推荐您使用APT软件包管理系统。
+&lt;p&gt;APT系统需要一个软件信息数据库和至少一个存放着大量deb包的软件仓库，我们称之为 源 。 源 可以是网络服务器，安装CD或者本地软件仓库。您需要修改 /etc/apt/sources.list 文件，使APT系统能够连接到 源。&lt;/p&gt;
 
-APT系统需要一个软件信息数据库和至少一个存放着大量deb包的软件仓库，我们称之为 源 。 源 可以是网络服务器，安装CD或者本地软件仓库。您需要修改 /etc/apt/sources.list 文件，使APT系统能够连接到 源。
+&lt;p&gt;从以下页面中获得网络安装源的列表，并且根据您的网络环境，选择速度较快的源。&lt;/p&gt;
 
-从以下页面中获得网络安装源的列表，并且根据您的网络环境，选择速度较快的源。
+&lt;p&gt;http://wiki.ubuntu.org.cn/%E5%BF%AB%E9%80%9F%E……%97/DapperDrake&lt;/p&gt;
 
-http://wiki.ubuntu.org.cn/%E5%BF%AB%E9%80%9F%E......%97/DapperDrake
+&lt;p&gt;APT系统主要包括 apt-get 和 apt-cache 等命令。通常是复合命令，包含若干个子命令。&lt;/p&gt;
 
-APT系统主要包括 apt-get 和 apt-cache 等命令。通常是复合命令，包含若干个子命令。
+&lt;pre&gt;&lt;code&gt;apt-get install xxx 安装xxx
 
-	apt-get install xxx 安装xxx
+-d 仅下载           -f 强制安装
 
-	-d 仅下载           -f 强制安装
+apt-get remove xxx 卸载xxx
 
-	apt-get remove xxx 卸载xxx
+apt-get update 更新软件信息数据库
 
-	apt-get update 更新软件信息数据库
+apt-get upgrade 进行系统升级
 
-	apt-get upgrade 进行系统升级
+apt-cache search 搜索软件包
+&lt;/code&gt;&lt;/pre&gt;
 
-	apt-cache search 搜索软件包
+&lt;p&gt;说明：建议您经常使用 sudo apt-get update 命令来更新您的软件信息数据库&lt;/p&gt;
 
-说明：建议您经常使用 sudo apt-get update 命令来更新您的软件信息数据库
+&lt;h2 id=&quot;apt-1&quot;&gt;APT系统修复&lt;/h2&gt;
 
-## APT系统修复 ##
+&lt;p&gt;由于各种意外，APT系统可能会出现问题，使用如下命令，尝试进行修复：apt-get -f install&lt;/p&gt;
 
-由于各种意外，APT系统可能会出现问题，使用如下命令，尝试进行修复：apt-get -f install
+&lt;h1 id=&quot;section-31&quot;&gt;源码包&lt;/h1&gt;
 
+&lt;p&gt;对于绝大多数软件，我们建议您使用APT系统来安装它。在少数情况下，例如某软件没有以deb包的格式发布，或者需要定制适合自己的软件，您可以通过编译源代码的方式安装它。&lt;/p&gt;
 
-# 源码包 #
+&lt;p&gt;首先需要下载软件的源码包，并且将它解包为一些源代码文件。并了便于管理，建议将下载的源码包移动到 /usr/local/src/ 目录下，并在这里解包。&lt;/p&gt;
 
-对于绝大多数软件，我们建议您使用APT系统来安装它。在少数情况下，例如某软件没有以deb包的格式发布，或者需要定制适合自己的软件，您可以通过编译源代码的方式安装它。
+&lt;pre&gt;&lt;code&gt;sudo mv xxx.tar.gz /usr/local/src 移动源码包
 
-首先需要下载软件的源码包，并且将它解包为一些源代码文件。并了便于管理，建议将下载的源码包移动到 /usr/local/src/ 目录下，并在这里解包。
+cd /usr/local/src 进入“/usr/local/src/”目录
 
-	sudo mv xxx.tar.gz /usr/local/src 移动源码包
+sudo tar -xzvf xxx.tar.gz 解包源码
 
-	cd /usr/local/src 进入“/usr/local/src/”目录
+cd xxx_ver/ 进行解包后的源码目录
+&lt;/code&gt;&lt;/pre&gt;
 
-	sudo tar -xzvf xxx.tar.gz 解包源码
+&lt;p&gt;源码目录中通常有一个 configure 脚本，用来配置即将开始的编译过程。您可以执行它&lt;/p&gt;
 
-	cd xxx_ver/ 进行解包后的源码目录
+&lt;pre&gt;&lt;code&gt;sudo ./configure [--prefix=/usr/loca/xxx ......]
+&lt;/code&gt;&lt;/pre&gt;
 
-源码目录中通常有一个 configure 脚本，用来配置即将开始的编译过程。您可以执行它
+&lt;p&gt;它会自动检测软件的编译环境和依赖关系，并且生成 Makefile 文件。&lt;/p&gt;
 
-	sudo ./configure [--prefix=/usr/loca/xxx ......]
+&lt;p&gt;使用带参数的命令 ./configure –help ，或者阅读 INSTALL 文件，查看该脚本允许的参数。例如使用&lt;/p&gt;
 
-它会自动检测软件的编译环境和依赖关系，并且生成 Makefile 文件。
+&lt;pre&gt;&lt;code&gt;--prefix=/usr/local/xxx 参数，将软件的安装目录设定为 /usr/local/xxx/
+&lt;/code&gt;&lt;/pre&gt;
 
-使用带参数的命令 ./configure --help ，或者阅读 INSTALL 文件，查看该脚本允许的参数。例如使用
+&lt;p&gt;。（如果一定要将软件安装在单独目录下，建议您安装在这里）&lt;/p&gt;
 
-	--prefix=/usr/local/xxx 参数，将软件的安装目录设定为 /usr/local/xxx/
+&lt;p&gt;现在执行 make 命令，系统会根据 Makefile 文件中的设定，通过 make 工具调用编译器和所需资源文件，将源代码编译成目标文件。&lt;/p&gt;
 
-。（如果一定要将软件安装在单独目录下，建议您安装在这里）
+&lt;p&gt;sudo make&lt;/p&gt;
 
-现在执行 make 命令，系统会根据 Makefile 文件中的设定，通过 make 工具调用编译器和所需资源文件，将源代码编译成目标文件。
+&lt;p&gt;执行 make install 命令， make 工具会自动连接目标文件和库文件，将最终生成的文件拷贝到 Makefile 文件设定的路径中，并且完成更改文件的属性，删除残留文件等活动。&lt;/p&gt;
 
-sudo make
+&lt;p&gt;sudo make install&lt;/p&gt;
 
-执行 make install 命令， make 工具会自动连接目标文件和库文件，将最终生成的文件拷贝到 Makefile 文件设定的路径中，并且完成更改文件的属性，删除残留文件等活动。
+&lt;p&gt;现在，编译安装已经完成，为了更方便的使用它，需要给程序的可执行文件作一个符号链接。&lt;/p&gt;
 
-sudo make install
+&lt;pre&gt;&lt;code&gt;sudo ln -sf /usr/local/xxx/可执行文件 /usr/local/bin/可执行文件
+&lt;/code&gt;&lt;/pre&gt;
 
-现在，编译安装已经完成，为了更方便的使用它，需要给程序的可执行文件作一个符号链接。
+&lt;p&gt;Tip:为了顺利的进行编译，至少需要安装 build-essential 软件包。&lt;/p&gt;
 
-	sudo ln -sf /usr/local/xxx/可执行文件 /usr/local/bin/可执行文件
+&lt;pre&gt;&lt;code&gt;sudo apt-get install build-essential
+&lt;/code&gt;&lt;/pre&gt;
 
-Tip:为了顺利的进行编译，至少需要安装 build-essential 软件包。
+&lt;h1 id=&quot;xwindow&quot;&gt;Xwindow简介&lt;/h1&gt;
+&lt;p&gt;Xwindow是工作站图形系统的工业标准，它有多种不同的实现，Ubuntu系统中使用的为Xorg。&lt;/p&gt;
 
-	sudo apt-get install build-essential
+&lt;p&gt;（比较前卫的图形界面系统XGL，实际代替X服务器的作用，另外还有与之配套的窗口管理器）&lt;/p&gt;
 
-# Xwindow简介 #
-Xwindow是工作站图形系统的工业标准，它有多种不同的实现，Ubuntu系统中使用的为Xorg。
+&lt;h2 id=&quot;section-32&quot;&gt;历史&lt;/h2&gt;
 
-（比较前卫的图形界面系统XGL，实际代替X服务器的作用，另外还有与之配套的窗口管理器）
+&lt;p&gt;当然，Xwindow有悠久的历史和传统，不过那不在我们讨论的范围。您要注意的有两点：&lt;/p&gt;
 
-## 历史 ##
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Xwindow 和 Xbox 中的“X”本意是不同的， X 只是 W 后的一个字母，差不多应该这样理解，Xwindow 是 Window 的接班人 （注意，Window不是Windows）&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;同样，也不要把 Xwindow 说成是 Xwindows，那是一种亵渎！一切伟大的创造，都应得到应有的理解和尊重。&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
 
-当然，Xwindow有悠久的历史和传统，不过那不在我们讨论的范围。您要注意的有两点：
+&lt;h2 id=&quot;section-33&quot;&gt;架构及原理&lt;/h2&gt;
 
-* Xwindow 和 Xbox 中的“X”本意是不同的， X 只是 W 后的一个字母，差不多应该这样理解，Xwindow 是 Window 的接班人 （注意，Window不是Windows）
+&lt;p&gt;Xwindow使用服务器－客户端架构。无论本地图形界面，还是远程图形界面，都以同样的流程工作。这样便不需要分别进行设计和维护，极大的提高了网络透明性。&lt;/p&gt;
 
-* 同样，也不要把 Xwindow 说成是 Xwindows，那是一种亵渎！一切伟大的创造，都应得到应有的理解和尊重。
+&lt;p&gt;本地X客户端 ┐ ┌ 键盘&lt;/p&gt;
 
-## 架构及原理 ##
+&lt;p&gt;远程X客户端 ┼ X协议 ─ X服务器 ─ 硬件规范 ┼ 鼠标&lt;/p&gt;
 
-Xwindow使用服务器－客户端架构。无论本地图形界面，还是远程图形界面，都以同样的流程工作。这样便不需要分别进行设计和维护，极大的提高了网络透明性。
+&lt;p&gt;远程X客户端 ┘ └ 显示器&lt;/p&gt;
 
-本地X客户端 ┐ ┌ 键盘
+&lt;h2 id=&quot;xserver&quot;&gt;Xserver&lt;/h2&gt;
 
-远程X客户端 ┼ X协议 ─ X服务器 ─ 硬件规范 ┼ 鼠标
+&lt;p&gt;Xwindow系统服务器端，通过驱动程序（硬件规范）来管理硬件资源。&lt;/p&gt;
 
-远程X客户端 ┘ └ 显示器
+&lt;p&gt;例如：当我们移动鼠标时，通过驱动程序，向 Xserver 发送信息：&lt;/p&gt;
 
-## Xserver ##
+&lt;p&gt;“向右移动200点，向上移动100点”（向右上移动）；“按下左键”……&lt;/p&gt;
 
-Xwindow系统服务器端，通过驱动程序（硬件规范）来管理硬件资源。
+&lt;p&gt;Xserver作出如下响应：&lt;/p&gt;
 
-例如：当我们移动鼠标时，通过驱动程序，向 Xserver 发送信息：
+&lt;p&gt;1、上一次鼠标停止的坐标为600,500&lt;/p&gt;
 
-“向右移动200点，向上移动100点”（向右上移动）；“按下左键”……
+&lt;p&gt;2、向右200，向上100。现在鼠标位于坐标800,600&lt;/p&gt;
 
-Xserver作出如下响应：
+&lt;p&gt;3、坐标800,600处，为窗口Firefox的“关闭”按钮&lt;/p&gt;
 
-1、上一次鼠标停止的坐标为600,500
+&lt;p&gt;4、根据预设动作，将 “点击Firefox窗口的关闭按钮” 翻译为 “关闭窗口Firefox”&lt;/p&gt;
 
-2、向右200，向上100。现在鼠标位于坐标800,600
+&lt;p&gt;5、向X客户端Firefox发送一个“退出”消息&lt;/p&gt;
 
-3、坐标800,600处，为窗口Firefox的“关闭”按钮
+&lt;p&gt;6、Xserver通过显示子系统（显卡、显示器），全程显示鼠标的位置和移动&lt;/p&gt;
 
-4、根据预设动作，将 “点击Firefox窗口的关闭按钮” 翻译为 “关闭窗口Firefox”
+&lt;ul&gt;
+  &lt;li&gt;事实上，向程序发送“退出”信号，通常窗口管理器完成……为了描述方便，这里暂不区分。稍后，我们将向您介绍 窗口管理器 的其它一些细节。&lt;/li&gt;
+&lt;/ul&gt;
 
-5、向X客户端Firefox发送一个“退出”消息
+&lt;p&gt;大多数的鼠标不需要专门的驱动程序，因为它们符合某一硬件规范，例如：有四个移动方向和三个键&lt;/p&gt;
 
-6、Xserver通过显示子系统（显卡、显示器），全程显示鼠标的位置和移动
+&lt;h2 id=&quot;xclient&quot;&gt;Xclient&lt;/h2&gt;
 
-* 事实上，向程序发送“退出”信号，通常窗口管理器完成……为了描述方便，这里暂不区分。稍后，我们将向您介绍 窗口管理器 的其它一些细节。
+&lt;p&gt;Xwindow系统客户端，通过X协议，实现与Xserver 的交互。&lt;/p&gt;
 
-大多数的鼠标不需要专门的驱动程序，因为它们符合某一硬件规范，例如：有四个移动方向和三个键
+&lt;p&gt;例如：&lt;/p&gt;
 
-## Xclient ##
+&lt;p&gt;1、Xclient （假设Firefox） 接收Xserver的消息： 输入焦点在地址栏的范围内，“ubuntu.org.cn”，回车&lt;/p&gt;
 
-Xwindow系统客户端，通过X协议，实现与Xserver 的交互。
+&lt;p&gt;2、Firefox根据预设动作，将这些消息识别为 “打开链接 ubuntu.org.cn”&lt;/p&gt;
 
-例如：
+&lt;p&gt;3、Firefox向域名服务器请求 链接 “ubuntu.org.cn”。域名服务器将这个请求转换为 “http://ubuntu.org.cn/” 和 IP地址211.148.131.7，发送回 Firefox&lt;/p&gt;
 
-1、Xclient （假设Firefox） 接收Xserver的消息： 输入焦点在地址栏的范围内，“ubuntu.org.cn”，回车
+&lt;p&gt;4、Firefox将 “http://ubuntu.org.cn/”显示在地址栏（向Xserver发送请求，在地址栏位置显示这个地址）&lt;/p&gt;
 
-2、Firefox根据预设动作，将这些消息识别为 “打开链接 ubuntu.org.cn”
+&lt;p&gt;5、Firefox向地址 211.148.131.7 请示显示页面。&lt;/p&gt;
 
-3、Firefox向域名服务器请求 链接 “ubuntu.org.cn”。域名服务器将这个请求转换为 “http://ubuntu.org.cn/” 和 IP地址211.148.131.7，发送回 Firefox
+&lt;p&gt;6、Firefox将服务器发送回的页面显示在主窗口中&lt;/p&gt;
 
-4、Firefox将 “http://ubuntu.org.cn/”显示在地址栏（向Xserver发送请求，在地址栏位置显示这个地址）
+&lt;h2 id=&quot;xprotocol&quot;&gt;Xprotocol&lt;/h2&gt;
 
-5、Firefox向地址 211.148.131.7 请示显示页面。
+&lt;p&gt;Xwindow系统协议，Xserver和Xclient之间进行通信的规则&lt;/p&gt;
 
-6、Firefox将服务器发送回的页面显示在主窗口中
+&lt;h2 id=&quot;section-34&quot;&gt;窗口管理器&lt;/h2&gt;
 
-## Xprotocol ##
+&lt;p&gt;Window Manager，一种特殊的Xclient。&lt;/p&gt;
 
-Xwindow系统协议，Xserver和Xclient之间进行通信的规则
+&lt;p&gt;使用窗口管理器时，Xserver并不直接与其它Xclient通信，而是通过WM中转，当一些消息被定义为WM指令时，它们会被拦截。例如Alt+F4关闭窗口、拖动标题栏……&lt;/p&gt;
 
-## 窗口管理器 ##
+&lt;p&gt;消息“打开链接 ubuntu.org.cn”，具体内容如下：&lt;/p&gt;
 
-Window Manager，一种特殊的Xclient。
+&lt;p&gt;输入焦点在地址栏的范围内，“ubuntu.org.cn”，回车&lt;/p&gt;
 
-使用窗口管理器时，Xserver并不直接与其它Xclient通信，而是通过WM中转，当一些消息被定义为WM指令时，它们会被拦截。例如Alt+F4关闭窗口、拖动标题栏……
+&lt;p&gt;Xserver并不能直接判断焦点，而是这样：&lt;/p&gt;
 
-消息“打开链接 ubuntu.org.cn”，具体内容如下：
+&lt;p&gt;1、Xserver向WM发送位置和点击的信息，WM根据当前的“焦点策略”确定激活（最上层）的窗口为Firefox&lt;/p&gt;
 
-输入焦点在地址栏的范围内，“ubuntu.org.cn”，回车
+&lt;p&gt;2、Xserver将Firefox显示在最上层，高亮显示它的标题栏&lt;/p&gt;
 
-Xserver并不能直接判断焦点，而是这样：
+&lt;p&gt;3、在窗口Firefox内点击地址栏，或者 Ctrl+L，Xserver将位置信息发送给WM，WM再发送给Firefox&lt;/p&gt;
 
-1、Xserver向WM发送位置和点击的信息，WM根据当前的“焦点策略”确定激活（最上层）的窗口为Firefox
+&lt;p&gt;4、Firefox判断当前焦点后，显示一个闪动的文字输入光标&lt;/p&gt;
 
-2、Xserver将Firefox显示在最上层，高亮显示它的标题栏
+&lt;p&gt;5、Firefox将输入光标通过WM发送给Xserver，Xserver在屏幕相应位置进行显示&lt;/p&gt;
 
-3、在窗口Firefox内点击地址栏，或者 Ctrl+L，Xserver将位置信息发送给WM，WM再发送给Firefox
+&lt;p&gt;那么，“窗口管理器”到底能作些什么呢？其实它所作的一切都是管理窗口。例如：&lt;/p&gt;
 
-4、Firefox判断当前焦点后，显示一个闪动的文字输入光标
+&lt;p&gt;1.最上层的窗口会把其它窗口挡住&lt;/p&gt;
 
-5、Firefox将输入光标通过WM发送给Xserver，Xserver在屏幕相应位置进行显示
+&lt;p&gt;2.它通常是一个“已激活窗口”，根据不同的“焦点策略”，窗口管理器确定被激活的窗口。&lt;/p&gt;
 
-那么，“窗口管理器”到底能作些什么呢？其实它所作的一切都是管理窗口。例如：
+&lt;p&gt;激活窗口标题栏高亮显示，接收大部分的键盘消息和窗口内的鼠标点击消息。&lt;/p&gt;
 
-1.最上层的窗口会把其它窗口挡住
+&lt;p&gt;3.为了美观和容易分辨，大多数窗口都要有标题栏和边框。&lt;/p&gt;
 
-2.它通常是一个“已激活窗口”，根据不同的“焦点策略”，窗口管理器确定被激活的窗口。
+&lt;p&gt;为了方便，标题栏上还要有一些按钮，比如：最小化，最大化，关闭（这些按钮是窗口管理器请求的小窗口）&lt;/p&gt;
 
-激活窗口标题栏高亮显示，接收大部分的键盘消息和窗口内的鼠标点击消息。
+&lt;p&gt;4.一个窗口可以在另一个窗口旁边显示，而不一定完全被遮挡。为了实现这一点，就要控制窗口显示的位置&lt;/p&gt;
 
-3.为了美观和容易分辨，大多数窗口都要有标题栏和边框。
+&lt;p&gt;5.为了控制窗口的显示位置，需要将整个屏幕用座标描述，最好的办法是绘制一个填充整个屏幕的窗口，也就是根窗口。&lt;/p&gt;
 
-为了方便，标题栏上还要有一些按钮，比如：最小化，最大化，关闭（这些按钮是窗口管理器请求的小窗口）
+&lt;p&gt;6.因为根窗口是最大的，所以它可以严严实实的遮挡任何窗口，为了避免这一点，根窗口永远在最底层。&lt;/p&gt;
 
-4.一个窗口可以在另一个窗口旁边显示，而不一定完全被遮挡。为了实现这一点，就要控制窗口显示的位置
+&lt;p&gt;这很形象的说明了为什么它叫作“根窗口” ……root&lt;/p&gt;
 
-5.为了控制窗口的显示位置，需要将整个屏幕用座标描述，最好的办法是绘制一个填充整个屏幕的窗口，也就是根窗口。
+&lt;p&gt;7.根窗口不一定只有一个，大多数的窗口管理器可以使用 “工作区” ，来切换显示多个根窗口&lt;/p&gt;
 
-6.因为根窗口是最大的，所以它可以严严实实的遮挡任何窗口，为了避免这一点，根窗口永远在最底层。
+&lt;p&gt;8.根窗口固定位置上通常放置一些其它Xclient的窗口，例如底部面板，顶部面板，侧面板，程序启动图标&lt;/p&gt;
 
-这很形象的说明了为什么它叫作“根窗口” ……root
+&lt;p&gt;9.面板上又可以放一些其它的Xclient窗口，如任务条，启动栏，菜单……&lt;/p&gt;
 
-7.根窗口不一定只有一个，大多数的窗口管理器可以使用 “工作区” ，来切换显示多个根窗口
+&lt;p&gt;任务条可以以图标显示正在运行的任务，还可以作其它的杂活，像自动挂载USB设备……&lt;/p&gt;
 
-8.根窗口固定位置上通常放置一些其它Xclient的窗口，例如底部面板，顶部面板，侧面板，程序启动图标
+&lt;h2 id=&quot;section-35&quot;&gt;启动流程&lt;/h2&gt;
 
-9.面板上又可以放一些其它的Xclient窗口，如任务条，启动栏，菜单……
+&lt;p&gt;我们知道 init 是linux的根进程，是所有进程的父进程。同样， xinit是所有Xwindow进程的根进程&lt;/p&gt;
 
-任务条可以以图标显示正在运行的任务，还可以作其它的杂活，像自动挂载USB设备……
+&lt;p&gt;Startx&lt;/p&gt;
 
-## 启动流程 ##
+&lt;p&gt;startx 命令可以在命令行下启动图形界面。执行startx 命令时，实际执行这一命令：&lt;/p&gt;
 
-我们知道 init 是linux的根进程，是所有进程的父进程。同样， xinit是所有Xwindow进程的根进程
+&lt;p&gt;xinit /etc/X11/xinit/xinitrc – /etc/X11/xinit/xserverrc&lt;/p&gt;
 
-Startx
+&lt;p&gt;根据脚本 /etc/X11/xinit/xserverrc 启动Xserver，同时根据脚本 /etc/X11/xinit/xinitrc 启动指定Xclient进程，例如窗口管理器&lt;/p&gt;
 
-startx 命令可以在命令行下启动图形界面。执行startx 命令时，实际执行这一命令：
+&lt;p&gt;脚本 /etc/X11/xinit/xserverrc 以预设的参数运行程序 /usr/bin/X11/X&lt;/p&gt;
 
-xinit /etc/X11/xinit/xinitrc -- /etc/X11/xinit/xserverrc
+&lt;p&gt;/etc/X11/xinit/xinitrc 脚本则指向 /etc/X11/Xsession ，依次启动 /etc/X11/Xsession.d 目录中的脚本&lt;/p&gt;
 
-根据脚本 /etc/X11/xinit/xserverrc 启动Xserver，同时根据脚本 /etc/X11/xinit/xinitrc 启动指定Xclient进程，例如窗口管理器
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;您可以在用户配置文件 ~/.Xsession 中定义使用的WM，它的优先级高于全局配置文件(对于GDM会话不起作用)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;startx启动时，并不会再进行身份认证。因为它启动的是 /etc/X11/Xsession.d/gnome-session ，而不是 GDM会话&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
 
-脚本 /etc/X11/xinit/xserverrc 以预设的参数运行程序 /usr/bin/X11/X
+&lt;h2 id=&quot;gdm&quot;&gt;GDM会话&lt;/h2&gt;
 
-/etc/X11/xinit/xinitrc 脚本则指向 /etc/X11/Xsession ，依次启动 /etc/X11/Xsession.d 目录中的脚本
+&lt;p&gt;Ubuntu系统启动时自动进入图形界面，不需要运行 startx 命令&lt;/p&gt;
 
-* 您可以在用户配置文件 ~/.Xsession 中定义使用的WM，它的优先级高于全局配置文件(对于GDM会话不起作用)
+&lt;p&gt;在某些启动级别中，包含了gdm的启动脚本，例如 ： /etc/rc2.d/S13gdm&lt;/p&gt;
 
-* startx启动时，并不会再进行身份认证。因为它启动的是 /etc/X11/Xsession.d/gnome-session ，而不是 GDM会话
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;指向 /etc/gdm/gdm-cdd.conf 文件，加载预设视觉主题，启动 /usr/lib/gdm/gdmgreeter（登录屏幕）&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;用户身份认证完成后，启动 /etc/X11/default-display-manager 这个文件中设定的默认窗口管理器 /usr/sbin/gdm&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
 
-## GDM会话 ##
+&lt;p&gt;gdm在启动时，会要求用户名和密码，也就是我们看到的登录屏幕（gdmgreeter）&lt;/p&gt;
 
-Ubuntu系统启动时自动进入图形界面，不需要运行 startx 命令
+&lt;ul&gt;
+  &lt;li&gt;/usr/share/xsessions 目录下为所有可用登录会话的脚本&lt;/li&gt;
+&lt;/ul&gt;
 
-在某些启动级别中，包含了gdm的启动脚本，例如 ： /etc/rc2.d/S13gdm
+&lt;p&gt;配置文件&lt;/p&gt;
 
-1. 指向 /etc/gdm/gdm-cdd.conf 文件，加载预设视觉主题，启动 /usr/lib/gdm/gdmgreeter（登录屏幕）
+&lt;h2 id=&quot;x&quot;&gt;X服务器&lt;/h2&gt;
 
-2. 用户身份认证完成后，启动 /etc/X11/default-display-manager 这个文件中设定的默认窗口管理器 /usr/sbin/gdm
+&lt;p&gt;X服务器的主要配置文件为 /etc/X11/xorg.conf&lt;/p&gt;
 
-gdm在启动时，会要求用户名和密码，也就是我们看到的登录屏幕（gdmgreeter）
+&lt;h2 id=&quot;section-36&quot;&gt;布局&lt;/h2&gt;
 
-* /usr/share/xsessions 目录下为所有可用登录会话的脚本
+&lt;p&gt;Section “ServerLayout”&lt;/p&gt;
 
-配置文件
+&lt;p&gt;Identifier “Default Layout”&lt;/p&gt;
 
-## X服务器 ##
+&lt;p&gt;Screen “Default Screen” 0 0&lt;/p&gt;
 
-X服务器的主要配置文件为 /etc/X11/xorg.conf
+&lt;p&gt;InputDevice “Generic Keyboard”&lt;/p&gt;
 
-## 布局 ##
+&lt;p&gt;InputDevice “Configured Mouse”&lt;/p&gt;
 
-Section &quot;ServerLayout&quot;
+&lt;p&gt;EndSection&lt;/p&gt;
 
-Identifier &quot;Default Layout&quot;
+&lt;ul&gt;
+  &lt;li&gt;定义了 布局标识 、 屏幕标识 、 键盘标识 、 鼠标标识&lt;/li&gt;
+&lt;/ul&gt;
 
-Screen &quot;Default Screen&quot; 0 0
+&lt;h2 id=&quot;section-37&quot;&gt;模块&lt;/h2&gt;
 
-InputDevice &quot;Generic Keyboard&quot;
+&lt;p&gt;Section “Module”&lt;/p&gt;
 
-InputDevice &quot;Configured Mouse&quot;
+&lt;p&gt;Load “i2c”&lt;/p&gt;
 
-EndSection
+&lt;p&gt;Load “bitmap”&lt;/p&gt;
 
-* 定义了 布局标识 、 屏幕标识 、 键盘标识 、 鼠标标识
+&lt;p&gt;Load “ddc”&lt;/p&gt;
 
-## 模块 ##
+&lt;p&gt;Load “dri”&lt;/p&gt;
 
-Section &quot;Module&quot;
+&lt;p&gt;Load “extmod”&lt;/p&gt;
 
-Load &quot;i2c&quot;
+&lt;p&gt;Load “freetype”&lt;/p&gt;
 
-Load &quot;bitmap&quot;
+&lt;p&gt;Load “glx”&lt;/p&gt;
 
-Load &quot;ddc&quot;
+&lt;p&gt;Load “int10”&lt;/p&gt;
 
-Load &quot;dri&quot;
+&lt;p&gt;Load “type1”&lt;/p&gt;
 
-Load &quot;extmod&quot;
+&lt;p&gt;Load “vbe”&lt;/p&gt;
 
-Load &quot;freetype&quot;
+&lt;p&gt;EndSection&lt;/p&gt;
 
-Load &quot;glx&quot;
+&lt;h2 id=&quot;x-1&quot;&gt;X核心字体路径&lt;/h2&gt;
 
-Load &quot;int10&quot;
+&lt;p&gt;Section “Files”&lt;/p&gt;
 
-Load &quot;type1&quot;
+&lt;p&gt;FontPath “/usr/share/X11/fonts/75dpi”&lt;/p&gt;
 
-Load &quot;vbe&quot;
+&lt;p&gt;FontPath “/usr/share/X11/fonts/100dpi”&lt;/p&gt;
 
-EndSection
+&lt;p&gt;FontPath “/usr/share/X11/fonts/misc”&lt;/p&gt;
 
-## X核心字体路径 ##
+&lt;p&gt;FontPath “/usr/share/X11/fonts/cyrillic”&lt;/p&gt;
 
-Section &quot;Files&quot;
+&lt;p&gt;FontPath “/usr/share/X11/fonts/100dpi/:unscaled”&lt;/p&gt;
 
-FontPath &quot;/usr/share/X11/fonts/75dpi&quot;
+&lt;p&gt;FontPath “/usr/share/X11/fonts/75dpi/:unscaled”&lt;/p&gt;
 
-FontPath &quot;/usr/share/X11/fonts/100dpi&quot;
+&lt;p&gt;FontPath “/usr/share/X11/fonts/Type1”&lt;/p&gt;
 
-FontPath &quot;/usr/share/X11/fonts/misc&quot;
+&lt;p&gt;FontPath “/usr/share/fonts/Chinese/wqy-bitmapfont”&lt;/p&gt;
 
-FontPath &quot;/usr/share/X11/fonts/cyrillic&quot;
+&lt;p&gt;EndSection&lt;/p&gt;
 
-FontPath &quot;/usr/share/X11/fonts/100dpi/:unscaled&quot;
+&lt;h2 id=&quot;section-38&quot;&gt;屏幕&lt;/h2&gt;
 
-FontPath &quot;/usr/share/X11/fonts/75dpi/:unscaled&quot;
+&lt;p&gt;Section “Screen”&lt;/p&gt;
 
-FontPath &quot;/usr/share/X11/fonts/Type1&quot;
+&lt;p&gt;Identifier “Default Screen”&lt;/p&gt;
 
-FontPath &quot;/usr/share/fonts/Chinese/wqy-bitmapfont&quot;
+&lt;p&gt;Device “ATI Technologies, Inc. RV370 5B62 [Radeon X600 (PCIE)]”&lt;/p&gt;
 
-EndSection
+&lt;p&gt;Monitor “DELL E176FP”&lt;/p&gt;
 
-## 屏幕 ##
+&lt;p&gt;DefaultDepth 24&lt;/p&gt;
 
-Section &quot;Screen&quot;
+&lt;p&gt;SubSection “Display”&lt;/p&gt;
 
-Identifier &quot;Default Screen&quot;
+&lt;p&gt;Depth 1&lt;/p&gt;
 
-Device &quot;ATI Technologies, Inc. RV370 5B62 [Radeon X600 (PCIE)]&quot;
+&lt;p&gt;Modes “1280x1024” “1152x864” “1024x768” “800x600” “720x400” “640x480”&lt;/p&gt;
 
-Monitor &quot;DELL E176FP&quot;
+&lt;p&gt;………………&lt;/p&gt;
 
-DefaultDepth 24
+&lt;p&gt;EndSubSection&lt;/p&gt;
 
-SubSection &quot;Display&quot;
+&lt;p&gt;EndSection&lt;/p&gt;
 
-Depth 1
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;DefaultDepth 24 默认色深&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;SubSection 可用色深及分辨率&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
 
-Modes &quot;1280x1024&quot; &quot;1152x864&quot; &quot;1024x768&quot; &quot;800x600&quot; &quot;720x400&quot; &quot;640x480&quot;
+&lt;h2 id=&quot;section-39&quot;&gt;显卡&lt;/h2&gt;
 
-………………
+&lt;p&gt;Section “Device”&lt;/p&gt;
 
-EndSubSection
+&lt;p&gt;Identifier “ATI Technologies, Inc. RV370 5B62 [Radeon X600 (PCIE)]”&lt;/p&gt;
 
-EndSection
+&lt;p&gt;Driver “fglrx”&lt;/p&gt;
 
-* DefaultDepth 24 默认色深
+&lt;p&gt;Option “KernelModuleParm” “agplock=0”&lt;/p&gt;
 
-* SubSection 可用色深及分辨率
+&lt;p&gt;VideoRam 131072&lt;/p&gt;
 
-## 显卡 ##
+&lt;p&gt;EndSection&lt;/p&gt;
 
-Section &quot;Device&quot;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Identifier 显卡标识&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Driver 显卡驱动（如不同正常启用图形界面，首先尝试”vesa”）&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Option 显卡参数&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;VideoRam 显存大小&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
 
-Identifier &quot;ATI Technologies, Inc. RV370 5B62 [Radeon X600 (PCIE)]&quot;
+&lt;h2 id=&quot;section-40&quot;&gt;显示器&lt;/h2&gt;
 
-Driver &quot;fglrx&quot;
+&lt;p&gt;Section “Device”&lt;/p&gt;
 
-Option &quot;KernelModuleParm&quot; &quot;agplock=0&quot;
+&lt;p&gt;Identifier “ATI Technologies, Inc. RV370 5B62 [Radeon X600 (PCIE)]”&lt;/p&gt;
 
-VideoRam 131072
+&lt;p&gt;Driver “fglrx”&lt;/p&gt;
 
-EndSection
+&lt;p&gt;Option “KernelModuleParm” “agplock=0”&lt;/p&gt;
 
-* Identifier 显卡标识
+&lt;p&gt;VideoRam 131072&lt;/p&gt;
 
-* Driver 显卡驱动（如不同正常启用图形界面，首先尝试&quot;vesa&quot;）
+&lt;p&gt;EndSection&lt;/p&gt;
 
-* Option 显卡参数
+&lt;h2 id=&quot;section-41&quot;&gt;配置文件内部结构&lt;/h2&gt;
 
-* VideoRam 显存大小
+&lt;p&gt;/&lt;/p&gt;
 
-## 显示器 ##
+&lt;p&gt;├/ “ServerLayout” 布局&lt;/p&gt;
 
-Section &quot;Device&quot;
+&lt;p&gt;│├ “InputDevice” keyboard 键盘&lt;/p&gt;
 
-Identifier &quot;ATI Technologies, Inc. RV370 5B62 [Radeon X600 (PCIE)]&quot;
+&lt;p&gt;│├ “InputDevice” mouse 鼠标&lt;/p&gt;
 
-Driver &quot;fglrx&quot;
+&lt;p&gt;││&lt;/p&gt;
 
-Option &quot;KernelModuleParm&quot; &quot;agplock=0&quot;
+&lt;p&gt;│└/ “Screen” 显示子系统&lt;/p&gt;
 
-VideoRam 131072
+&lt;p&gt;│ ├ “Monitor” 显示器&lt;/p&gt;
 
-EndSection
+&lt;p&gt;│ ├ “Device” videocard 显卡&lt;/p&gt;
 
-## 配置文件内部结构 ##
+&lt;p&gt;│&lt;/p&gt;
 
-/
+&lt;p&gt;│&lt;/p&gt;
 
-├/ &quot;ServerLayout&quot; 布局
+&lt;p&gt;├ “Files” 字体&lt;/p&gt;
 
-│├ &quot;InputDevice&quot; keyboard 键盘
+&lt;p&gt;└ “Module” 模块&lt;/p&gt;
 
-│├ &quot;InputDevice&quot; mouse 鼠标
+&lt;h2 id=&quot;x-2&quot;&gt;X客户端&lt;/h2&gt;
 
-││
+&lt;p&gt;在 /etc/X11/Xsession 文件中可以发现下列内容&lt;/p&gt;
 
-│└/ &quot;Screen&quot; 显示子系统
+&lt;p&gt;OPTIONFILE=/etc/X11/Xsession.options&lt;/p&gt;
 
-│ ├ &quot;Monitor&quot; 显示器
+&lt;p&gt;SYSRESOURCES=/etc/X11/Xresources&lt;/p&gt;
 
-│ ├ &quot;Device&quot; videocard 显卡
+&lt;p&gt;USRRESOURCES=$HOME/.Xresources&lt;/p&gt;
 
-│
+&lt;p&gt;SYSSESSIONDIR=/etc/X11/Xsession.d&lt;/p&gt;
 
-│
+&lt;p&gt;USERXSESSION=$HOME/.xsession&lt;/p&gt;
 
-├ &quot;Files&quot; 字体
+&lt;p&gt;ALTUSERXSESSION=$HOME/.Xsession&lt;/p&gt;
 
-└ &quot;Module&quot; 模块
+&lt;p&gt;ERRFILE=$HOME/.xsession-errors&lt;/p&gt;
 
-## X客户端 ##
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;OPTIONFILE=/etc/X11/Xsession.options 设定X进程的启动参数。例如允许用户进程allow-user-xsession&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Xresources X资源文件。许多程序保留了X接口，允许X服务器管理一些视觉选项，例如窗口内的字体，配色等&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;xsession X进程。可以设置一些启动时自动运行的程序，也可以用来设定自己的窗口管理器（窗口管理器和桌面环境或者登录管理器是无关的）&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
 
-在 /etc/X11/Xsession 文件中可以发现下列内容
+&lt;h2 id=&quot;section-42&quot;&gt;字体&lt;/h2&gt;
 
-OPTIONFILE=/etc/X11/Xsession.options
+&lt;p&gt;freetype渲染引擎&lt;/p&gt;
 
-SYSRESOURCES=/etc/X11/Xresources
+&lt;p&gt;作为Xorg服务器的一个模块，freetype的功能包括读取Truetype字体信息，如大小、分辨率、编码等，并以之为依据渲染字体 -&lt;/p&gt;
 
-USRRESOURCES=$HOME/.Xresources
+&lt;p&gt;freetype2.x相对于freetype1.x 增加了抗锯齿等功能 - ( /etc/X11/xorg/conf 的 Module&lt;/p&gt;
 
-SYSSESSIONDIR=/etc/X11/Xsession.d
+&lt;p&gt;字段中，可以选择字体渲染模块，建议使用默认的 freetype )&lt;/p&gt;
 
-USERXSESSION=$HOME/.xsession
+&lt;p&gt;freetype只负责渲染字体。而查找字体，则可以由X服务器、X客户端或者字体服务器来完成。找到字体后，使用freetype引擎就地渲染&lt;/p&gt;
 
-ALTUSERXSESSION=$HOME/.Xsession
+&lt;p&gt;X核心字体&lt;/p&gt;
 
-ERRFILE=$HOME/.xsession-errors
+&lt;p&gt;X服务器根据X客户端的请求（字符编码），查找字体并进行渲染，然后显示，我们称之为&lt;/p&gt;
 
-* OPTIONFILE=/etc/X11/Xsession.options 设定X进程的启动参数。例如允许用户进程allow-user-xsession
+&lt;p&gt;Xft字体&lt;/p&gt;
 
-* Xresources X资源文件。许多程序保留了X接口，允许X服务器管理一些视觉选项，例如窗口内的字体，配色等
+&lt;p&gt;X客户端自行查找字体并进行渲染，X服务器只负责显示&lt;/p&gt;
 
-* xsession X进程。可以设置一些启动时自动运行的程序，也可以用来设定自己的窗口管理器（窗口管理器和桌面环境或者登录管理器是无关的）
+&lt;p&gt;由于Xft字体的渲染在客户端完成，所以它可以动态的加载，而不需要随同X服务器一同启动&lt;/p&gt;
 
-## 字体 ##
+&lt;p&gt;字体服务器&lt;/p&gt;
 
-freetype渲染引擎
+&lt;p&gt;另外还有一种字体服务器模式，例如 XFT字体：当客户端请求字体时，X服务器将请求转发到字体服务器，由字体服务器查找字体，并使用freetype引擎渲染，将结果传回X服务器，X服务器进行显示……&lt;/p&gt;
 
-作为Xorg服务器的一个模块，freetype的功能包括读取Truetype字体信息，如大小、分辨率、编码等，并以之为依据渲染字体 -
+&lt;p&gt;X核心字体&lt;/p&gt;
 
-freetype2.x相对于freetype1.x 增加了抗锯齿等功能 - ( /etc/X11/xorg/conf 的 Module
+&lt;p&gt;/etc/X11/xorg.conf 中可以配置X核心字体的搜索路径&lt;/p&gt;
 
-字段中，可以选择字体渲染模块，建议使用默认的 freetype )
+&lt;p&gt;Section “Files”&lt;/p&gt;
 
-freetype只负责渲染字体。而查找字体，则可以由X服务器、X客户端或者字体服务器来完成。找到字体后，使用freetype引擎就地渲染
+&lt;p&gt;FontPath “/usr/X11R6/lib/X11/fonts/misc/”&lt;/p&gt;
 
-X核心字体
+&lt;p&gt;FontPath “/usr/X11R6/lib/X11/fonts/Type1/”&lt;/p&gt;
 
-X服务器根据X客户端的请求（字符编码），查找字体并进行渲染，然后显示，我们称之为
+&lt;p&gt;FontPath “/usr/X11R6/lib/X11/fonts/Speedo/”&lt;/p&gt;
 
-Xft字体
+&lt;p&gt;FontPath “/usr/X11R6/lib/X11/fonts/100dpi/”&lt;/p&gt;
 
-X客户端自行查找字体并进行渲染，X服务器只负责显示
+&lt;p&gt;FontPath “/usr/X11R6/lib/X11/fonts/75dpi/”&lt;/p&gt;
 
-由于Xft字体的渲染在客户端完成，所以它可以动态的加载，而不需要随同X服务器一同启动
+&lt;p&gt;EndSection&lt;/p&gt;
 
-字体服务器
+&lt;p&gt;*&lt;/p&gt;
 
-另外还有一种字体服务器模式，例如 XFT字体：当客户端请求字体时，X服务器将请求转发到字体服务器，由字体服务器查找字体，并使用freetype引擎渲染，将结果传回X服务器，X服务器进行显示……
+&lt;p&gt;当X客户端向X服务器请求显示文字的时候，X服务器会按上面列表的先后顺序查找字体&lt;/p&gt;
 
-X核心字体
+&lt;p&gt;例如显示中文时，如果第一个路径中的字体不包含中文，则查找下面的路径，直到发现中文字体&lt;/p&gt;
 
-/etc/X11/xorg.conf 中可以配置X核心字体的搜索路径
+&lt;p&gt;*&lt;/p&gt;
 
-Section &quot;Files&quot;
+&lt;p&gt;请将您偏好的字体放在靠前的位置&lt;/p&gt;
 
-FontPath &quot;/usr/X11R6/lib/X11/fonts/misc/&quot;
+&lt;p&gt;要使安装的字体能够作为X核心字体使用，将字体的安装路径添加到上面的列表中，使用 mkfontscale 、 mkfontdir&lt;/p&gt;
 
-FontPath &quot;/usr/X11R6/lib/X11/fonts/Type1/&quot;
+&lt;p&gt;扫瞄文件夹中的字体，并生成索引，就可以了（建议使用 ttmkfdir 生成 fonts.scale ，将其复制为 fonts.dir ）&lt;/p&gt;
 
-FontPath &quot;/usr/X11R6/lib/X11/fonts/Speedo/&quot;
+&lt;p&gt;字体的选择及显示风格，可以修改GTK1的配置文件，或者在Xresources文件中对程序单独进行定义&lt;/p&gt;
 
-FontPath &quot;/usr/X11R6/lib/X11/fonts/100dpi/&quot;
+&lt;p&gt;事实上，在我们的日常应用中，X核心字体环境并不常见，使用GTK1图形库的程序、某些类型的终端……&lt;/p&gt;
 
-FontPath &quot;/usr/X11R6/lib/X11/fonts/75dpi/&quot;
+&lt;ul&gt;
+  &lt;li&gt;Emacs也是这样一个老派的程序……不过Emacs23中刚刚加入了xft字体的支持&lt;/li&gt;
+&lt;/ul&gt;
 
-EndSection
+&lt;p&gt;XFT字体&lt;/p&gt;
 
-*
+&lt;p&gt;Xft字体相关选项在 /etc/fonts/fonts.conf 文件中配置&lt;/p&gt;
 
-当X客户端向X服务器请求显示文字的时候，X服务器会按上面列表的先后顺序查找字体
+&lt;p&gt;可以使用 fc-cache 命令，递归扫瞄以下目录中的字体（包括子文件夹中的字体），建立字体缓存&lt;/p&gt;
 
-例如显示中文时，如果第一个路径中的字体不包含中文，则查找下面的路径，直到发现中文字体
+&lt;p&gt;/usr/share/X11/fonts&lt;/p&gt;
 
-*
+&lt;p&gt;/usr/share/fonts&lt;/p&gt;
 
-请将您偏好的字体放在靠前的位置
+&lt;p&gt;/usr/local/share/fonts&lt;/p&gt;
 
-要使安装的字体能够作为X核心字体使用，将字体的安装路径添加到上面的列表中，使用 mkfontscale 、 mkfontdir
+&lt;p&gt;~/.fonts&lt;/p&gt;
 
-扫瞄文件夹中的字体，并生成索引，就可以了（建议使用 ttmkfdir 生成 fonts.scale ，将其复制为 fonts.dir ）
+&lt;ul&gt;
+  &lt;li&gt;/etc/fonts/fonts.conf 文件的 &lt;dir&gt; 字段&lt;/dir&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
-字体的选择及显示风格，可以修改GTK1的配置文件，或者在Xresources文件中对程序单独进行定义
+&lt;p&gt;多数支持GTK2或者Qt图形库的X客户端能够使用Xft字体渲染技术&lt;/p&gt;
 
-事实上，在我们的日常应用中，X核心字体环境并不常见，使用GTK1图形库的程序、某些类型的终端……
+&lt;ul&gt;
+  &lt;li&gt;GTK2为Gnome使用的图形库，Qt为KDE使用的图形库。相对来说，GTK2图形库在程序的GUI设计中更加通用&lt;/li&gt;
+&lt;/ul&gt;
 
-* Emacs也是这样一个老派的程序……不过Emacs23中刚刚加入了xft字体的支持
+&lt;p&gt;安装字体，只要将字体拷贝到以上任意目录， fc-cache -fv 刷新字体缓存即可 （参数: -f 强制刷新; -v 显示过程）&lt;/p&gt;
 
-XFT字体
+&lt;p&gt;使用命令 fc-list 列出所有可用字体&lt;/p&gt;
 
-Xft字体相关选项在 /etc/fonts/fonts.conf 文件中配置
+&lt;p&gt;字体的选择及显示风格，可以修改GTK2或者Qt的配置文件，建议使用图形界面配置&lt;/p&gt;
 
-可以使用 fc-cache 命令，递归扫瞄以下目录中的字体（包括子文件夹中的字体），建立字体缓存
+&lt;ul&gt;
+  &lt;li&gt;一般情况下，桌面环境中附带了相关程序，例如 gnome-font-properties&lt;/li&gt;
+&lt;/ul&gt;
 
-/usr/share/X11/fonts
+&lt;h1 id=&quot;section-43&quot;&gt;系统管理&lt;/h1&gt;
+&lt;p&gt;## 一些细节 ##&lt;/p&gt;
 
-/usr/share/fonts
+&lt;p&gt;Linux是大小写敏感的系统，所有的命令、路径、参数、变量……都区分大小写&lt;/p&gt;
 
-/usr/local/share/fonts
+&lt;p&gt;使用 TAB 键补全命令，无论任何时候，多按几次TAB总会有所帮助&lt;/p&gt;
 
-~/.fonts
+&lt;p&gt;Shell的功能键能够协助您更高效的编辑命令，请熟悉其键绑定，尽量使用它&lt;/p&gt;
 
- 
+&lt;p&gt;命令由 命令名 、 分隔符 、 参数 、 操作对象 构成&lt;/p&gt;
 
-* /etc/fonts/fonts.conf 文件的 &lt;dir&gt; 字段
+&lt;p&gt;命令名&lt;/p&gt;
 
-多数支持GTK2或者Qt图形库的X客户端能够使用Xft字体渲染技术
+&lt;p&gt;标识命令的功能，例如cp(copy)、mv(move)、rm(remove)……&lt;/p&gt;
 
-* GTK2为Gnome使用的图形库，Qt为KDE使用的图形库。相对来说，GTK2图形库在程序的GUI设计中更加通用
+&lt;p&gt;有些命令包含一些子命令，您可以认为它的命令名由两个单词构成，例如“apt”软件包管理系统：&lt;/p&gt;
 
-安装字体，只要将字体拷贝到以上任意目录， fc-cache -fv 刷新字体缓存即可 （参数: -f 强制刷新; -v 显示过程）
+&lt;p&gt;apt-get install 安装一个软件&lt;/p&gt;
 
-使用命令 fc-list 列出所有可用字体
+&lt;p&gt;apt-get remove 删除一个软件&lt;/p&gt;
 
-字体的选择及显示风格，可以修改GTK2或者Qt的配置文件，建议使用图形界面配置
+&lt;p&gt;分隔符&lt;/p&gt;
 
-* 一般情况下，桌面环境中附带了相关程序，例如 gnome-font-properties
+&lt;p&gt;通常为空格，多个连续的空格视为一个空格，下面两个命令相同：&lt;/p&gt;
 
-# 系统管理 #
-## 一些细节 ##
+&lt;p&gt;cp a b&lt;/p&gt;
 
-Linux是大小写敏感的系统，所有的命令、路径、参数、变量……都区分大小写
+&lt;p&gt;cp a b&lt;/p&gt;
 
-使用 TAB 键补全命令，无论任何时候，多按几次TAB总会有所帮助
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;有一些特殊符号也属于分隔符，例如管道&lt;/td&gt;
+      &lt;td&gt;、重定向 &amp;gt; 、 » 、 &amp;lt; 、后台运行 &amp;amp; 、序列执行 &amp;amp;&amp;amp; 、 ; 。使用这些符号时，您不需要再使用空格作为分隔符，例如：&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
 
-Shell的功能键能够协助您更高效的编辑命令，请熟悉其键绑定，尽量使用它
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;ls -al&lt;/td&gt;
+      &lt;td&gt;less&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
 
-命令由 命令名 、 分隔符 、 参数 、 操作对象 构成
+&lt;p&gt;写为以下形式，是为了让您更容易的阅读它：&lt;/p&gt;
 
-命令名
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;ls -al&lt;/td&gt;
+      &lt;td&gt;less&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
 
-标识命令的功能，例如cp(copy)、mv(move)、rm(remove)……
+&lt;p&gt;参数&lt;/p&gt;
 
-有些命令包含一些子命令，您可以认为它的命令名由两个单词构成，例如“apt”软件包管理系统：
+&lt;p&gt;精细调节命令的行为，以 - 引导，通常为参数名的首字母。许多软件都可以使用 -h 参数来阅读使用说明，例如：&lt;/p&gt;
 
-apt-get install 安装一个软件
+&lt;p&gt;apt-get -h&lt;/p&gt;
 
-apt-get remove 删除一个软件
+&lt;p&gt;也可以使用参数的全名，一般以 – 引导，例如：&lt;/p&gt;
 
-分隔符
+&lt;p&gt;apt-get –help&lt;/p&gt;
 
-通常为空格，多个连续的空格视为一个空格，下面两个命令相同：
+&lt;p&gt;多数命令中，使用 - 引导多个字符，将会被视为多个参数，例如：&lt;/p&gt;
 
-cp a b
+&lt;p&gt;apt-get -help&lt;/p&gt;
 
-cp a b
+&lt;p&gt;系统会解读为以下命令&lt;/p&gt;
 
-有一些特殊符号也属于分隔符，例如管道 | 、重定向 &amp;gt; 、 &amp;gt;&amp;gt; 、 &amp;lt; 、后台运行 &amp;amp; 、序列执行 &amp;amp;&amp;amp; 、 ; 。使用这些符号时，您不需要再使用空格作为分隔符，例如：
+&lt;p&gt;apt-get -h -e -l -p&lt;/p&gt;
 
-ls -al|less
+&lt;p&gt;少数命令的参数，不需要以 - 引导，或者使用 - 引导参数全名，例如：&lt;/p&gt;
 
-写为以下形式，是为了让您更容易的阅读它：
+&lt;p&gt;ps aux&lt;/p&gt;
 
-ls -al | less
+&lt;p&gt;/etc/init.d/gdm start&lt;/p&gt;
 
-参数
+&lt;p&gt;mplayer -loop xxx&lt;/p&gt;
 
-精细调节命令的行为，以 - 引导，通常为参数名的首字母。许多软件都可以使用 -h 参数来阅读使用说明，例如：
+&lt;p&gt;需要对多个对象进行操作时，可以使用空格分隔符将它们隔开：&lt;/p&gt;
 
-apt-get -h
+&lt;p&gt;touch 1 2 3 4 5 6&lt;/p&gt;
 
-也可以使用参数的全名，一般以 -- 引导，例如：
+&lt;p&gt;使用空格分隔的多个对象，视为一个整体，作为命令的一个操作对象：&lt;/p&gt;
 
-apt-get --help
+&lt;p&gt;mv 1 2 3 4 5 6 /home/&lt;/p&gt;
 
-多数命令中，使用 - 引导多个字符，将会被视为多个参数，例如：
+&lt;p&gt;这个命令把“1 2 3 4 5 6”作为一个操作对象，移动到另一个操作对象，“/home/”目录&lt;/p&gt;
 
-apt-get -help
+&lt;p&gt;递归 表示在子层次中重复相同操作。例如递归复制某目录，不但复制当前目录及其下的所有文件；而且对当前目录的子目录，也进行递归复制的操作。&lt;/p&gt;
 
-系统会解读为以下命令
+&lt;p&gt;格式约定&lt;/p&gt;
 
-apt-get -h -e -l -p
+&lt;p&gt;使用 [] 表示可选项，实际输入为方括号中的内容，例如&lt;/p&gt;
 
-少数命令的参数，不需要以 - 引导，或者使用 - 引导参数全名，例如：
+&lt;p&gt;ls [-al]&lt;/p&gt;
 
-ps aux
+&lt;p&gt;ls是必须的，参数不需要以方括号括起来。&lt;/p&gt;
 
-/etc/init.d/gdm start
+&lt;p&gt;使用 &amp;lt;&amp;gt; 表示必需项，实际输入为尖括号中的内容&lt;/p&gt;
 
-mplayer -loop xxx
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;使用&lt;/td&gt;
+      &lt;td&gt;表示 或 ，以&lt;/td&gt;
+      &lt;td&gt;分隔的项目不能同时使用，例如&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
 
-需要对多个对象进行操作时，可以使用空格分隔符将它们隔开：
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;tar [-z&lt;/td&gt;
+      &lt;td&gt;j c&lt;/td&gt;
+      &lt;td&gt;x vf] &lt;归档文件&gt; [源文件]&lt;/归档文件&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
 
-touch 1 2 3 4 5 6
+&lt;p&gt;参数通常紧跟命令名，除非必要，在命令格式中，我们通常省略它们&lt;/p&gt;
 
-使用空格分隔的多个对象，视为一个整体，作为命令的一个操作对象：
+&lt;p&gt;系统信息
+uptime  &lt;/p&gt;
 
-mv 1 2 3 4 5 6 /home/
+&lt;p&gt;联机信息-时间，显示如下&lt;/p&gt;
 
-这个命令把“1 2 3 4 5 6”作为一个操作对象，移动到另一个操作对象，“/home/”目录
+&lt;p&gt;11:27pm up 9 days, 7:12, 3 user, load average: 0.07, 0.12, 0.14&lt;/p&gt;
 
-递归 表示在子层次中重复相同操作。例如递归复制某目录，不但复制当前目录及其下的所有文件；而且对当前目录的子目录，也进行递归复制的操作。
+&lt;p&gt;当前系统时间 系统运行时间 当前在线用户数 系统负荷 1分钟前 5分钟前 15分钟前&lt;/p&gt;
 
-格式约定
+&lt;p&gt;w&lt;/p&gt;
 
-使用 [] 表示可选项，实际输入为方括号中的内容，例如
+&lt;p&gt;联机信息-已登录用户，显示如下&lt;/p&gt;
 
-ls [-al]
+&lt;p&gt;01:04:10 up 1:34, 2 users, load average: 0.25, 0.16, 0.11&lt;/p&gt;
 
-ls是必须的，参数不需要以方括号括起来。
+&lt;p&gt;uptime 信息&lt;/p&gt;
 
-使用 &amp;lt;&amp;gt; 表示必需项，实际输入为尖括号中的内容
+&lt;p&gt;USER TTY FROM LOGIN@ IDLE JCPU PCPU WHAT&lt;/p&gt;
 
-使用 | 表示 或 ，以 | 分隔的项目不能同时使用，例如
+&lt;p&gt;user tty1 192.168.0.1 23:30 1:33 0.14s 0.12s -bash&lt;/p&gt;
 
-tar [-z|j c|x vf] &lt;归档文件&gt; [源文件]
+&lt;p&gt;用户名 登录方式 来源地址 登录时间 发呆时间 资源占用 当前任务&lt;/p&gt;
 
-参数通常紧跟命令名，除非必要，在命令格式中，我们通常省略它们
+&lt;p&gt;Tip：w [用户名称] : 显示某一用户相关信息&lt;/p&gt;
 
-系统信息
-uptime  
+&lt;p&gt;who&lt;/p&gt;
 
-联机信息-时间，显示如下
+&lt;p&gt;联机信息，常用参数&lt;/p&gt;
 
-11:27pm up 9 days, 7:12, 3 user, load average: 0.07, 0.12, 0.14
+&lt;p&gt;-r 运行级别&lt;/p&gt;
 
-当前系统时间 系统运行时间 当前在线用户数 系统负荷 1分钟前 5分钟前 15分钟前
+&lt;p&gt;whoami&lt;/p&gt;
 
-w
+&lt;p&gt;显示当前用户名&lt;/p&gt;
 
-联机信息-已登录用户，显示如下
+&lt;p&gt;last&lt;/p&gt;
 
-01:04:10 up 1:34, 2 users, load average: 0.25, 0.16, 0.11
+&lt;p&gt;最近用户登录信息&lt;/p&gt;
 
-uptime 信息
+&lt;p&gt;-&lt;数字&gt; 使用数字作为参数，控制显示条目。例如&lt;/数字&gt;&lt;/p&gt;
 
-USER TTY FROM LOGIN@ IDLE JCPU PCPU WHAT
+&lt;p&gt;last -10 显示10条纪录&lt;/p&gt;
 
-user tty1 192.168.0.1 23:30 1:33 0.14s 0.12s -bash
+&lt;p&gt;uname&lt;/p&gt;
 
-用户名 登录方式 来源地址 登录时间 发呆时间 资源占用 当前任务
+&lt;p&gt;系统信息&lt;/p&gt;
 
-Tip：w [用户名称] : 显示某一用户相关信息
+&lt;p&gt;-s 内核名称（默认参数）           -a 全部               -p CPU信息                -n 主机名          &lt;/p&gt;
 
-who
+&lt;p&gt;-r 内核发行信息（版本号）                -v 内核版本信息&lt;/p&gt;
 
-联机信息，常用参数
+&lt;p&gt;date&lt;/p&gt;
 
--r 运行级别
+&lt;p&gt;显示、设定系统时间&lt;/p&gt;
 
-whoami
+&lt;p&gt;-u 显示格林尼洛时间（UTC）&lt;/p&gt;
 
-显示当前用户名
+&lt;p&gt;MMDDhhmm[[CC]YY][.ss] 设定时间，需要管理员权限。例如： date 12292359&lt;/p&gt;
 
-last
+&lt;p&gt;MM 月份 DD 天数 hh 小时 mm 分钟 CC 年份前两位 YY 年份后两位 ss 秒钟&lt;/p&gt;
 
-最近用户登录信息
+&lt;p&gt;秒钟、年份为可选，例如： date 122923592006.59&lt;/p&gt;
 
--&lt;数字&gt; 使用数字作为参数，控制显示条目。例如
+&lt;p&gt;+[%X]设定显示格式，以下为date默认输出格式：&lt;/p&gt;
 
-last -10 显示10条纪录
+&lt;p&gt;date +%Y年%m月%d日%A%H:%M:%S%Z&lt;/p&gt;
 
-uname
+&lt;p&gt;格式控制            %n 换行             %t 制表符&lt;/p&gt;
 
-系统信息
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;小时                    %H(00~23) %I(01~12) %k(0~23) %l(1~12) %p(AM&lt;/td&gt;
+      &lt;td&gt;PM)&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
 
--s 内核名称（默认参数）           -a 全部               -p CPU信息                -n 主机名          
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;分、秒                %M分钟(00~59)                  %S秒(00..61)              %T(hh:mm:ss) %r(hh:mm:ss [AM&lt;/td&gt;
+      &lt;td&gt;PM])&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
 
--r 内核发行信息（版本号）                -v 内核版本信息
+&lt;p&gt;%s 从1970年1月1日00:00:00 UTC到目前为止的秒数              %X(%H:%M:%S)                 %Z时区&lt;/p&gt;
 
-date
+&lt;p&gt;星期                    %a(Sun~Sat) %A(Sunday~Saturday) %w : 一周中的第几天 (0..6)&lt;/p&gt;
 
-显示、设定系统时间
+&lt;p&gt;年份                    %Y(0000~9999) %y(00~99)&lt;/p&gt;
 
--u 显示格林尼洛时间（UTC）
+&lt;p&gt;月份                    %m(01~12) %b %h(Jan~Dec) %B(January~December)&lt;/p&gt;
 
-MMDDhhmm[[CC]YY][.ss] 设定时间，需要管理员权限。例如： date 12292359
+&lt;p&gt;日期                    %d(01~31) %j(001~366)&lt;/p&gt;
 
-MM 月份 DD 天数 hh 小时 mm 分钟 CC 年份前两位 YY 年份后两位 ss 秒钟
+&lt;p&gt;%x(本地格式mm/dd/yy) %D(mm/dd/yy) %c&lt;/p&gt;
 
-秒钟、年份为可选，例如： date 122923592006.59
+&lt;p&gt;一年中的第几周&lt;/p&gt;
 
-+[%X]设定显示格式，以下为date默认输出格式：
+&lt;p&gt;%U(00~53)以Sunday为一周的第一天 %W(00~53)以Monday为一周的第一天&lt;/p&gt;
 
-date +%Y年%m月%d日%A%H:%M:%S%Z
+&lt;p&gt;cal&lt;/p&gt;
 
-格式控制            %n 换行             %t 制表符
+&lt;p&gt;显示日历&lt;/p&gt;
 
-小时                    %H(00~23) %I(01~12) %k(0~23) %l(1~12) %p(AM|PM)
+&lt;p&gt;文件管理
+一些细节&lt;/p&gt;
 
-分、秒                %M分钟(00~59)                  %S秒(00..61)              %T(hh:mm:ss) %r(hh:mm:ss [AM|PM])
+&lt;p&gt;/ 目录为文件系统根目录，所有目录都是它的子目录&lt;/p&gt;
 
-%s 从1970年1月1日00:00:00 UTC到目前为止的秒数              %X(%H:%M:%S)                 %Z时区
+&lt;p&gt;绝对路径以 / 起始，相对路径以当前所在目录起始&lt;/p&gt;
 
-星期                    %a(Sun~Sat) %A(Sunday~Saturday) %w : 一周中的第几天 (0..6)
+&lt;p&gt;目录是一种特殊类型的文件，如果没有特别指明， 文件 包括文件和目录&lt;/p&gt;
 
-年份                    %Y(0000~9999) %y(00~99)
+&lt;p&gt;.. 表示上一级目录， . 表示当前目录，它们是两个特殊目录&lt;/p&gt;
 
-月份                    %m(01~12) %b %h(Jan~Dec) %B(January~December)
+&lt;p&gt;链接&lt;/p&gt;
 
-日期                    %d(01~31) %j(001~366)
+&lt;p&gt;为当前文件建立在其它路径中的访问方法。例如将系统中其它位置的可执行文件，链接到 /usr/local/bin 目录下，使用命令调用。&lt;/p&gt;
 
-%x(本地格式mm/dd/yy) %D(mm/dd/yy) %c
+&lt;p&gt;ls [路径]&lt;/p&gt;
 
-一年中的第几周
+&lt;p&gt;显示当前目录文件列表&lt;/p&gt;
 
-%U(00~53)以Sunday为一周的第一天 %W(00~53)以Monday为一周的第一天
+&lt;p&gt;–color 不同属性以不同颜色显示（默认参数）&lt;/p&gt;
 
-cal
+&lt;p&gt;-a 全部显示                -i 显示inode值          -l 详细信息                &lt;/p&gt;
 
-显示日历
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;-F 显示文件类型后缀 目录/ 链接@ 可执行文件* 端口文件= 管道文件&lt;/td&gt;
+      &lt;td&gt;&amp;gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
 
-文件管理
-一些细节
+&lt;p&gt;-A 显示隐藏文件                 -R 递归显示子目录文件列表                -S 按文件大小排序            &lt;/p&gt;
 
-/ 目录为文件系统根目录，所有目录都是它的子目录
+&lt;p&gt;-t 按修改时间排序              -u 按访问时间排序             -d 只显示目录，不递归显示目录下的文件&lt;/p&gt;
 
-绝对路径以 / 起始，相对路径以当前所在目录起始
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;cd [目录路径]&lt;/td&gt;
+      &lt;td&gt;[特殊路径]&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
 
-目录是一种特殊类型的文件，如果没有特别指明， 文件 包括文件和目录
+&lt;p&gt;切换目录&lt;/p&gt;
 
-.. 表示上一级目录， . 表示当前目录，它们是两个特殊目录
+&lt;p&gt;目录路径可以使用绝对路径或者相对路径特殊路径：&lt;/p&gt;
 
-链接
+&lt;p&gt;~ $HOME目录（默认值）          - 上一次目录              .. 上一级目录             . 当前目录&lt;/p&gt;
 
-为当前文件建立在其它路径中的访问方法。例如将系统中其它位置的可执行文件，链接到 /usr/local/bin 目录下，使用命令调用。
+&lt;p&gt;说明：您可以通过修改 /etc/environment 文件，来定义 $CDPATH 变量，设定“cd”命令的搜索路径。&lt;/p&gt;
 
-ls [路径]
+&lt;p&gt;pwd&lt;/p&gt;
 
-显示当前目录文件列表
+&lt;p&gt;显示当前路径&lt;/p&gt;
 
---color 不同属性以不同颜色显示（默认参数）
+&lt;p&gt;file &lt;文件名&gt;&lt;/文件名&gt;&lt;/p&gt;
 
--a 全部显示                -i 显示inode值          -l 详细信息                
+&lt;p&gt;显示文件类型&lt;/p&gt;
 
--F 显示文件类型后缀 目录/ 链接@ 可执行文件* 端口文件= 管道文件| &amp;gt;
+&lt;p&gt;-i 显示mime类型&lt;/p&gt;
 
--A 显示隐藏文件                 -R 递归显示子目录文件列表                -S 按文件大小排序            
+&lt;p&gt;du [路径]&lt;/p&gt;
 
--t 按修改时间排序              -u 按访问时间排序             -d 只显示目录，不递归显示目录下的文件
+&lt;p&gt;计算文件或目录空间占用&lt;/p&gt;
 
-cd [目录路径] | [特殊路径]
+&lt;p&gt;-h 人性化显示。自动以G、M、K为单位显示占用空间大小                 -l 重复计算硬链接文件大小&lt;/p&gt;
 
-切换目录
+&lt;p&gt;-L 计算符号链接文件大小          -a 显示当前目录子目录中的文件                 -c 显示文件数&lt;/p&gt;
 
-目录路径可以使用绝对路径或者相对路径特殊路径：
+&lt;p&gt;less &lt;文件名&gt;&lt;/文件名&gt;&lt;/p&gt;
 
-~ $HOME目录（默认值）          - 上一次目录              .. 上一级目录             . 当前目录
+&lt;p&gt;浏览文件，使用VI和Emacs两种风格的键绑定。以下为VI风格键绑定&lt;/p&gt;
 
-说明：您可以通过修改 /etc/environment 文件，来定义 $CDPATH 变量，设定“cd”命令的搜索路径。
+&lt;p&gt;Ctrl+f(orward) 向下翻一页 Ctrl+d(own) 向下翻半页&lt;/p&gt;
 
-pwd
+&lt;p&gt;Ctrl+b(ackward) 向上翻一页 Ctrl+u(p) 向上翻半页             / 查找 q(uit) 退出&lt;/p&gt;
 
-显示当前路径
+&lt;p&gt;touch &lt;目标文件&gt;&lt;/目标文件&gt;&lt;/p&gt;
 
-file &lt;文件名&gt;
+&lt;p&gt;触碰，在不修改文件的前提下，更改其时间属性。通常用来创建一个空文件&lt;/p&gt;
 
-显示文件类型
+&lt;p&gt;mkdir &lt;文件夹&gt;&lt;/文件夹&gt;&lt;/p&gt;
 
--i 显示mime类型
+&lt;p&gt;创建文件夹&lt;/p&gt;
 
-du [路径]
+&lt;p&gt;-p &lt;多级目录&gt; 按路径创建多级目录           -m &lt;数字权限值&gt; 设定权限&lt;/数字权限值&gt;&lt;/多级目录&gt;&lt;/p&gt;
 
-计算文件或目录空间占用
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;cp &lt;源文件&gt; &amp;lt;目标目录&lt;/源文件&gt;&lt;/td&gt;
+      &lt;td&gt;文件&amp;gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
 
--h 人性化显示。自动以G、M、K为单位显示占用空间大小                 -l 重复计算硬链接文件大小
+&lt;p&gt;将源文件复制为目录文件，或者将源文件复制到目标目录。多个源文件使用空格分隔&lt;/p&gt;
 
--L 计算符号链接文件大小          -a 显示当前目录子目录中的文件                 -c 显示文件数
+&lt;p&gt;cp &lt;源目录&gt; &lt;目标目录&gt;&lt;/目标目录&gt;&lt;/源目录&gt;&lt;/p&gt;
 
-less &lt;文件名&gt;
+&lt;p&gt;将源目录复制到目标目录中，如果复制多个源目录，需要使用 -R 参数&lt;/p&gt;
 
-浏览文件，使用VI和Emacs两种风格的键绑定。以下为VI风格键绑定
+&lt;p&gt;-a 相当于-dpr参数             -d 保留链接                -f 强制复制，覆盖目标文件                 -i 覆盖时询问用户&lt;/p&gt;
 
-Ctrl+f(orward) 向下翻一页 Ctrl+d(own) 向下翻半页
+&lt;p&gt;-p 保留修改时间和访问权限                -r -R 递归复制（目录=&amp;gt;目录）          -l 创建链接                &lt;/p&gt;
 
-Ctrl+b(ackward) 向上翻一页 Ctrl+u(p) 向上翻半页             / 查找 q(uit) 退出
+&lt;p&gt;-v 显示过程&lt;/p&gt;
 
-touch &lt;目标文件&gt;
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;rm &amp;lt;目标目录&lt;/td&gt;
+      &lt;td&gt;文件&amp;gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
 
-触碰，在不修改文件的前提下，更改其时间属性。通常用来创建一个空文件
+&lt;p&gt;删除&lt;/p&gt;
 
-mkdir &lt;文件夹&gt;
+&lt;p&gt;-r -R 递归删除            -f 强制删除（无需确认，直接删除。慎用！）               -i 交互式删除（询问用户）&lt;/p&gt;
 
-创建文件夹
+&lt;p&gt;rmdir &lt;目标目录&gt;&lt;/目标目录&gt;&lt;/p&gt;
 
--p &lt;多级目录&gt; 按路径创建多级目录           -m &lt;数字权限值&gt; 设定权限
+&lt;p&gt;删除目录时，建议您使用“rm -r”命令&lt;/p&gt;
 
-cp &lt;源文件&gt; &amp;lt;目标目录|文件&amp;gt;
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;mv &lt;源文件&gt; &amp;lt;目标目录&lt;/源文件&gt;&lt;/td&gt;
+      &lt;td&gt;文件&amp;gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
 
-将源文件复制为目录文件，或者将源文件复制到目标目录。多个源文件使用空格分隔
+&lt;p&gt;相当于cp后删除源文件，也可以作为“重命名”使用。&lt;/p&gt;
 
-cp &lt;源目录&gt; &lt;目标目录&gt;
+&lt;p&gt;mv &lt;源目录&gt; &lt;目标目录&gt;&lt;/目标目录&gt;&lt;/源目录&gt;&lt;/p&gt;
 
-将源目录复制到目标目录中，如果复制多个源目录，需要使用 -R 参数
+&lt;p&gt;-r -R 递归&lt;/p&gt;
 
--a 相当于-dpr参数             -d 保留链接                -f 强制复制，覆盖目标文件                 -i 覆盖时询问用户
+&lt;p&gt;ln &lt;源文件&gt; &lt;链接&gt;&lt;/链接&gt;&lt;/源文件&gt;&lt;/p&gt;
 
--p 保留修改时间和访问权限                -r -R 递归复制（目录=&amp;gt;目录）          -l 创建链接                
+&lt;p&gt;链接&lt;/p&gt;
 
--v 显示过程
+&lt;p&gt;-s 符号链接                -f 强制链接，覆盖目标文件                 -i 覆盖前询问用户&lt;/p&gt;
 
-rm &amp;lt;目标目录|文件&amp;gt;
+&lt;p&gt;文件操作
+nano&lt;/p&gt;
 
-删除
+&lt;p&gt;一个简单轻便的文本编辑器，使用Emacs风格的键绑定。&lt;/p&gt;
 
--r -R 递归删除            -f 强制删除（无需确认，直接删除。慎用！）               -i 交互式删除（询问用户）
+&lt;p&gt;split &lt;源文件&gt; [目标文件名前缀]&lt;/源文件&gt;&lt;/p&gt;
 
-rmdir &lt;目标目录&gt;
+&lt;p&gt;将源文件按一定规则分割成若干个目标文件。默认文件名前缀为 x&lt;/p&gt;
 
-删除目录时，建议您使用“rm -r”命令
+&lt;p&gt;-&lt;行数&gt; 按行数分割文件           -l &lt;行数&gt; 同上&lt;/行数&gt;&lt;/行数&gt;&lt;/p&gt;
 
-mv &lt;源文件&gt; &amp;lt;目标目录|文件&amp;gt;
+&lt;p&gt;-b &lt;字节&gt; 按大小分割文件。可以使用b、k、m作单位，不指定单位的情况下，默认单位为b&lt;/字节&gt;&lt;/p&gt;
 
-相当于cp后删除源文件，也可以作为“重命名”使用。
+&lt;p&gt;-C &lt;字节&gt; 按大小分割文件，并尽量保持每行的完整&lt;/字节&gt;&lt;/p&gt;
 
-mv &lt;源目录&gt; &lt;目标目录&gt;
+&lt;p&gt;示例：split -C 100k file.split x&lt;/p&gt;
 
--r -R 递归
+&lt;p&gt;cat &lt;文件名&gt;&lt;/文件名&gt;&lt;/p&gt;
 
-ln &lt;源文件&gt; &lt;链接&gt;
+&lt;p&gt;输出文件内容。用空格分隔多个文件名，可以将多个文件内容连接到一起输出。使用重定向合并为一个文件&lt;/p&gt;
 
-链接
+&lt;p&gt;-n 在输出中添加行号                   -b 在输出中添加行号，空行不编号            &lt;/p&gt;
 
--s 符号链接                -f 强制链接，覆盖目标文件                 -i 覆盖前询问用户
+&lt;p&gt;-s 将两行或以上的空行，合并为一个空行&lt;/p&gt;
 
-文件操作
-nano
+&lt;p&gt;示例：cat xaa xab xac &amp;gt; file.split&lt;/p&gt;
 
-一个简单轻便的文本编辑器，使用Emacs风格的键绑定。
+&lt;p&gt;sort [-o &lt;输出文件&gt;] [-t &lt;分隔字符&gt;] [+&lt;起始字段&gt; - &lt;结束字段&gt;] [文件]&lt;/结束字段&gt;&lt;/起始字段&gt;&lt;/分隔字符&gt;&lt;/输出文件&gt;&lt;/p&gt;
 
-split &lt;源文件&gt; [目标文件名前缀]
+&lt;p&gt;对文本内容排序&lt;/p&gt;
 
-将源文件按一定规则分割成若干个目标文件。默认文件名前缀为 x
+&lt;p&gt;-m 合并文件               -c 检查文件是否已按规则排序            -b 忽略行首空格字符                  &lt;/p&gt;
 
--&lt;行数&gt; 按行数分割文件           -l &lt;行数&gt; 同上
+&lt;p&gt;-u 忽略内容重复行             -f 忽略大小写             -l 忽略非打印字符              -M 作为月份比较&lt;/p&gt;
 
--b &lt;字节&gt; 按大小分割文件。可以使用b、k、m作单位，不指定单位的情况下，默认单位为b
+&lt;p&gt;-d 按字典顺序排序，按照字母、数字、空格、制表符排序           -r 逆序输出&lt;/p&gt;
 
--C &lt;字节&gt; 按大小分割文件，并尽量保持每行的完整
+&lt;p&gt;more&lt;/p&gt;
 
-示例：split -C 100k file.split x
+&lt;p&gt;查看文件内容，我们建议您使用 less&lt;/p&gt;
 
-cat &lt;文件名&gt;
+&lt;p&gt;diff &lt;文件名&gt;&lt;/文件名&gt;&lt;/p&gt;
 
-输出文件内容。用空格分隔多个文件名，可以将多个文件内容连接到一起输出。使用重定向合并为一个文件
+&lt;p&gt;比较文件&lt;/p&gt;
 
--n 在输出中添加行号                   -b 在输出中添加行号，空行不编号            
+&lt;p&gt;cksum [文件名]&lt;/p&gt;
 
--s 将两行或以上的空行，合并为一个空行
+&lt;p&gt;计算文件的CRC值。不指定文件名则从标准输入设备读入数据，例如：&lt;/p&gt;
 
-示例：cat xaa xab xac &amp;gt; file.split
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;echo xxx&lt;/td&gt;
+      &lt;td&gt;cksum&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
 
-sort [-o &lt;输出文件&gt;] [-t &lt;分隔字符&gt;] [+&lt;起始字段&gt; - &lt;结束字段&gt;] [文件]
+&lt;p&gt;md5sum [文件名] 计算文件的md5值。同上&lt;/p&gt;
 
-对文本内容排序
+&lt;p&gt;权限管理
+一些细节&lt;/p&gt;
 
--m 合并文件               -c 检查文件是否已按规则排序            -b 忽略行首空格字符                  
+&lt;p&gt;一个文件主要包含下列属性， ls -l&lt;/p&gt;
 
--u 忽略内容重复行             -f 忽略大小写             -l 忽略非打印字符              -M 作为月份比较
+&lt;ul&gt;
+  &lt;li&gt;rwx rwx rwx user group date filename&lt;/li&gt;
+&lt;/ul&gt;
 
--d 按字典顺序排序，按照字母、数字、空格、制表符排序           -r 逆序输出
+&lt;p&gt;111 101 101&lt;/p&gt;
 
-more
+&lt;p&gt;其中，第一组为归属用户的权限，第二组为归属群组的权限，第三组为其它用户群组的权限。user为文件的归属用户，group为文件的归属群组，date为日期信息，filename为文件名。&lt;/p&gt;
 
-查看文件内容，我们建议您使用 less
+&lt;p&gt;对于文件夹，必须拥有它的可执行权限，才能够使用 cd 命令进入该文件夹；拥有可读权限，才能够使用 ls 命令查看该文件夹的文件列表。&lt;/p&gt;
 
-diff &lt;文件名&gt;
+&lt;p&gt;root用户拥有最高权限。&lt;/p&gt;
 
-比较文件
+&lt;p&gt;可以使用3位的二进制数字来描述一组权限，某一权限对应的数字为1,则表示具有该种权限，为0,则不具有该种权限。&lt;/p&gt;
 
-cksum [文件名]
+&lt;p&gt;使用二进制数字来描述一组权限，虽然非常直观，但是3组权限需要用9位数来表示，使用不够方便。因此我们将三组权限使用3位8进制数字来表示。它们的对应关系为：&lt;/p&gt;
 
-计算文件的CRC值。不指定文件名则从标准输入设备读入数据，例如：
+&lt;p&gt;r 100 4&lt;/p&gt;
 
-echo xxx | cksum
+&lt;p&gt;w 010 2&lt;/p&gt;
 
-md5sum [文件名] 计算文件的md5值。同上
+&lt;p&gt;x 001 1&lt;/p&gt;
 
-权限管理
-一些细节
+&lt;p&gt;将这三位8进制数字相加的结果，就可以表示该组权限的具体内容，例如：&lt;/p&gt;
 
-一个文件主要包含下列属性， ls -l
+&lt;p&gt;7=4+2+1=rwx&lt;/p&gt;
 
-- rwx rwx rwx user group date filename
+&lt;p&gt;5=4+1=rx&lt;/p&gt;
 
-111 101 101
+&lt;p&gt;755=4+2+1 4+1 4+1=rwx r-x r-x&lt;/p&gt;
 
-其中，第一组为归属用户的权限，第二组为归属群组的权限，第三组为其它用户群组的权限。user为文件的归属用户，group为文件的归属群组，date为日期信息，filename为文件名。
+&lt;p&gt;还可以使用 a 、 u 、 g 、 o 表示归属关系，使用 = 、 + 、 - 表示权限变化，使用 r 、 w 、 x 表示权限内容，&lt;/p&gt;
 
-对于文件夹，必须拥有它的可执行权限，才能够使用 cd 命令进入该文件夹；拥有可读权限，才能够使用 ls 命令查看该文件夹的文件列表。
+&lt;p&gt;a 所有用户 u 归属用户 g 归属群组 o 其它用户&lt;/p&gt;
 
-root用户拥有最高权限。
+&lt;p&gt;= 具有权限 + 增加权限 - 去除权限&lt;/p&gt;
 
-可以使用3位的二进制数字来描述一组权限，某一权限对应的数字为1,则表示具有该种权限，为0,则不具有该种权限。
+&lt;p&gt;r 可读权限 w 可写权限 x 可执行权限&lt;/p&gt;
 
-使用二进制数字来描述一组权限，虽然非常直观，但是3组权限需要用9位数来表示，使用不够方便。因此我们将三组权限使用3位8进制数字来表示。它们的对应关系为：
+&lt;p&gt;例如：&lt;/p&gt;
 
-r 100 4
+&lt;p&gt;a+x 给所有用户增加可执行权限&lt;/p&gt;
 
-w 010 2
+&lt;p&gt;go-wx 将归属群组和其它用户的可写、可执行权限去掉&lt;/p&gt;
 
-x 001 1
+&lt;p&gt;u=rwx 归属用户具有可读、可写、可执行权限&lt;/p&gt;
 
-将这三位8进制数字相加的结果，就可以表示该组权限的具体内容，例如：
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;chmod &lt;权限表达式&gt; &amp;lt;文件&lt;/权限表达式&gt;&lt;/td&gt;
+      &lt;td&gt;目录&amp;gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
 
-7=4+2+1=rwx
+&lt;p&gt;更改文件的权限。权限的表达式可以使用三位8进制数字表示，或者使用 augo +-= rxw-s 来表示&lt;/p&gt;
 
-5=4+1=rx
+&lt;p&gt;-R 递归&lt;/p&gt;
 
-755=4+2+1 4+1 4+1=rwx r-x r-x
+&lt;p&gt;-v 显示过程&lt;/p&gt;
 
-还可以使用 a 、 u 、 g 、 o 表示归属关系，使用 = 、 + 、 - 表示权限变化，使用 r 、 w 、 x 表示权限内容，
+&lt;p&gt;-c 类似“-v”，仅显示更改部分&lt;/p&gt;
 
-a 所有用户 u 归属用户 g 归属群组 o 其它用户
+&lt;p&gt;–reference=&lt;参考文件或目录&gt; 以指定文件为参考更改权限&lt;/参考文件或目录&gt;&lt;/p&gt;
 
-= 具有权限 + 增加权限 - 去除权限
+&lt;p&gt;示例：&lt;/p&gt;
 
-r 可读权限 w 可写权限 x 可执行权限
+&lt;p&gt;chmod -R a+x path&lt;/p&gt;
 
-例如：
+&lt;p&gt;chmod -Rv 755 path&lt;/p&gt;
 
-a+x 给所有用户增加可执行权限
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;chown &lt;归属用户&gt;[:归属群组] &amp;lt;文件&lt;/归属用户&gt;&lt;/td&gt;
+      &lt;td&gt;目录&amp;gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
 
-go-wx 将归属群组和其它用户的可写、可执行权限去掉
+&lt;p&gt;更改文件的归属用户。可以使用用户名或者UID&lt;/p&gt;
 
-u=rwx 归属用户具有可读、可写、可执行权限
+&lt;p&gt;-R 递归              -v 显示过程                -c 类似 -v ，仅显示更改部分&lt;/p&gt;
 
-chmod &lt;权限表达式&gt; &amp;lt;文件|目录&amp;gt;
+&lt;p&gt;–reference=&lt;参考文件或目录&gt; 以指定文件为参考更改权限&lt;/参考文件或目录&gt;&lt;/p&gt;
 
-更改文件的权限。权限的表达式可以使用三位8进制数字表示，或者使用 augo +-= rxw-s 来表示
+&lt;p&gt;示例：&lt;/p&gt;
 
--R 递归
+&lt;p&gt;chown user:admin path                   chown -R user.admin path              chown user path&lt;/p&gt;
 
--v 显示过程
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;chgrp &lt;归属群组&gt; &amp;lt;文件&lt;/归属群组&gt;&lt;/td&gt;
+      &lt;td&gt;目录&amp;gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
 
--c 类似“-v”，仅显示更改部分
+&lt;p&gt;更改文件的归属群组。可以使用群组名或者GID&lt;/p&gt;
 
---reference=&lt;参考文件或目录&gt; 以指定文件为参考更改权限
+&lt;p&gt;参数同上&lt;/p&gt;
 
-示例：
+&lt;p&gt;SUID、SGID、Sticky bit&lt;/p&gt;
 
-chmod -R a+x path
+&lt;p&gt;某些情况下，需要以可执行文件归属用户的身份执行该文件，可以为该文件设置SUID。同样，设置SGID能够以该文件归属群组的身份执行它。&lt;/p&gt;
 
-chmod -Rv 755 path
+&lt;p&gt;例如：用户自行设定密码。出于安全方面的考虑， /etc/shadow 只能由root用户直接修改。&lt;/p&gt;
 
-chown &lt;归属用户&gt;[:归属群组] &amp;lt;文件|目录&amp;gt;
+&lt;p&gt;-rw——- root root /etc/shadow&lt;/p&gt;
 
-更改文件的归属用户。可以使用用户名或者UID
+&lt;p&gt;这个时候，可以为程序 /usr/bin/passwd&lt;/p&gt;
 
--R 递归              -v 显示过程                -c 类似 -v ，仅显示更改部分
+&lt;p&gt;设置SUID，当普通用户执行“passwd”命令时，便能够以该程序归属用户root的身份修改 /etc/shadow&lt;/p&gt;
 
---reference=&lt;参考文件或目录&gt; 以指定文件为参考更改权限
+&lt;p&gt;文件。而“passwd”程序自身带有身份验证机制，不能通过验证时拒绝执行，从而保证了安全。&lt;/p&gt;
 
-示例：
+&lt;p&gt;ls -l /usr/bin/passwd&lt;/p&gt;
 
-chown user:admin path                   chown -R user.admin path              chown user path
+&lt;p&gt;-r-s–x–x root root /usr/bin/passwd&lt;/p&gt;
 
-chgrp &lt;归属群组&gt; &amp;lt;文件|目录&amp;gt;
+&lt;p&gt;我们发现，归属用户的可执行权限位使用 s ，表示SUID。同样，归属群组的可执行权限位使用 s ，表示SGID。任何用户或群组都拥有&lt;/p&gt;
 
-更改文件的归属群组。可以使用群组名或者GID
+&lt;p&gt;其它用户 的权限，所以不需要以 其它用户 身份执行文件，其它用户的可执行权限位便不会出现 s 。该权限位可能出现的属性为 t&lt;/p&gt;
 
-参数同上
+&lt;p&gt;，也就是粘着位Sticky bit。&lt;/p&gt;
 
-SUID、SGID、Sticky bit
+&lt;p&gt;ls -ld /tmp&lt;/p&gt;
 
-某些情况下，需要以可执行文件归属用户的身份执行该文件，可以为该文件设置SUID。同样，设置SGID能够以该文件归属群组的身份执行它。
+&lt;p&gt;drwxrwxrwt root root /tmp&lt;/p&gt;
 
-例如：用户自行设定密码。出于安全方面的考虑， /etc/shadow 只能由root用户直接修改。
+&lt;p&gt;粘着位表示任何用户都可能具有写权限，但只有该归属用户或root用户才能够删除&lt;/p&gt;
 
--rw------- root root /etc/shadow
+&lt;p&gt;SUID、SGID、Sticky bit也可以像权限一样，使用一个八进制数表示，如下：&lt;/p&gt;
 
-这个时候，可以为程序 /usr/bin/passwd
+&lt;p&gt;4 SUID&lt;/p&gt;
 
-设置SUID，当普通用户执行“passwd”命令时，便能够以该程序归属用户root的身份修改 /etc/shadow
+&lt;p&gt;2 SGID&lt;/p&gt;
 
-文件。而“passwd”程序自身带有身份验证机制，不能通过验证时拒绝执行，从而保证了安全。
+&lt;p&gt;1 Sticky bit&lt;/p&gt;
 
-ls -l /usr/bin/passwd
+&lt;p&gt;通过在“chmod”命令中使用4个八进制数的表达式，如 4755 ，用第一位表示SUID、SGID、或Sticky bit，便能够为文件设置这些特殊权限。示例：&lt;/p&gt;
 
--r-s--x--x root root /usr/bin/passwd
+&lt;p&gt;chmod -R 4755 path&lt;/p&gt;
 
-我们发现，归属用户的可执行权限位使用 s ，表示SUID。同样，归属群组的可执行权限位使用 s ，表示SGID。任何用户或群组都拥有
+&lt;p&gt;lsattr [路径]&lt;/p&gt;
 
-其它用户 的权限，所以不需要以 其它用户 身份执行文件，其它用户的可执行权限位便不会出现 s 。该权限位可能出现的属性为 t
+&lt;p&gt;查看文件的特殊属性&lt;/p&gt;
 
-，也就是粘着位Sticky bit。
+&lt;p&gt;-a 全部显示                -d 只显示目录            -R 递归&lt;/p&gt;
 
-ls -ld /tmp
+&lt;p&gt;特殊属性包括：&lt;/p&gt;
 
-drwxrwxrwt root root /tmp
+&lt;p&gt;a：仅供附加用途                 b：不更新最后存取时间              c：压缩后存放            d：排除在倾倒操作之外&lt;/p&gt;
 
-粘着位表示任何用户都可能具有写权限，但只有该归属用户或root用户才能够删除
+&lt;p&gt;i：不得任意更动文件或目录                s：保密性删除文件或目录          S：即时更新文件或目录&lt;/p&gt;
 
-SUID、SGID、Sticky bit也可以像权限一样，使用一个八进制数表示，如下：
+&lt;p&gt;u：预防以外删除&lt;/p&gt;
 
-4 SUID
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;chattr +&lt;/td&gt;
+      &lt;td&gt;-&lt;/td&gt;
+      &lt;td&gt;=&lt;属性&gt; &lt;路径&gt;&lt;/路径&gt;&lt;/属性&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
 
-2 SGID
+&lt;p&gt;更改文件特殊属性&lt;/p&gt;
 
-1 Sticky bit
+&lt;p&gt;-R 递归              -V 显示过程&lt;/p&gt;
 
-通过在“chmod”命令中使用4个八进制数的表达式，如 4755 ，用第一位表示SUID、SGID、或Sticky bit，便能够为文件设置这些特殊权限。示例：
+&lt;p&gt;压缩解压
+tar -c|x|u|r|t[z|j][v] -f &lt;归档文件&gt; [未打包文件]&lt;/归档文件&gt;&lt;/p&gt;
 
-chmod -R 4755 path
+&lt;p&gt;将多个文件打包为一个归档文件，可以在打包的同时进行压缩。支持的格式为tar（归档）、gz（压缩）、bz2（压缩率更高，比较耗时）&lt;/p&gt;
 
-lsattr [路径]
+&lt;p&gt;-c 创建               -x 解包               -u 更新               -r 添加               -t 查看               &lt;/p&gt;
 
-查看文件的特殊属性
+&lt;p&gt;-d 比较压缩包内文件和文件                -A 将tar文件添加到归档文件中                  -z 使用gz压缩格式&lt;/p&gt;
 
--a 全部显示                -d 只显示目录            -R 递归
+&lt;p&gt;-j 使用bz2压缩格式           -v 显示过程                -f &lt;文件名&gt; 归档文件的文件名&lt;/文件名&gt;&lt;/p&gt;
 
-特殊属性包括：
+&lt;p&gt;-C &lt;解压路径&gt; 将压缩包中的文件解压到指定目录             &lt;/解压路径&gt;&lt;/p&gt;
 
-a：仅供附加用途                 b：不更新最后存取时间              c：压缩后存放            d：排除在倾倒操作之外
+&lt;p&gt;[未打包文件] 创建、更新时必须填写&lt;/p&gt;
 
-i：不得任意更动文件或目录                s：保密性删除文件或目录          S：即时更新文件或目录
+&lt;p&gt;示例：&lt;/p&gt;
 
-u：预防以外删除
+&lt;p&gt;tar -zcvf xxx.tar.gz xxx/ xxx1 xxx2 xxx3 多个待打包文件以空格分隔&lt;/p&gt;
 
-chattr +|-|=&lt;属性&gt; &lt;路径&gt;
+&lt;p&gt;tar -zcvf xxx.tar.gz /home/user/xxx/ 使用绝对路径打包，解包也使用绝对路径&lt;/p&gt;
 
-更改文件特殊属性
+&lt;p&gt;tar -zxvf xxx.tar.gz 按相对路径解包到当前目录下，或按绝对路径解包&lt;/p&gt;
 
--R 递归              -V 显示过程
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;tar -zcvf xxx.tar.gz xxx&lt;/td&gt;
+      &lt;td&gt;split -b 1m 打包后，使用split分割为1m大小的多个文件&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
 
-压缩解压
-tar -c|x|u|r|t[z|j][v] -f &lt;归档文件&gt; [未打包文件]
+&lt;p&gt;其它参数&lt;/p&gt;
 
-将多个文件打包为一个归档文件，可以在打包的同时进行压缩。支持的格式为tar（归档）、gz（压缩）、bz2（压缩率更高，比较耗时）
+&lt;p&gt;-P 使用绝对路径压缩时，保留根目录“/”             -W 校验             -p 还原文件权限&lt;/p&gt;
 
--c 创建               -x 解包               -u 更新               -r 添加               -t 查看               
+&lt;p&gt;-w 询问用户               –totals 统计                -T &lt;表达式&gt; 处理符合条件的文件&lt;/表达式&gt;&lt;/p&gt;
 
--d 比较压缩包内文件和文件                -A 将tar文件添加到归档文件中                  -z 使用gz压缩格式
+&lt;p&gt;-X &lt;表达式&gt; 排除符合条件的文件&lt;/表达式&gt;&lt;/p&gt;
 
--j 使用bz2压缩格式           -v 显示过程                -f &lt;文件名&gt; 归档文件的文件名
+&lt;p&gt;zip [参数] &lt;压缩包&gt; &lt;源文件&gt;&lt;/源文件&gt;&lt;/压缩包&gt;&lt;/p&gt;
 
--C &lt;解压路径&gt; 将压缩包中的文件解压到指定目录             
+&lt;p&gt;使用zip格式打包文件&lt;/p&gt;
 
-[未打包文件] 创建、更新时必须填写
+&lt;p&gt;-r 递归，将指定目录下的所有文件和子目录一并处理                   -S 包含系统和隐藏文件&lt;/p&gt;
 
-示例：
+&lt;p&gt;-y 直接保存符号连接，而非该连接所指向的文件                  -X 不保存额外的文件属性&lt;/p&gt;
 
-tar -zcvf xxx.tar.gz xxx/ xxx1 xxx2 xxx3 多个待打包文件以空格分隔
+&lt;p&gt;-m 将文件压缩并加入压缩文件后，删除源文件&lt;/p&gt;
 
-tar -zcvf xxx.tar.gz /home/user/xxx/ 使用绝对路径打包，解包也使用绝对路径
+&lt;p&gt;-&lt;压缩级别&gt; 1~9，数字越大，压缩率越高&lt;/压缩级别&gt;&lt;/p&gt;
 
-tar -zxvf xxx.tar.gz 按相对路径解包到当前目录下，或按绝对路径解包
+&lt;p&gt;-F 尝试修复已损坏的压缩文件            -T 检查备份文件内的每个文件是否正确无误&lt;/p&gt;
 
-tar -zcvf xxx.tar.gz xxx | split -b 1m 打包后，使用split分割为1m大小的多个文件
+&lt;p&gt;-q 不显示指令执行过程               -g 将文件压缩后附加在既有的压缩文件之后，而非另行建立新的压缩文件&lt;/p&gt;
 
-其它参数
+&lt;p&gt;-u 更新压缩包内文件                  &lt;/p&gt;
 
--P 使用绝对路径压缩时，保留根目录“/”             -W 校验             -p 还原文件权限
+&lt;p&gt;-f 更新压缩包内文件。如果符合条件的文件没有包含在压缩包中，则压缩后添加&lt;/p&gt;
 
--w 询问用户               --totals 统计                -T &lt;表达式&gt; 处理符合条件的文件
+&lt;p&gt;-$ 保存第一个被压缩文件所在磁盘的卷标           -j 只保存文件名称及其内容                &lt;/p&gt;
 
--X &lt;表达式&gt; 排除符合条件的文件
+&lt;p&gt;-D 压缩文件内不建立目录名称           -i &lt;表达式&gt; 压缩目录时，只压缩符合条件的文件&lt;/表达式&gt;&lt;/p&gt;
 
-zip [参数] &lt;压缩包&gt; &lt;源文件&gt;
+&lt;p&gt;-x &lt;表达式&gt; 排除符合条件的文件               -n &lt;文件名后缀&gt; 排除指定文件名后缀的文件&lt;/文件名后缀&gt;&lt;/表达式&gt;&lt;/p&gt;
 
-使用zip格式打包文件
+&lt;p&gt;-b &lt;缓存路径&gt; 指定临时文件目录               -d &lt;表达式&gt; 从压缩文件内删除指定的文件&lt;/表达式&gt;&lt;/缓存路径&gt;&lt;/p&gt;
 
--r 递归，将指定目录下的所有文件和子目录一并处理                   -S 包含系统和隐藏文件
+&lt;p&gt;-t &lt;日期时间&gt; 把压缩文件的日期设成指定的日期&lt;/日期时间&gt;&lt;/p&gt;
 
--y 直接保存符号连接，而非该连接所指向的文件                  -X 不保存额外的文件属性
+&lt;p&gt;-o 以压缩文件内拥有最新更改时间的文件为准，将压缩文件的更改时间设成和该文件相同&lt;/p&gt;
 
--m 将文件压缩并加入压缩文件后，删除源文件
+&lt;p&gt;-A 调整可执行的自动解压缩文件                 -c 替每个被压缩的文件加上注释&lt;/p&gt;
 
--&lt;压缩级别&gt; 1~9，数字越大，压缩率越高
+&lt;p&gt;-z 替压缩文件加上注释               -k 使用MS-DOS兼容格式的文件名称。&lt;/p&gt;
 
--F 尝试修复已损坏的压缩文件            -T 检查备份文件内的每个文件是否正确无误
+&lt;p&gt;-l 压缩文件时，把LF字符置换成LF+CR字符。                 -ll 压缩文件时，把LF+CR字符置换成LF字符。&lt;/p&gt;
 
--q 不显示指令执行过程               -g 将文件压缩后附加在既有的压缩文件之后，而非另行建立新的压缩文件
+&lt;p&gt;unzip [参数] &lt;压缩文件&gt; [压缩包中将被释放的文件]&lt;/压缩文件&gt;&lt;/p&gt;
 
--u 更新压缩包内文件                  
+&lt;p&gt;解压zip压缩包文件&lt;/p&gt;
 
--f 更新压缩包内文件。如果符合条件的文件没有包含在压缩包中，则压缩后添加
+&lt;p&gt;-P &lt;密码&gt; zip压缩包的密码                 -d &lt;路径&gt; 指定解压路径            -n 解压缩时不覆盖原有文件&lt;/路径&gt;&lt;/密码&gt;&lt;/p&gt;
 
--$ 保存第一个被压缩文件所在磁盘的卷标           -j 只保存文件名称及其内容                
+&lt;p&gt;-f 覆盖原有文件                  -o 不经询问，直接覆盖原有文件&lt;/p&gt;
 
--D 压缩文件内不建立目录名称           -i &lt;表达式&gt; 压缩目录时，只压缩符合条件的文件
+&lt;p&gt;-u 覆盖原有文件，并将压缩文件中的其他文件解压缩到目录中&lt;/p&gt;
 
--x &lt;表达式&gt; 排除符合条件的文件               -n &lt;文件名后缀&gt; 排除指定文件名后缀的文件
+&lt;p&gt;-l 显示压缩文件内所包含的文件                  -t 检查压缩文件是否正确            -z 显示压缩包注释&lt;/p&gt;
 
--b &lt;缓存路径&gt; 指定临时文件目录               -d &lt;表达式&gt; 从压缩文件内删除指定的文件
+&lt;p&gt;-Z unzip -Z等于执行zipinfo指令                   -j 不处理压缩文件中原有的目录路径&lt;/p&gt;
 
--t &lt;日期时间&gt; 把压缩文件的日期设成指定的日期
+&lt;p&gt;-C 压缩文件中的文件名称区分大小写                  -L 将压缩文件中的全部文件名改为小写&lt;/p&gt;
 
--o 以压缩文件内拥有最新更改时间的文件为准，将压缩文件的更改时间设成和该文件相同
+&lt;p&gt;-s 将文件名中的空格转换下划线                  -X 解压缩时保留文件原来的UID/GID&lt;/p&gt;
 
--A 调整可执行的自动解压缩文件                 -c 替每个被压缩的文件加上注释
+&lt;p&gt;-q 执行时不显示任何信息                             -v 执行是时显示详细的信息&lt;/p&gt;
 
--z 替压缩文件加上注释               -k 使用MS-DOS兼容格式的文件名称。
+&lt;p&gt;-c 将解压缩的结果显示到屏幕上，并对字符做适当的转换&lt;/p&gt;
 
--l 压缩文件时，把LF字符置换成LF+CR字符。                 -ll 压缩文件时，把LF+CR字符置换成LF字符。
+&lt;p&gt;-p 与-c参数类似，会将解压缩的结果显示到屏幕上，但不会执行任何的转换&lt;/p&gt;
 
-unzip [参数] &lt;压缩文件&gt; [压缩包中将被释放的文件]
+&lt;p&gt;-a 对文本文件进行必要的字符转换                       -b 不要对文本文件进行字符转换&lt;/p&gt;
 
-解压zip压缩包文件
+&lt;p&gt;-x &lt;表达式&gt; 处理里排除压缩包中的指定文件                       -M 将输出结果送到more程序处理&lt;/表达式&gt;&lt;/p&gt;
 
--P &lt;密码&gt; zip压缩包的密码                 -d &lt;路径&gt; 指定解压路径            -n 解压缩时不覆盖原有文件
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;7z&lt;/td&gt;
+      &lt;td&gt;7za &lt;子命令&gt; [参数] &lt;压缩包&gt; [文件]&lt;/压缩包&gt;&lt;/子命令&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
 
--f 覆盖原有文件                  -o 不经询问，直接覆盖原有文件
+&lt;p&gt;子命令&lt;/p&gt;
 
--u 覆盖原有文件，并将压缩文件中的其他文件解压缩到目录中
+&lt;p&gt;a 添加       d 删除       e 解压       x 带路径解压    l 列表查看         t 测试        u 更新&lt;/p&gt;
 
--l 显示压缩文件内所包含的文件                  -t 检查压缩文件是否正确            -z 显示压缩包注释
+&lt;p&gt;参数&lt;/p&gt;
 
--Z unzip -Z等于执行zipinfo指令                   -j 不处理压缩文件中原有的目录路径
+&lt;p&gt;-m&lt;压缩方式&gt;            -m0=&lt;压缩算法&gt; 默认使用lzma                  -mx=&amp;lt;1~9&amp;gt; 压缩级别&lt;/压缩算法&gt;&lt;/压缩方式&gt;&lt;/p&gt;
 
--C 压缩文件中的文件名称区分大小写                  -L 将压缩文件中的全部文件名改为小写
+&lt;p&gt;-mfb=64 number of fast bytes for LZMA = 64           -md=&lt;字典大小&gt; 设置字典大小，例如 -md=32m&lt;/字典大小&gt;&lt;/p&gt;
 
--s 将文件名中的空格转换下划线                  -X 解压缩时保留文件原来的UID/GID
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;-ms=&amp;lt;on&lt;/td&gt;
+      &lt;td&gt;off&amp;gt; 是否固实压缩                -o&lt;输出目录&gt; 设置输出目录               -p[密码] 使用密码&lt;/输出目录&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
 
--q 执行时不显示任何信息                             -v 执行是时显示详细的信息
+&lt;p&gt;-r[数字] 递归，使用数字定义递归子目录的深度                   -sfx[&lt;模块名称&gt;] 使用自解压模块&lt;/模块名称&gt;&lt;/p&gt;
 
--c 将解压缩的结果显示到屏幕上，并对字符做适当的转换
+&lt;p&gt;-si 从标准输入设备读入数据               -so 将数据写入标准输出设备              -y 所有询问均回答Yes&lt;/p&gt;
 
--p 与-c参数类似，会将解压缩的结果显示到屏幕上，但不会执行任何的转换
+&lt;p&gt;-w&lt;工作目录&gt;&lt;/工作目录&gt;&lt;/p&gt;
 
--a 对文本文件进行必要的字符转换                       -b 不要对文本文件进行字符转换
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;rar &lt;子命令&gt; [参数] &lt;压缩包&gt; [文件&lt;/压缩包&gt;&lt;/子命令&gt;&lt;/td&gt;
+      &lt;td&gt;文件列表&lt;/td&gt;
+      &lt;td&gt;路径]&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
 
--x &lt;表达式&gt; 处理里排除压缩包中的指定文件                       -M 将输出结果送到more程序处理
+&lt;p&gt;子命令&lt;/p&gt;
 
-7z|7za &lt;子命令&gt; [参数] &lt;压缩包&gt; [文件]
+&lt;p&gt;x 带路径解压              e 解压到当前目录               a 将文件添加到压缩包内            d 从压缩包中删除文件&lt;/p&gt;
 
-子命令
+&lt;p&gt;u 更新压缩包内文件           f 更新压缩包内文件，并添加压缩包内不存在的文件            m 添加并删除源文件&lt;/p&gt;
 
-a 添加       d 删除       e 解压       x 带路径解压    l 列表查看         t 测试        u 更新
+&lt;p&gt;r 修复                l 列表查看压缩包内文件信息 lt 更详细信息 lb 简短信息            c 添加压缩包注释&lt;/p&gt;
 
-参数
+&lt;p&gt;cf &lt;文件名&gt; 将文件内容添加为注释&lt;/文件名&gt;&lt;/p&gt;
 
--m&lt;压缩方式&gt;            -m0=&lt;压缩算法&gt; 默认使用lzma                  -mx=&amp;lt;1~9&amp;gt; 压缩级别
+&lt;p&gt;cw &lt;文件名&gt; 将注释保存为文件&lt;/文件名&gt;&lt;/p&gt;
 
--mfb=64 number of fast bytes for LZMA = 64           -md=&lt;字典大小&gt; 设置字典大小，例如 -md=32m
+&lt;p&gt;t 测试压缩包              rr 添加恢复纪录                  rv 恢复到文件  &lt;/p&gt;
 
--ms=&amp;lt;on|off&amp;gt; 是否固实压缩                -o&lt;输出目录&gt; 设置输出目录               -p[密码] 使用密码
+&lt;p&gt;参数&lt;/p&gt;
 
--r[数字] 递归，使用数字定义递归子目录的深度                   -sfx[&lt;模块名称&gt;] 使用自解压模块
+&lt;p&gt;-p&lt;密码&gt; 设置密码&lt;/密码&gt;&lt;/p&gt;
 
--si 从标准输入设备读入数据               -so 将数据写入标准输出设备              -y 所有询问均回答Yes
+&lt;p&gt;-m&amp;lt;0~5&amp;gt; 设置压缩级别，数字越大，压缩级别越高&lt;/p&gt;
 
--w&lt;工作目录&gt;
+&lt;p&gt;搜索
+whereis &lt;程序名称&gt;&lt;/程序名称&gt;&lt;/p&gt;
 
-rar &lt;子命令&gt; [参数] &lt;压缩包&gt; [文件|文件列表|路径]
+&lt;p&gt;查找软件的安装路径          &lt;/p&gt;
 
-子命令
+&lt;p&gt;-b 只查找二进制文件                   -m 只查找帮助文件            -s 只查找源代码        -u 排除指定类型文件&lt;/p&gt;
 
-x 带路径解压              e 解压到当前目录               a 将文件添加到压缩包内            d 从压缩包中删除文件
+&lt;p&gt;-f 只显示文件名                  -B &lt;目录&gt; 在指定目录下查找二进制文件           &lt;/目录&gt;&lt;/p&gt;
 
-u 更新压缩包内文件           f 更新压缩包内文件，并添加压缩包内不存在的文件            m 添加并删除源文件
+&lt;p&gt;-M &lt;目录&gt; 在指定目录下查找帮助文件               -S &lt;目录&gt; 在指定目录下查找源代码&lt;/目录&gt;&lt;/目录&gt;&lt;/p&gt;
 
-r 修复                l 列表查看压缩包内文件信息 lt 更详细信息 lb 简短信息            c 添加压缩包注释
+&lt;p&gt;locate &lt;文件名称&gt;&lt;/文件名称&gt;&lt;/p&gt;
 
-cf &lt;文件名&gt; 将文件内容添加为注释
+&lt;p&gt;在文件索引数据库中搜索文件&lt;/p&gt;
 
-cw &lt;文件名&gt; 将注释保存为文件
+&lt;p&gt;-d &lt;数据库路径&gt; 搜索指定数据库&lt;/数据库路径&gt;&lt;/p&gt;
 
-t 测试压缩包              rr 添加恢复纪录                  rv 恢复到文件  
+&lt;p&gt;updatedb 更新文件索引数据库&lt;/p&gt;
 
-参数
+&lt;p&gt;find [路径] &lt;表达式&gt;&lt;/表达式&gt;&lt;/p&gt;
 
--p&lt;密码&gt; 设置密码
+&lt;p&gt;查找文件&lt;/p&gt;
 
--m&amp;lt;0~5&amp;gt; 设置压缩级别，数字越大，压缩级别越高
+&lt;p&gt;-name &lt;表达式&gt; 根据文件名查找文件&lt;/表达式&gt;&lt;/p&gt;
 
-搜索
-whereis &lt;程序名称&gt;
+&lt;p&gt;-iname &lt;表达式&gt; 根据文件名查找文件，忽略大小写&lt;/表达式&gt;&lt;/p&gt;
 
-查找软件的安装路径          
+&lt;p&gt;-path &lt;表达式&gt; 根据路径查找文件&lt;/表达式&gt;&lt;/p&gt;
 
--b 只查找二进制文件                   -m 只查找帮助文件            -s 只查找源代码        -u 排除指定类型文件
+&lt;p&gt;-ipath &lt;表达式&gt; 根据路径查找文件，忽略大小写&lt;/表达式&gt;&lt;/p&gt;
 
--f 只显示文件名                  -B &lt;目录&gt; 在指定目录下查找二进制文件           
+&lt;p&gt;-amin &lt;分钟&gt; 过去N分钟内访问过的文件&lt;/分钟&gt;&lt;/p&gt;
 
--M &lt;目录&gt; 在指定目录下查找帮助文件               -S &lt;目录&gt; 在指定目录下查找源代码
+&lt;p&gt;-atime &lt;天数&gt; 过去N天内访问过的文件&lt;/天数&gt;&lt;/p&gt;
 
-locate &lt;文件名称&gt;
+&lt;p&gt;-cmin &lt;分钟&gt; 过去N分钟内修改过的文件&lt;/分钟&gt;&lt;/p&gt;
 
-在文件索引数据库中搜索文件
+&lt;p&gt;-ctime &lt;天数&gt; 过去N天内修改过的文件&lt;/天数&gt;&lt;/p&gt;
 
--d &lt;数据库路径&gt; 搜索指定数据库
+&lt;p&gt;-anewer &lt;参照文件&gt; 比参照文件更晚被读取过的文件&lt;/参照文件&gt;&lt;/p&gt;
 
-updatedb 更新文件索引数据库
+&lt;p&gt;-cnewer &lt;参照文件&gt; 比参照文件更晚被修改过的文件&lt;/参照文件&gt;&lt;/p&gt;
 
-find [路径] &lt;表达式&gt;
+&lt;p&gt;-size &lt;大小&gt; 根据文件大小查找文件，单位b c w k M G&lt;/大小&gt;&lt;/p&gt;
 
-查找文件
+&lt;p&gt;-type &lt;文件类型&gt; 根据文件类型查找文件。b 块设备 c 字符设备 d 目录 p 管道文件 f 普通文件 l 链接 s 端口文件&lt;/文件类型&gt;&lt;/p&gt;
 
--name &lt;表达式&gt; 根据文件名查找文件
+&lt;p&gt;-user &lt;用户名&gt; 按归属用户查找文件&lt;/用户名&gt;&lt;/p&gt;
 
--iname &lt;表达式&gt; 根据文件名查找文件，忽略大小写
+&lt;p&gt;-uid &lt;uid&gt; 按UID查找文件&lt;/uid&gt;&lt;/p&gt;
 
--path &lt;表达式&gt; 根据路径查找文件
+&lt;p&gt;-group &lt;群组名&gt; 按归属群组查找文件&lt;/群组名&gt;&lt;/p&gt;
 
--ipath &lt;表达式&gt; 根据路径查找文件，忽略大小写
+&lt;p&gt;-gid &lt;gid&gt; 按GID查找文件&lt;/gid&gt;&lt;/p&gt;
 
--amin &lt;分钟&gt; 过去N分钟内访问过的文件
+&lt;p&gt;-empty 查找空文件&lt;/p&gt;
 
--atime &lt;天数&gt; 过去N天内访问过的文件
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;grep &lt;字符串&gt;&lt;/字符串&gt;&lt;/td&gt;
+      &lt;td&gt;“&lt;正则表达式&gt;&quot; [文件名]&lt;/正则表达式&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
 
--cmin &lt;分钟&gt; 过去N分钟内修改过的文件
+&lt;p&gt;其它
+echo &lt;字符串&gt;&lt;/字符串&gt;&lt;/p&gt;
 
--ctime &lt;天数&gt; 过去N天内修改过的文件
+&lt;p&gt;回显。较复杂的字符串，可以使用 “ 括起来。&lt;/p&gt;
 
--anewer &lt;参照文件&gt; 比参照文件更晚被读取过的文件
+&lt;p&gt;-n 输出内容不换行             -E 不解析脱字符                 -e 解析脱字符&lt;/p&gt;
 
--cnewer &lt;参照文件&gt; 比参照文件更晚被修改过的文件
+&lt;p&gt;控制字符&lt;/p&gt;
 
--size &lt;大小&gt; 根据文件大小查找文件，单位b c w k M G
+&lt;p&gt;\ 反斜线             a 警告                b 退格                n 换行                r 回车                t 水平制表符&lt;/p&gt;
 
--type &lt;文件类型&gt; 根据文件类型查找文件。b 块设备 c 字符设备 d 目录 p 管道文件 f 普通文件 l 链接 s 端口文件
+&lt;p&gt;clear&lt;/p&gt;
 
--user &lt;用户名&gt; 按归属用户查找文件
+&lt;p&gt;消除屏幕&lt;/p&gt;
 
--uid &lt;uid&gt; 按UID查找文件
+&lt;p&gt;alias &lt;输入内容&gt; &lt;实际内容&gt;&lt;/实际内容&gt;&lt;/输入内容&gt;&lt;/p&gt;
 
--group &lt;群组名&gt; 按归属群组查找文件
+&lt;p&gt;别名，为命令指定一个别名，以简化输入。例如：&lt;/p&gt;
 
--gid &lt;gid&gt; 按GID查找文件
+&lt;p&gt;alias ls=’ls –color=auto’&lt;/p&gt;
 
--empty 查找空文件
+&lt;p&gt;alias ls=”l -CF”&lt;/p&gt;
 
-grep &lt;字符串&gt;|&quot;&lt;正则表达式&gt;&quot; [文件名]
+&lt;p&gt;可以将您的定义保存在 ~/.bashrc 文件中。&lt;/p&gt;
 
-其它
-echo &lt;字符串&gt;
+&lt;p&gt;export &lt;变量名称&gt;&lt;/变量名称&gt;&lt;/p&gt;
 
-回显。较复杂的字符串，可以使用 &quot; 括起来。
+&lt;p&gt;将变量导出为环境变量，常写变量赋值一同使用，例如：&lt;/p&gt;
 
--n 输出内容不换行             -E 不解析脱字符                 -e 解析脱字符
+&lt;p&gt;export PATH=”$PATH:xxx”&lt;/p&gt;
 
-控制字符
+&lt;p&gt;其中 $PATH 表示变量 PATH 原值&lt;/p&gt;
 
-\ 反斜线             a 警告                b 退格                n 换行                r 回车                t 水平制表符
+&lt;p&gt;shutdown&lt;/p&gt;
 
-clear
+&lt;p&gt;关闭计算机，向根进程 init 发送信号，更改 runlevel 为 0 (halt)&lt;/p&gt;
 
-消除屏幕
+&lt;p&gt;-h 关闭电源                -r 重启               -n 强行关机，不向 init进程 发送信号&lt;/p&gt;
 
-alias &lt;输入内容&gt; &lt;实际内容&gt;
+&lt;p&gt;-k 模拟关机，向登录者发送关机警告                   -t &lt;秒&gt; N秒后关机             time &lt;时间&gt; 定时关机&lt;/时间&gt;&lt;/秒&gt;&lt;/p&gt;
 
-别名，为命令指定一个别名，以简化输入。例如：
+&lt;p&gt;-c [说明信息] 取消关机               -f 重启时忽略检测文件系统                 -F 重启时强制检测文件系统&lt;/p&gt;
 
-alias ls=&#39;ls --color=auto&#39;
+&lt;p&gt;halt&lt;/p&gt;
 
-alias ls=&quot;l -CF&quot;
+&lt;p&gt;关闭计算机。 调用 shutdown -h ，结束系统进程，同步文件系统，停止内核。&lt;/p&gt;
 
-可以将您的定义保存在 ~/.bashrc 文件中。
+&lt;p&gt;-n 不同步文件系统             -w 模拟关机，写 /var/log/wtmp 纪录          -f 不调用 shutdown ,强行关机&lt;/p&gt;
 
-export &lt;变量名称&gt;
+&lt;p&gt;-p 默认选项，关机时调用 poweroff             -i 关机前断开网络&lt;/p&gt;
 
-将变量导出为环境变量，常写变量赋值一同使用，例如：
+&lt;p&gt;reboot&lt;/p&gt;
 
-export PATH=&quot;$PATH:xxx&quot;
+&lt;p&gt;重新启动计算机。参数与 halt 相似&lt;/p&gt;
 
-其中 $PATH 表示变量 PATH 原值
+&lt;p&gt;chroot &lt;路径&gt;&lt;/路径&gt;&lt;/p&gt;
 
-shutdown
+&lt;p&gt;Change Root 更改根目录，重新定义会话的运行环境。&lt;/p&gt;
 
-关闭计算机，向根进程 init 发送信号，更改 runlevel 为 0 (halt)
+&lt;p&gt;用户管理
+一些细节&lt;/p&gt;
 
--h 关闭电源                -r 重启               -n 强行关机，不向 init进程 发送信号
+&lt;p&gt;root 用户为根用户，也就是 系统管理员 拥有全部权限&lt;/p&gt;
 
--k 模拟关机，向登录者发送关机警告                   -t &lt;秒&gt; N秒后关机             time &lt;时间&gt; 定时关机
+&lt;p&gt;一个用户只能拥有一个 GID ，但是还可以归属于其它附加群组&lt;/p&gt;
 
--c [说明信息] 取消关机               -f 重启时忽略检测文件系统                 -F 重启时强制检测文件系统
+&lt;p&gt;用户管理的重要配置文件：&lt;/p&gt;
 
-halt
+&lt;p&gt;/etc/passwd 用户名 密码位 UID 归属GID 姓名 $HOME目录 登录Shell&lt;/p&gt;
 
-关闭计算机。 调用 shutdown -h ，结束系统进程，同步文件系统，停止内核。
+&lt;p&gt;/etc/shadow 用户名 已加密密码 密码改动信息 密码策略&lt;/p&gt;
 
--n 不同步文件系统             -w 模拟关机，写 /var/log/wtmp 纪录          -f 不调用 shutdown ,强行关机
+&lt;p&gt;/etc/group 群组名 密码位 GID 组内用户&lt;/p&gt;
 
--p 默认选项，关机时调用 poweroff             -i 关机前断开网络
+&lt;p&gt;/etc/gshadow 群组密码相关文件，不重要&lt;/p&gt;
 
-reboot
+&lt;p&gt;/etc/sudoers 用户名 权限定义 权限&lt;/p&gt;
 
-重新启动计算机。参数与 halt 相似
+&lt;p&gt;可以使用 pwconv 命令创建影子密码，将 /etc/passwd 文件中的密码转换到 /etc/shadow 文件&lt;/p&gt;
 
-chroot &lt;路径&gt;
+&lt;p&gt;su [用户名]&lt;/p&gt;
 
-Change Root 更改根目录，重新定义会话的运行环境。
+&lt;p&gt;切换到其它用户，默认切换到root用户。提示密码为将切换用户密码&lt;/p&gt;
 
-用户管理
-一些细节
+&lt;p&gt;-f 快速切换，忽略配置文件                 -l 重新登录                 -m ，-p 不更改环境变量&lt;/p&gt;
 
-root 用户为根用户，也就是 系统管理员 拥有全部权限
+&lt;p&gt;-c &lt;命令&gt; 切换后执行命令，并退出切换&lt;/命令&gt;&lt;/p&gt;
 
-一个用户只能拥有一个 GID ，但是还可以归属于其它附加群组
+&lt;p&gt;sudo [命令]&lt;/p&gt;
 
-用户管理的重要配置文件：
+&lt;p&gt;以其它用户的身份执行命令，默认以root的身份执行。提示密码为当前用户密码&lt;/p&gt;
 
-/etc/passwd 用户名 密码位 UID 归属GID 姓名 $HOME目录 登录Shell
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;-s 切换为root shell              -i 切换为root shell，并初始化             -u &amp;lt;用户名&lt;/td&gt;
+      &lt;td&gt;UID&amp;gt; 执行命令的身份&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
 
-/etc/shadow 用户名 已加密密码 密码改动信息 密码策略
+&lt;p&gt;-l 显示自己的权限&lt;/p&gt;
 
-/etc/group 群组名 密码位 GID 组内用户
+&lt;p&gt;passwd [用户名]&lt;/p&gt;
 
-/etc/gshadow 群组密码相关文件，不重要
+&lt;p&gt;设定用户密码&lt;/p&gt;
 
-/etc/sudoers 用户名 权限定义 权限
+&lt;p&gt;-d 清除密码                -l 锁定用户                 -e 使密码过期，在下次登录时更改密码&lt;/p&gt;
 
-可以使用 pwconv 命令创建影子密码，将 /etc/passwd 文件中的密码转换到 /etc/shadow 文件
+&lt;p&gt;-S 显示密码认证信息                   -x &lt;天数&gt; 密码过期，最大使用时间          &lt;/天数&gt;&lt;/p&gt;
 
-su [用户名]
+&lt;p&gt;-n &lt;天数&gt; 冻结密码，最小使用时间           -s 更改登录Shell                 -f 更改用户信息&lt;/天数&gt;&lt;/p&gt;
 
-切换到其它用户，默认切换到root用户。提示密码为将切换用户密码
+&lt;p&gt;示例：&lt;/p&gt;
 
--f 快速切换，忽略配置文件                 -l 重新登录                 -m ，-p 不更改环境变量
+&lt;p&gt;$passwd&lt;/p&gt;
 
--c &lt;命令&gt; 切换后执行命令，并退出切换
+&lt;p&gt;Changing password for user&lt;/p&gt;
 
-sudo [命令]
+&lt;p&gt;(current) UNIX password: 原密码&lt;/p&gt;
 
-以其它用户的身份执行命令，默认以root的身份执行。提示密码为当前用户密码
+&lt;p&gt;Enter new UNIX password: 新密码&lt;/p&gt;
 
--s 切换为root shell              -i 切换为root shell，并初始化             -u &amp;lt;用户名|UID&amp;gt; 执行命令的身份
+&lt;p&gt;Retype new UNIX password: 确认新密码&lt;/p&gt;
 
--l 显示自己的权限
+&lt;p&gt;chsh [-s &lt;shell&gt;] [用户名]&lt;/shell&gt;&lt;/p&gt;
 
-passwd [用户名]
+&lt;p&gt;更改登录Shell&lt;/p&gt;
 
-设定用户密码
+&lt;p&gt;usermod &lt;用户名&gt;&lt;/用户名&gt;&lt;/p&gt;
 
--d 清除密码                -l 锁定用户                 -e 使密码过期，在下次登录时更改密码
+&lt;p&gt;修改用户账号&lt;/p&gt;
 
--S 显示密码认证信息                   -x &lt;天数&gt; 密码过期，最大使用时间          
+&lt;p&gt;-d &lt;目录&gt; 设定$HOME目录               -m 设定$HOME目录时自动建立                 &lt;/目录&gt;&lt;/p&gt;
 
--n &lt;天数&gt; 冻结密码，最小使用时间           -s 更改登录Shell                 -f 更改用户信息
+&lt;p&gt;-s &lt;shell&gt; 修改用户登录Shell              -l &lt;新用户名&gt; 修改为新用户名&lt;/新用户名&gt;&lt;/shell&gt;&lt;/p&gt;
 
-示例：
+&lt;p&gt;-u &lt;uid&gt; 修改用户UID                      -g &lt;群组名&gt; 修改用户归属群组&lt;/群组名&gt;&lt;/uid&gt;&lt;/p&gt;
 
-$passwd
+&lt;p&gt;-G &lt;群组名&gt; 修改用户归属附加群组          -L 锁定帐户                -U 解除锁定              &lt;/群组名&gt;&lt;/p&gt;
 
-Changing password for user
+&lt;p&gt;-e &lt;过期时间&gt; 设定用户账号过期时间                 -f &lt;缓冲天数&gt; 设定密码过期后多长时间关闭账号&lt;/缓冲天数&gt;&lt;/过期时间&gt;&lt;/p&gt;
 
-(current) UNIX password: 原密码
+&lt;p&gt;-c &lt;字符串&gt; 修改用户备注&lt;/字符串&gt;&lt;/p&gt;
 
-Enter new UNIX password: 新密码
+&lt;p&gt;useradd &lt;用户名&gt;&lt;/用户名&gt;&lt;/p&gt;
 
-Retype new UNIX password: 确认新密码
+&lt;p&gt;新建用户&lt;/p&gt;
 
-chsh [-s &lt;shell&gt;] [用户名]
+&lt;p&gt;-d &lt;目录&gt; 设定$HOME目录               -m 自动建立$HOME目录           -M 不自动建立$HOME目录&lt;/目录&gt;&lt;/p&gt;
 
-更改登录Shell
+&lt;p&gt;-s &lt;shell&gt; 修改用户登录Shell              -l &lt;用户名&gt; 修改为新用户名               -u &lt;uid&gt; 修改用户UID&lt;/uid&gt;&lt;/用户名&gt;&lt;/shell&gt;&lt;/p&gt;
 
-usermod &lt;用户名&gt;
+&lt;p&gt;-g &lt;群组名&gt; 修改用户归属群组                   -G &lt;群组名&gt; 修改用户归属附加群组&lt;/群组名&gt;&lt;/群组名&gt;&lt;/p&gt;
 
-修改用户账号
+&lt;p&gt;-n 不建立以用户名为名称的群组                 -e &lt;过期时间&gt; 设定用户账号过期时间&lt;/过期时间&gt;&lt;/p&gt;
 
--d &lt;目录&gt; 设定$HOME目录               -m 设定$HOME目录时自动建立                 
+&lt;p&gt;-f &lt;缓冲天数&gt; 设定密码过期后多长时间关闭账号                -c &lt;字符串&gt; 修改用户备注&lt;/字符串&gt;&lt;/缓冲天数&gt;&lt;/p&gt;
 
--s &lt;shell&gt; 修改用户登录Shell              -l &lt;新用户名&gt; 修改为新用户名
+&lt;p&gt;-D [表达式] 更改预设值 （预设值保存于 /etc/default/useradd 文件中）&lt;/p&gt;
 
--u &lt;uid&gt; 修改用户UID                      -g &lt;群组名&gt; 修改用户归属群组
+&lt;p&gt;新建用户规则保存于 /etc/login.defs 文件中&lt;/p&gt;
 
--G &lt;群组名&gt; 修改用户归属附加群组          -L 锁定帐户                -U 解除锁定              
+&lt;p&gt;新建用户默认文件保存于 /etc/skel/ 目录中。新建用户时，系统自动拷贝此目录下的文件至新建用户的 $HOME 目录&lt;/p&gt;
 
--e &lt;过期时间&gt; 设定用户账号过期时间                 -f &lt;缓冲天数&gt; 设定密码过期后多长时间关闭账号
+&lt;p&gt;userdel &lt;用户名&gt;&lt;/用户名&gt;&lt;/p&gt;
 
--c &lt;字符串&gt; 修改用户备注
+&lt;p&gt;删除用户&lt;/p&gt;
 
-useradd &lt;用户名&gt;
+&lt;p&gt;-r 删除用户相关文件和目录&lt;/p&gt;
 
-新建用户
+&lt;p&gt;id [用户名]&lt;/p&gt;
 
--d &lt;目录&gt; 设定$HOME目录               -m 自动建立$HOME目录           -M 不自动建立$HOME目录
+&lt;p&gt;显示用户 UID GID 归属附加群组&lt;/p&gt;
 
--s &lt;shell&gt; 修改用户登录Shell              -l &lt;用户名&gt; 修改为新用户名               -u &lt;uid&gt; 修改用户UID
+&lt;p&gt;finger [用户名]&lt;/p&gt;
 
--g &lt;群组名&gt; 修改用户归属群组                   -G &lt;群组名&gt; 修改用户归属附加群组
+&lt;p&gt;显示用户信息&lt;/p&gt;
 
--n 不建立以用户名为名称的群组                 -e &lt;过期时间&gt; 设定用户账号过期时间
+&lt;p&gt;进程管理
+一些细节&lt;/p&gt;
 
--f &lt;缓冲天数&gt; 设定密码过期后多长时间关闭账号                -c &lt;字符串&gt; 修改用户备注
+&lt;p&gt;进程一般分为交互进程、批处理进程和守护进程三类。&lt;/p&gt;
 
--D [表达式] 更改预设值 （预设值保存于 /etc/default/useradd 文件中）
+&lt;p&gt;守护进程总是活跃，在系统启动时通过脚本自动启动，或由root启动，通常在后台运行。&lt;/p&gt;
 
-新建用户规则保存于 /etc/login.defs 文件中
+&lt;p&gt;一个进程可以拥有子进程。当父进程终止时，它的子进程也随之终止；而子进程终止时，父进程通常可以继续运行。&lt;/p&gt;
 
-新建用户默认文件保存于 /etc/skel/ 目录中。新建用户时，系统自动拷贝此目录下的文件至新建用户的 $HOME 目录
+&lt;p&gt;init 进程为根进程，所有进程都是它的子进程&lt;/p&gt;
 
-userdel &lt;用户名&gt;
+&lt;p&gt;ps&lt;/p&gt;
 
-删除用户
+&lt;p&gt;显示进程信息，参数可省略 -&lt;/p&gt;
 
--r 删除用户相关文件和目录
+&lt;p&gt;aux 以BSD风格显示进程(常用)                   -efH 以System V风格显示进程&lt;/p&gt;
 
-id [用户名]
+&lt;p&gt;-e , -A 显示所有进程           a 显示终端上所有用户的进程             x 显示无终端进程&lt;/p&gt;
 
-显示用户 UID GID 归属附加群组
+&lt;p&gt;u 显示详细信息                   f 树状显示                  w 完整显示信息                  l 显示长列表&lt;/p&gt;
 
-finger [用户名]
+&lt;p&gt;示例：&lt;/p&gt;
 
-显示用户信息
+&lt;p&gt;ps alx 另一种常用输出格式&lt;/p&gt;
 
-进程管理
-一些细节
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;ps aux&lt;/td&gt;
+      &lt;td&gt;less 将输出通过管道，使用 less 查看&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
 
-进程一般分为交互进程、批处理进程和守护进程三类。
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;ps aux&lt;/td&gt;
+      &lt;td&gt;grep &lt;关键字&gt; 通过关键字查找进程&lt;/关键字&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
 
-守护进程总是活跃，在系统启动时通过脚本自动启动，或由root启动，通常在后台运行。
+&lt;p&gt;输出字段&lt;/p&gt;
 
-一个进程可以拥有子进程。当父进程终止时，它的子进程也随之终止；而子进程终止时，父进程通常可以继续运行。
+&lt;p&gt;USER 进程所有者               PID 进程ID               PPID 父进程              %CPU CPU占用率&lt;/p&gt;
 
-init 进程为根进程，所有进程都是它的子进程
+&lt;p&gt;%MEM 内存占用率           NI 进程优先级。数值越大，占用CPU时间越少                  VSZ 进程虚拟大小&lt;/p&gt;
 
-ps
+&lt;p&gt;RSS 页面文件占用              TTY 终端ID              STAT 进程状态                  &lt;/p&gt;
 
-显示进程信息，参数可省略 -
+&lt;p&gt;D 不可中断 Uninterruptible sleep (usually IO)               R 正在运行，或在队列中的进程                 &lt;/p&gt;
 
-aux 以BSD风格显示进程(常用)                   -efH 以System V风格显示进程
+&lt;p&gt;S 处于休眠状态                   T 停止或被追踪                  Z 僵尸进程                &lt;/p&gt;
 
--e , -A 显示所有进程           a 显示终端上所有用户的进程             x 显示无终端进程
+&lt;p&gt;W 进入内存交换（从内核2.6开始无效）           X 死掉的进程            &amp;lt; 高优先级                 N 低优先级&lt;/p&gt;
 
-u 显示详细信息                   f 树状显示                  w 完整显示信息                  l 显示长列表
+&lt;p&gt;L 有些页被锁进内存          s 包含子进程              + 位于后台的进程组；&lt;/p&gt;
 
-示例：
+&lt;p&gt;l 多线程，克隆线程 multi-threaded (using CLONE_THREAD, like NPTL pthreads do)&lt;/p&gt;
 
-ps alx 另一种常用输出格式
+&lt;p&gt;pstree&lt;/p&gt;
 
-ps aux | less 将输出通过管道，使用 less 查看
+&lt;p&gt;树状显示进程信息&lt;/p&gt;
 
-ps aux | grep &lt;关键字&gt; 通过关键字查找进程
+&lt;p&gt;-a 显示完整命令及参数               -c 重复进程分别显示                   -c 显示进程ID PID   -n 按 PID 排列进程&lt;/p&gt;
 
-输出字段
+&lt;p&gt;pgrep &lt;进程名&gt;&lt;/进程名&gt;&lt;/p&gt;
 
-USER 进程所有者               PID 进程ID               PPID 父进程              %CPU CPU占用率
+&lt;p&gt;显示进程的PID&lt;/p&gt;
 
-%MEM 内存占用率           NI 进程优先级。数值越大，占用CPU时间越少                  VSZ 进程虚拟大小
+&lt;p&gt;-l 显示进程名和进程PID            -o 进程起始ID           -n 进程终止ID&lt;/p&gt;
 
-RSS 页面文件占用              TTY 终端ID              STAT 进程状态                  
+&lt;p&gt;xkill&lt;/p&gt;
 
-D 不可中断 Uninterruptible sleep (usually IO)               R 正在运行，或在队列中的进程                 
+&lt;p&gt;在图形界面中点杀进程。执行此命令后，鼠标指针变为骷髅图案（一定看过《加勒比海盗》吧）。在窗口中点击左键杀死进程，右键取消&lt;/p&gt;
 
-S 处于休眠状态                   T 停止或被追踪                  Z 僵尸进程                
+&lt;p&gt;pkill &lt;进程名&gt;&lt;/进程名&gt;&lt;/p&gt;
 
-W 进入内存交换（从内核2.6开始无效）           X 死掉的进程            &amp;lt; 高优先级                 N 低优先级
+&lt;p&gt;结束进程族。如果结束单个进程，请用 kill&lt;/p&gt;
 
-L 有些页被锁进内存          s 包含子进程              + 位于后台的进程组；
+&lt;p&gt;kill [信号代码] &lt;进程pid&gt;&lt;/进程pid&gt;&lt;/p&gt;
 
-l 多线程，克隆线程 multi-threaded (using CLONE_THREAD, like NPTL pthreads do)
+&lt;p&gt;根据PID向进程发送信号，常用来结束进程，默认信号为 -9&lt;/p&gt;
 
-pstree
+&lt;p&gt;-l [信号数字] 显示、翻译信号代码&lt;/p&gt;
 
-树状显示进程信息
+&lt;p&gt;-9 , -KILL 发送 kill 信号退出&lt;/p&gt;
 
--a 显示完整命令及参数               -c 重复进程分别显示                   -c 显示进程ID PID   -n 按 PID 排列进程
+&lt;p&gt;-6 , -ABRT 发送 abort 信号退出&lt;/p&gt;
 
-pgrep &lt;进程名&gt;
+&lt;p&gt;-15 , -TERM 发送 Termination 信号&lt;/p&gt;
 
-显示进程的PID
+&lt;p&gt;-1 , -HUP 挂起&lt;/p&gt;
 
--l 显示进程名和进程PID            -o 进程起始ID           -n 进程终止ID
+&lt;p&gt;-2 , -INT 从键盘中断，相当于 Ctrl+c&lt;/p&gt;
 
-xkill
+&lt;p&gt;-3 , -QUIT 从键盘退出，相当于 Ctrl+d&lt;/p&gt;
 
-在图形界面中点杀进程。执行此命令后，鼠标指针变为骷髅图案（一定看过《加勒比海盗》吧）。在窗口中点击左键杀死进程，右键取消
+&lt;p&gt;-4 , -ILL 非法指令&lt;/p&gt;
 
-pkill &lt;进程名&gt;
+&lt;p&gt;-11 , -SEGV 内存错误&lt;/p&gt;
 
-结束进程族。如果结束单个进程，请用 kill
+&lt;p&gt;-13 , -PIPE 破坏管道&lt;/p&gt;
 
-kill [信号代码] &lt;进程pid&gt;
+&lt;p&gt;-14 , -ALRM&lt;/p&gt;
 
-根据PID向进程发送信号，常用来结束进程，默认信号为 -9
+&lt;p&gt;-STOP 停止进程，但不结束&lt;/p&gt;
 
--l [信号数字] 显示、翻译信号代码
+&lt;p&gt;-CONT 继续运行已停止的进程&lt;/p&gt;
 
--9 , -KILL 发送 kill 信号退出
+&lt;p&gt;-9 -1 结束当前用户的所有进程&lt;/p&gt;
 
--6 , -ABRT 发送 abort 信号退出
+&lt;p&gt;renice &lt;优先级表达式&gt; &lt;进程表达式&gt;&lt;/进程表达式&gt;&lt;/优先级表达式&gt;&lt;/p&gt;
 
--15 , -TERM 发送 Termination 信号
+&lt;p&gt;重新设定进程优先级（无此必要）&lt;/p&gt;
 
--1 , -HUP 挂起
+&lt;p&gt;优先级表达式：&lt;/p&gt;
 
--2 , -INT 从键盘中断，相当于 Ctrl+c
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;table&gt;
+      &lt;tbody&gt;
+        &lt;tr&gt;
+          &lt;td&gt;-&lt;/td&gt;
+          &lt;td&gt;= &lt;nice值&gt;&lt;/nice值&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/tbody&gt;
+    &lt;/table&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
 
--3 , -QUIT 从键盘退出，相当于 Ctrl+d
+&lt;p&gt;nice取值范围： -20~19&lt;/p&gt;
 
--4 , -ILL 非法指令
+&lt;p&gt;进程表达式：&lt;/p&gt;
 
--11 , -SEGV 内存错误
+&lt;p&gt;-p &lt;pid&gt; 通过进程ID进行设定&lt;/pid&gt;&lt;/p&gt;
 
--13 , -PIPE 破坏管道
+&lt;p&gt;-g &lt;pgid&gt; 通过进程群组ID&lt;/pgid&gt;&lt;/p&gt;
 
--14 , -ALRM
+&lt;p&gt;-u &lt;uid&gt; 通过进程拥有者UID设定&lt;/uid&gt;&lt;/p&gt;
 
--STOP 停止进程，但不结束
+&lt;p&gt;top&lt;/p&gt;
 
--CONT 继续运行已停止的进程
+&lt;p&gt;动态、交互式进程管理器&lt;/p&gt;
 
--9 -1 结束当前用户的所有进程
+&lt;p&gt;-c 显示进程启动状态，包括参数、操作对象等；而不只是进程名&lt;/p&gt;
 
-renice &lt;优先级表达式&gt; &lt;进程表达式&gt;
+&lt;p&gt;-d &lt;秒&gt; 刷新频率。 -d 5，表示5秒刷新一次&lt;/秒&gt;&lt;/p&gt;
 
-重新设定进程优先级（无此必要）
+&lt;p&gt;-n &lt;次&gt; 刷新次数，然后退出。 -n 5，表示刷新5次后退出；&lt;/次&gt;&lt;/p&gt;
 
-优先级表达式：
+&lt;p&gt;-b 以批量模式运行，让输出能够使用管道或重定向。但不能进行交互，最好和 -n &lt;次&gt; 参数一同使用&lt;/次&gt;&lt;/p&gt;
 
-+|-|= &lt;nice值&gt;
+&lt;p&gt;-i 禁止显示空闲进程或僵尸进程；&lt;/p&gt;
 
-nice取值范围： -20~19
+&lt;p&gt;-p PID 仅监视指定进程的ID；PID是一个数值；&lt;/p&gt;
 
-进程表达式：
+&lt;p&gt;-s 安全模式运行，禁用一些效互指令；&lt;/p&gt;
 
--p &lt;pid&gt; 通过进程ID进行设定
+&lt;p&gt;-S 累积模式，输出每个进程的总的CPU时间，包括已死的子进程；&lt;/p&gt;
 
--g &lt;pgid&gt; 通过进程群组ID
-
--u &lt;uid&gt; 通过进程拥有者UID设定
-
-top
-
-动态、交互式进程管理器
-
--c 显示进程启动状态，包括参数、操作对象等；而不只是进程名
-
--d &lt;秒&gt; 刷新频率。 -d 5，表示5秒刷新一次
-
--n &lt;次&gt; 刷新次数，然后退出。 -n 5，表示刷新5次后退出；
-
--b 以批量模式运行，让输出能够使用管道或重定向。但不能进行交互，最好和 -n &lt;次&gt; 参数一同使用
-
--i 禁止显示空闲进程或僵尸进程；
-
--p PID 仅监视指定进程的ID；PID是一个数值；
-
--s 安全模式运行，禁用一些效互指令；
-
--S 累积模式，输出每个进程的总的CPU时间，包括已死的子进程；
-
-交互命令：
+&lt;p&gt;交互命令：&lt;/p&gt;
 
 &lt;space&gt; 立即刷新
 
@@ -4401,7 +4650,7 @@ Linux会最大程度的利用物理内存，避免使用交换空间;而不是�
 因此，Linux系统表面看来内存开销很大，实际上系统运行是很稳定的──Linux不会时而流畅，时而瘫痪。事实上，在正常情况下，它运行是非常流畅的。
 
 原文链接：http://www.cnblogs.com/dutlei/archive/2012/11/20/2778327.html
-&lt;/命令&gt;&lt;/命令&gt;&lt;/命令&gt;&lt;/命令&gt;&lt;/down&gt;&lt;/m-j&gt;&lt;/键位&gt;&lt;/数字&gt;&lt;/寄存器名称&gt;&lt;/宏名称&gt;&lt;/宏名称&gt;&lt;/目标字符串&gt;&lt;/源字符串&gt;&lt;/目标字符串&gt;&lt;/源字符串&gt;&lt;/行号2&gt;&lt;/行号1&gt;&lt;/目标字符串&gt;&lt;/源字符串&gt;&lt;/目标字符串&gt;&lt;/源字符串&gt;&lt;/寄存器名称&gt;&lt;/行号&gt;&lt;/标记名称&gt;&lt;/标记名称&gt;&lt;/行号&gt;&lt;/功能&gt;&lt;/键位&gt;&lt;/作用范围&gt;&lt;/right&gt;&lt;/m-l&gt;&lt;/left&gt;&lt;/m-h&gt;&lt;/up&gt;&lt;/m-k&gt;&lt;/down&gt;&lt;/m-j&gt;&lt;/模块名称&gt;&lt;/秒&gt;&lt;/封包大小&gt;&lt;/广播地址&gt;&lt;/ip地址&gt;&lt;/子网掩码&gt;&lt;/网关地址&gt;&lt;/网关地址&gt;&lt;/网卡&gt;&lt;/子网掩码&gt;&lt;/网关地址&gt;&lt;/路由地址&gt;&lt;/子网掩码&gt;&lt;/ip地址&gt;&lt;/网卡&gt;&lt;/网卡&gt;&lt;/磁盘设备文件&gt;&lt;/镜像文件&gt;&lt;/文件系统类型&gt;&lt;/分区设备文件&gt;&lt;/分区设备文件&gt;&lt;/文件系统类型&gt;&lt;/磁盘设备文件&gt;&lt;/秒&gt;&lt;/文件系统类型&gt;&lt;/文件系统类型&gt;&lt;/挂载路径&gt;&lt;/设备文件&gt;&lt;/卷标&gt;&lt;/gid&gt;&lt;/uid&gt;&lt;/权限掩码&gt;&lt;/设备文件&gt;&lt;/命令&gt;&lt;/命令2&gt;&lt;/命令1&gt;&lt;/命令2&gt;&lt;/命令1&gt;&lt;/命令&gt;&lt;/命令&gt;&lt;/space&gt;&lt;/次&gt;&lt;/次&gt;&lt;/秒&gt;&lt;/uid&gt;&lt;/pgid&gt;&lt;/pid&gt;&lt;/nice值&gt;&lt;/进程表达式&gt;&lt;/优先级表达式&gt;&lt;/进程pid&gt;&lt;/进程名&gt;&lt;/进程名&gt;&lt;/关键字&gt;&lt;/用户名&gt;&lt;/字符串&gt;&lt;/缓冲天数&gt;&lt;/过期时间&gt;&lt;/群组名&gt;&lt;/群组名&gt;&lt;/uid&gt;&lt;/用户名&gt;&lt;/shell&gt;&lt;/目录&gt;&lt;/用户名&gt;&lt;/字符串&gt;&lt;/缓冲天数&gt;&lt;/过期时间&gt;&lt;/群组名&gt;&lt;/群组名&gt;&lt;/uid&gt;&lt;/新用户名&gt;&lt;/shell&gt;&lt;/目录&gt;&lt;/用户名&gt;&lt;/shell&gt;&lt;/天数&gt;&lt;/天数&gt;&lt;/命令&gt;&lt;/路径&gt;&lt;/时间&gt;&lt;/秒&gt;&lt;/变量名称&gt;&lt;/实际内容&gt;&lt;/输入内容&gt;&lt;/字符串&gt;&lt;/正则表达式&gt;&lt;/字符串&gt;&lt;/gid&gt;&lt;/群组名&gt;&lt;/uid&gt;&lt;/用户名&gt;&lt;/文件类型&gt;&lt;/大小&gt;&lt;/参照文件&gt;&lt;/参照文件&gt;&lt;/天数&gt;&lt;/分钟&gt;&lt;/天数&gt;&lt;/分钟&gt;&lt;/表达式&gt;&lt;/表达式&gt;&lt;/表达式&gt;&lt;/表达式&gt;&lt;/表达式&gt;&lt;/数据库路径&gt;&lt;/文件名称&gt;&lt;/目录&gt;&lt;/目录&gt;&lt;/目录&gt;&lt;/程序名称&gt;&lt;/密码&gt;&lt;/文件名&gt;&lt;/文件名&gt;&lt;/压缩包&gt;&lt;/子命令&gt;&lt;/工作目录&gt;&lt;/模块名称&gt;&lt;/输出目录&gt;&lt;/字典大小&gt;&lt;/压缩算法&gt;&lt;/压缩方式&gt;&lt;/压缩包&gt;&lt;/子命令&gt;&lt;/表达式&gt;&lt;/路径&gt;&lt;/密码&gt;&lt;/压缩文件&gt;&lt;/日期时间&gt;&lt;/表达式&gt;&lt;/缓存路径&gt;&lt;/文件名后缀&gt;&lt;/表达式&gt;&lt;/表达式&gt;&lt;/压缩级别&gt;&lt;/源文件&gt;&lt;/压缩包&gt;&lt;/表达式&gt;&lt;/表达式&gt;&lt;/解压路径&gt;&lt;/文件名&gt;&lt;/归档文件&gt;&lt;/路径&gt;&lt;/属性&gt;&lt;/归属群组&gt;&lt;/参考文件或目录&gt;&lt;/归属用户&gt;&lt;/参考文件或目录&gt;&lt;/权限表达式&gt;&lt;/文件名&gt;&lt;/结束字段&gt;&lt;/起始字段&gt;&lt;/分隔字符&gt;&lt;/输出文件&gt;&lt;/文件名&gt;&lt;/字节&gt;&lt;/字节&gt;&lt;/行数&gt;&lt;/行数&gt;&lt;/源文件&gt;&lt;/链接&gt;&lt;/源文件&gt;&lt;/目标目录&gt;&lt;/源目录&gt;&lt;/源文件&gt;&lt;/目标目录&gt;&lt;/目标目录&gt;&lt;/源目录&gt;&lt;/源文件&gt;&lt;/数字权限值&gt;&lt;/多级目录&gt;&lt;/文件夹&gt;&lt;/目标文件&gt;&lt;/文件名&gt;&lt;/文件名&gt;&lt;/数字&gt;&lt;/归档文件&gt;&lt;/dir&gt;&lt;/tab&gt;
+&lt;/命令&gt;&lt;/命令&gt;&lt;/命令&gt;&lt;/命令&gt;&lt;/down&gt;&lt;/m-j&gt;&lt;/键位&gt;&lt;/数字&gt;&lt;/寄存器名称&gt;&lt;/宏名称&gt;&lt;/宏名称&gt;&lt;/目标字符串&gt;&lt;/源字符串&gt;&lt;/目标字符串&gt;&lt;/源字符串&gt;&lt;/行号2&gt;&lt;/行号1&gt;&lt;/目标字符串&gt;&lt;/源字符串&gt;&lt;/目标字符串&gt;&lt;/源字符串&gt;&lt;/寄存器名称&gt;&lt;/行号&gt;&lt;/标记名称&gt;&lt;/标记名称&gt;&lt;/行号&gt;&lt;/功能&gt;&lt;/键位&gt;&lt;/作用范围&gt;&lt;/right&gt;&lt;/m-l&gt;&lt;/left&gt;&lt;/m-h&gt;&lt;/up&gt;&lt;/m-k&gt;&lt;/down&gt;&lt;/m-j&gt;&lt;/模块名称&gt;&lt;/秒&gt;&lt;/封包大小&gt;&lt;/广播地址&gt;&lt;/ip地址&gt;&lt;/子网掩码&gt;&lt;/网关地址&gt;&lt;/网关地址&gt;&lt;/网卡&gt;&lt;/子网掩码&gt;&lt;/网关地址&gt;&lt;/路由地址&gt;&lt;/子网掩码&gt;&lt;/ip地址&gt;&lt;/网卡&gt;&lt;/网卡&gt;&lt;/磁盘设备文件&gt;&lt;/镜像文件&gt;&lt;/文件系统类型&gt;&lt;/分区设备文件&gt;&lt;/分区设备文件&gt;&lt;/文件系统类型&gt;&lt;/磁盘设备文件&gt;&lt;/秒&gt;&lt;/文件系统类型&gt;&lt;/文件系统类型&gt;&lt;/挂载路径&gt;&lt;/设备文件&gt;&lt;/卷标&gt;&lt;/gid&gt;&lt;/uid&gt;&lt;/权限掩码&gt;&lt;/设备文件&gt;&lt;/命令&gt;&lt;/命令2&gt;&lt;/命令1&gt;&lt;/命令2&gt;&lt;/命令1&gt;&lt;/命令&gt;&lt;/命令&gt;&lt;/space&gt;
 </description>
         <pubDate>Sat, 05 Mar 2016 15:30:45 +0800</pubDate>
         <link>http://javictory.info/ubuntu/2016/03/05/ubuntu-Instruction.html</link>
