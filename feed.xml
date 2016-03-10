@@ -6,8 +6,8 @@
 </description>
     <link>http://javictory.info/</link>
     <atom:link href="http://javictory.info/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 10 Mar 2016 18:50:09 +0800</pubDate>
-    <lastBuildDate>Thu, 10 Mar 2016 18:50:09 +0800</lastBuildDate>
+    <pubDate>Thu, 10 Mar 2016 18:55:57 +0800</pubDate>
+    <lastBuildDate>Thu, 10 Mar 2016 18:55:57 +0800</lastBuildDate>
     <generator>Jekyll v3.1.1</generator>
     
       <item>
@@ -186,6 +186,306 @@
         
         
         <category>Ubuntu</category>
+        
+      </item>
+    
+      <item>
+        <title>常见字符集区别：</title>
+        <description>&lt;p&gt;1、LPTSTR、LPCSTR、LPCTSTR、LPSTR的意义：&lt;/p&gt;
+
+&lt;p&gt;(1) LPSTR：32bit指针 指向一个字符串，每个字符占1字节；&lt;/p&gt;
+
+&lt;p&gt;(2) LPCSTR：32-bit指针 指向一个常字符串，每个字符占1字节；&lt;/p&gt;
+
+&lt;p&gt;(3) LPCTSTR：32-bit指针 指向一个常字符串,每字符可能占1字节或2字节，取决于Unicode是否定义，T表示在Win32环境中， 有一个_T宏；&lt;/p&gt;
+
+&lt;p&gt;(4) LPTSTR：32-bit指针 每字符可能占1字节或2字节，取决于Unicode是否定义。&lt;/p&gt;
+
+&lt;p&gt;2、Multi-Byte Character Set：&lt;/p&gt;
+
+&lt;p&gt;MBCS，它是多字节字符集，它是不定长表示世界文字的编码。&lt;/p&gt;
+
+&lt;p&gt;MBCS表示英文字母时就和ASCII一样（这也是我们容易把MBCS和ASCII搞混的原因），但表示其他文字时就需要用多字节。&lt;/p&gt;
+
+&lt;p&gt;WINDOWS下面的程序设计可以支持MBCS和UNICODE两种编码的字符串，具体用那种就看你定义了MBCS宏还是UNICODE宏。&lt;/p&gt;
+
+&lt;p&gt;MBCS宏对应的字符串指针是char* 也就是LPSTR；&lt;/p&gt;
+
+&lt;p&gt;UNICODE对应的指针是unsigned  short* 也就是LPWSTR；&lt;/p&gt;
+
+&lt;p&gt;为了写程序方便，微软定义了类型LPTSTR，在MBCS下他就是char* ,   在UNICODE下它是unsigned   char* ,这样你就可以重定义一个宏进行不同字符集的转换了。&lt;/p&gt;
+</description>
+        <pubDate>Tue, 08 Mar 2016 15:30:45 +0800</pubDate>
+        <link>http://javictory.info/windows/2016/03/08/win-common-charset.html</link>
+        <guid isPermaLink="true">http://javictory.info/windows/2016/03/08/win-common-charset.html</guid>
+        
+        
+        <category>Windows</category>
+        
+      </item>
+    
+      <item>
+        <title>VC++ 6.0 编译器相关设置</title>
+        <description>&lt;p&gt;1、结构体中所有成员的对齐参数N的最大值称为结构体的对齐参数。 &lt;/p&gt;
+
+&lt;p&gt;VC++6.0中n 默认是8个字节，可以修改这个设定的对齐参数；&lt;/p&gt;
+
+&lt;p&gt;(1)方法一：&lt;/p&gt;
+
+&lt;p&gt;在菜单“工程”的“设置”中的“C/C++”选项卡的“分类”中， “Code Generation ”的“Struct member alignment” 中设置：&lt;/p&gt;
+
+&lt;p&gt;1byte、2byte、4byte、8byte、16byte等几种，默认为8byte。&lt;/p&gt;
+
+&lt;p&gt;(2)方法二：&lt;/p&gt;
+
+&lt;p&gt;可以程序控制，采用指令：
+		#pragma   pack(xx)控制&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt; 例如：
+	#pragma   pack(1),1字节对齐，
+	#pragma   pack(4)，4字节对齐，
+	#pragma   pack(16)，16字节对齐   
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;接下来我们将分不同的情况来详细讨论结构体成员的分布情况，顺便提醒一下， 常见类型的长度：&lt;/p&gt;
+
+&lt;p&gt;Int 4byte, Short 2byte, Char 1byte, Double 8byte, Long 4byte ；  &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;让我们先看下例： 
+
+Struct  A 
+{
+	char   c; //1byte  
+	double d; //8byte  
+	short s;  //2byte  
+	int   i;  //4byte  
+};  
+
+int main(int argc, char* argv[]) 
+{ 
+	A  strua;
+	printf(&quot;%len:d\n&quot;,sizeof(A));     
+	printf(&quot;%d,%d,%d,%d&quot;,&amp;amp;strua.c,&amp;amp;strua.d,&amp;amp;strua.s,&amp;amp;strua.i);  
+	return 0;  
+}  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;n设置为8byte时 结果：len:24, &lt;/p&gt;
+
+&lt;p&gt;1245032,1245040,1245048,1245052 内存中成员分布如下：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://javictory.info/img/img_append/C++VS2008-1.png&quot; alt=&quot;Preview&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;2、用 devenv.exe /resetuserdata 恢复Visual Studio 初始状态&lt;/p&gt;
+</description>
+        <pubDate>Tue, 08 Mar 2016 15:30:45 +0800</pubDate>
+        <link>http://javictory.info/c++/2016/03/08/C++-VS2008.html</link>
+        <guid isPermaLink="true">http://javictory.info/c++/2016/03/08/C++-VS2008.html</guid>
+        
+        
+        <category>C++</category>
+        
+      </item>
+    
+      <item>
+        <title>VC++中动静态链接库的调用</title>
+        <description>&lt;p&gt;1、动态链接库在调用时要注意:&lt;/p&gt;
+
+&lt;p&gt;格式为hdll=LoadLibrary（“DLL地址”）；&lt;/p&gt;
+
+&lt;p&gt;这里字符串类型是LPSTR，当VS中工程属性设置是unicode字符集的时候会提示错误，
+   因此要在配置-Property-General-&amp;gt;Character Set 里面把默认字符集“unicode”改成支持多字符扩展或者notset即可。&lt;/p&gt;
+
+&lt;p&gt;2、动态链接库DLL的调用分为动态调用和静态调用&lt;/p&gt;
+
+&lt;p&gt;(1)DLL的静态调用&lt;/p&gt;
+
+&lt;p&gt;在程序中要静态调用一个dll文件，一般会有下面这么一句 ：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;#pragma comment(lib, &quot;dll2.lib&quot;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;当然这不是必须的，也可以通过工程 设置 链接 添加这个lib。&lt;/p&gt;
+
+&lt;p&gt;意思是要把dll2.lib这个文件的信息编译到exe这个程序当中的，所以你必须把你的dll2.lib和dll2.dll都得放入exe所在的文件夹；&lt;/p&gt;
+
+&lt;p&gt;dll2.lib是用于编译的时候用的，  dll2.dll是当exe文件执行的时候用的；&lt;/p&gt;
+
+&lt;p&gt;当编译好了以后 这个dll2.lib文件就没有用了 ，因为它的信息已经编译到exe中了；&lt;/p&gt;
+
+&lt;p&gt;所以当你发布的时候 就可以把这个dll2.lib删除了，只留下dll2.dll就可以了。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;例如：
+
+#include &amp;lt;iostream&amp;gt;
+#pragma comment(lib,&quot;Mydll2.lib&quot;)
+extern &quot;C&quot; __declspec(dllimport) int add(int x,int y);
+int main(int argc, char* argv[])
+{
+	int result = add(2,3);
+	printf(&quot;%d&quot;,result);
+	getchar();
+	return 0;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;(2)DLL的动态调用：&lt;/p&gt;
+
+&lt;p&gt;只需要dll就可以了，和lib一点关系都没有。&lt;/p&gt;
+
+&lt;p&gt;可以用Extern，也可以用.def文件导出函数接口，供外部工程调用。&lt;/p&gt;
+
+&lt;p&gt;动态链接库在调用时要注意： &lt;/p&gt;
+
+&lt;p&gt;格式为hdll=LoadLibrary（“DLL地址”）；&lt;/p&gt;
+
+&lt;p&gt;这里字符串类型是LPSTR，不是unicode字符，
+   因此要配置 -Property-General-&amp;gt;Character Set 里面把默认字符集“unicode”改成支持多字符扩展或者notset即可。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;例如：
+
+#include &amp;lt;stdio.h&amp;gt;
+#include &amp;lt;windows.h&amp;gt; 
+typedef int(*lpAddFun)(int , int);
+
+int main(int argc, char* argv[])
+{
+	HINSTANCE hDll;
+	lpAddFun addFun;
+	hDll = LoadLibrary(&quot;Mydll2.dll&quot;);
+	if (hDll != NULL)
+	{
+		addFun = (lpAddFun)GetProcAddress(hDll, &quot;add&quot;);
+		if (addFun != NULL)
+		{
+			int result = addFun(2, 3);
+			printf(&quot;%d&quot;, result);
+	   	 	getchar();
+		}
+		FreeLibrary(hDll);
+	}
+   	 	getchar();
+	return 0;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;3、DLL工程和实际引用工程联调&lt;/p&gt;
+</description>
+        <pubDate>Tue, 08 Mar 2016 15:30:45 +0800</pubDate>
+        <link>http://javictory.info/c++/2016/03/08/C++-DLL.html</link>
+        <guid isPermaLink="true">http://javictory.info/c++/2016/03/08/C++-DLL.html</guid>
+        
+        
+        <category>C++</category>
+        
+      </item>
+    
+      <item>
+        <title>C++ 基础</title>
+        <description>&lt;p&gt;基本语法&lt;/p&gt;
+
+&lt;p&gt;1、全局变量个局部变量&lt;/p&gt;
+
+&lt;p&gt;如下面的这一串代码&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;#include &amp;lt;iostream&amp;gt;
+
+  #include &amp;lt;stdlib.h&amp;gt;
+
+  using namespace std;
+  
+  int vac=3;
+
+  int main(){
+
+  	int vac=10;
+  	::vac++;
+  	cout&amp;lt;&amp;lt;::vac&amp;lt;&amp;lt;endl;
+  	cout&amp;lt;&amp;lt;vac&amp;lt;&amp;lt;endl;
+  	system(&amp;quot;pause&amp;quot;);
+  	return 0 ;
+  }&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;其中，有几个地方需要做一下说明：&lt;/p&gt;
+
+&lt;p&gt;(1)在调试的时候，想要让弹出console的时候停止 需要添加system(“pause”)，方便进行观看。&lt;/p&gt;
+
+&lt;p&gt;(2)::是域操作符，::前面可以是 类名，命名空间名 来限定 ::后面的内容从哪里读取，在这里如果 ::前面没有域名 那么就是全局；：：vac代表的即是全局变量。&lt;/p&gt;
+
+&lt;p&gt;(3)而在main函数里面定义的 vac函数则是局部变量。&lt;/p&gt;
+
+&lt;p&gt;2、变量初始化&lt;/p&gt;
+
+&lt;p&gt;形式：&lt;变量名&gt;(表达式)&lt;/变量名&gt;&lt;/p&gt;
+
+&lt;p&gt;例如：int a(4); //与C语言中的int a=4;是等价的。&lt;/p&gt;
+
+&lt;p&gt;3、C++符号常量 const&lt;/p&gt;
+
+&lt;p&gt;C++有符号常量而C中是没有的&lt;/p&gt;
+
+&lt;p&gt;C++的格式： const &lt;类型&gt;&lt;符号常量&gt;=值;&lt;/符号常量&gt;&lt;/类型&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;例如 ：const float PI=3.1415926; // C为 #define PI 3.1415926;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;(1)与C相比，用const定义的符号常量具有数据类型，而且作用域可以是局部的。&lt;/p&gt;
+
+&lt;p&gt;(2)const 可以是参数指针不被改变&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt; 例如： int sum(const int *a);    (3)调用时，不想改变引用变量a的值
+
+ 例如： void f(const int &amp;amp;a,int b){...}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;4、自增判断&lt;/p&gt;
+
+&lt;p&gt;#include &lt;iostream&gt;&lt;/iostream&gt;&lt;/p&gt;
+
+&lt;p&gt;using namespace std;&lt;/p&gt;
+
+&lt;p&gt;#define product(x) (x*x);&lt;/p&gt;
+
+&lt;p&gt;int main(){&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;int i=3,j,k;
+
+j=product(i++);//此处的表达式为(i++)*(i++)，运行结束后，i==5；
+
+k=product(++i);//此处的表达式为(++i)*(++i),在得到运算结果之前，i==7
+
+cout&amp;lt;&amp;lt;&quot;j=&quot;&amp;lt;&amp;lt;j&amp;lt;&amp;lt;&quot;k=&quot;&amp;lt;&amp;lt;k&amp;lt;&amp;lt;endl;
+
+system(&quot;pause&quot;);
+
+return 0; }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;5、在VC++ 编写dll时应当注意在.c文件和在.CPP文件下的区别。      &lt;br /&gt;
+   在.cpp文件下无论是动态链接库的创建还是调用，都要声明一下extern “C” ；&lt;/p&gt;
+
+&lt;p&gt;6、在C中是没有string类型的，因此都是用字符数组进行
+   字符数组也没有办法直接进行字符串的赋值
+   只有在初始化的时候可以直接进行赋值&lt;/p&gt;
+
+&lt;p&gt;7、main函数中参数的意义:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;int main(int argc, char* argv[])
+{
+	return 0;
+}    两个参数是给读入命令行参数的：
+&lt;/code&gt;&lt;/pre&gt;
+
+   	argc表示参数个数，Count;
+
+   	argv[]存放参数，Value;
+</description>
+        <pubDate>Tue, 08 Mar 2016 15:30:45 +0800</pubDate>
+        <link>http://javictory.info/c++/2016/03/08/C++-Basic.html</link>
+        <guid isPermaLink="true">http://javictory.info/c++/2016/03/08/C++-Basic.html</guid>
+        
+        
+        <category>C++</category>
         
       </item>
     
@@ -4102,312 +4402,12 @@ Linux会最大程度的利用物理内存，避免使用交换空间;而不是�
 原文链接：http://www.cnblogs.com/dutlei/archive/2012/11/20/2778327.html
 &lt;/命令&gt;&lt;/命令&gt;&lt;/命令&gt;&lt;/命令&gt;&lt;/down&gt;&lt;/m-j&gt;&lt;/键位&gt;&lt;/数字&gt;&lt;/寄存器名称&gt;&lt;/宏名称&gt;&lt;/宏名称&gt;&lt;/目标字符串&gt;&lt;/源字符串&gt;&lt;/目标字符串&gt;&lt;/源字符串&gt;&lt;/行号2&gt;&lt;/行号1&gt;&lt;/目标字符串&gt;&lt;/源字符串&gt;&lt;/目标字符串&gt;&lt;/源字符串&gt;&lt;/寄存器名称&gt;&lt;/行号&gt;&lt;/标记名称&gt;&lt;/标记名称&gt;&lt;/行号&gt;&lt;/功能&gt;&lt;/键位&gt;&lt;/作用范围&gt;&lt;/right&gt;&lt;/m-l&gt;&lt;/left&gt;&lt;/m-h&gt;&lt;/up&gt;&lt;/m-k&gt;&lt;/down&gt;&lt;/m-j&gt;&lt;/模块名称&gt;&lt;/秒&gt;&lt;/封包大小&gt;&lt;/广播地址&gt;&lt;/ip地址&gt;&lt;/子网掩码&gt;&lt;/网关地址&gt;&lt;/网关地址&gt;&lt;/网卡&gt;&lt;/子网掩码&gt;&lt;/网关地址&gt;&lt;/路由地址&gt;&lt;/子网掩码&gt;&lt;/ip地址&gt;&lt;/网卡&gt;&lt;/网卡&gt;&lt;/磁盘设备文件&gt;&lt;/镜像文件&gt;&lt;/文件系统类型&gt;&lt;/分区设备文件&gt;&lt;/分区设备文件&gt;&lt;/文件系统类型&gt;&lt;/磁盘设备文件&gt;&lt;/秒&gt;&lt;/文件系统类型&gt;&lt;/文件系统类型&gt;&lt;/挂载路径&gt;&lt;/设备文件&gt;&lt;/卷标&gt;&lt;/gid&gt;&lt;/uid&gt;&lt;/权限掩码&gt;&lt;/设备文件&gt;&lt;/命令&gt;&lt;/命令2&gt;&lt;/命令1&gt;&lt;/命令2&gt;&lt;/命令1&gt;&lt;/命令&gt;&lt;/命令&gt;&lt;/space&gt;&lt;/次&gt;&lt;/次&gt;&lt;/秒&gt;&lt;/uid&gt;&lt;/pgid&gt;&lt;/pid&gt;&lt;/nice值&gt;&lt;/进程表达式&gt;&lt;/优先级表达式&gt;&lt;/进程pid&gt;&lt;/进程名&gt;&lt;/进程名&gt;&lt;/关键字&gt;&lt;/用户名&gt;&lt;/字符串&gt;&lt;/缓冲天数&gt;&lt;/过期时间&gt;&lt;/群组名&gt;&lt;/群组名&gt;&lt;/uid&gt;&lt;/用户名&gt;&lt;/shell&gt;&lt;/目录&gt;&lt;/用户名&gt;&lt;/字符串&gt;&lt;/缓冲天数&gt;&lt;/过期时间&gt;&lt;/群组名&gt;&lt;/群组名&gt;&lt;/uid&gt;&lt;/新用户名&gt;&lt;/shell&gt;&lt;/目录&gt;&lt;/用户名&gt;&lt;/shell&gt;&lt;/天数&gt;&lt;/天数&gt;&lt;/命令&gt;&lt;/路径&gt;&lt;/时间&gt;&lt;/秒&gt;&lt;/变量名称&gt;&lt;/实际内容&gt;&lt;/输入内容&gt;&lt;/字符串&gt;&lt;/正则表达式&gt;&lt;/字符串&gt;&lt;/gid&gt;&lt;/群组名&gt;&lt;/uid&gt;&lt;/用户名&gt;&lt;/文件类型&gt;&lt;/大小&gt;&lt;/参照文件&gt;&lt;/参照文件&gt;&lt;/天数&gt;&lt;/分钟&gt;&lt;/天数&gt;&lt;/分钟&gt;&lt;/表达式&gt;&lt;/表达式&gt;&lt;/表达式&gt;&lt;/表达式&gt;&lt;/表达式&gt;&lt;/数据库路径&gt;&lt;/文件名称&gt;&lt;/目录&gt;&lt;/目录&gt;&lt;/目录&gt;&lt;/程序名称&gt;&lt;/密码&gt;&lt;/文件名&gt;&lt;/文件名&gt;&lt;/压缩包&gt;&lt;/子命令&gt;&lt;/工作目录&gt;&lt;/模块名称&gt;&lt;/输出目录&gt;&lt;/字典大小&gt;&lt;/压缩算法&gt;&lt;/压缩方式&gt;&lt;/压缩包&gt;&lt;/子命令&gt;&lt;/表达式&gt;&lt;/路径&gt;&lt;/密码&gt;&lt;/压缩文件&gt;&lt;/日期时间&gt;&lt;/表达式&gt;&lt;/缓存路径&gt;&lt;/文件名后缀&gt;&lt;/表达式&gt;&lt;/表达式&gt;&lt;/压缩级别&gt;&lt;/源文件&gt;&lt;/压缩包&gt;&lt;/表达式&gt;&lt;/表达式&gt;&lt;/解压路径&gt;&lt;/文件名&gt;&lt;/归档文件&gt;&lt;/路径&gt;&lt;/属性&gt;&lt;/归属群组&gt;&lt;/参考文件或目录&gt;&lt;/归属用户&gt;&lt;/参考文件或目录&gt;&lt;/权限表达式&gt;&lt;/文件名&gt;&lt;/结束字段&gt;&lt;/起始字段&gt;&lt;/分隔字符&gt;&lt;/输出文件&gt;&lt;/文件名&gt;&lt;/字节&gt;&lt;/字节&gt;&lt;/行数&gt;&lt;/行数&gt;&lt;/源文件&gt;&lt;/链接&gt;&lt;/源文件&gt;&lt;/目标目录&gt;&lt;/源目录&gt;&lt;/源文件&gt;&lt;/目标目录&gt;&lt;/目标目录&gt;&lt;/源目录&gt;&lt;/源文件&gt;&lt;/数字权限值&gt;&lt;/多级目录&gt;&lt;/文件夹&gt;&lt;/目标文件&gt;&lt;/文件名&gt;&lt;/文件名&gt;&lt;/数字&gt;&lt;/归档文件&gt;&lt;/dir&gt;&lt;/tab&gt;
 </description>
-        <pubDate>Tue, 08 Mar 2016 15:30:45 +0800</pubDate>
-        <link>http://javictory.info/ubuntu/2016/03/08/ubuntu-Instruction.html</link>
-        <guid isPermaLink="true">http://javictory.info/ubuntu/2016/03/08/ubuntu-Instruction.html</guid>
+        <pubDate>Sat, 05 Mar 2016 15:30:45 +0800</pubDate>
+        <link>http://javictory.info/ubuntu/2016/03/05/ubuntu-Instruction.html</link>
+        <guid isPermaLink="true">http://javictory.info/ubuntu/2016/03/05/ubuntu-Instruction.html</guid>
         
         
         <category>Ubuntu</category>
-        
-      </item>
-    
-      <item>
-        <title>常见字符集区别：</title>
-        <description>&lt;p&gt;1、LPTSTR、LPCSTR、LPCTSTR、LPSTR的意义：&lt;/p&gt;
-
-&lt;p&gt;(1) LPSTR：32bit指针 指向一个字符串，每个字符占1字节；&lt;/p&gt;
-
-&lt;p&gt;(2) LPCSTR：32-bit指针 指向一个常字符串，每个字符占1字节；&lt;/p&gt;
-
-&lt;p&gt;(3) LPCTSTR：32-bit指针 指向一个常字符串,每字符可能占1字节或2字节，取决于Unicode是否定义，T表示在Win32环境中， 有一个_T宏；&lt;/p&gt;
-
-&lt;p&gt;(4) LPTSTR：32-bit指针 每字符可能占1字节或2字节，取决于Unicode是否定义。&lt;/p&gt;
-
-&lt;p&gt;2、Multi-Byte Character Set：&lt;/p&gt;
-
-&lt;p&gt;MBCS，它是多字节字符集，它是不定长表示世界文字的编码。&lt;/p&gt;
-
-&lt;p&gt;MBCS表示英文字母时就和ASCII一样（这也是我们容易把MBCS和ASCII搞混的原因），但表示其他文字时就需要用多字节。&lt;/p&gt;
-
-&lt;p&gt;WINDOWS下面的程序设计可以支持MBCS和UNICODE两种编码的字符串，具体用那种就看你定义了MBCS宏还是UNICODE宏。&lt;/p&gt;
-
-&lt;p&gt;MBCS宏对应的字符串指针是char* 也就是LPSTR；&lt;/p&gt;
-
-&lt;p&gt;UNICODE对应的指针是unsigned  short* 也就是LPWSTR；&lt;/p&gt;
-
-&lt;p&gt;为了写程序方便，微软定义了类型LPTSTR，在MBCS下他就是char* ,   在UNICODE下它是unsigned   char* ,这样你就可以重定义一个宏进行不同字符集的转换了。&lt;/p&gt;
-</description>
-        <pubDate>Tue, 08 Mar 2016 15:30:45 +0800</pubDate>
-        <link>http://javictory.info/windows/2016/03/08/win-common-charset.html</link>
-        <guid isPermaLink="true">http://javictory.info/windows/2016/03/08/win-common-charset.html</guid>
-        
-        
-        <category>Windows</category>
-        
-      </item>
-    
-      <item>
-        <title>VC++ 6.0 编译器相关设置</title>
-        <description>&lt;p&gt;1、结构体中所有成员的对齐参数N的最大值称为结构体的对齐参数。 &lt;/p&gt;
-
-&lt;p&gt;VC++6.0中n 默认是8个字节，可以修改这个设定的对齐参数；&lt;/p&gt;
-
-&lt;p&gt;(1)方法一：&lt;/p&gt;
-
-&lt;p&gt;在菜单“工程”的“设置”中的“C/C++”选项卡的“分类”中， “Code Generation ”的“Struct member alignment” 中设置：&lt;/p&gt;
-
-&lt;p&gt;1byte、2byte、4byte、8byte、16byte等几种，默认为8byte。&lt;/p&gt;
-
-&lt;p&gt;(2)方法二：&lt;/p&gt;
-
-&lt;p&gt;可以程序控制，采用指令：
-		#pragma   pack(xx)控制&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt; 例如：
-	#pragma   pack(1),1字节对齐，
-	#pragma   pack(4)，4字节对齐，
-	#pragma   pack(16)，16字节对齐   
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;接下来我们将分不同的情况来详细讨论结构体成员的分布情况，顺便提醒一下， 常见类型的长度：&lt;/p&gt;
-
-&lt;p&gt;Int 4byte, Short 2byte, Char 1byte, Double 8byte, Long 4byte ；  &lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;让我们先看下例： 
-
-Struct  A 
-{
-	char   c; //1byte  
-	double d; //8byte  
-	short s;  //2byte  
-	int   i;  //4byte  
-};  
-
-int main(int argc, char* argv[]) 
-{ 
-	A  strua;
-	printf(&quot;%len:d\n&quot;,sizeof(A));     
-	printf(&quot;%d,%d,%d,%d&quot;,&amp;amp;strua.c,&amp;amp;strua.d,&amp;amp;strua.s,&amp;amp;strua.i);  
-	return 0;  
-}  
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;n设置为8byte时 结果：len:24, &lt;/p&gt;
-
-&lt;p&gt;1245032,1245040,1245048,1245052 内存中成员分布如下：&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://javictory.info/img/img_append/C++VS2008-1.png&quot; alt=&quot;Preview&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;2、用 devenv.exe /resetuserdata 恢复Visual Studio 初始状态&lt;/p&gt;
-</description>
-        <pubDate>Tue, 08 Mar 2016 15:30:45 +0800</pubDate>
-        <link>http://javictory.info/c++/2016/03/08/C++-VS2008.html</link>
-        <guid isPermaLink="true">http://javictory.info/c++/2016/03/08/C++-VS2008.html</guid>
-        
-        
-        <category>C++</category>
-        
-      </item>
-    
-      <item>
-        <title>VC++中动静态链接库的调用</title>
-        <description>&lt;p&gt;1、动态链接库在调用时要注意:&lt;/p&gt;
-
-&lt;p&gt;格式为hdll=LoadLibrary（“DLL地址”）；&lt;/p&gt;
-
-&lt;p&gt;这里字符串类型是LPSTR，当VS中工程属性设置是unicode字符集的时候会提示错误，
-   因此要在配置-Property-General-&amp;gt;Character Set 里面把默认字符集“unicode”改成支持多字符扩展或者notset即可。&lt;/p&gt;
-
-&lt;p&gt;2、动态链接库DLL的调用分为动态调用和静态调用&lt;/p&gt;
-
-&lt;p&gt;(1)DLL的静态调用&lt;/p&gt;
-
-&lt;p&gt;在程序中要静态调用一个dll文件，一般会有下面这么一句 ：&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;#pragma comment(lib, &quot;dll2.lib&quot;)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;当然这不是必须的，也可以通过工程 设置 链接 添加这个lib。&lt;/p&gt;
-
-&lt;p&gt;意思是要把dll2.lib这个文件的信息编译到exe这个程序当中的，所以你必须把你的dll2.lib和dll2.dll都得放入exe所在的文件夹；&lt;/p&gt;
-
-&lt;p&gt;dll2.lib是用于编译的时候用的，  dll2.dll是当exe文件执行的时候用的；&lt;/p&gt;
-
-&lt;p&gt;当编译好了以后 这个dll2.lib文件就没有用了 ，因为它的信息已经编译到exe中了；&lt;/p&gt;
-
-&lt;p&gt;所以当你发布的时候 就可以把这个dll2.lib删除了，只留下dll2.dll就可以了。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;例如：
-
-#include &amp;lt;iostream&amp;gt;
-#pragma comment(lib,&quot;Mydll2.lib&quot;)
-extern &quot;C&quot; __declspec(dllimport) int add(int x,int y);
-int main(int argc, char* argv[])
-{
-	int result = add(2,3);
-	printf(&quot;%d&quot;,result);
-	getchar();
-	return 0;
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;(2)DLL的动态调用：&lt;/p&gt;
-
-&lt;p&gt;只需要dll就可以了，和lib一点关系都没有。&lt;/p&gt;
-
-&lt;p&gt;可以用Extern，也可以用.def文件导出函数接口，供外部工程调用。&lt;/p&gt;
-
-&lt;p&gt;动态链接库在调用时要注意： &lt;/p&gt;
-
-&lt;p&gt;格式为hdll=LoadLibrary（“DLL地址”）；&lt;/p&gt;
-
-&lt;p&gt;这里字符串类型是LPSTR，不是unicode字符，
-   因此要配置 -Property-General-&amp;gt;Character Set 里面把默认字符集“unicode”改成支持多字符扩展或者notset即可。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;例如：
-
-#include &amp;lt;stdio.h&amp;gt;
-#include &amp;lt;windows.h&amp;gt; 
-typedef int(*lpAddFun)(int , int);
-
-int main(int argc, char* argv[])
-{
-	HINSTANCE hDll;
-	lpAddFun addFun;
-	hDll = LoadLibrary(&quot;Mydll2.dll&quot;);
-	if (hDll != NULL)
-	{
-		addFun = (lpAddFun)GetProcAddress(hDll, &quot;add&quot;);
-		if (addFun != NULL)
-		{
-			int result = addFun(2, 3);
-			printf(&quot;%d&quot;, result);
-	   	 	getchar();
-		}
-		FreeLibrary(hDll);
-	}
-   	 	getchar();
-	return 0;
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;3、DLL工程和实际引用工程联调&lt;/p&gt;
-</description>
-        <pubDate>Tue, 08 Mar 2016 15:30:45 +0800</pubDate>
-        <link>http://javictory.info/c++/2016/03/08/C++-DLL.html</link>
-        <guid isPermaLink="true">http://javictory.info/c++/2016/03/08/C++-DLL.html</guid>
-        
-        
-        <category>C++</category>
-        
-      </item>
-    
-      <item>
-        <title>C++ 基础</title>
-        <description>&lt;p&gt;基本语法&lt;/p&gt;
-
-&lt;p&gt;1、全局变量个局部变量&lt;/p&gt;
-
-&lt;p&gt;如下面的这一串代码&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;#include &amp;lt;iostream&amp;gt;
-
-  #include &amp;lt;stdlib.h&amp;gt;
-
-  using namespace std;
-  
-  int vac=3;
-
-  int main(){
-
-  	int vac=10;
-  	::vac++;
-  	cout&amp;lt;&amp;lt;::vac&amp;lt;&amp;lt;endl;
-  	cout&amp;lt;&amp;lt;vac&amp;lt;&amp;lt;endl;
-  	system(&amp;quot;pause&amp;quot;);
-  	return 0 ;
-  }&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;其中，有几个地方需要做一下说明：&lt;/p&gt;
-
-&lt;p&gt;(1)在调试的时候，想要让弹出console的时候停止 需要添加system(“pause”)，方便进行观看。&lt;/p&gt;
-
-&lt;p&gt;(2)::是域操作符，::前面可以是 类名，命名空间名 来限定 ::后面的内容从哪里读取，在这里如果 ::前面没有域名 那么就是全局；：：vac代表的即是全局变量。&lt;/p&gt;
-
-&lt;p&gt;(3)而在main函数里面定义的 vac函数则是局部变量。&lt;/p&gt;
-
-&lt;p&gt;2、变量初始化&lt;/p&gt;
-
-&lt;p&gt;形式：&lt;变量名&gt;(表达式)&lt;/变量名&gt;&lt;/p&gt;
-
-&lt;p&gt;例如：int a(4); //与C语言中的int a=4;是等价的。&lt;/p&gt;
-
-&lt;p&gt;3、C++符号常量 const&lt;/p&gt;
-
-&lt;p&gt;C++有符号常量而C中是没有的&lt;/p&gt;
-
-&lt;p&gt;C++的格式： const &lt;类型&gt;&lt;符号常量&gt;=值;&lt;/符号常量&gt;&lt;/类型&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;例如 ：const float PI=3.1415926; // C为 #define PI 3.1415926;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;(1)与C相比，用const定义的符号常量具有数据类型，而且作用域可以是局部的。&lt;/p&gt;
-
-&lt;p&gt;(2)const 可以是参数指针不被改变&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt; 例如： int sum(const int *a);    (3)调用时，不想改变引用变量a的值
-
- 例如： void f(const int &amp;amp;a,int b){...}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;4、自增判断&lt;/p&gt;
-
-&lt;p&gt;#include &lt;iostream&gt;&lt;/iostream&gt;&lt;/p&gt;
-
-&lt;p&gt;using namespace std;&lt;/p&gt;
-
-&lt;p&gt;#define product(x) (x*x);&lt;/p&gt;
-
-&lt;p&gt;int main(){&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;int i=3,j,k;
-
-j=product(i++);//此处的表达式为(i++)*(i++)，运行结束后，i==5；
-
-k=product(++i);//此处的表达式为(++i)*(++i),在得到运算结果之前，i==7
-
-cout&amp;lt;&amp;lt;&quot;j=&quot;&amp;lt;&amp;lt;j&amp;lt;&amp;lt;&quot;k=&quot;&amp;lt;&amp;lt;k&amp;lt;&amp;lt;endl;
-
-system(&quot;pause&quot;);
-
-return 0; }
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;5、在VC++ 编写dll时应当注意在.c文件和在.CPP文件下的区别。      &lt;br /&gt;
-   在.cpp文件下无论是动态链接库的创建还是调用，都要声明一下extern “C” ；&lt;/p&gt;
-
-&lt;p&gt;6、在C中是没有string类型的，因此都是用字符数组进行
-   字符数组也没有办法直接进行字符串的赋值
-   只有在初始化的时候可以直接进行赋值&lt;/p&gt;
-
-&lt;p&gt;7、main函数中参数的意义:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;int main(int argc, char* argv[])
-{
-	return 0;
-}    两个参数是给读入命令行参数的：
-&lt;/code&gt;&lt;/pre&gt;
-
-   	argc表示参数个数，Count;
-
-   	argv[]存放参数，Value;
-</description>
-        <pubDate>Tue, 08 Mar 2016 15:30:45 +0800</pubDate>
-        <link>http://javictory.info/c++/2016/03/08/C++-Basic.html</link>
-        <guid isPermaLink="true">http://javictory.info/c++/2016/03/08/C++-Basic.html</guid>
-        
-        
-        <category>C++</category>
         
       </item>
     
