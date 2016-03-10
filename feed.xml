@@ -6,8 +6,8 @@
 </description>
     <link>http://javictory.info/</link>
     <atom:link href="http://javictory.info/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 10 Mar 2016 18:55:57 +0800</pubDate>
-    <lastBuildDate>Thu, 10 Mar 2016 18:55:57 +0800</lastBuildDate>
+    <pubDate>Thu, 10 Mar 2016 19:24:03 +0800</pubDate>
+    <lastBuildDate>Thu, 10 Mar 2016 19:24:03 +0800</lastBuildDate>
     <generator>Jekyll v3.1.1</generator>
     
       <item>
@@ -1234,23 +1234,25 @@ Rxvt.preeditType:Root
 
 &lt;h2 id=&quot;section-13&quot;&gt;任务管理&lt;/h2&gt;
 
-&lt;p&gt;&amp;amp;——————————–在命令的末尾加上一个 &amp;amp; 符号，表示背景任务，例如：&lt;/p&gt;
+&lt;p&gt;1、	&amp;amp;——————————–在命令的末尾加上一个 &amp;amp; 符号，表示背景任务，例如：&lt;/p&gt;
 
-&lt;p&gt;wget http://www.download.net/xxx/mp3 &amp;amp;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;	wget http://www.download.net/xxx/mp3 &amp;amp;
+&lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;;———————————-使用 ; 将多个命令连结起来，则表示任务按顺序执行&lt;/p&gt;
+&lt;p&gt;2、	;——————————–使用 ; 将多个命令连结起来，则表示任务按顺序执行.&lt;/p&gt;
 
-&lt;p&gt;&amp;amp;&amp;amp;——————————使用 &amp;amp;&amp;amp; 将多个命令连结起来，则表示只有前面的命令执行成功，后面的命令才能得以执行&lt;/p&gt;
+&lt;p&gt;3、	&amp;amp;&amp;amp;——————————-使用 &amp;amp;&amp;amp; 将多个命令连结起来，则表示只有前面的命令执行成功，后面的命令才能得以执行.&lt;/p&gt;
 
-&lt;p&gt;&lt;code&gt;-----------------------------------`&amp;lt;命令&amp;gt;` ，如果一个命令中包含以&lt;/code&gt; （Esc键下方的按键）括起来的子命令，那么子命令将被优先执行，执行结果被代入上一级命令继续执行，例如创建一个以当前时间命名的文件：&lt;/p&gt;
+&lt;p&gt;4、	` `———————————–`&lt;命令&gt;\` ，如果一个命令中包含以 `` （Esc键下方的按键）括起来的子命令，那么子命令将被优先执行，执行结果被代入上一级命令继续执行，例如创建一个以当前时间命名的文件：&lt;/命令&gt;&lt;/p&gt;
 
-&lt;p&gt;touch &lt;code&gt;date +%m.%d_%H:%M:%S&lt;/code&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;touch `date +%m.%d_%H:%M:%S`
 
-&lt;p&gt;touch 命令能够创建一个文件，它的操作对象，为 date +%m%d%H%M%S 命令的输出 06.06_06:06:60&lt;/p&gt;
+touch 命令能够创建一个文件，它的操作对象，为 date +%m%d%H%M%S 命令的输出 06.06_06:06:60
 
-&lt;p&gt;这样，我们创建了一个名为 06.06_06:06:60 的文件（六月六日六时六分刚过六十秒-_-!）&lt;/p&gt;
+这样，我们创建了一个名为 06.06_06:06:60 的文件（六月六日六时六分刚过六十秒-_-!）
+&lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Ctrl+z&lt;/p&gt;
+&lt;h2 id=&quot;ctrlz&quot;&gt;Ctrl+z&lt;/h2&gt;
 
 &lt;p&gt;将当前Shell中的任务挂起&lt;/p&gt;
 
@@ -1266,26 +1268,27 @@ Rxvt.preeditType:Root
 
 &lt;p&gt;如果后台运行多个任务，您可以在 bg 或者 fg 后跟任务编号，作为操作对象，例如：bg 2&lt;/p&gt;
 
-&lt;p&gt;管道、重定向&lt;/p&gt;
+&lt;h2 id=&quot;section-14&quot;&gt;管道、重定向&lt;/h2&gt;
 
-&lt;blockquote&gt;
-  &lt;p&gt;———————–重定向符号，它的作用是将命令的输出重定向到一个文件中。比如我们想把命令 ls 的结果保存为 FileList 文件，作一个清单，我们可以使用重定向符号来完成它：&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;1、 &amp;gt;———————–重定向符号，它的作用是将命令的输出重定向到一个文件中。比如我
+们想把命令 ls 的结果保存为 FileList 文件，作一个清单，我们可以使用重定向符号来完成它：&lt;/p&gt;
 
-&lt;p&gt;ls -l &amp;gt; FileList&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;ls -l &amp;gt; FileList
+&lt;/code&gt;&lt;/pre&gt;
 
-&lt;blockquote&gt;
-  &lt;blockquote&gt;
-    &lt;p&gt;———————-作用与 &amp;gt; 基本相同，不同点在于， » 以追加的方式，将命令的输出写入文件的末尾。&lt;/p&gt;
-  &lt;/blockquote&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;2、 »———————-作用与 &amp;gt; 基本相同，不同点在于， » 以追加的方式，将命令的输
+出写入文件的末尾。&lt;/p&gt;
 
-&lt;p&gt;&amp;lt;———————–是从文件到命令的重定向，将文件的内容作为命令的输入。&lt;/p&gt;
+&lt;p&gt;3、 &amp;lt;———————–是从文件到命令的重定向，将文件的内容作为命令的输入。&lt;/p&gt;
 
 &lt;table&gt;
   &lt;tbody&gt;
     &lt;tr&gt;
-      &lt;td&gt;————————为管道符号，它的作用是将前一个命令的输出，作为下一个命令的输入。假设一个目录下的文件太多，使用 ls命令不能够在屏幕中完全显示，这个时候您可以将 ls 命令的输出，通过管道符号，作为浏览器 less 的输入。就可以使用浏览器的功能翻页、查找：ls -al&lt;/td&gt;
+      &lt;td&gt;4、&lt;/td&gt;
+      &lt;td&gt;———————–为管道符号，它的作用是将前一个命令的输出，作为下一个命令的输&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;入。假设一个目录下的文件太多，使用 ls命令不能够在屏幕中完全显示，这个时候您可以将 ls 命令的输出，通过管道符号，作为浏览器 less 的输入。就可以使用浏览器的功能翻页、查找：ls -al&lt;/td&gt;
       &lt;td&gt;less&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
@@ -1293,11 +1296,12 @@ Rxvt.preeditType:Root
 
 &lt;p&gt;说明： less 浏览器的键绑定几乎与 man 相同，请参阅 在线帮助系统&lt;/p&gt;
 
-&lt;h2 id=&quot;section-14&quot;&gt;脱字符&lt;/h2&gt;
+&lt;h2 id=&quot;section-15&quot;&gt;脱字符&lt;/h2&gt;
 
 &lt;p&gt;Shell中的一些功能是通过特殊符号作为控制字符来实现的，上面已经介绍了很多了。这产生一个问题，如果一个文件名中，刚好包含了这些字符，比如 ; ，就很难对它进行操作。使用 less 浏览这个文件&lt;/p&gt;
 
-&lt;p&gt;less ;xxx&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;less ;xxx
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;less 会很快返回一个错误信息，因为并没有一个文件名作为操作对象。接着，Shell会报告，系统中没有 xxx 这个命令。&lt;/p&gt;
 
@@ -1321,7 +1325,7 @@ Rxvt.preeditType:Root
 
 &lt;h2 id=&quot;fish&quot;&gt;Fish&lt;/h2&gt;
 
-&lt;p&gt;the friendly interactive shell&lt;/p&gt;
+&lt;p&gt;the  friendly  interactive  shell&lt;/p&gt;
 
 &lt;p&gt;正如它的名字，Fish是一款非常友好的Shell，大力推荐！使用命令 sudo apt-get install fish 安装它。完成后，运行命令 fish 切换到fish， exit 返回bash。&lt;/p&gt;
 
@@ -1329,15 +1333,12 @@ Rxvt.preeditType:Root
 
 &lt;p&gt;1.自动补全、语法高亮&lt;/p&gt;
 
-&lt;p&gt;bash的自动补全默认只是补全命令、路径，如果想补全变量、参数等，通常需要使用复杂的组合键（见上面bash的介绍），即便您能够记住它们，快&lt;/p&gt;
+&lt;p&gt;bash的自动补全默认只是补全命令、路径，如果想补全变量、参数等，通常需要使用复杂的组合键（见上面bash的介绍），即便您能够记住它们，快速准确的按下这些组合键，也是一种严峻的考验。而FISH的自动补全可以自动识别语法，补全正确的内容。并且具有语法高亮的功能，比如用MPLAYER放MP3：&lt;/p&gt;
 
-&lt;p&gt;速准确的按下这些组合键，也是一种严峻的考验。而FISH的自动补全可以自动识别语法，补全正确的内容。并且具有语法高亮的功能，比如用MPLAYER放&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;mpl&amp;lt;tab&amp;gt;(ayer) -l&amp;lt;tab&amp;gt;(oop) &amp;lt;tab&amp;gt;(0)
 
-&lt;p&gt;MP3：&lt;/p&gt;
-
-&lt;p&gt;mpl&lt;tab&gt;(ayer) -l&lt;tab&gt;(oop) &lt;tab&gt;(0)&lt;/tab&gt;&lt;/tab&gt;&lt;/tab&gt;&lt;/p&gt;
-
-&lt;p&gt;-sh&lt;tab&gt;(uffle) -pl&lt;tab&gt;(aylist) &lt;tab&gt;(mp3_playlist)&lt;/tab&gt;&lt;/tab&gt;&lt;/tab&gt;&lt;/p&gt;
+-sh&amp;lt;tab&amp;gt;(uffle) -pl&amp;lt;tab&amp;gt;(aylist) &amp;lt;tab&amp;gt;(mp3_playlist)
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;一阵猛按 &lt;tab&gt; 键，一个蛮长的命令就完成了。&lt;/tab&gt;&lt;/p&gt;
 
@@ -1514,7 +1515,7 @@ PATH=&quot;/usr/local/sbin:/usr/local/bin:/usr/sbin&quot;
 
 Linux系统主要通过以下步骤启动：
 
-## 1.读取MBR的信息，启动Boot Manager ##
+#### 1.读取MBR的信息，启动Boot Manager ####
 
 Windows使用NTLDR作为Boot
 
@@ -1522,19 +1523,19 @@ Manager，如果您的系统中安装多个版本的Windows，您就需要在NTL
 
 Linux通常使用功能强大，配置灵活的GRUB作为Boot Manager，我们将在启动管理章节中向您介绍它的使用方式。
 
-## 2.加载系统内核，启动init进程 ##
+#### 2.加载系统内核，启动init进程 ####
 
 init进程是Linux的根进程，所有的系统进程都是它的子进程。
 
-## 3.init进程读取 /etc/inittab 文件中的信息，并进入预设的运行级别，按顺序运行该运行级别对应文件夹下的脚本。脚本通常以 start 参数启动，并指向一个系统中的程序。 ##
+#### 3.init进程读取 /etc/inittab 文件中的信息，并进入预设的运行级别，按顺序运行该运行级别对应文件夹下的脚本。脚本通常以 start 参数启动，并指向一个系统中的程序。 ####
 
 通常情况下， /etc/rcS.d/ 目录下的启动脚本首先被执行，然后是 /etc/rcN.d/ 目录。例如您设定的运行级别为3,那么它对应的启动目录为 /etc/rc3.d/ 。
 
-## 4.根据 /etc/rcS.d/ 文件夹中对应的脚本启动Xwindow服务器 xorg ##
+#### 4.根据 /etc/rcS.d/ 文件夹中对应的脚本启动Xwindow服务器 xorg ####
 
 Xwindow为Linux下的图形用户界面系统。
 
-## 5.启动登录管理器，等待用户登录 ##
+#### 5.启动登录管理器，等待用户登录 ####
 
 Ubuntu系统默认使用GDM作为登录管理器，您在登录管理器界面中输入用户名和密码后，便可以登录系统。（您可以在 /etc/rc3.d/ 文件夹中找到一个名为 S13gdm 的链接）
 
