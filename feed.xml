@@ -6,8 +6,8 @@
 </description>
     <link>http://javictory.info/</link>
     <atom:link href="http://javictory.info/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 10 Mar 2016 19:32:56 +0800</pubDate>
-    <lastBuildDate>Thu, 10 Mar 2016 19:32:56 +0800</lastBuildDate>
+    <pubDate>Thu, 10 Mar 2016 19:49:36 +0800</pubDate>
+    <lastBuildDate>Thu, 10 Mar 2016 19:49:36 +0800</lastBuildDate>
     <generator>Jekyll v3.1.1</generator>
     
       <item>
@@ -1997,7 +1997,8 @@ cd xxx_ver/ 进行解包后的源码目录
 
 &lt;p&gt;startx 命令可以在命令行下启动图形界面。执行startx 命令时，实际执行这一命令：&lt;/p&gt;
 
-&lt;p&gt;xinit /etc/X11/xinit/xinitrc – /etc/X11/xinit/xserverrc&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;xinit /etc/X11/xinit/xinitrc -- /etc/X11/xinit/xserverrc
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;根据脚本 /etc/X11/xinit/xserverrc 启动Xserver，同时根据脚本 /etc/X11/xinit/xinitrc 启动指定Xclient进程，例如窗口管理器&lt;/p&gt;
 
@@ -2043,17 +2044,18 @@ cd xxx_ver/ 进行解包后的源码目录
 
 &lt;h2 id=&quot;section-36&quot;&gt;布局&lt;/h2&gt;
 
-&lt;p&gt;Section “ServerLayout”&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Section &quot;ServerLayout&quot;
 
-&lt;p&gt;Identifier “Default Layout”&lt;/p&gt;
+Identifier &quot;Default Layout&quot;
 
-&lt;p&gt;Screen “Default Screen” 0 0&lt;/p&gt;
+Screen &quot;Default Screen&quot; 0 0
 
-&lt;p&gt;InputDevice “Generic Keyboard”&lt;/p&gt;
+InputDevice &quot;Generic Keyboard&quot;
 
-&lt;p&gt;InputDevice “Configured Mouse”&lt;/p&gt;
+InputDevice &quot;Configured Mouse&quot;
 
-&lt;p&gt;EndSection&lt;/p&gt;
+EndSection
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;ul&gt;
   &lt;li&gt;定义了 布局标识 、 屏幕标识 、 键盘标识 、 鼠标标识&lt;/li&gt;
@@ -2061,183 +2063,172 @@ cd xxx_ver/ 进行解包后的源码目录
 
 &lt;h2 id=&quot;section-37&quot;&gt;模块&lt;/h2&gt;
 
-&lt;p&gt;Section “Module”&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Section &quot;Module&quot;
 
-&lt;p&gt;Load “i2c”&lt;/p&gt;
+Load &quot;i2c&quot;
 
-&lt;p&gt;Load “bitmap”&lt;/p&gt;
+Load &quot;bitmap&quot;
 
-&lt;p&gt;Load “ddc”&lt;/p&gt;
+Load &quot;ddc&quot;
 
-&lt;p&gt;Load “dri”&lt;/p&gt;
+Load &quot;dri&quot;
 
-&lt;p&gt;Load “extmod”&lt;/p&gt;
+Load &quot;extmod&quot;
 
-&lt;p&gt;Load “freetype”&lt;/p&gt;
+Load &quot;freetype&quot;
 
-&lt;p&gt;Load “glx”&lt;/p&gt;
+Load &quot;glx&quot;
 
-&lt;p&gt;Load “int10”&lt;/p&gt;
+Load &quot;int10&quot;
 
-&lt;p&gt;Load “type1”&lt;/p&gt;
+Load &quot;type1&quot;
 
-&lt;p&gt;Load “vbe”&lt;/p&gt;
+Load &quot;vbe&quot;
 
-&lt;p&gt;EndSection&lt;/p&gt;
+EndSection
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;h2 id=&quot;x-1&quot;&gt;X核心字体路径&lt;/h2&gt;
 
-&lt;p&gt;Section “Files”&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Section &quot;Files&quot;
 
-&lt;p&gt;FontPath “/usr/share/X11/fonts/75dpi”&lt;/p&gt;
+FontPath &quot;/usr/share/X11/fonts/75dpi&quot;
 
-&lt;p&gt;FontPath “/usr/share/X11/fonts/100dpi”&lt;/p&gt;
+FontPath &quot;/usr/share/X11/fonts/100dpi&quot;
 
-&lt;p&gt;FontPath “/usr/share/X11/fonts/misc”&lt;/p&gt;
+FontPath &quot;/usr/share/X11/fonts/misc&quot;
 
-&lt;p&gt;FontPath “/usr/share/X11/fonts/cyrillic”&lt;/p&gt;
+FontPath &quot;/usr/share/X11/fonts/cyrillic&quot;
 
-&lt;p&gt;FontPath “/usr/share/X11/fonts/100dpi/:unscaled”&lt;/p&gt;
+FontPath &quot;/usr/share/X11/fonts/100dpi/:unscaled&quot;
 
-&lt;p&gt;FontPath “/usr/share/X11/fonts/75dpi/:unscaled”&lt;/p&gt;
+FontPath &quot;/usr/share/X11/fonts/75dpi/:unscaled&quot;
 
-&lt;p&gt;FontPath “/usr/share/X11/fonts/Type1”&lt;/p&gt;
+FontPath &quot;/usr/share/X11/fonts/Type1&quot;
 
-&lt;p&gt;FontPath “/usr/share/fonts/Chinese/wqy-bitmapfont”&lt;/p&gt;
+FontPath &quot;/usr/share/fonts/Chinese/wqy-bitmapfont&quot;
 
-&lt;p&gt;EndSection&lt;/p&gt;
+EndSection
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;h2 id=&quot;section-38&quot;&gt;屏幕&lt;/h2&gt;
 
-&lt;p&gt;Section “Screen”&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Section &quot;Screen&quot;
 
-&lt;p&gt;Identifier “Default Screen”&lt;/p&gt;
+Identifier &quot;Default Screen&quot;
 
-&lt;p&gt;Device “ATI Technologies, Inc. RV370 5B62 [Radeon X600 (PCIE)]”&lt;/p&gt;
+Device &quot;ATI Technologies, Inc. RV370 5B62 [Radeon X600 (PCIE)]&quot;
 
-&lt;p&gt;Monitor “DELL E176FP”&lt;/p&gt;
+Monitor &quot;DELL E176FP&quot;
 
-&lt;p&gt;DefaultDepth 24&lt;/p&gt;
+DefaultDepth 24
 
-&lt;p&gt;SubSection “Display”&lt;/p&gt;
+SubSection &quot;Display&quot;
 
-&lt;p&gt;Depth 1&lt;/p&gt;
+Depth 1
 
-&lt;p&gt;Modes “1280x1024” “1152x864” “1024x768” “800x600” “720x400” “640x480”&lt;/p&gt;
+Modes &quot;1280x1024&quot; &quot;1152x864&quot; &quot;1024x768&quot; &quot;800x600&quot; &quot;720x400&quot; &quot;640x480&quot;
 
-&lt;p&gt;………………&lt;/p&gt;
+………………
 
-&lt;p&gt;EndSubSection&lt;/p&gt;
+EndSubSection
 
-&lt;p&gt;EndSection&lt;/p&gt;
+EndSection
 
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;DefaultDepth 24 默认色深&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;SubSection 可用色深及分辨率&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
+* DefaultDepth 24 默认色深
+
+* SubSection 可用色深及分辨率
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;h2 id=&quot;section-39&quot;&gt;显卡&lt;/h2&gt;
 
-&lt;p&gt;Section “Device”&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Section &quot;Device&quot;
 
-&lt;p&gt;Identifier “ATI Technologies, Inc. RV370 5B62 [Radeon X600 (PCIE)]”&lt;/p&gt;
+Identifier &quot;ATI Technologies, Inc. RV370 5B62 [Radeon X600 (PCIE)]&quot;
 
-&lt;p&gt;Driver “fglrx”&lt;/p&gt;
+Driver &quot;fglrx&quot;
 
-&lt;p&gt;Option “KernelModuleParm” “agplock=0”&lt;/p&gt;
+Option &quot;KernelModuleParm&quot; &quot;agplock=0&quot;
 
-&lt;p&gt;VideoRam 131072&lt;/p&gt;
+VideoRam 131072
 
-&lt;p&gt;EndSection&lt;/p&gt;
+EndSection
 
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;Identifier 显卡标识&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Driver 显卡驱动（如不同正常启用图形界面，首先尝试”vesa”）&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Option 显卡参数&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;VideoRam 显存大小&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
+* Identifier 显卡标识
+
+* Driver 显卡驱动（如不同正常启用图形界面，首先尝试&quot;vesa&quot;）
+
+* Option 显卡参数
+
+* VideoRam 显存大小
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;h2 id=&quot;section-40&quot;&gt;显示器&lt;/h2&gt;
 
-&lt;p&gt;Section “Device”&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Section &quot;Device&quot;
 
-&lt;p&gt;Identifier “ATI Technologies, Inc. RV370 5B62 [Radeon X600 (PCIE)]”&lt;/p&gt;
+Identifier &quot;ATI Technologies, Inc. RV370 5B62 [Radeon X600 (PCIE)]&quot;
 
-&lt;p&gt;Driver “fglrx”&lt;/p&gt;
+Driver &quot;fglrx&quot;
 
-&lt;p&gt;Option “KernelModuleParm” “agplock=0”&lt;/p&gt;
+Option &quot;KernelModuleParm&quot; &quot;agplock=0&quot;
 
-&lt;p&gt;VideoRam 131072&lt;/p&gt;
+VideoRam 131072
 
-&lt;p&gt;EndSection&lt;/p&gt;
+EndSection
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;h2 id=&quot;section-41&quot;&gt;配置文件内部结构&lt;/h2&gt;
 
-&lt;p&gt;/&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;/
 
-&lt;p&gt;├/ “ServerLayout” 布局&lt;/p&gt;
+├/ &quot;ServerLayout&quot; 布局
 
-&lt;p&gt;│├ “InputDevice” keyboard 键盘&lt;/p&gt;
+│├ &quot;InputDevice&quot; keyboard 键盘
 
-&lt;p&gt;│├ “InputDevice” mouse 鼠标&lt;/p&gt;
+│├ &quot;InputDevice&quot; mouse 鼠标
 
-&lt;p&gt;││&lt;/p&gt;
+││
 
-&lt;p&gt;│└/ “Screen” 显示子系统&lt;/p&gt;
+│└/ &quot;Screen&quot; 显示子系统
 
-&lt;p&gt;│ ├ “Monitor” 显示器&lt;/p&gt;
+│ ├ &quot;Monitor&quot; 显示器
 
-&lt;p&gt;│ ├ “Device” videocard 显卡&lt;/p&gt;
+│ ├ &quot;Device&quot; videocard 显卡
 
-&lt;p&gt;│&lt;/p&gt;
+│
 
-&lt;p&gt;│&lt;/p&gt;
+│
 
-&lt;p&gt;├ “Files” 字体&lt;/p&gt;
+├ &quot;Files&quot; 字体
 
-&lt;p&gt;└ “Module” 模块&lt;/p&gt;
+└ &quot;Module&quot; 模块
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;h2 id=&quot;x-2&quot;&gt;X客户端&lt;/h2&gt;
 
 &lt;p&gt;在 /etc/X11/Xsession 文件中可以发现下列内容&lt;/p&gt;
 
-&lt;p&gt;OPTIONFILE=/etc/X11/Xsession.options&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;OPTIONFILE=/etc/X11/Xsession.options
 
-&lt;p&gt;SYSRESOURCES=/etc/X11/Xresources&lt;/p&gt;
+SYSRESOURCES=/etc/X11/Xresources
 
-&lt;p&gt;USRRESOURCES=$HOME/.Xresources&lt;/p&gt;
+USRRESOURCES=$HOME/.Xresources
 
-&lt;p&gt;SYSSESSIONDIR=/etc/X11/Xsession.d&lt;/p&gt;
+SYSSESSIONDIR=/etc/X11/Xsession.d
 
-&lt;p&gt;USERXSESSION=$HOME/.xsession&lt;/p&gt;
+USERXSESSION=$HOME/.xsession
 
-&lt;p&gt;ALTUSERXSESSION=$HOME/.Xsession&lt;/p&gt;
+ALTUSERXSESSION=$HOME/.Xsession
 
-&lt;p&gt;ERRFILE=$HOME/.xsession-errors&lt;/p&gt;
+ERRFILE=$HOME/.xsession-errors
 
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;OPTIONFILE=/etc/X11/Xsession.options 设定X进程的启动参数。例如允许用户进程allow-user-xsession&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;Xresources X资源文件。许多程序保留了X接口，允许X服务器管理一些视觉选项，例如窗口内的字体，配色等&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;xsession X进程。可以设置一些启动时自动运行的程序，也可以用来设定自己的窗口管理器（窗口管理器和桌面环境或者登录管理器是无关的）&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
+* OPTIONFILE=/etc/X11/Xsession.options 设定X进程的启动参数。例如允许用户进程allow-user-xsession
+
+* Xresources X资源文件。许多程序保留了X接口，允许X服务器管理一些视觉选项，例如窗口内的字体，配色等
+
+* xsession X进程。可以设置一些启动时自动运行的程序，也可以用来设定自己的窗口管理器（窗口管理器和桌面环境或者登录管理器是无关的）
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;h2 id=&quot;section-42&quot;&gt;字体&lt;/h2&gt;
 
@@ -2269,27 +2260,28 @@ cd xxx_ver/ 进行解包后的源码目录
 
 &lt;p&gt;/etc/X11/xorg.conf 中可以配置X核心字体的搜索路径&lt;/p&gt;
 
-&lt;p&gt;Section “Files”&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Section &quot;Files&quot;
 
-&lt;p&gt;FontPath “/usr/X11R6/lib/X11/fonts/misc/”&lt;/p&gt;
+FontPath &quot;/usr/X11R6/lib/X11/fonts/misc/&quot;
 
-&lt;p&gt;FontPath “/usr/X11R6/lib/X11/fonts/Type1/”&lt;/p&gt;
+FontPath &quot;/usr/X11R6/lib/X11/fonts/Type1/&quot;
 
-&lt;p&gt;FontPath “/usr/X11R6/lib/X11/fonts/Speedo/”&lt;/p&gt;
+FontPath &quot;/usr/X11R6/lib/X11/fonts/Speedo/&quot;
 
-&lt;p&gt;FontPath “/usr/X11R6/lib/X11/fonts/100dpi/”&lt;/p&gt;
+FontPath &quot;/usr/X11R6/lib/X11/fonts/100dpi/&quot;
 
-&lt;p&gt;FontPath “/usr/X11R6/lib/X11/fonts/75dpi/”&lt;/p&gt;
+FontPath &quot;/usr/X11R6/lib/X11/fonts/75dpi/&quot;
 
-&lt;p&gt;EndSection&lt;/p&gt;
+EndSection
 
-&lt;p&gt;*&lt;/p&gt;
+*
 
-&lt;p&gt;当X客户端向X服务器请求显示文字的时候，X服务器会按上面列表的先后顺序查找字体&lt;/p&gt;
+当X客户端向X服务器请求显示文字的时候，X服务器会按上面列表的先后顺序查找字体
 
-&lt;p&gt;例如显示中文时，如果第一个路径中的字体不包含中文，则查找下面的路径，直到发现中文字体&lt;/p&gt;
+例如显示中文时，如果第一个路径中的字体不包含中文，则查找下面的路径，直到发现中文字体
 
-&lt;p&gt;*&lt;/p&gt;
+*
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;请将您偏好的字体放在靠前的位置&lt;/p&gt;
 
@@ -2311,13 +2303,14 @@ cd xxx_ver/ 进行解包后的源码目录
 
 &lt;p&gt;可以使用 fc-cache 命令，递归扫瞄以下目录中的字体（包括子文件夹中的字体），建立字体缓存&lt;/p&gt;
 
-&lt;p&gt;/usr/share/X11/fonts&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;/usr/share/X11/fonts
 
-&lt;p&gt;/usr/share/fonts&lt;/p&gt;
+/usr/share/fonts
 
-&lt;p&gt;/usr/local/share/fonts&lt;/p&gt;
+/usr/local/share/fonts
 
-&lt;p&gt;~/.fonts&lt;/p&gt;
+~/.fonts
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;ul&gt;
   &lt;li&gt;/etc/fonts/fonts.conf 文件的 &lt;dir&gt; 字段&lt;/dir&gt;&lt;/li&gt;
@@ -2340,7 +2333,8 @@ cd xxx_ver/ 进行解包后的源码目录
 &lt;/ul&gt;
 
 &lt;h1 id=&quot;section-43&quot;&gt;系统管理&lt;/h1&gt;
-&lt;p&gt;## 一些细节 ##&lt;/p&gt;
+
+&lt;h2 id=&quot;section-44&quot;&gt;一些细节&lt;/h2&gt;
 
 &lt;p&gt;Linux是大小写敏感的系统，所有的命令、路径、参数、变量……都区分大小写&lt;/p&gt;
 
@@ -2356,17 +2350,19 @@ cd xxx_ver/ 进行解包后的源码目录
 
 &lt;p&gt;有些命令包含一些子命令，您可以认为它的命令名由两个单词构成，例如“apt”软件包管理系统：&lt;/p&gt;
 
-&lt;p&gt;apt-get install 安装一个软件&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;apt-get install 安装一个软件
 
-&lt;p&gt;apt-get remove 删除一个软件&lt;/p&gt;
+apt-get remove 删除一个软件
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;分隔符&lt;/p&gt;
 
 &lt;p&gt;通常为空格，多个连续的空格视为一个空格，下面两个命令相同：&lt;/p&gt;
 
-&lt;p&gt;cp a b&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;cp  a  b
 
-&lt;p&gt;cp a b&lt;/p&gt;
+cp  a  b
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;table&gt;
   &lt;tbody&gt;
@@ -2377,59 +2373,54 @@ cd xxx_ver/ 进行解包后的源码目录
   &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;table&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;ls -al&lt;/td&gt;
-      &lt;td&gt;less&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
+&lt;pre&gt;&lt;code&gt;ls -al|less
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;写为以下形式，是为了让您更容易的阅读它：&lt;/p&gt;
 
-&lt;table&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;ls -al&lt;/td&gt;
-      &lt;td&gt;less&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
+&lt;pre&gt;&lt;code&gt;ls -al | less
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;参数&lt;/p&gt;
 
 &lt;p&gt;精细调节命令的行为，以 - 引导，通常为参数名的首字母。许多软件都可以使用 -h 参数来阅读使用说明，例如：&lt;/p&gt;
 
-&lt;p&gt;apt-get -h&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;apt-get -h
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;也可以使用参数的全名，一般以 – 引导，例如：&lt;/p&gt;
 
-&lt;p&gt;apt-get –help&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;apt-get --help
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;多数命令中，使用 - 引导多个字符，将会被视为多个参数，例如：&lt;/p&gt;
 
-&lt;p&gt;apt-get -help&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;apt-get -help
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;系统会解读为以下命令&lt;/p&gt;
 
-&lt;p&gt;apt-get -h -e -l -p&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;apt-get -h -e -l -p
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;少数命令的参数，不需要以 - 引导，或者使用 - 引导参数全名，例如：&lt;/p&gt;
 
-&lt;p&gt;ps aux&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;ps aux
 
-&lt;p&gt;/etc/init.d/gdm start&lt;/p&gt;
+/etc/init.d/gdm start
 
-&lt;p&gt;mplayer -loop xxx&lt;/p&gt;
+mplayer -loop xxx
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;需要对多个对象进行操作时，可以使用空格分隔符将它们隔开：&lt;/p&gt;
 
-&lt;p&gt;touch 1 2 3 4 5 6&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;touch 1 2 3 4 5 6
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;使用空格分隔的多个对象，视为一个整体，作为命令的一个操作对象：&lt;/p&gt;
 
-&lt;p&gt;mv 1 2 3 4 5 6 /home/&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;mv 1 2 3 4 5 6 /home/
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;这个命令把“1 2 3 4 5 6”作为一个操作对象，移动到另一个操作对象，“/home/”目录&lt;/p&gt;
 
@@ -2439,7 +2430,8 @@ cd xxx_ver/ 进行解包后的源码目录
 
 &lt;p&gt;使用 [] 表示可选项，实际输入为方括号中的内容，例如&lt;/p&gt;
 
-&lt;p&gt;ls [-al]&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;ls [-al]
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;ls是必须的，参数不需要以方括号括起来。&lt;/p&gt;
 
@@ -2455,15 +2447,8 @@ cd xxx_ver/ 进行解包后的源码目录
   &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;table&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;tar [-z&lt;/td&gt;
-      &lt;td&gt;j c&lt;/td&gt;
-      &lt;td&gt;x vf] &lt;归档文件&gt; [源文件]&lt;/归档文件&gt;&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
+&lt;pre&gt;&lt;code&gt;tar [-z|j c|x vf] &amp;lt;归档文件&amp;gt; [源文件]
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;参数通常紧跟命令名，除非必要，在命令格式中，我们通常省略它们&lt;/p&gt;
 
@@ -2472,7 +2457,8 @@ uptime  &lt;/p&gt;
 
 &lt;p&gt;联机信息-时间，显示如下&lt;/p&gt;
 
-&lt;p&gt;11:27pm up 9 days, 7:12, 3 user, load average: 0.07, 0.12, 0.14&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;11:27pm up 9 days, 7:12, 3 user, load average: 0.07, 0.12, 0.14
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;当前系统时间 系统运行时间 当前在线用户数 系统负荷 1分钟前 5分钟前 15分钟前&lt;/p&gt;
 
@@ -2480,17 +2466,19 @@ uptime  &lt;/p&gt;
 
 &lt;p&gt;联机信息-已登录用户，显示如下&lt;/p&gt;
 
-&lt;p&gt;01:04:10 up 1:34, 2 users, load average: 0.25, 0.16, 0.11&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;01:04:10 up 1:34, 2 users, load average: 0.25, 0.16, 0.11
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;uptime 信息&lt;/p&gt;
 
-&lt;p&gt;USER TTY FROM LOGIN@ IDLE JCPU PCPU WHAT&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;USER TTY FROM LOGIN@ IDLE JCPU PCPU WHAT
 
-&lt;p&gt;user tty1 192.168.0.1 23:30 1:33 0.14s 0.12s -bash&lt;/p&gt;
+user tty1 192.168.0.1 23:30 1:33 0.14s 0.12s -bash
 
-&lt;p&gt;用户名 登录方式 来源地址 登录时间 发呆时间 资源占用 当前任务&lt;/p&gt;
+用户名 登录方式 来源地址 登录时间 发呆时间 资源占用 当前任务
 
-&lt;p&gt;Tip：w [用户名称] : 显示某一用户相关信息&lt;/p&gt;
+Tip：w [用户名称] : 显示某一用户相关信息
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;who&lt;/p&gt;
 

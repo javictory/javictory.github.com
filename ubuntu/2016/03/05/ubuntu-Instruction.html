@@ -1619,7 +1619,8 @@ cd xxx_ver/ 进行解包后的源码目录
 
 <p>startx 命令可以在命令行下启动图形界面。执行startx 命令时，实际执行这一命令：</p>
 
-<p>xinit /etc/X11/xinit/xinitrc – /etc/X11/xinit/xserverrc</p>
+<pre><code>xinit /etc/X11/xinit/xinitrc -- /etc/X11/xinit/xserverrc
+</code></pre>
 
 <p>根据脚本 /etc/X11/xinit/xserverrc 启动Xserver，同时根据脚本 /etc/X11/xinit/xinitrc 启动指定Xclient进程，例如窗口管理器</p>
 
@@ -1665,17 +1666,18 @@ cd xxx_ver/ 进行解包后的源码目录
 
 <h2 id="section-36">布局</h2>
 
-<p>Section “ServerLayout”</p>
+<pre><code>Section "ServerLayout"
 
-<p>Identifier “Default Layout”</p>
+Identifier "Default Layout"
 
-<p>Screen “Default Screen” 0 0</p>
+Screen "Default Screen" 0 0
 
-<p>InputDevice “Generic Keyboard”</p>
+InputDevice "Generic Keyboard"
 
-<p>InputDevice “Configured Mouse”</p>
+InputDevice "Configured Mouse"
 
-<p>EndSection</p>
+EndSection
+</code></pre>
 
 <ul>
   <li>定义了 布局标识 、 屏幕标识 、 键盘标识 、 鼠标标识</li>
@@ -1683,183 +1685,172 @@ cd xxx_ver/ 进行解包后的源码目录
 
 <h2 id="section-37">模块</h2>
 
-<p>Section “Module”</p>
+<pre><code>Section "Module"
 
-<p>Load “i2c”</p>
+Load "i2c"
 
-<p>Load “bitmap”</p>
+Load "bitmap"
 
-<p>Load “ddc”</p>
+Load "ddc"
 
-<p>Load “dri”</p>
+Load "dri"
 
-<p>Load “extmod”</p>
+Load "extmod"
 
-<p>Load “freetype”</p>
+Load "freetype"
 
-<p>Load “glx”</p>
+Load "glx"
 
-<p>Load “int10”</p>
+Load "int10"
 
-<p>Load “type1”</p>
+Load "type1"
 
-<p>Load “vbe”</p>
+Load "vbe"
 
-<p>EndSection</p>
+EndSection
+</code></pre>
 
 <h2 id="x-1">X核心字体路径</h2>
 
-<p>Section “Files”</p>
+<pre><code>Section "Files"
 
-<p>FontPath “/usr/share/X11/fonts/75dpi”</p>
+FontPath "/usr/share/X11/fonts/75dpi"
 
-<p>FontPath “/usr/share/X11/fonts/100dpi”</p>
+FontPath "/usr/share/X11/fonts/100dpi"
 
-<p>FontPath “/usr/share/X11/fonts/misc”</p>
+FontPath "/usr/share/X11/fonts/misc"
 
-<p>FontPath “/usr/share/X11/fonts/cyrillic”</p>
+FontPath "/usr/share/X11/fonts/cyrillic"
 
-<p>FontPath “/usr/share/X11/fonts/100dpi/:unscaled”</p>
+FontPath "/usr/share/X11/fonts/100dpi/:unscaled"
 
-<p>FontPath “/usr/share/X11/fonts/75dpi/:unscaled”</p>
+FontPath "/usr/share/X11/fonts/75dpi/:unscaled"
 
-<p>FontPath “/usr/share/X11/fonts/Type1”</p>
+FontPath "/usr/share/X11/fonts/Type1"
 
-<p>FontPath “/usr/share/fonts/Chinese/wqy-bitmapfont”</p>
+FontPath "/usr/share/fonts/Chinese/wqy-bitmapfont"
 
-<p>EndSection</p>
+EndSection
+</code></pre>
 
 <h2 id="section-38">屏幕</h2>
 
-<p>Section “Screen”</p>
+<pre><code>Section "Screen"
 
-<p>Identifier “Default Screen”</p>
+Identifier "Default Screen"
 
-<p>Device “ATI Technologies, Inc. RV370 5B62 [Radeon X600 (PCIE)]”</p>
+Device "ATI Technologies, Inc. RV370 5B62 [Radeon X600 (PCIE)]"
 
-<p>Monitor “DELL E176FP”</p>
+Monitor "DELL E176FP"
 
-<p>DefaultDepth 24</p>
+DefaultDepth 24
 
-<p>SubSection “Display”</p>
+SubSection "Display"
 
-<p>Depth 1</p>
+Depth 1
 
-<p>Modes “1280x1024” “1152x864” “1024x768” “800x600” “720x400” “640x480”</p>
+Modes "1280x1024" "1152x864" "1024x768" "800x600" "720x400" "640x480"
 
-<p>………………</p>
+………………
 
-<p>EndSubSection</p>
+EndSubSection
 
-<p>EndSection</p>
+EndSection
 
-<ul>
-  <li>
-    <p>DefaultDepth 24 默认色深</p>
-  </li>
-  <li>
-    <p>SubSection 可用色深及分辨率</p>
-  </li>
-</ul>
+* DefaultDepth 24 默认色深
+
+* SubSection 可用色深及分辨率
+</code></pre>
 
 <h2 id="section-39">显卡</h2>
 
-<p>Section “Device”</p>
+<pre><code>Section "Device"
 
-<p>Identifier “ATI Technologies, Inc. RV370 5B62 [Radeon X600 (PCIE)]”</p>
+Identifier "ATI Technologies, Inc. RV370 5B62 [Radeon X600 (PCIE)]"
 
-<p>Driver “fglrx”</p>
+Driver "fglrx"
 
-<p>Option “KernelModuleParm” “agplock=0”</p>
+Option "KernelModuleParm" "agplock=0"
 
-<p>VideoRam 131072</p>
+VideoRam 131072
 
-<p>EndSection</p>
+EndSection
 
-<ul>
-  <li>
-    <p>Identifier 显卡标识</p>
-  </li>
-  <li>
-    <p>Driver 显卡驱动（如不同正常启用图形界面，首先尝试”vesa”）</p>
-  </li>
-  <li>
-    <p>Option 显卡参数</p>
-  </li>
-  <li>
-    <p>VideoRam 显存大小</p>
-  </li>
-</ul>
+* Identifier 显卡标识
+
+* Driver 显卡驱动（如不同正常启用图形界面，首先尝试"vesa"）
+
+* Option 显卡参数
+
+* VideoRam 显存大小
+</code></pre>
 
 <h2 id="section-40">显示器</h2>
 
-<p>Section “Device”</p>
+<pre><code>Section "Device"
 
-<p>Identifier “ATI Technologies, Inc. RV370 5B62 [Radeon X600 (PCIE)]”</p>
+Identifier "ATI Technologies, Inc. RV370 5B62 [Radeon X600 (PCIE)]"
 
-<p>Driver “fglrx”</p>
+Driver "fglrx"
 
-<p>Option “KernelModuleParm” “agplock=0”</p>
+Option "KernelModuleParm" "agplock=0"
 
-<p>VideoRam 131072</p>
+VideoRam 131072
 
-<p>EndSection</p>
+EndSection
+</code></pre>
 
 <h2 id="section-41">配置文件内部结构</h2>
 
-<p>/</p>
+<pre><code>/
 
-<p>├/ “ServerLayout” 布局</p>
+├/ "ServerLayout" 布局
 
-<p>│├ “InputDevice” keyboard 键盘</p>
+│├ "InputDevice" keyboard 键盘
 
-<p>│├ “InputDevice” mouse 鼠标</p>
+│├ "InputDevice" mouse 鼠标
 
-<p>││</p>
+││
 
-<p>│└/ “Screen” 显示子系统</p>
+│└/ "Screen" 显示子系统
 
-<p>│ ├ “Monitor” 显示器</p>
+│ ├ "Monitor" 显示器
 
-<p>│ ├ “Device” videocard 显卡</p>
+│ ├ "Device" videocard 显卡
 
-<p>│</p>
+│
 
-<p>│</p>
+│
 
-<p>├ “Files” 字体</p>
+├ "Files" 字体
 
-<p>└ “Module” 模块</p>
+└ "Module" 模块
+</code></pre>
 
 <h2 id="x-2">X客户端</h2>
 
 <p>在 /etc/X11/Xsession 文件中可以发现下列内容</p>
 
-<p>OPTIONFILE=/etc/X11/Xsession.options</p>
+<pre><code>OPTIONFILE=/etc/X11/Xsession.options
 
-<p>SYSRESOURCES=/etc/X11/Xresources</p>
+SYSRESOURCES=/etc/X11/Xresources
 
-<p>USRRESOURCES=$HOME/.Xresources</p>
+USRRESOURCES=$HOME/.Xresources
 
-<p>SYSSESSIONDIR=/etc/X11/Xsession.d</p>
+SYSSESSIONDIR=/etc/X11/Xsession.d
 
-<p>USERXSESSION=$HOME/.xsession</p>
+USERXSESSION=$HOME/.xsession
 
-<p>ALTUSERXSESSION=$HOME/.Xsession</p>
+ALTUSERXSESSION=$HOME/.Xsession
 
-<p>ERRFILE=$HOME/.xsession-errors</p>
+ERRFILE=$HOME/.xsession-errors
 
-<ul>
-  <li>
-    <p>OPTIONFILE=/etc/X11/Xsession.options 设定X进程的启动参数。例如允许用户进程allow-user-xsession</p>
-  </li>
-  <li>
-    <p>Xresources X资源文件。许多程序保留了X接口，允许X服务器管理一些视觉选项，例如窗口内的字体，配色等</p>
-  </li>
-  <li>
-    <p>xsession X进程。可以设置一些启动时自动运行的程序，也可以用来设定自己的窗口管理器（窗口管理器和桌面环境或者登录管理器是无关的）</p>
-  </li>
-</ul>
+* OPTIONFILE=/etc/X11/Xsession.options 设定X进程的启动参数。例如允许用户进程allow-user-xsession
+
+* Xresources X资源文件。许多程序保留了X接口，允许X服务器管理一些视觉选项，例如窗口内的字体，配色等
+
+* xsession X进程。可以设置一些启动时自动运行的程序，也可以用来设定自己的窗口管理器（窗口管理器和桌面环境或者登录管理器是无关的）
+</code></pre>
 
 <h2 id="section-42">字体</h2>
 
@@ -1891,27 +1882,28 @@ cd xxx_ver/ 进行解包后的源码目录
 
 <p>/etc/X11/xorg.conf 中可以配置X核心字体的搜索路径</p>
 
-<p>Section “Files”</p>
+<pre><code>Section "Files"
 
-<p>FontPath “/usr/X11R6/lib/X11/fonts/misc/”</p>
+FontPath "/usr/X11R6/lib/X11/fonts/misc/"
 
-<p>FontPath “/usr/X11R6/lib/X11/fonts/Type1/”</p>
+FontPath "/usr/X11R6/lib/X11/fonts/Type1/"
 
-<p>FontPath “/usr/X11R6/lib/X11/fonts/Speedo/”</p>
+FontPath "/usr/X11R6/lib/X11/fonts/Speedo/"
 
-<p>FontPath “/usr/X11R6/lib/X11/fonts/100dpi/”</p>
+FontPath "/usr/X11R6/lib/X11/fonts/100dpi/"
 
-<p>FontPath “/usr/X11R6/lib/X11/fonts/75dpi/”</p>
+FontPath "/usr/X11R6/lib/X11/fonts/75dpi/"
 
-<p>EndSection</p>
+EndSection
 
-<p>*</p>
+*
 
-<p>当X客户端向X服务器请求显示文字的时候，X服务器会按上面列表的先后顺序查找字体</p>
+当X客户端向X服务器请求显示文字的时候，X服务器会按上面列表的先后顺序查找字体
 
-<p>例如显示中文时，如果第一个路径中的字体不包含中文，则查找下面的路径，直到发现中文字体</p>
+例如显示中文时，如果第一个路径中的字体不包含中文，则查找下面的路径，直到发现中文字体
 
-<p>*</p>
+*
+</code></pre>
 
 <p>请将您偏好的字体放在靠前的位置</p>
 
@@ -1933,13 +1925,14 @@ cd xxx_ver/ 进行解包后的源码目录
 
 <p>可以使用 fc-cache 命令，递归扫瞄以下目录中的字体（包括子文件夹中的字体），建立字体缓存</p>
 
-<p>/usr/share/X11/fonts</p>
+<pre><code>/usr/share/X11/fonts
 
-<p>/usr/share/fonts</p>
+/usr/share/fonts
 
-<p>/usr/local/share/fonts</p>
+/usr/local/share/fonts
 
-<p>~/.fonts</p>
+~/.fonts
+</code></pre>
 
 <ul>
   <li>/etc/fonts/fonts.conf 文件的 <dir> 字段</dir></li>
@@ -1962,7 +1955,8 @@ cd xxx_ver/ 进行解包后的源码目录
 </ul>
 
 <h1 id="section-43">系统管理</h1>
-<p>## 一些细节 ##</p>
+
+<h2 id="section-44">一些细节</h2>
 
 <p>Linux是大小写敏感的系统，所有的命令、路径、参数、变量……都区分大小写</p>
 
@@ -1978,17 +1972,19 @@ cd xxx_ver/ 进行解包后的源码目录
 
 <p>有些命令包含一些子命令，您可以认为它的命令名由两个单词构成，例如“apt”软件包管理系统：</p>
 
-<p>apt-get install 安装一个软件</p>
+<pre><code>apt-get install 安装一个软件
 
-<p>apt-get remove 删除一个软件</p>
+apt-get remove 删除一个软件
+</code></pre>
 
 <p>分隔符</p>
 
 <p>通常为空格，多个连续的空格视为一个空格，下面两个命令相同：</p>
 
-<p>cp a b</p>
+<pre><code>cp  a  b
 
-<p>cp a b</p>
+cp  a  b
+</code></pre>
 
 <table>
   <tbody>
@@ -1999,59 +1995,54 @@ cd xxx_ver/ 进行解包后的源码目录
   </tbody>
 </table>
 
-<table>
-  <tbody>
-    <tr>
-      <td>ls -al</td>
-      <td>less</td>
-    </tr>
-  </tbody>
-</table>
+<pre><code>ls -al|less
+</code></pre>
 
 <p>写为以下形式，是为了让您更容易的阅读它：</p>
 
-<table>
-  <tbody>
-    <tr>
-      <td>ls -al</td>
-      <td>less</td>
-    </tr>
-  </tbody>
-</table>
+<pre><code>ls -al | less
+</code></pre>
 
 <p>参数</p>
 
 <p>精细调节命令的行为，以 - 引导，通常为参数名的首字母。许多软件都可以使用 -h 参数来阅读使用说明，例如：</p>
 
-<p>apt-get -h</p>
+<pre><code>apt-get -h
+</code></pre>
 
 <p>也可以使用参数的全名，一般以 – 引导，例如：</p>
 
-<p>apt-get –help</p>
+<pre><code>apt-get --help
+</code></pre>
 
 <p>多数命令中，使用 - 引导多个字符，将会被视为多个参数，例如：</p>
 
-<p>apt-get -help</p>
+<pre><code>apt-get -help
+</code></pre>
 
 <p>系统会解读为以下命令</p>
 
-<p>apt-get -h -e -l -p</p>
+<pre><code>apt-get -h -e -l -p
+</code></pre>
 
 <p>少数命令的参数，不需要以 - 引导，或者使用 - 引导参数全名，例如：</p>
 
-<p>ps aux</p>
+<pre><code>ps aux
 
-<p>/etc/init.d/gdm start</p>
+/etc/init.d/gdm start
 
-<p>mplayer -loop xxx</p>
+mplayer -loop xxx
+</code></pre>
 
 <p>需要对多个对象进行操作时，可以使用空格分隔符将它们隔开：</p>
 
-<p>touch 1 2 3 4 5 6</p>
+<pre><code>touch 1 2 3 4 5 6
+</code></pre>
 
 <p>使用空格分隔的多个对象，视为一个整体，作为命令的一个操作对象：</p>
 
-<p>mv 1 2 3 4 5 6 /home/</p>
+<pre><code>mv 1 2 3 4 5 6 /home/
+</code></pre>
 
 <p>这个命令把“1 2 3 4 5 6”作为一个操作对象，移动到另一个操作对象，“/home/”目录</p>
 
@@ -2061,7 +2052,8 @@ cd xxx_ver/ 进行解包后的源码目录
 
 <p>使用 [] 表示可选项，实际输入为方括号中的内容，例如</p>
 
-<p>ls [-al]</p>
+<pre><code>ls [-al]
+</code></pre>
 
 <p>ls是必须的，参数不需要以方括号括起来。</p>
 
@@ -2077,15 +2069,8 @@ cd xxx_ver/ 进行解包后的源码目录
   </tbody>
 </table>
 
-<table>
-  <tbody>
-    <tr>
-      <td>tar [-z</td>
-      <td>j c</td>
-      <td>x vf] <归档文件> [源文件]</归档文件></td>
-    </tr>
-  </tbody>
-</table>
+<pre><code>tar [-z|j c|x vf] &lt;归档文件&gt; [源文件]
+</code></pre>
 
 <p>参数通常紧跟命令名，除非必要，在命令格式中，我们通常省略它们</p>
 
@@ -2094,7 +2079,8 @@ uptime  </p>
 
 <p>联机信息-时间，显示如下</p>
 
-<p>11:27pm up 9 days, 7:12, 3 user, load average: 0.07, 0.12, 0.14</p>
+<pre><code>11:27pm up 9 days, 7:12, 3 user, load average: 0.07, 0.12, 0.14
+</code></pre>
 
 <p>当前系统时间 系统运行时间 当前在线用户数 系统负荷 1分钟前 5分钟前 15分钟前</p>
 
@@ -2102,17 +2088,19 @@ uptime  </p>
 
 <p>联机信息-已登录用户，显示如下</p>
 
-<p>01:04:10 up 1:34, 2 users, load average: 0.25, 0.16, 0.11</p>
+<pre><code>01:04:10 up 1:34, 2 users, load average: 0.25, 0.16, 0.11
+</code></pre>
 
 <p>uptime 信息</p>
 
-<p>USER TTY FROM LOGIN@ IDLE JCPU PCPU WHAT</p>
+<pre><code>USER TTY FROM LOGIN@ IDLE JCPU PCPU WHAT
 
-<p>user tty1 192.168.0.1 23:30 1:33 0.14s 0.12s -bash</p>
+user tty1 192.168.0.1 23:30 1:33 0.14s 0.12s -bash
 
-<p>用户名 登录方式 来源地址 登录时间 发呆时间 资源占用 当前任务</p>
+用户名 登录方式 来源地址 登录时间 发呆时间 资源占用 当前任务
 
-<p>Tip：w [用户名称] : 显示某一用户相关信息</p>
+Tip：w [用户名称] : 显示某一用户相关信息
+</code></pre>
 
 <p>who</p>
 
