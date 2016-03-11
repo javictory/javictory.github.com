@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>VC++中动静态链接库的调用</title>
+  <meta name="description" content="1、动态链接库在调用时要注意:格式为hdll=LoadLibrary（“DLL地址”）；">
+
+  <!-- CSS files -->
+  <link rel="stylesheet" href="http://javictory.info/css/font-awesome.min.css">
+  <link rel="stylesheet" href="http://javictory.info/css/main.css">
+
+  <link rel="canonical" href="http://javictory.info/c++/2015/11/12/C++-DLL.html">
+  <link rel="alternate" type="application/rss+xml" title="Javicroty's Blog" href="http://javictory.info /feed.xml " />
+
+  <!-- Icons -->
+  <!-- 16x16 -->
+  <link rel="shortcut icon" href="http://javictory.info/favicon.ico">
+  <!-- 32x32 -->
+  <link rel="shortcut icon" href="http://javictory.info/favicon.png">
+</head>
+
+
+<body>
+  <div class="row">
+    <div class="col s12 m3">
+      <div class="table cover">
+        
+
+<div class="cover-card table-cell table-bottom">
+  
+  <img src="http://javictory.info/img/horse.jpg" alt="" class="avatar">
+  
+  <a href="http://javictory.info/" class="author_name">Javictory</a>
+  <span class="author_job">SoftWare Engineer</span>
+  <span class="author_bio mbm">Stay hungry. Stay foolish.<nbsp/> <br/>--Steve Jobs.</span>
+  <nav class="nav">
+    <ul class="nav-list">
+       
+      <li class="nav-item">
+        <a href="http://javictory.info/archive/">Archive</a>
+        <span>||</span>
+      </li>
+          
+      <li class="nav-item">
+        <a href="http://javictory.info/categories/">Categories</a>
+        <span>||</span>
+      </li>
+                
+      <li class="nav-item">
+        <a href="http://javictory.info/tags/">Tags</a>
+      </li>
+       
+    </ul>
+  </nav>
+  <div class="social-links">
+  <ul>
+    <li><a href="mailto:javictory@163.com" class="social-link-item" target="_blank"><i class="fa fa-fw fa-envelope"></i></a></li>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  </ul>
+</div>
+
+</div>
+
+      </div>
+    </div>
+    <div class="col s12 m9">
+      <div class="post-listing">
+        <div class="back-home">
+  <a href="http://javictory.info/">< back Home.</a>
+</div>
+
+
+
+<div id="post">
+  <header class="post-header">
+    <h1 title="VC++中动静态链接库的调用">VC++中动静态链接库的调用</h1>
+    <span class="post-meta">
+      <span class="post-date">
+        12 NOV 2015
+      </span>
+      •
+      <span class="read-time" title="Estimated read time">
+  
+  
+    1 min read
+  
+</span>
+
+    </span>
+
+  </header>
+
+  <article class="post-content">
+    <p>1、动态链接库在调用时要注意:</p>
+
+<p>格式为hdll=LoadLibrary（“DLL地址”）；</p>
+
+<p>这里字符串类型是LPSTR，当VS中工程属性设置是unicode字符集的时候会提示错误，
+   因此要在配置-Property-General-&gt;Character Set 里面把默认字符集“unicode”改成支持多字符扩展或者notset即可。</p>
+
+<p>2、动态链接库DLL的调用分为动态调用和静态调用</p>
+
+<p>(1)DLL的静态调用</p>
+
+<p>在程序中要静态调用一个dll文件，一般会有下面这么一句 ：</p>
+
+<pre><code>#pragma comment(lib, "dll2.lib")
+</code></pre>
+
+<p>当然这不是必须的，也可以通过工程 设置 链接 添加这个lib。</p>
+
+<p>意思是要把dll2.lib这个文件的信息编译到exe这个程序当中的，所以你必须把你的dll2.lib和dll2.dll都得放入exe所在的文件夹；</p>
+
+<p>dll2.lib是用于编译的时候用的，  dll2.dll是当exe文件执行的时候用的；</p>
+
+<p>当编译好了以后 这个dll2.lib文件就没有用了 ，因为它的信息已经编译到exe中了；</p>
+
+<p>所以当你发布的时候 就可以把这个dll2.lib删除了，只留下dll2.dll就可以了。</p>
+
+<pre><code>例如：
+
+#include &lt;iostream&gt;
+#pragma comment(lib,"Mydll2.lib")
+extern "C" __declspec(dllimport) int add(int x,int y);
+int main(int argc, char* argv[])
+{
+	int result = add(2,3);
+	printf("%d",result);
+	getchar();
+	return 0;
+}
+</code></pre>
+
+<p>(2)DLL的动态调用：</p>
+
+<p>只需要dll就可以了，和lib一点关系都没有。</p>
+
+<p>可以用Extern，也可以用.def文件导出函数接口，供外部工程调用。</p>
+
+<p>动态链接库在调用时要注意： </p>
+
+<p>格式为hdll=LoadLibrary（“DLL地址”）；</p>
+
+<p>这里字符串类型是LPSTR，不是unicode字符，
+   因此要配置 -Property-General-&gt;Character Set 里面把默认字符集“unicode”改成支持多字符扩展或者notset即可。</p>
+
+<pre><code>例如：
+
+#include &lt;stdio.h&gt;
+#include &lt;windows.h&gt; 
+typedef int(*lpAddFun)(int , int);
+
+int main(int argc, char* argv[])
+{
+	HINSTANCE hDll;
+	lpAddFun addFun;
+	hDll = LoadLibrary("Mydll2.dll");
+	if (hDll != NULL)
+	{
+		addFun = (lpAddFun)GetProcAddress(hDll, "add");
+		if (addFun != NULL)
+		{
+			int result = addFun(2, 3);
+			printf("%d", result);
+	   	 	getchar();
+		}
+		FreeLibrary(hDll);
+	}
+   	 	getchar();
+	return 0;
+}
+</code></pre>
+
+<p>3、DLL工程和实际引用工程联调</p>
+
+  </article>
+</div>
+
+<div class="share-buttons">
+  <h6>Share on: </h6>
+  <ul>
+    <li>
+      <a href="https://twitter.com/intent/tweet?text=http://javictory.info/c++/2015/11/12/C++-DLL.html" class="twitter btn" title="Share on Twitter"><i class="fa fa-twitter"></i><span> Twitter</span></a>
+    </li>
+    <li>
+      <a href="https://www.facebook.com/sharer/sharer.php?u=http://javictory.info/c++/2015/11/12/C++-DLL.html" class="facebook btn" title="Share on Facebook"><i class="fa fa-facebook"></i><span> Facebook</span></a>
+    </li>
+    <li>
+      <a href="https://plus.google.com/share?url=http://javictory.info/c++/2015/11/12/C++-DLL.html" class="google-plus btn" title="Share on Google Plus"><i class="fa fa-google-plus"></i><span> Google+</span></a>
+    </li>
+    <li>
+      <a href="https://news.ycombinator.com/submitlink?u=http://javictory.info/c++/2015/11/12/C++-DLL.html" class="hacker-news btn" title="Share on Hacker News"><i class="fa fa-hacker-news"></i><span> Hacker News</span></a>
+    </li>
+    <li>
+      <a href="https://www.reddit.com/submit?url=http://javictory.info/c++/2015/11/12/C++-DLL.html" class="reddit btn" title="Share on Reddit"><i class="fa fa-reddit"></i><span> Reddit</span></a>
+    </li>
+  </ul>
+</div><!-- end share-buttons -->
+
+
+
+
+        <footer>
+  &copy; 2016 Javictory. Powered by <a href="http://jekyllrb.com/">jekyll</a>, <a href="https://github.com/javictory/">javictory theme</a> made with <i class="fa fa-heart heart-icon"></i>
+</footer>
+
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="http://javictory.info/js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="http://javictory.info/js/main.js"></script>
+
+
+</body>
+</html>

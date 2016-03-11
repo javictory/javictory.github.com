@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>VC++ 6.0 编译器相关设置</title>
+  <meta name="description" content="VC++ 6.0 编译器相关设置">
+
+  <!-- CSS files -->
+  <link rel="stylesheet" href="http://javictory.info/css/font-awesome.min.css">
+  <link rel="stylesheet" href="http://javictory.info/css/main.css">
+
+  <link rel="canonical" href="http://javictory.info/c++/2015/11/08/C++-VS2008.html">
+  <link rel="alternate" type="application/rss+xml" title="Javicroty's Blog" href="http://javictory.info /feed.xml " />
+
+  <!-- Icons -->
+  <!-- 16x16 -->
+  <link rel="shortcut icon" href="http://javictory.info/favicon.ico">
+  <!-- 32x32 -->
+  <link rel="shortcut icon" href="http://javictory.info/favicon.png">
+</head>
+
+
+<body>
+  <div class="row">
+    <div class="col s12 m3">
+      <div class="table cover">
+        
+
+<div class="cover-card table-cell table-bottom">
+  
+  <img src="http://javictory.info/img/horse.jpg" alt="" class="avatar">
+  
+  <a href="http://javictory.info/" class="author_name">Javictory</a>
+  <span class="author_job">SoftWare Engineer</span>
+  <span class="author_bio mbm">Stay hungry. Stay foolish.<nbsp/> <br/>--Steve Jobs.</span>
+  <nav class="nav">
+    <ul class="nav-list">
+       
+      <li class="nav-item">
+        <a href="http://javictory.info/archive/">Archive</a>
+        <span>||</span>
+      </li>
+          
+      <li class="nav-item">
+        <a href="http://javictory.info/categories/">Categories</a>
+        <span>||</span>
+      </li>
+                
+      <li class="nav-item">
+        <a href="http://javictory.info/tags/">Tags</a>
+      </li>
+       
+    </ul>
+  </nav>
+  <div class="social-links">
+  <ul>
+    <li><a href="mailto:javictory@163.com" class="social-link-item" target="_blank"><i class="fa fa-fw fa-envelope"></i></a></li>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  </ul>
+</div>
+
+</div>
+
+      </div>
+    </div>
+    <div class="col s12 m9">
+      <div class="post-listing">
+        <div class="back-home">
+  <a href="http://javictory.info/">< back Home.</a>
+</div>
+
+
+
+<div id="post">
+  <header class="post-header">
+    <h1 title="VC++ 6.0 编译器相关设置">VC++ 6.0 编译器相关设置</h1>
+    <span class="post-meta">
+      <span class="post-date">
+        8 NOV 2015
+      </span>
+      •
+      <span class="read-time" title="Estimated read time">
+  
+  
+    1 min read
+  
+</span>
+
+    </span>
+
+  </header>
+
+  <article class="post-content">
+    <p>1、结构体中所有成员的对齐参数N的最大值称为结构体的对齐参数。 </p>
+
+<p>VC++6.0中n 默认是8个字节，可以修改这个设定的对齐参数；</p>
+
+<p>(1)方法一：</p>
+
+<p>在菜单“工程”的“设置”中的“C/C++”选项卡的“分类”中， “Code Generation ”的“Struct member alignment” 中设置：</p>
+
+<p>1byte、2byte、4byte、8byte、16byte等几种，默认为8byte。</p>
+
+<p>(2)方法二：</p>
+
+<p>可以程序控制，采用指令：
+		#pragma   pack(xx)控制</p>
+
+<pre><code> 例如：
+	#pragma   pack(1),1字节对齐，
+	#pragma   pack(4)，4字节对齐，
+	#pragma   pack(16)，16字节对齐   
+</code></pre>
+
+<p>接下来我们将分不同的情况来详细讨论结构体成员的分布情况，顺便提醒一下， 常见类型的长度：</p>
+
+<p>Int 4byte, Short 2byte, Char 1byte, Double 8byte, Long 4byte ；  </p>
+
+<pre><code>让我们先看下例： 
+
+Struct  A 
+{
+	char   c; //1byte  
+	double d; //8byte  
+	short s;  //2byte  
+	int   i;  //4byte  
+};  
+
+int main(int argc, char* argv[]) 
+{ 
+	A  strua;
+	printf("%len:d\n",sizeof(A));     
+	printf("%d,%d,%d,%d",&amp;strua.c,&amp;strua.d,&amp;strua.s,&amp;strua.i);  
+	return 0;  
+}  
+</code></pre>
+
+<p>n设置为8byte时 结果：len:24, </p>
+
+<p>1245032,1245040,1245048,1245052 内存中成员分布如下：</p>
+
+<p><img src="http://javictory.info/img/img_append/C++VS2008-1.png" alt="Preview" /></p>
+
+<p>2、用 devenv.exe /resetuserdata 恢复Visual Studio 初始状态</p>
+
+  </article>
+</div>
+
+<div class="share-buttons">
+  <h6>Share on: </h6>
+  <ul>
+    <li>
+      <a href="https://twitter.com/intent/tweet?text=http://javictory.info/c++/2015/11/08/C++-VS2008.html" class="twitter btn" title="Share on Twitter"><i class="fa fa-twitter"></i><span> Twitter</span></a>
+    </li>
+    <li>
+      <a href="https://www.facebook.com/sharer/sharer.php?u=http://javictory.info/c++/2015/11/08/C++-VS2008.html" class="facebook btn" title="Share on Facebook"><i class="fa fa-facebook"></i><span> Facebook</span></a>
+    </li>
+    <li>
+      <a href="https://plus.google.com/share?url=http://javictory.info/c++/2015/11/08/C++-VS2008.html" class="google-plus btn" title="Share on Google Plus"><i class="fa fa-google-plus"></i><span> Google+</span></a>
+    </li>
+    <li>
+      <a href="https://news.ycombinator.com/submitlink?u=http://javictory.info/c++/2015/11/08/C++-VS2008.html" class="hacker-news btn" title="Share on Hacker News"><i class="fa fa-hacker-news"></i><span> Hacker News</span></a>
+    </li>
+    <li>
+      <a href="https://www.reddit.com/submit?url=http://javictory.info/c++/2015/11/08/C++-VS2008.html" class="reddit btn" title="Share on Reddit"><i class="fa fa-reddit"></i><span> Reddit</span></a>
+    </li>
+  </ul>
+</div><!-- end share-buttons -->
+
+
+
+
+        <footer>
+  &copy; 2016 Javictory. Powered by <a href="http://jekyllrb.com/">jekyll</a>, <a href="https://github.com/javictory/">javictory theme</a> made with <i class="fa fa-heart heart-icon"></i>
+</footer>
+
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="http://javictory.info/js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="http://javictory.info/js/main.js"></script>
+
+
+</body>
+</html>

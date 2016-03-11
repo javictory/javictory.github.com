@@ -95,42 +95,10 @@
   <ul class="post-list">
     
       <li>
-        <span class="post-meta">Mar 9, 2016</span>
+        <span class="post-meta">Mar 1, 2016</span>
 
         <h2>
-          <a class="post-link" href="/ubuntu/2016/03/09/ubuntu-common-shortcutkey.html">Ubuntu 常用快捷键</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Mar 8, 2016</span>
-
-        <h2>
-          <a class="post-link" href="/windows/2016/03/08/win-common-charset.html">常见字符集区别：</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Mar 8, 2016</span>
-
-        <h2>
-          <a class="post-link" href="/c++/2016/03/08/C++-VS2008.html">VC++ 6.0 编译器相关设置</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Mar 8, 2016</span>
-
-        <h2>
-          <a class="post-link" href="/c++/2016/03/08/C++-DLL.html">VC++中动静态链接库的调用</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Mar 8, 2016</span>
-
-        <h2>
-          <a class="post-link" href="/c++/2016/03/08/C++-Basic.html">C++ 基础</a>
+          <a class="post-link" href="/notebook/2016/03/01/pretell.html">序言</a>
         </h2>
       </li>
     
@@ -143,10 +111,42 @@
       </li>
     
       <li>
-        <span class="post-meta">Mar 1, 2016</span>
+        <span class="post-meta">Dec 8, 2015</span>
 
         <h2>
-          <a class="post-link" href="/notebook/2016/03/01/pretell.html">序言</a>
+          <a class="post-link" href="/windows/2015/12/08/win-common-charset.html">常见字符集区别：</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">Dec 1, 2015</span>
+
+        <h2>
+          <a class="post-link" href="/c++/2015/12/01/C++-Basic.html">C++ 基础</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">Nov 12, 2015</span>
+
+        <h2>
+          <a class="post-link" href="/c++/2015/11/12/C++-DLL.html">VC++中动静态链接库的调用</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">Nov 9, 2015</span>
+
+        <h2>
+          <a class="post-link" href="/ubuntu/2015/11/09/ubuntu-common-shortcutkey.html">Ubuntu 常用快捷键</a>
+        </h2>
+      </li>
+    
+      <li>
+        <span class="post-meta">Nov 8, 2015</span>
+
+        <h2>
+          <a class="post-link" href="/c++/2015/11/08/C++-VS2008.html">VC++ 6.0 编译器相关设置</a>
         </h2>
       </li>
     

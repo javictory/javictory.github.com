@@ -6,9 +6,288 @@
 </description>
     <link>http://javictory.info/</link>
     <atom:link href="http://javictory.info/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 10 Mar 2016 19:51:42 +0800</pubDate>
-    <lastBuildDate>Thu, 10 Mar 2016 19:51:42 +0800</lastBuildDate>
+    <pubDate>Fri, 11 Mar 2016 22:45:28 +0800</pubDate>
+    <lastBuildDate>Fri, 11 Mar 2016 22:45:28 +0800</lastBuildDate>
     <generator>Jekyll v3.1.1</generator>
+    
+      <item>
+        <title>序言</title>
+        <description>&lt;p&gt;开这个博客的原因是因为平常自己也喜欢记一些东西，虽然有自己的文档，但主要是流水账式的记录一些东西，比较乱，不够系统。建立这样一个博客就是为了督促自己，将自己平时的积累进行系统的归纳和分类，同时也是一种经验的分享。&lt;/p&gt;
+
+&lt;p&gt;同时开这个博客的过程也是一种学习，毕竟自己是个小白，什么也不懂，好在喜欢折腾。博观而约取，厚积而薄发。希望这点滴的积累能够帮到我，也能够带给大家一些启发。&lt;/p&gt;
+
+</description>
+        <pubDate>Tue, 01 Mar 2016 15:30:45 +0800</pubDate>
+        <link>http://javictory.info/notebook/2016/03/01/pretell.html</link>
+        <guid isPermaLink="true">http://javictory.info/notebook/2016/03/01/pretell.html</guid>
+        
+        
+        <category>notebook</category>
+        
+      </item>
+    
+      <item>
+        <title>Welcome to Jekyll!</title>
+        <description>&lt;p&gt;You’ll find this post in your &lt;code&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+
+&lt;p&gt;To add new posts, simply add a file in the &lt;code&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
+
+&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;def print_hi(name)
+  puts &amp;quot;Hi, #{name}&amp;quot;
+end
+print_hi(&amp;#39;Tom&amp;#39;)
+#=&amp;gt; prints &amp;#39;Hi, Tom&amp;#39; to STDOUT.&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Check out the &lt;a href=&quot;http://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;
+
+</description>
+        <pubDate>Tue, 01 Mar 2016 15:30:45 +0800</pubDate>
+        <link>http://javictory.info/jekyll/2016/03/01/welcome-to-jekyll.html</link>
+        <guid isPermaLink="true">http://javictory.info/jekyll/2016/03/01/welcome-to-jekyll.html</guid>
+        
+        
+        <category>jekyll</category>
+        
+      </item>
+    
+      <item>
+        <title>常见字符集区别：</title>
+        <description>&lt;p&gt;1、LPTSTR、LPCSTR、LPCTSTR、LPSTR的意义：&lt;/p&gt;
+
+&lt;p&gt;(1) LPSTR：32bit指针 指向一个字符串，每个字符占1字节；&lt;/p&gt;
+
+&lt;p&gt;(2) LPCSTR：32-bit指针 指向一个常字符串，每个字符占1字节；&lt;/p&gt;
+
+&lt;p&gt;(3) LPCTSTR：32-bit指针 指向一个常字符串,每字符可能占1字节或2字节，取决于Unicode是否定义，T表示在Win32环境中， 有一个_T宏；&lt;/p&gt;
+
+&lt;p&gt;(4) LPTSTR：32-bit指针 每字符可能占1字节或2字节，取决于Unicode是否定义。&lt;/p&gt;
+
+&lt;p&gt;2、Multi-Byte Character Set：&lt;/p&gt;
+
+&lt;p&gt;MBCS，它是多字节字符集，它是不定长表示世界文字的编码。&lt;/p&gt;
+
+&lt;p&gt;MBCS表示英文字母时就和ASCII一样（这也是我们容易把MBCS和ASCII搞混的原因），但表示其他文字时就需要用多字节。&lt;/p&gt;
+
+&lt;p&gt;WINDOWS下面的程序设计可以支持MBCS和UNICODE两种编码的字符串，具体用那种就看你定义了MBCS宏还是UNICODE宏。&lt;/p&gt;
+
+&lt;p&gt;MBCS宏对应的字符串指针是char* 也就是LPSTR；&lt;/p&gt;
+
+&lt;p&gt;UNICODE对应的指针是unsigned  short* 也就是LPWSTR；&lt;/p&gt;
+
+&lt;p&gt;为了写程序方便，微软定义了类型LPTSTR，在MBCS下他就是char* ,   在UNICODE下它是unsigned   char* ,这样你就可以重定义一个宏进行不同字符集的转换了。&lt;/p&gt;
+</description>
+        <pubDate>Tue, 08 Dec 2015 15:30:45 +0800</pubDate>
+        <link>http://javictory.info/windows/2015/12/08/win-common-charset.html</link>
+        <guid isPermaLink="true">http://javictory.info/windows/2015/12/08/win-common-charset.html</guid>
+        
+        
+        <category>Windows</category>
+        
+      </item>
+    
+      <item>
+        <title>C++ 基础</title>
+        <description>&lt;p&gt;基本语法&lt;/p&gt;
+
+&lt;p&gt;1、全局变量个局部变量&lt;/p&gt;
+
+&lt;p&gt;如下面的这一串代码&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;#include &amp;lt;iostream&amp;gt;
+
+  #include &amp;lt;stdlib.h&amp;gt;
+
+  using namespace std;
+  
+  int vac=3;
+
+  int main(){
+
+  	int vac=10;
+  	::vac++;
+  	cout&amp;lt;&amp;lt;::vac&amp;lt;&amp;lt;endl;
+  	cout&amp;lt;&amp;lt;vac&amp;lt;&amp;lt;endl;
+  	system(&amp;quot;pause&amp;quot;);
+  	return 0 ;
+  }&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;其中，有几个地方需要做一下说明：&lt;/p&gt;
+
+&lt;p&gt;(1)在调试的时候，想要让弹出console的时候停止 需要添加system(“pause”)，方便进行观看。&lt;/p&gt;
+
+&lt;p&gt;(2)::是域操作符，::前面可以是 类名，命名空间名 来限定 ::后面的内容从哪里读取，在这里如果 ::前面没有域名 那么就是全局；：：vac代表的即是全局变量。&lt;/p&gt;
+
+&lt;p&gt;(3)而在main函数里面定义的 vac函数则是局部变量。&lt;/p&gt;
+
+&lt;p&gt;2、变量初始化&lt;/p&gt;
+
+&lt;p&gt;形式：&lt;变量名&gt;(表达式)&lt;/变量名&gt;&lt;/p&gt;
+
+&lt;p&gt;例如：int a(4); //与C语言中的int a=4;是等价的。&lt;/p&gt;
+
+&lt;p&gt;3、C++符号常量 const&lt;/p&gt;
+
+&lt;p&gt;C++有符号常量而C中是没有的&lt;/p&gt;
+
+&lt;p&gt;C++的格式： const &lt;类型&gt;&lt;符号常量&gt;=值;&lt;/符号常量&gt;&lt;/类型&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;例如 ：const float PI=3.1415926; // C为 #define PI 3.1415926;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;(1)与C相比，用const定义的符号常量具有数据类型，而且作用域可以是局部的。&lt;/p&gt;
+
+&lt;p&gt;(2)const 可以是参数指针不被改变&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt; 例如： int sum(const int *a);    (3)调用时，不想改变引用变量a的值
+
+ 例如： void f(const int &amp;amp;a,int b){...}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;4、自增判断&lt;/p&gt;
+
+&lt;p&gt;#include &lt;iostream&gt;&lt;/iostream&gt;&lt;/p&gt;
+
+&lt;p&gt;using namespace std;&lt;/p&gt;
+
+&lt;p&gt;#define product(x) (x*x);&lt;/p&gt;
+
+&lt;p&gt;int main(){&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;int i=3,j,k;
+
+j=product(i++);//此处的表达式为(i++)*(i++)，运行结束后，i==5；
+
+k=product(++i);//此处的表达式为(++i)*(++i),在得到运算结果之前，i==7
+
+cout&amp;lt;&amp;lt;&quot;j=&quot;&amp;lt;&amp;lt;j&amp;lt;&amp;lt;&quot;k=&quot;&amp;lt;&amp;lt;k&amp;lt;&amp;lt;endl;
+
+system(&quot;pause&quot;);
+
+return 0; }
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;5、在VC++ 编写dll时应当注意在.c文件和在.CPP文件下的区别。      &lt;br /&gt;
+   在.cpp文件下无论是动态链接库的创建还是调用，都要声明一下extern “C” ；&lt;/p&gt;
+
+&lt;p&gt;6、在C中是没有string类型的，因此都是用字符数组进行
+   字符数组也没有办法直接进行字符串的赋值
+   只有在初始化的时候可以直接进行赋值&lt;/p&gt;
+
+&lt;p&gt;7、main函数中参数的意义:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;int main(int argc, char* argv[])
+{
+	return 0;
+}    两个参数是给读入命令行参数的：
+&lt;/code&gt;&lt;/pre&gt;
+
+   	argc表示参数个数，Count;
+
+   	argv[]存放参数，Value;
+</description>
+        <pubDate>Tue, 01 Dec 2015 15:30:45 +0800</pubDate>
+        <link>http://javictory.info/c++/2015/12/01/C++-Basic.html</link>
+        <guid isPermaLink="true">http://javictory.info/c++/2015/12/01/C++-Basic.html</guid>
+        
+        
+        <category>C++</category>
+        
+      </item>
+    
+      <item>
+        <title>VC++中动静态链接库的调用</title>
+        <description>&lt;p&gt;1、动态链接库在调用时要注意:&lt;/p&gt;
+
+&lt;p&gt;格式为hdll=LoadLibrary（“DLL地址”）；&lt;/p&gt;
+
+&lt;p&gt;这里字符串类型是LPSTR，当VS中工程属性设置是unicode字符集的时候会提示错误，
+   因此要在配置-Property-General-&amp;gt;Character Set 里面把默认字符集“unicode”改成支持多字符扩展或者notset即可。&lt;/p&gt;
+
+&lt;p&gt;2、动态链接库DLL的调用分为动态调用和静态调用&lt;/p&gt;
+
+&lt;p&gt;(1)DLL的静态调用&lt;/p&gt;
+
+&lt;p&gt;在程序中要静态调用一个dll文件，一般会有下面这么一句 ：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;#pragma comment(lib, &quot;dll2.lib&quot;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;当然这不是必须的，也可以通过工程 设置 链接 添加这个lib。&lt;/p&gt;
+
+&lt;p&gt;意思是要把dll2.lib这个文件的信息编译到exe这个程序当中的，所以你必须把你的dll2.lib和dll2.dll都得放入exe所在的文件夹；&lt;/p&gt;
+
+&lt;p&gt;dll2.lib是用于编译的时候用的，  dll2.dll是当exe文件执行的时候用的；&lt;/p&gt;
+
+&lt;p&gt;当编译好了以后 这个dll2.lib文件就没有用了 ，因为它的信息已经编译到exe中了；&lt;/p&gt;
+
+&lt;p&gt;所以当你发布的时候 就可以把这个dll2.lib删除了，只留下dll2.dll就可以了。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;例如：
+
+#include &amp;lt;iostream&amp;gt;
+#pragma comment(lib,&quot;Mydll2.lib&quot;)
+extern &quot;C&quot; __declspec(dllimport) int add(int x,int y);
+int main(int argc, char* argv[])
+{
+	int result = add(2,3);
+	printf(&quot;%d&quot;,result);
+	getchar();
+	return 0;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;(2)DLL的动态调用：&lt;/p&gt;
+
+&lt;p&gt;只需要dll就可以了，和lib一点关系都没有。&lt;/p&gt;
+
+&lt;p&gt;可以用Extern，也可以用.def文件导出函数接口，供外部工程调用。&lt;/p&gt;
+
+&lt;p&gt;动态链接库在调用时要注意： &lt;/p&gt;
+
+&lt;p&gt;格式为hdll=LoadLibrary（“DLL地址”）；&lt;/p&gt;
+
+&lt;p&gt;这里字符串类型是LPSTR，不是unicode字符，
+   因此要配置 -Property-General-&amp;gt;Character Set 里面把默认字符集“unicode”改成支持多字符扩展或者notset即可。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;例如：
+
+#include &amp;lt;stdio.h&amp;gt;
+#include &amp;lt;windows.h&amp;gt; 
+typedef int(*lpAddFun)(int , int);
+
+int main(int argc, char* argv[])
+{
+	HINSTANCE hDll;
+	lpAddFun addFun;
+	hDll = LoadLibrary(&quot;Mydll2.dll&quot;);
+	if (hDll != NULL)
+	{
+		addFun = (lpAddFun)GetProcAddress(hDll, &quot;add&quot;);
+		if (addFun != NULL)
+		{
+			int result = addFun(2, 3);
+			printf(&quot;%d&quot;, result);
+	   	 	getchar();
+		}
+		FreeLibrary(hDll);
+	}
+   	 	getchar();
+	return 0;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;3、DLL工程和实际引用工程联调&lt;/p&gt;
+</description>
+        <pubDate>Thu, 12 Nov 2015 15:30:45 +0800</pubDate>
+        <link>http://javictory.info/c++/2015/11/12/C++-DLL.html</link>
+        <guid isPermaLink="true">http://javictory.info/c++/2015/11/12/C++-DLL.html</guid>
+        
+        
+        <category>C++</category>
+        
+      </item>
     
       <item>
         <title>Ubuntu 常用快捷键</title>
@@ -180,47 +459,12 @@
 
 &lt;p&gt;以“系统配置”为例，先按SUPER + A，SUPER即Win键，然后切换到中文输入法，输入“系统配置”，按回车即打开程序。&lt;/p&gt;
 </description>
-        <pubDate>Wed, 09 Mar 2016 00:00:00 +0800</pubDate>
-        <link>http://javictory.info/ubuntu/2016/03/09/ubuntu-common-shortcutkey.html</link>
-        <guid isPermaLink="true">http://javictory.info/ubuntu/2016/03/09/ubuntu-common-shortcutkey.html</guid>
+        <pubDate>Mon, 09 Nov 2015 00:00:00 +0800</pubDate>
+        <link>http://javictory.info/ubuntu/2015/11/09/ubuntu-common-shortcutkey.html</link>
+        <guid isPermaLink="true">http://javictory.info/ubuntu/2015/11/09/ubuntu-common-shortcutkey.html</guid>
         
         
         <category>Ubuntu</category>
-        
-      </item>
-    
-      <item>
-        <title>常见字符集区别：</title>
-        <description>&lt;p&gt;1、LPTSTR、LPCSTR、LPCTSTR、LPSTR的意义：&lt;/p&gt;
-
-&lt;p&gt;(1) LPSTR：32bit指针 指向一个字符串，每个字符占1字节；&lt;/p&gt;
-
-&lt;p&gt;(2) LPCSTR：32-bit指针 指向一个常字符串，每个字符占1字节；&lt;/p&gt;
-
-&lt;p&gt;(3) LPCTSTR：32-bit指针 指向一个常字符串,每字符可能占1字节或2字节，取决于Unicode是否定义，T表示在Win32环境中， 有一个_T宏；&lt;/p&gt;
-
-&lt;p&gt;(4) LPTSTR：32-bit指针 每字符可能占1字节或2字节，取决于Unicode是否定义。&lt;/p&gt;
-
-&lt;p&gt;2、Multi-Byte Character Set：&lt;/p&gt;
-
-&lt;p&gt;MBCS，它是多字节字符集，它是不定长表示世界文字的编码。&lt;/p&gt;
-
-&lt;p&gt;MBCS表示英文字母时就和ASCII一样（这也是我们容易把MBCS和ASCII搞混的原因），但表示其他文字时就需要用多字节。&lt;/p&gt;
-
-&lt;p&gt;WINDOWS下面的程序设计可以支持MBCS和UNICODE两种编码的字符串，具体用那种就看你定义了MBCS宏还是UNICODE宏。&lt;/p&gt;
-
-&lt;p&gt;MBCS宏对应的字符串指针是char* 也就是LPSTR；&lt;/p&gt;
-
-&lt;p&gt;UNICODE对应的指针是unsigned  short* 也就是LPWSTR；&lt;/p&gt;
-
-&lt;p&gt;为了写程序方便，微软定义了类型LPTSTR，在MBCS下他就是char* ,   在UNICODE下它是unsigned   char* ,这样你就可以重定义一个宏进行不同字符集的转换了。&lt;/p&gt;
-</description>
-        <pubDate>Tue, 08 Mar 2016 15:30:45 +0800</pubDate>
-        <link>http://javictory.info/windows/2016/03/08/win-common-charset.html</link>
-        <guid isPermaLink="true">http://javictory.info/windows/2016/03/08/win-common-charset.html</guid>
-        
-        
-        <category>Windows</category>
         
       </item>
     
@@ -278,256 +522,12 @@ int main(int argc, char* argv[])
 
 &lt;p&gt;2、用 devenv.exe /resetuserdata 恢复Visual Studio 初始状态&lt;/p&gt;
 </description>
-        <pubDate>Tue, 08 Mar 2016 15:30:45 +0800</pubDate>
-        <link>http://javictory.info/c++/2016/03/08/C++-VS2008.html</link>
-        <guid isPermaLink="true">http://javictory.info/c++/2016/03/08/C++-VS2008.html</guid>
+        <pubDate>Sun, 08 Nov 2015 15:30:45 +0800</pubDate>
+        <link>http://javictory.info/c++/2015/11/08/C++-VS2008.html</link>
+        <guid isPermaLink="true">http://javictory.info/c++/2015/11/08/C++-VS2008.html</guid>
         
         
         <category>C++</category>
-        
-      </item>
-    
-      <item>
-        <title>VC++中动静态链接库的调用</title>
-        <description>&lt;p&gt;1、动态链接库在调用时要注意:&lt;/p&gt;
-
-&lt;p&gt;格式为hdll=LoadLibrary（“DLL地址”）；&lt;/p&gt;
-
-&lt;p&gt;这里字符串类型是LPSTR，当VS中工程属性设置是unicode字符集的时候会提示错误，
-   因此要在配置-Property-General-&amp;gt;Character Set 里面把默认字符集“unicode”改成支持多字符扩展或者notset即可。&lt;/p&gt;
-
-&lt;p&gt;2、动态链接库DLL的调用分为动态调用和静态调用&lt;/p&gt;
-
-&lt;p&gt;(1)DLL的静态调用&lt;/p&gt;
-
-&lt;p&gt;在程序中要静态调用一个dll文件，一般会有下面这么一句 ：&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;#pragma comment(lib, &quot;dll2.lib&quot;)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;当然这不是必须的，也可以通过工程 设置 链接 添加这个lib。&lt;/p&gt;
-
-&lt;p&gt;意思是要把dll2.lib这个文件的信息编译到exe这个程序当中的，所以你必须把你的dll2.lib和dll2.dll都得放入exe所在的文件夹；&lt;/p&gt;
-
-&lt;p&gt;dll2.lib是用于编译的时候用的，  dll2.dll是当exe文件执行的时候用的；&lt;/p&gt;
-
-&lt;p&gt;当编译好了以后 这个dll2.lib文件就没有用了 ，因为它的信息已经编译到exe中了；&lt;/p&gt;
-
-&lt;p&gt;所以当你发布的时候 就可以把这个dll2.lib删除了，只留下dll2.dll就可以了。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;例如：
-
-#include &amp;lt;iostream&amp;gt;
-#pragma comment(lib,&quot;Mydll2.lib&quot;)
-extern &quot;C&quot; __declspec(dllimport) int add(int x,int y);
-int main(int argc, char* argv[])
-{
-	int result = add(2,3);
-	printf(&quot;%d&quot;,result);
-	getchar();
-	return 0;
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;(2)DLL的动态调用：&lt;/p&gt;
-
-&lt;p&gt;只需要dll就可以了，和lib一点关系都没有。&lt;/p&gt;
-
-&lt;p&gt;可以用Extern，也可以用.def文件导出函数接口，供外部工程调用。&lt;/p&gt;
-
-&lt;p&gt;动态链接库在调用时要注意： &lt;/p&gt;
-
-&lt;p&gt;格式为hdll=LoadLibrary（“DLL地址”）；&lt;/p&gt;
-
-&lt;p&gt;这里字符串类型是LPSTR，不是unicode字符，
-   因此要配置 -Property-General-&amp;gt;Character Set 里面把默认字符集“unicode”改成支持多字符扩展或者notset即可。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;例如：
-
-#include &amp;lt;stdio.h&amp;gt;
-#include &amp;lt;windows.h&amp;gt; 
-typedef int(*lpAddFun)(int , int);
-
-int main(int argc, char* argv[])
-{
-	HINSTANCE hDll;
-	lpAddFun addFun;
-	hDll = LoadLibrary(&quot;Mydll2.dll&quot;);
-	if (hDll != NULL)
-	{
-		addFun = (lpAddFun)GetProcAddress(hDll, &quot;add&quot;);
-		if (addFun != NULL)
-		{
-			int result = addFun(2, 3);
-			printf(&quot;%d&quot;, result);
-	   	 	getchar();
-		}
-		FreeLibrary(hDll);
-	}
-   	 	getchar();
-	return 0;
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;3、DLL工程和实际引用工程联调&lt;/p&gt;
-</description>
-        <pubDate>Tue, 08 Mar 2016 15:30:45 +0800</pubDate>
-        <link>http://javictory.info/c++/2016/03/08/C++-DLL.html</link>
-        <guid isPermaLink="true">http://javictory.info/c++/2016/03/08/C++-DLL.html</guid>
-        
-        
-        <category>C++</category>
-        
-      </item>
-    
-      <item>
-        <title>C++ 基础</title>
-        <description>&lt;p&gt;基本语法&lt;/p&gt;
-
-&lt;p&gt;1、全局变量个局部变量&lt;/p&gt;
-
-&lt;p&gt;如下面的这一串代码&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;#include &amp;lt;iostream&amp;gt;
-
-  #include &amp;lt;stdlib.h&amp;gt;
-
-  using namespace std;
-  
-  int vac=3;
-
-  int main(){
-
-  	int vac=10;
-  	::vac++;
-  	cout&amp;lt;&amp;lt;::vac&amp;lt;&amp;lt;endl;
-  	cout&amp;lt;&amp;lt;vac&amp;lt;&amp;lt;endl;
-  	system(&amp;quot;pause&amp;quot;);
-  	return 0 ;
-  }&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;其中，有几个地方需要做一下说明：&lt;/p&gt;
-
-&lt;p&gt;(1)在调试的时候，想要让弹出console的时候停止 需要添加system(“pause”)，方便进行观看。&lt;/p&gt;
-
-&lt;p&gt;(2)::是域操作符，::前面可以是 类名，命名空间名 来限定 ::后面的内容从哪里读取，在这里如果 ::前面没有域名 那么就是全局；：：vac代表的即是全局变量。&lt;/p&gt;
-
-&lt;p&gt;(3)而在main函数里面定义的 vac函数则是局部变量。&lt;/p&gt;
-
-&lt;p&gt;2、变量初始化&lt;/p&gt;
-
-&lt;p&gt;形式：&lt;变量名&gt;(表达式)&lt;/变量名&gt;&lt;/p&gt;
-
-&lt;p&gt;例如：int a(4); //与C语言中的int a=4;是等价的。&lt;/p&gt;
-
-&lt;p&gt;3、C++符号常量 const&lt;/p&gt;
-
-&lt;p&gt;C++有符号常量而C中是没有的&lt;/p&gt;
-
-&lt;p&gt;C++的格式： const &lt;类型&gt;&lt;符号常量&gt;=值;&lt;/符号常量&gt;&lt;/类型&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;例如 ：const float PI=3.1415926; // C为 #define PI 3.1415926;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;(1)与C相比，用const定义的符号常量具有数据类型，而且作用域可以是局部的。&lt;/p&gt;
-
-&lt;p&gt;(2)const 可以是参数指针不被改变&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt; 例如： int sum(const int *a);    (3)调用时，不想改变引用变量a的值
-
- 例如： void f(const int &amp;amp;a,int b){...}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;4、自增判断&lt;/p&gt;
-
-&lt;p&gt;#include &lt;iostream&gt;&lt;/iostream&gt;&lt;/p&gt;
-
-&lt;p&gt;using namespace std;&lt;/p&gt;
-
-&lt;p&gt;#define product(x) (x*x);&lt;/p&gt;
-
-&lt;p&gt;int main(){&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;int i=3,j,k;
-
-j=product(i++);//此处的表达式为(i++)*(i++)，运行结束后，i==5；
-
-k=product(++i);//此处的表达式为(++i)*(++i),在得到运算结果之前，i==7
-
-cout&amp;lt;&amp;lt;&quot;j=&quot;&amp;lt;&amp;lt;j&amp;lt;&amp;lt;&quot;k=&quot;&amp;lt;&amp;lt;k&amp;lt;&amp;lt;endl;
-
-system(&quot;pause&quot;);
-
-return 0; }
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;5、在VC++ 编写dll时应当注意在.c文件和在.CPP文件下的区别。      &lt;br /&gt;
-   在.cpp文件下无论是动态链接库的创建还是调用，都要声明一下extern “C” ；&lt;/p&gt;
-
-&lt;p&gt;6、在C中是没有string类型的，因此都是用字符数组进行
-   字符数组也没有办法直接进行字符串的赋值
-   只有在初始化的时候可以直接进行赋值&lt;/p&gt;
-
-&lt;p&gt;7、main函数中参数的意义:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;int main(int argc, char* argv[])
-{
-	return 0;
-}    两个参数是给读入命令行参数的：
-&lt;/code&gt;&lt;/pre&gt;
-
-   	argc表示参数个数，Count;
-
-   	argv[]存放参数，Value;
-</description>
-        <pubDate>Tue, 08 Mar 2016 15:30:45 +0800</pubDate>
-        <link>http://javictory.info/c++/2016/03/08/C++-Basic.html</link>
-        <guid isPermaLink="true">http://javictory.info/c++/2016/03/08/C++-Basic.html</guid>
-        
-        
-        <category>C++</category>
-        
-      </item>
-    
-      <item>
-        <title>Welcome to Jekyll!</title>
-        <description>&lt;p&gt;You’ll find this post in your &lt;code&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
-
-&lt;p&gt;To add new posts, simply add a file in the &lt;code&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
-
-&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;def print_hi(name)
-  puts &amp;quot;Hi, #{name}&amp;quot;
-end
-print_hi(&amp;#39;Tom&amp;#39;)
-#=&amp;gt; prints &amp;#39;Hi, Tom&amp;#39; to STDOUT.&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Check out the &lt;a href=&quot;http://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;
-
-</description>
-        <pubDate>Tue, 01 Mar 2016 15:30:45 +0800</pubDate>
-        <link>http://javictory.info/jekyll/2016/03/01/welcome-to-jekyll.html</link>
-        <guid isPermaLink="true">http://javictory.info/jekyll/2016/03/01/welcome-to-jekyll.html</guid>
-        
-        
-        <category>jekyll</category>
-        
-      </item>
-    
-      <item>
-        <title>序言</title>
-        <description>&lt;p&gt;开这个博客的原因是因为平常自己也喜欢记一些东西，虽然有自己的文档，但主要是流水账式的记录一些东西，比较乱，不够系统。建立这样一个博客就是为了督促自己，将自己平时的积累进行系统的归纳和分类，同时也是一种经验的分享。&lt;/p&gt;
-
-&lt;p&gt;同时开这个博客的过程也是一种学习，毕竟自己是个小白，什么也不懂，好在喜欢折腾。博观而约取，厚积而薄发。希望这点滴的积累能够帮到我，也能够带给大家一些启发。&lt;/p&gt;
-
-</description>
-        <pubDate>Tue, 01 Mar 2016 15:30:45 +0800</pubDate>
-        <link>http://javictory.info/notebook/2016/03/01/pretell.html</link>
-        <guid isPermaLink="true">http://javictory.info/notebook/2016/03/01/pretell.html</guid>
-        
-        
-        <category>notebook</category>
         
       </item>
     

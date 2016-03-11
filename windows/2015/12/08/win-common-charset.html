@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>常见字符集区别：</title>
+  <meta name="description" content="1、LPTSTR、LPCSTR、LPCTSTR、LPSTR的意义：">
+
+  <!-- CSS files -->
+  <link rel="stylesheet" href="http://javictory.info/css/font-awesome.min.css">
+  <link rel="stylesheet" href="http://javictory.info/css/main.css">
+
+  <link rel="canonical" href="http://javictory.info/windows/2015/12/08/win-common-charset.html">
+  <link rel="alternate" type="application/rss+xml" title="Javicroty's Blog" href="http://javictory.info /feed.xml " />
+
+  <!-- Icons -->
+  <!-- 16x16 -->
+  <link rel="shortcut icon" href="http://javictory.info/favicon.ico">
+  <!-- 32x32 -->
+  <link rel="shortcut icon" href="http://javictory.info/favicon.png">
+</head>
+
+
+<body>
+  <div class="row">
+    <div class="col s12 m3">
+      <div class="table cover">
+        
+
+<div class="cover-card table-cell table-bottom">
+  
+  <img src="http://javictory.info/img/horse.jpg" alt="" class="avatar">
+  
+  <a href="http://javictory.info/" class="author_name">Javictory</a>
+  <span class="author_job">SoftWare Engineer</span>
+  <span class="author_bio mbm">Stay hungry. Stay foolish.<nbsp/> <br/>--Steve Jobs.</span>
+  <nav class="nav">
+    <ul class="nav-list">
+       
+      <li class="nav-item">
+        <a href="http://javictory.info/archive/">Archive</a>
+        <span>||</span>
+      </li>
+          
+      <li class="nav-item">
+        <a href="http://javictory.info/categories/">Categories</a>
+        <span>||</span>
+      </li>
+                
+      <li class="nav-item">
+        <a href="http://javictory.info/tags/">Tags</a>
+      </li>
+       
+    </ul>
+  </nav>
+  <div class="social-links">
+  <ul>
+    <li><a href="mailto:javictory@163.com" class="social-link-item" target="_blank"><i class="fa fa-fw fa-envelope"></i></a></li>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  </ul>
+</div>
+
+</div>
+
+      </div>
+    </div>
+    <div class="col s12 m9">
+      <div class="post-listing">
+        <div class="back-home">
+  <a href="http://javictory.info/">< back Home.</a>
+</div>
+
+
+
+<div id="post">
+  <header class="post-header">
+    <h1 title="常见字符集区别：">常见字符集区别：</h1>
+    <span class="post-meta">
+      <span class="post-date">
+        8 DEC 2015
+      </span>
+      •
+      <span class="read-time" title="Estimated read time">
+  
+  
+    1 min read
+  
+</span>
+
+    </span>
+
+  </header>
+
+  <article class="post-content">
+    <p>1、LPTSTR、LPCSTR、LPCTSTR、LPSTR的意义：</p>
+
+<p>(1) LPSTR：32bit指针 指向一个字符串，每个字符占1字节；</p>
+
+<p>(2) LPCSTR：32-bit指针 指向一个常字符串，每个字符占1字节；</p>
+
+<p>(3) LPCTSTR：32-bit指针 指向一个常字符串,每字符可能占1字节或2字节，取决于Unicode是否定义，T表示在Win32环境中， 有一个_T宏；</p>
+
+<p>(4) LPTSTR：32-bit指针 每字符可能占1字节或2字节，取决于Unicode是否定义。</p>
+
+<p>2、Multi-Byte Character Set：</p>
+
+<p>MBCS，它是多字节字符集，它是不定长表示世界文字的编码。</p>
+
+<p>MBCS表示英文字母时就和ASCII一样（这也是我们容易把MBCS和ASCII搞混的原因），但表示其他文字时就需要用多字节。</p>
+
+<p>WINDOWS下面的程序设计可以支持MBCS和UNICODE两种编码的字符串，具体用那种就看你定义了MBCS宏还是UNICODE宏。</p>
+
+<p>MBCS宏对应的字符串指针是char* 也就是LPSTR；</p>
+
+<p>UNICODE对应的指针是unsigned  short* 也就是LPWSTR；</p>
+
+<p>为了写程序方便，微软定义了类型LPTSTR，在MBCS下他就是char* ,   在UNICODE下它是unsigned   char* ,这样你就可以重定义一个宏进行不同字符集的转换了。</p>
+
+  </article>
+</div>
+
+<div class="share-buttons">
+  <h6>Share on: </h6>
+  <ul>
+    <li>
+      <a href="https://twitter.com/intent/tweet?text=http://javictory.info/windows/2015/12/08/win-common-charset.html" class="twitter btn" title="Share on Twitter"><i class="fa fa-twitter"></i><span> Twitter</span></a>
+    </li>
+    <li>
+      <a href="https://www.facebook.com/sharer/sharer.php?u=http://javictory.info/windows/2015/12/08/win-common-charset.html" class="facebook btn" title="Share on Facebook"><i class="fa fa-facebook"></i><span> Facebook</span></a>
+    </li>
+    <li>
+      <a href="https://plus.google.com/share?url=http://javictory.info/windows/2015/12/08/win-common-charset.html" class="google-plus btn" title="Share on Google Plus"><i class="fa fa-google-plus"></i><span> Google+</span></a>
+    </li>
+    <li>
+      <a href="https://news.ycombinator.com/submitlink?u=http://javictory.info/windows/2015/12/08/win-common-charset.html" class="hacker-news btn" title="Share on Hacker News"><i class="fa fa-hacker-news"></i><span> Hacker News</span></a>
+    </li>
+    <li>
+      <a href="https://www.reddit.com/submit?url=http://javictory.info/windows/2015/12/08/win-common-charset.html" class="reddit btn" title="Share on Reddit"><i class="fa fa-reddit"></i><span> Reddit</span></a>
+    </li>
+  </ul>
+</div><!-- end share-buttons -->
+
+
+
+
+        <footer>
+  &copy; 2016 Javictory. Powered by <a href="http://jekyllrb.com/">jekyll</a>, <a href="https://github.com/javictory/">javictory theme</a> made with <i class="fa fa-heart heart-icon"></i>
+</footer>
+
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="http://javictory.info/js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="http://javictory.info/js/main.js"></script>
+
+
+</body>
+</html>
