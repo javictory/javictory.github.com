@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Socket编程的select模型</title>
+  <meta name="description" content="在掌握了socket相关的一些函数后，套接字编程还是比较简单的，日常工作中碰到很多的问题就是客户端/服务器模型中，如何让服务端在同一时间高效的处理多个客户端的连接，我们的处理办法可能会是在服务端不停的监听客户端的请求，有新的请求到达时，开辟一个新的线程去和该客户端进行后续处理，但是这样针对每一个客户端都需要去开辟...">
+
+  <!-- CSS files -->
+  <link rel="stylesheet" href="http://javictory.info/css/font-awesome.min.css">
+  <link rel="stylesheet" href="http://javictory.info/css/main.css">
+
+  <link rel="canonical" href="http://javictory.info/sockets/2016/01/13/windows-socket-select-module.html">
+  <link rel="alternate" type="application/rss+xml" title="Javicroty's Blog" href="http://javictory.info /feed.xml " />
+
+  <!-- Icons -->
+  <!-- 16x16 -->
+  <link rel="shortcut icon" href="http://javictory.info/favicon.ico">
+  <!-- 32x32 -->
+  <link rel="shortcut icon" href="http://javictory.info/favicon.png">
+</head>
+
+
+<body>
+  <div class="row">
+    <div class="col s12 m3">
+      <div class="table cover">
+        
+
+<div class="cover-card table-cell table-bottom">
+  
+  <img src="http://javictory.info/img/horse.jpg" alt="" class="avatar">
+  
+  <a href="http://javictory.info/" class="author_name">Javictory</a>
+  <span class="author_job">SoftWare Engineer</span>
+  <span class="author_bio mbm">Stay hungry. Stay foolish.<nbsp/> <br/>--Steve Jobs.</span>
+  <nav class="nav">
+    <ul class="nav-list">
+       
+      <li class="nav-item">
+        <a href="http://javictory.info/archive/">Archive</a>
+        <span>||</span>
+      </li>
+          
+      <li class="nav-item">
+        <a href="http://javictory.info/categories/">Categories</a>
+        <span>||</span>
+      </li>
+                
+      <li class="nav-item">
+        <a href="http://javictory.info/tags/">Tags</a>
+      </li>
+       
+    </ul>
+  </nav>
+  <div class="social-links">
+  <ul>
+    <li><a href="mailto:javictory@163.com" class="social-link-item" target="_blank"><i class="fa fa-fw fa-envelope"></i></a></li>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  </ul>
+</div>
+
+</div>
+
+      </div>
+    </div>
+    <div class="col s12 m9">
+      <div class="post-listing">
+        <div class="back-home">
+  <a href="http://javictory.info/">< back Home.</a>
+</div>
+
+
+
+<div id="post">
+  <header class="post-header">
+    <h1 title="Socket编程的select模型">Socket编程的select模型</h1>
+    <span class="post-meta">
+      <span class="post-date">
+        13 JAN 2016
+      </span>
+      •
+      <span class="read-time" title="Estimated read time">
+  
+  
+    3 mins read
+  
+</span>
+
+    </span>
+
+  </header>
+
+  <article class="post-content">
+    <p>在掌握了socket相关的一些函数后，套接字编程还是比较简单的，日常工作中碰到很多的问题就是客户端/服务器模型中，如何让服务端在同一时间高效的处理多个客户端的连接，我们的处理办法可能会是在服务端不停的监听客户端的请求，有新的请求到达时，开辟一个新的线程去和该客户端进行后续处理，但是这样针对每一个客户端都需要去开辟一个新的线程，效率必定底下。</p>
+
+<p>其实，socket编程提供了很多的模型来处理这种情形，我们只要按照模型去实现我们的代码就可以解决这个问题。主要有select模型和重叠I/o模型，以及完成端口模型。这次，我们主要介绍下select模型，该模型又分为普通select模型，wsaasyncselect模型，wsaeventselect模型。我们将通过样例代码的方式逐一介绍。</p>
+
+<h1 id="select">一、select模型</h1>
+
+<p>使用该模型时，在服务端我们可以开辟两个线程，一个线程用来监听客户端的连接请求，另一个用来处理客户端的请求。</p>
+
+<p>主要用到的函数为select函数。如：</p>
+
+<pre><code>全局变量：
+
+fd_set  g_fdClientSock;
+</code></pre>
+
+<p>线程1处理函数：
+	SOCKET listenSock = socket( AF_INET, SOCK_STREAM, IPPROTO_TCP );</p>
+
+<pre><code>sockaddr_in sin;
+sin.sin_family = AF_INET;
+sin.sin_port = htons(7788);
+sin.sin_addr.S_un.S_addr = INADDR_ANY;
+
+int nRet = bind( listenSock, (sockaddr*)&amp;sin, (int)(sizeof(sin)));
+if ( nRet == SOCKET_ERROR )
+{
+    DWORD errCode = GetLastError();
+    return;
+}
+
+listen( listenSock, 5);
+
+int clientNum = 0;
+
+sockaddr_in clientAddr;
+
+int nameLen = sizeof( clientAddr );
+
+while( clientNum &lt; FD_SETSIZE )
+{
+    SOCKET clientSock = accept( listenSock, (sockaddr*)&amp;clientAddr, &amp;nameLen );
+    FD_SET( clientSock, &amp;g_fdClientSock);
+    clientNum++;
+ }
+</code></pre>
+
+<p>线程2处理函数：
+	fd_set fdRead;
+    FD_ZERO( &amp;fdRead );
+    int nRet = 0;
+    char* recvBuffer =(char*)malloc( sizeof(char) * 1024 );</p>
+
+<pre><code>if ( recvBuffer == NULL )
+{
+    return;
+}
+
+memset( recvBuffer, 0, sizeof(char) * 1024 );
+while ( true )
+{
+    fdRead = g_fdClientSock;
+    nRet = select( 0, &amp;fdRead, NULL, NULL, NULL );
+    if ( nRet != SOCKET_ERROR )
+    {
+        for ( int i = 0; i &lt; g_fdClientSock.fd_count; i++ )
+        {
+            if ( FD_ISSET(g_fdClientSock.fd_array[i],&amp;fdRead)  )
+            {
+                memset( recvBuffer, 0, sizeof(char) * 1024 );
+                nRet = recv( g_fdClientSock.fd_array[i], recvBuffer, 1024, 0);
+                if ( nRet == SOCKET_ERROR )
+                {
+                    closesocket( g_fdClientSock.fd_array[i] )；
+                        FD_CLR( g_fdClientSock.fd_array[i], &amp;g_fdClientSock );
+                }
+                else
+                {
+                    //todo:后续处理
+                   }
+            }
+        }
+    }
+}
+
+if ( recvBuffer != NULL )
+{
+    free( recvBuffer );
+}
+</code></pre>
+
+<p>该模型有个最大的缺点就是，它需要一个死循环不停的去遍历所有的客户端套接字集合，询问是否有数据到来，这样，如果连接的客户端很多，势必会影响处理客户端请求的效率，但它的优点就是解决了每一个客户端都去开辟新的线程与其通信的问题。如果有一个模型，可以不用去轮询客户端套接字集合，而是等待系统通知，当有客户端数据到来时，系统自动的通知我们的程序，这就解决了select模型带来的问题了。</p>
+
+<p>二、WsaAsyncSelect模型
+WsaAsyncSelect模型就是这样一个解决了普通select模型问题的socket编程模型。它是在有客户端数据到来时，系统发送消息给我们的程序，我们的程序只要定义好消息的处理方法就可以了，用到的函数只要是WSAAsyncSelect,如：</p>
+
+<p>首先，我们定义一个Windows消息，告诉系统，当有客户端数据到来时，发送该消息给我们。</p>
+
+<pre><code>#define  UM_SOCK_ASYNCRECVMSG  WM_USER + 1
+</code></pre>
+
+<p>在我们的处理函数中可以如下监听客户端的连接：</p>
+
+<pre><code>SOCKET listenSock = socket( AF_INET, SOCK_STREAM, IPPROTO_TCP );
+sockaddr_in sin;
+sin.sin_family = AF_INET;
+sin.sin_port = htons(7788);
+sin.sin_addr.S_un.S_addr = INADDR_ANY;
+int nRet = bind( listenSock, (sockaddr*)&amp;sin, (int)(sizeof(sin)));
+if ( nRet == SOCKET_ERROR )
+{
+    DWORD errCode = GetLastError();
+    return;
+}
+
+listen( listenSock, 5);
+
+int clientNum = 0;
+sockaddr_in clientAddr;
+int nameLen = sizeof( clientAddr );
+
+while( clientNum &lt; FD_SETSIZE )
+{
+    SOCKET clientSock = accept( listenSock, (sockaddr*)&amp;clientAddr, &amp;nameLen );
+    //hWnd为接收系统发送的消息的窗口句柄
+     WSAAsyncSelect( clientSock, hWnd, UM_SOCK_ASYNCRECVMSG, FD_READ | FD_CLOSE );
+    clientNum++;
+}
+</code></pre>
+
+<p>接下来，我们需要在我们的窗口添加对UM_SOCK_ASYNCRECVMSG消息的处理函数，在该函数中真正接收客户端发送过来的数据，在这个消息处理函数中的wparam参数表示的是客户端套接字，lparam参数表示的是发生的网络事件如：</p>
+
+<pre><code>SOCKET clientSock = (SOCKET)wParam;
+if ( WSAGETSELECTERROR( lParam ) )
+{
+  closesocket( clientSock );
+  return;
+}
+
+switch ( WSAGETSELECTEVENT( lParam ) )
+{
+   case FD_READ:
+   {
+       char recvBuffer[1024] = {'\0'};
+       int nRet = recv( clientSock, recvBuffer, 1024, 0 );
+       if ( nRet &gt; 0 )
+       {
+            szRecvMsg.AppendFormat(_T("Client %d Say:%s\r\n"), clientSock, recvBuffer );
+       }
+       else
+       {
+            //client disconnect
+            szRecvMsg.AppendFormat(_T("Client %d Disconnect!\r\n"), clientSock );
+       }
+    }                              
+
+    break;
+
+  case FD_CLOSE:
+  {
+       closesocket( clientSock );
+       szRecvMsg.AppendFormat(_T("Client %d Disconnect!\r\n"), clientSock );
+  }
+
+  break;
+}
+</code></pre>
+
+<p>可以看到WsaAsyncSelect模型是非常简单的模型，它解决了普通select模型的问题，但是它最大的缺点就是它只能用在windows程序上，因为它需要一个接收系统消息的窗口句柄，那么有没有一个模型既可以解决select模型的问题，又不限定只能是windows程序才能用呢？下面我们来看看WsaEventSelect模型。</p>
+
+<p>三、WsaEventSelect模型</p>
+
+<p>WsaEventSelect模型是一个不用主动去轮询所有客户端套接字是否有数据到来的模型，它也是在客户端有数据到来时，系统发送通知给我们的程序，但是，它不是发送消息，而是通过事件的方式来通知我们的程序，这就解决了WsaAsyncSelect模型只能用在windows程序的问题。</p>
+
+<p>该模型的实现，我们也可以开辟两个线程来进行处理，一个用来接收客户端的连接请求，一个用来与客户端进行通信，用到的主要函数有WSAEventSelect，WSAWaitForMultipleEvents，WSAEnumNetworkEvents实现方式如下：</p>
+
+<p>首先定义三个全局数组</p>
+
+<pre><code>SOCKET      g_SockArray[MAX_NUM_SOCKET];//存放客户端套接字
+
+WSAEVENT    g_EventArray[MAX_NUM_SOCKET];//存放该客户端有数据到来时，触发的事件
+
+UINT32      g_totalEvent = 0;//记录客户端的连接数
+</code></pre>
+
+<p>线程1处理函数如下：</p>
+
+<pre><code>SOCKET listenSock = socket( AF_INET, SOCK_STREAM, IPPROTO_TCP );
+sockaddr_in sin;
+sin.sin_family = AF_INET;
+sin.sin_port = htons(7788);
+sin.sin_addr.S_un.S_addr = INADDR_ANY;
+int nRet = bind( listenSock, (sockaddr*)&amp;sin, (int)(sizeof(sin)));
+if ( nRet == SOCKET_ERROR )
+{
+    DWORD errCode = GetLastError();
+    return；
+}
+
+listen( listenSock, 5);
+
+sockaddr_in clientAddr;
+int nameLen = sizeof( clientAddr );
+while( g_totalEvent &lt; MAX_NUM_SOCKET )
+{
+    SOCKET clientSock = accept( listenSock, (sockaddr*)&amp;clientAddr, &amp;nameLen );
+    if ( clientSock == INVALID_SOCKET )
+    {
+        continue;
+    }
+    g_SockArray[g_totalEvent] = clientSock;
+
+    if( (g_EventArray[g_totalEvent] = WSACreateEvent()) == WSA_INVALID_EVENT )
+    {
+        continue;
+    }
+
+    WSAEventSelect( clientSock, g_EventArray[g_totalEvent],FD_READ | FD_CLOSE );
+    g_totalEvent++;
+}
+</code></pre>
+
+<p>线程2的处理函数如下：</p>
+
+<pre><code>int nIndex = 0;
+char* recvBuffer =(char*)malloc( sizeof(char) * 1024 );
+
+if ( recvBuffer == NULL )
+{
+	return；
+}
+
+memset( recvBuffer, 0, sizeof(char) * 1024 );
+
+while( true )
+{
+    nIndex = WSAWaitForMultipleEvents( g_totalEvent, g_EventArray, FALSE, WSA_INFINITE,FALSE );
+    if ( nIndex == WSA_WAIT_FAILED )
+    {
+        continue;
+    }
+    else
+    { 
+        WSAResetEvent( g_EventArray[ nIndex - WSA_WAIT_EVENT_0]);
+        SOCKET clientSock = g_SockArray[ nIndex - WSA_WAIT_EVENT_0 ];
+        WSANETWORKEVENTS wsaNetWorkEvent;
+
+        int nRet = WSAEnumNetworkEvents( clientSock, g_EventArray[nIndex - WSA_WAIT_EVENT_0], &amp;wsaNetWorkEvent );
+        if ( SOCKET_ERROR == nRet )
+        {
+            continue;
+        }
+        else if ( wsaNetWorkEvent.lNetworkEvents &amp; FD_READ )
+        {
+            if ( wsaNetWorkEvent.iErrorCode[FD_READ_BIT] != 0 )
+            {
+                //occur error
+                closesocket( clientSock );
+            }
+            else 
+            {
+                memset( recvBuffer, 0, sizeof(char) * 1024 );
+                nRet = recv( clientSock, recvBuffer, 1024, 0);
+                if ( nRet == SOCKET_ERROR )
+                {
+                    closesocket( clientSock );
+                }
+                else
+                {
+                    //todo:对接收到的客户端数据进行处理
+                    }
+             }
+         }
+         else if( wsaNetWorkEvent.lNetworkEvents &amp; FD_CLOSE )
+         {
+            if ( wsaNetWorkEvent.iErrorCode[FD_CLOSE_BIT] != 0 )
+            {
+                //occur error
+                closesocket( clientSock );
+            }
+            else
+            {
+                closesocket( clientSock );
+            }  
+         }
+    }
+}
+
+if ( recvBuffer != NULL )
+{
+    free( recvBuffer );
+}
+</code></pre>
+
+<p>该模型通过一个死循环里面调用WSAWaitForMultipleEvents函数来等待客户端套接字对应的Event的到来，一旦事件通知到达，就通过该套接字去接收数据。虽然WsaEventSelect模型的实现较前两种方法复杂，但它在效率和兼容性方面是最好的。</p>
+
+<p>以上三种模型虽然在效率方面有了不少的提升，但它们都存在一个问题，就是都预设了只能接收64个客户端连接，虽然我们在实现时可以不受这个限制，但是那样，它们所带来的效率提升又将打折扣。</p>
+
+  </article>
+</div>
+
+<div class="share-buttons">
+  <h6>Share on: </h6>
+  <ul>
+    <li>
+      <a href="https://twitter.com/intent/tweet?text=http://javictory.info/sockets/2016/01/13/windows-socket-select-module.html" class="twitter btn" title="Share on Twitter"><i class="fa fa-twitter"></i><span> Twitter</span></a>
+    </li>
+    <li>
+      <a href="https://www.facebook.com/sharer/sharer.php?u=http://javictory.info/sockets/2016/01/13/windows-socket-select-module.html" class="facebook btn" title="Share on Facebook"><i class="fa fa-facebook"></i><span> Facebook</span></a>
+    </li>
+    <li>
+      <a href="https://plus.google.com/share?url=http://javictory.info/sockets/2016/01/13/windows-socket-select-module.html" class="google-plus btn" title="Share on Google Plus"><i class="fa fa-google-plus"></i><span> Google+</span></a>
+    </li>
+    <li>
+      <a href="https://news.ycombinator.com/submitlink?u=http://javictory.info/sockets/2016/01/13/windows-socket-select-module.html" class="hacker-news btn" title="Share on Hacker News"><i class="fa fa-hacker-news"></i><span> Hacker News</span></a>
+    </li>
+    <li>
+      <a href="https://www.reddit.com/submit?url=http://javictory.info/sockets/2016/01/13/windows-socket-select-module.html" class="reddit btn" title="Share on Reddit"><i class="fa fa-reddit"></i><span> Reddit</span></a>
+    </li>
+  </ul>
+</div><!-- end share-buttons -->
+
+
+
+
+        <footer>
+  &copy; 2016 Javictory. Powered by <a href="http://jekyllrb.com/">jekyll</a>, <a href="https://github.com/javictory/">javictory theme</a> made with <i class="fa fa-heart heart-icon"></i>
+</footer>
+
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="http://javictory.info/js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="http://javictory.info/js/main.js"></script>
+
+
+</body>
+</html>
