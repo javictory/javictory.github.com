@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>在Windows上配置VIM</title>
+  <meta name="description" content="Vim是一款很牛逼的文本编辑工具，自己早已经习惯使用UE，但是久闻不如一见，试过才能评论好坏。首先，由于Vim更多的人是用在了Linux上，关于Windows的安装配置相关的文章比较少，因此我决定在Windows7上尝试安装下Vim，并进行学习；">
+
+  <!-- CSS files -->
+  <link rel="stylesheet" href="http://javictory.info/css/font-awesome.min.css">
+  <link rel="stylesheet" href="http://javictory.info/css/main.css">
+
+  <link rel="canonical" href="http://javictory.info/vim/2016/03/28/EditTool-Vim.html">
+  <link rel="alternate" type="application/rss+xml" title="Javicroty's Blog" href="http://javictory.info /feed.xml " />
+
+  <!-- Icons -->
+  <!-- 16x16 -->
+  <link rel="shortcut icon" href="http://javictory.info/favicon.ico">
+  <!-- 32x32 -->
+  <link rel="shortcut icon" href="http://javictory.info/favicon.png">
+</head>
+
+
+<body>
+  <div class="row">
+    <div class="col s12 m3">
+      <div class="table cover">
+        
+
+<div class="cover-card table-cell table-bottom">
+  
+  <img src="http://javictory.info/img/horse.jpg" alt="" class="avatar">
+  
+  <a href="http://javictory.info/" class="author_name">Javictory</a>
+  <span class="author_job">SoftWare Engineer</span>
+  <span class="author_bio mbm">Stay hungry. Stay foolish.<nbsp/> <br/>--Steve Jobs.</span>
+  <nav class="nav">
+    <ul class="nav-list">
+       
+      <li class="nav-item">
+        <a href="http://javictory.info/archive/">Archive</a>
+        <span>||</span>
+      </li>
+          
+      <li class="nav-item">
+        <a href="http://javictory.info/categories/">Categories</a>
+        <span>||</span>
+      </li>
+                
+      <li class="nav-item">
+        <a href="http://javictory.info/tags/">Tags</a>
+      </li>
+       
+    </ul>
+  </nav>
+  <div class="social-links">
+  <ul>
+    <li><a href="mailto:javictory@163.com" class="social-link-item" target="_blank"><i class="fa fa-fw fa-envelope"></i></a></li>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  </ul>
+</div>
+
+</div>
+
+      </div>
+    </div>
+    <div class="col s12 m9">
+      <div class="post-listing">
+        <div class="back-home">
+  <a href="http://javictory.info/">< back Home.</a>
+</div>
+
+
+
+<div id="post">
+  <header class="post-header">
+    <h1 title="在Windows上配置VIM">在Windows上配置VIM</h1>
+    <span class="post-meta">
+      <span class="post-date">
+        28 MAR 2016
+      </span>
+      •
+      <span class="read-time" title="Estimated read time">
+  
+  
+    1 min read
+  
+</span>
+
+    </span>
+
+  </header>
+
+  <article class="post-content">
+    <p>Vim是一款很牛逼的文本编辑工具，自己早已经习惯使用UE，但是久闻不如一见，试过才能评论好坏。
+首先，由于Vim更多的人是用在了Linux上，关于Windows的安装配置相关的文章比较少，因此我决定在Windows7上尝试安装下Vim，并进行学习；</p>
+
+<p>Vim的扩展性很强，在Github上有很多的Plugin可供你进行选择，安装和配置。但是，想必大家也了解，插件多，其实也未必是一件好事，因为随之而来的是管理问题。好在，大神们早已经为我们解决了这一苦恼的问题。那就是Vundle插件，一个专门用于管理插件的插件。
+安装的过程在Vundle上的github有提供，详见：</p>
+
+<pre><code>https://github.com/VundleVim/Vundle.vim/blob/master/README_ZH_CN.md
+</code></pre>
+
+<p>里面有提供详细的安装过程，也许你之前已经有装过Gig了，但是为了以后少折腾建议还是先删除了，然后按照教程安装一遍。
+大致的过程就是先安装（1）vim ；（2）github ； （3）Curl ；</p>
+
+<p>我的安装目录是在 C：\Vim 下，git是安装在 C：\Git ;</p>
+
+<p>首先是在C:\Vim\vimfiles下创建bundle文件夹，然后gitclone下Vundle；</p>
+
+<pre><code>$ git clone https://github.com/VundleVim/Vundle.vim.git
+</code></pre>
+
+<p>其次替换掉 C:\Vim_vimrc;暂时我的_vimrc是这个样子的</p>
+
+<pre><code>	set nocompatible              " 去除VI一致性,必须
+	filetype off                  " 必须
+	
+	" 设置包括vundle和初始化相关的runtime path
+	set rtp+=$vim/vimfiles/bundle/Vundle.vim
+	call vundle#begin('$vim/vimfiles/bundle/')
+	" 另一种选择, 指定一个vundle安装插件的路径
+	"call vundle#begin('~/some/path/here')
+	
+	" 让vundle管理插件版本,必须
+	Plugin 'VundleVim/Vundle.vim'
+	
+	" 以下插件安装.
+	Plugin 'altercation/solarized'
+	
+	" 你的所有插件需要在下面这行之前
+	call vundle#end()            " 必须
+	filetype plugin indent on    " 必须 加载vim自带和插件相应的语法和文件类型相关脚本
+	" 忽视插件改变缩进,可以使用以下替代:
+	"filetype plugin on
+	"
+	" 简要帮助文档
+	" :PluginList       - 列出所有已配置的插件
+	" :PluginInstall    - 安装插件,追加 `!` 用以更新或使用 :PluginUpdate
+	" :PluginSearch foo - 搜索 foo ; 追加 `!` 清除本地缓存
+	" :PluginClean      - 清除未使用插件,需要确认; 追加 `!` 自动批准移除未使用插件
+	"
+	" 查阅 :h vundle 获取更多细节和wiki以及FAQ
+	" 将你自己对非插件片段放在这行之后
+	syntax on  
+	set t_Co=256  
+	let g:solarized_termcolors=256  
+	set background=dark  
+	colorscheme solarized 
+</code></pre>
+
+<p>其中我指定了：</p>
+
+<p>（1）rpt，vundle的运行库的位置；</p>
+
+<pre><code>	set rtp+=$vim/vimfiles/bundle/Vundle.vim
+</code></pre>
+
+<p>（2）Vim安装插件的位置；</p>
+
+<pre><code>	call vundle#begin('$vim/vimfiles/bundle/')
+</code></pre>
+
+<p>装好了一个基本的环境，我对Vim初始的配色方案很反感，并不是很喜欢。github上有solarized这个配色方案，看了下预览，感觉超赞。</p>
+
+<p>然后我按照Vundle的插件管理方法，进行PluginInstall，安装完成后，重启gvim，发现还是原来的界面，还需要对其进行进一步设置；</p>
+
+<pre><code>solarized设置如下：	
+	syntax on  
+	set t_Co=256  
+	let g:solarized_termcolors=256  
+	set background=dark  
+	colorscheme solarized 
+</code></pre>
+
+<p>设置完成后，出现Error。后来发现还需要将 solarized.vim 拷贝到 C:\Vim\vim74\colors 下；再次打开，就能看到solarized风格的界面。</p>
+
+  </article>
+</div>
+
+<div class="share-buttons">
+  <h6>Share on: </h6>
+  <ul>
+    <li>
+      <a href="https://twitter.com/intent/tweet?text=http://javictory.info/vim/2016/03/28/EditTool-Vim.html" class="twitter btn" title="Share on Twitter"><i class="fa fa-twitter"></i><span> Twitter</span></a>
+    </li>
+    <li>
+      <a href="https://www.facebook.com/sharer/sharer.php?u=http://javictory.info/vim/2016/03/28/EditTool-Vim.html" class="facebook btn" title="Share on Facebook"><i class="fa fa-facebook"></i><span> Facebook</span></a>
+    </li>
+    <li>
+      <a href="https://plus.google.com/share?url=http://javictory.info/vim/2016/03/28/EditTool-Vim.html" class="google-plus btn" title="Share on Google Plus"><i class="fa fa-google-plus"></i><span> Google+</span></a>
+    </li>
+    <li>
+      <a href="https://news.ycombinator.com/submitlink?u=http://javictory.info/vim/2016/03/28/EditTool-Vim.html" class="hacker-news btn" title="Share on Hacker News"><i class="fa fa-hacker-news"></i><span> Hacker News</span></a>
+    </li>
+    <li>
+      <a href="https://www.reddit.com/submit?url=http://javictory.info/vim/2016/03/28/EditTool-Vim.html" class="reddit btn" title="Share on Reddit"><i class="fa fa-reddit"></i><span> Reddit</span></a>
+    </li>
+  </ul>
+</div><!-- end share-buttons -->
+
+
+
+
+        <footer>
+  &copy; 2016 Javictory. Powered by <a href="http://jekyllrb.com/">jekyll</a>, <a href="https://github.com/javictory/">javictory theme</a> made with <i class="fa fa-heart heart-icon"></i>
+</footer>
+
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="http://javictory.info/js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="http://javictory.info/js/main.js"></script>
+
+
+</body>
+</html>
